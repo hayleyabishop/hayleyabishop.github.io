@@ -1091,6 +1091,7 @@ header {
 header .row {
 	position: relative;
 	min-height: 66px;
+	width: 100%;
 }
 
 header .top-bar {
@@ -1102,7 +1103,7 @@ header .top-bar {
 	left: 90px;
 	top: 0;
 	height: 100%;
-	padding-top: 20px;
+	padding-top: 0;
   }
   
   header .top-bar a {
@@ -1129,7 +1130,7 @@ header .logo a {
 	display: block;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 2.3rem;
-	line-height: 1.565;
+	line-height: 100%;
 	margin-bottom: 0;
 	text-transform: uppercase;
 	letter-spacing: .4rem;
@@ -1291,7 +1292,7 @@ header .logo a {
 		left: 0;
 		width: 100%;
 		box-sizing: border-box;
-
+	}
 }
 @media only screen and (max-width:768px) {
 	header .top-bar {
@@ -2217,6 +2218,7 @@ header .logo a {
 	padding-bottom: 6rem;
 	text-align: center;
 }
+
 #stats .row {
 	max-width: 1440px;
 }
@@ -2625,4 +2627,4 @@ footer .copyright span:last-child::after {
 	background: #000000;
 }
 
-/*# sourceMappingURL=main.css.map */}
+/*# sourceMappingURL=main.css.map */
