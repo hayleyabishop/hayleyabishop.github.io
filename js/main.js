@@ -178,9 +178,10 @@
 
 			var active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');			
 
-         navigation_links.parent().removeClass("current");
+         	navigation_links.parent().removeClass("current");
 			active_link.parent().addClass("current");
 
+			history.replaceState(null, null, `#${active_section.attr("id")}`);
 		}, 
 
 		offset: '25%'

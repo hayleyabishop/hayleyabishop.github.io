@@ -6,6 +6,7 @@
  *  03-01-2016
  *  ------------------------------------------------------------------
  *  TOC:
+ *  00. color standards
  *  01. webfonts and iconfonts
  *  02. base style overrides
  *  03. typography & general theme styles
@@ -27,6 +28,33 @@
  *
  * =================================================================== 
  */
+
+
+/** 
+ * ===================================================================
+ * 00. color standards
+ *
+ * ------------------------------------------------------------------- 
+ */
+:root{
+ --background-dark:#151515;
+ --background-grey: #ebebeb;
+ --background-white: #FFFFFF;
+ --foreground::after;
+ --primary::after;
+ --text-primary: ;
+ --text-secondary: #FF0077;
+ --text-white: #FFFFFF;
+ --text-light: rgba(255,255,255,0.5);
+ --header-accent:#cc005f;
+ --accent: #FF0077;
+ --background-accent: ;
+ --text-accent: #FF0077;
+ --secondary:#313131;
+ --secondary-highlight: #cc005f;
+ --background-secondary: #990047;
+
+}
 
 
 /** 
@@ -90,7 +118,7 @@ a, a:visited {
 	transition: all 0.3s ease-in-out;
 }
 a:hover, a:focus, a:active {
-	color: #FF0077;
+	color: var(--accent);
 	outline: 0;
 }
 
@@ -301,7 +329,7 @@ ul.disc li::before {
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: #FF0077;
+	background: var(--secondary);
 	position: absolute;
 	left: -17px;
 	top: 11px;
@@ -309,7 +337,7 @@ ul.disc li::before {
 }
 dt {
 	margin: 0;
-	color: #FF0077;
+	color: var(--secondary);
 }
 dd {
 	margin: 0 0 0 2rem;
@@ -429,7 +457,7 @@ img.pull-left {
 	display: none;
 }
 .pace .pace-progress {
-	background: #FF0077;
+	background: var(--secondary);
 	position: fixed;
 	z-index: 900;
 	top: 0;
@@ -472,7 +500,7 @@ img.pull-left {
 	border-top: 11px solid rgba(255, 255, 255, 0.1);
 	border-right: 11px solid rgba(255, 255, 255, 0.1);
 	border-bottom: 11px solid rgba(255, 255, 255, 0.1);
-	border-left: 11px solid #FF0077;
+	border-left: 11px solid var(--secondary);
 	-webkit-animation: load 1.1s infinite linear;
 	animation: load 1.1s infinite linear;
 	display: block;
@@ -593,8 +621,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: #cc005f;
-	border-bottom: 1px solid #FF0077;
+	color: var(--secondary-highlight);
+	border-bottom: 1px solid var(--secondary);
 }
 label, legend {
 	font-family: "poppins-bold", sans-serif;
@@ -735,8 +763,8 @@ button.stroke.large, .button.stroke.large {
 	line-height: 5.4rem !important;
 }
 button.stroke:hover, .button.stroke:hover {
-	border: 3px solid #FF0077;
-	color: #FF0077;
+	border: 3px solid var(--secondary);
+	color: var(--secondary);
 }
 button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
@@ -924,7 +952,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #252525;
 }
 .stats-tabs li a:hover {
-	color: #FF0077;
+	color: var(--secondary);
 }
 .stats-tabs li a em {
 	display: block;
@@ -1018,6 +1046,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- 
  */
+
+section{
+	z-index: 1;
+ }
 .grey-section {
 	background: #ebebeb;
 }
@@ -1040,7 +1072,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-	color: #FF0077;
+	color: var(--secondary);
 	font-size: 1.6rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
@@ -1095,8 +1127,11 @@ header .row {
 }
 
 header .top-bar {
+	/* backdrop-filter:invert(100%); */
+	mix-blend-mode: difference;
+	z-index: 2;
 	display: block;
-	background: #000000;
+	background: rgba(0, 0, 0, .5);
 	min-width: 220px;
 	min-height: 66px;
 	position: absolute;
@@ -1160,7 +1195,7 @@ header .logo a {
 }
 .menu-toggle span {
 	display: block;
-	background-color: #FF0077;
+	background-color: var(--secondary);
 	width: 24px;
 	height: 3px;
 	margin-top: -1.5px;
@@ -1218,7 +1253,7 @@ header .logo a {
 	background-color: rgba(255, 0, 119, 0);
 }
 .menu-toggle.is-clicked span::before, .menu-toggle.is-clicked span::after {
-	background-color: #ff0077;
+	background-color: var(--secondary);
 	-moz-transition-delay: 0s, 0.2s;
 	-o-transition-delay: 0s, 0.2s;
 	-webkit-transition-delay: 0s, 0.2s;
@@ -1274,12 +1309,12 @@ header .logo a {
 	border: none;
 }
 .main-navigation li a:hover {
-	color: #FF0077;
+	color: var(--secondary);
 	padding-left: 1rem;
 }
 .main-navigation li.current > a {
 	background: none;
-	color: #FF0077;
+	color: var(--secondary);
 }
 
 /**
@@ -1367,7 +1402,7 @@ header .logo a {
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-	color: #cc005f;
+	color: var(--secondary-highlight);
 	font-family: "poppins-bold", sans-serif;
 	font-size: 2.3rem;
 	line-height: 1.565;
@@ -1414,7 +1449,7 @@ header .logo a {
 	letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-	border-color: #cc005f;
+	border-color: var(--secondary-highlight);
 }
 .intro-content .button::after {
 	display: inline-block;
@@ -1446,7 +1481,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #cc005f;
+	color: var(--secondary-highlight);
 }
 
 /**
@@ -1524,6 +1559,11 @@ header .logo a {
 	padding-top: 12rem;
 	padding-bottom: 15rem;
 }
+#about .top-bar{
+	background: rgba(0, 0, 0, 1);
+	-webkit-filter: invert(100%);
+}
+
 #about .section-intro {
 	margin-bottom: 3rem;
 }
@@ -1659,7 +1699,7 @@ header .logo a {
 	text-align: center;
 }
 #resume .resume-header h2 {
-	color: #FF0077;
+	color: var(--header-accent);
 }
 
 #resume .resume-timeline {
@@ -1987,7 +2027,7 @@ header .logo a {
 	border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-	background: #cc005f;
+	background: var(--secondary-highlight);
 	border: none;
 }
 @media only screen and (max-width:600px) {
@@ -2153,7 +2193,7 @@ header .logo a {
 	color: white;
 }
 #services .section-intro h5 {
-	color: #FF0077;
+	color: var(--secondary);
 }
 #services .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
@@ -2175,7 +2215,7 @@ header .logo a {
 }
 .services-list .icon i {
 	font-size: 5.4rem;
-	color: #FF0077;
+	color: var(--secondary);
 }
 .services-list h3 {
 	color: #FFFFFF;
@@ -2203,7 +2243,7 @@ header .logo a {
 	background: #FFFFFF;
 }
 .owl-theme .owl-controls .owl-page.active span {
-	background: #FF0077;
+	background: var(--secondary);
 }
 
 
@@ -2214,7 +2254,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #stats {
-	background: #990047;
+	background: var(--background-secondary);
 	padding-top: 7.2rem;
 	padding-bottom: 6rem;
 	text-align: center;
@@ -2290,7 +2330,7 @@ header .logo a {
 	color: white;
 }
 #contact .section-intro h5 {
-	color: #FF0077;
+	color: var(--secondary);
 }
 #contact .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
@@ -2343,7 +2383,7 @@ header .logo a {
 	padding: 0 2rem;
 	margin: 0;
 	color: #FFFFFF;
-	background: #FF0077;
+	background: var(--secondary);
 }
 #contact form .form-field label::after {
 	position: absolute;
@@ -2352,7 +2392,7 @@ header .logo a {
 	margin-top: -6px;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
-	border-right: 5px solid #FF0077;
+	border-right: 5px solid var(--secondary);
 	content: "";
 }
 #contact input[type="text"],
@@ -2374,7 +2414,7 @@ header .logo a {
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
 #contact input[type="email"]:focus {
-	border-color: #FF0077;
+	border-color: var(--secondary);
 	color: #FFFFFF;
 }
 #contact textarea {
@@ -2382,7 +2422,7 @@ header .logo a {
 	padding: 1.8rem 2rem;
 }
 #contact textarea:focus {
-	border-color: #FF0077;
+	border-color: var(--secondary);
 	color: #FFFFFF;
 }
 #contact button.submitform {
@@ -2394,11 +2434,11 @@ header .logo a {
 	padding: 0 3rem;
 	margin-top: 4.8rem;
 	width: 100%;
-	background: #FF0077;
+	background: var(--secondary);
 	color: #FFFFFF;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-	background: #cc005f;
+	background: var(--secondary-highlight);
 }
 #message-warning, #message-success {
 	display: none;
@@ -2412,7 +2452,7 @@ header .logo a {
 	color: #fa0003;
 }
 #message-success {
-	color: #FF0077;
+	color: var(--secondary);
 }
 #message-warning i, #message-success i {
 	margin-right: 10px;
@@ -2457,7 +2497,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .contact-info h5 {
-	color: #FF0077;
+	color: var(--secondary);
 }
 
 /**
@@ -2531,7 +2571,7 @@ footer a, footer a:visited {
 	color: #FFFFFF;
 }
 footer a:hover, footer a:focus {
-	color: #FF0077;
+	color: var(--secondary);
 }
 footer .row {
 	max-width: 900px;
@@ -2610,7 +2650,7 @@ footer .copyright span:last-child::after {
 	width: 6rem;
 	line-height: 6.6rem;
 	text-align: center;
-	background: #cc005f;
+	background: var(--secondary-highlight);
 	color: #FFFFFF;
 	text-align: center;
 	text-transform: uppercase;
