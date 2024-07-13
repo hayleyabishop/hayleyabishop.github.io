@@ -38,9 +38,18 @@
  */
 :root {
 
+	/* By Palette */
+	--accent: #83f6e7;
+	/*  #FF0077*/
+	--accent-dark:  #51e8f6;
+	/* #cc005f */
+	--accent-xtra-dark: #03818c;
+	/* #990047 */
+
 	/* By Section */
 
 	--navbar-background: rgba(0, 0, 0, 0.8);
+	--menu-hamburger: var(--accent-xtra-dark);
 	--about-background: #FFFFFF;
 	--portfolio-background: #FFFFFF;
 	--contact-background: #151515;
@@ -87,19 +96,19 @@
 	--background-body: var(--background-dark);
 	--text-body: #6e6e6e;
 	--text-primary: #6e6e6e;
-	--text-secondary: #FF0077;
+	--text-secondary: var(--accent);
 	--text-white: #FFFFFF;
 	--text-light: rgba(255, 255, 255, 0.5);
 	--title-color: #FFFFFF;
-	--header-accent: #cc005f;
+	--header-accent: var(--accent-dark);
 	--header-primary: #313131;
 	--header-secondary: #888888;
-	--accent: #FF0077;
 	--background-accent: ;
-	--text-accent: #FF0077;
+	--foreground-accent: var(--accent);
+	--text-accent: var(--accent);
 	--secondary: #313131;
-	--secondary-highlight: #cc005f;
-	--background-secondary: #990047;
+	--secondary-highlight: var(--accent-dark);
+	--background-secondary: var(--accent-xtra-dark);
 
 }
 
@@ -173,7 +182,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: var(--accent);
+	color: var(--text-accent);
 	outline: 0;
 }
 
@@ -612,7 +621,7 @@ img.pull-left {
 }
 
 .pace .pace-progress {
-	background: var(--accent);
+	background: var(--foreground-accent);
 	position: fixed;
 	z-index: 900;
 	top: 0;
@@ -1417,7 +1426,7 @@ section {
  */
 header {
 	position: fixed;
-	width: 100%;
+	width: 0%;
 	min-height: 66px;
 	z-index: 600;
 }
@@ -1425,19 +1434,21 @@ header {
 header .row {
 	position: relative;
 	min-height: 66px;
-	width: 100%;
+	width: 20%;
 }
 
 header .top-bar {
 	/* backdrop-filter:invert(100%); */
 	mix-blend-mode: difference;
 	z-index: 2;
-	display: block;
+	display: flex;
+	flex-direction: row;
 	background: rgba(0, 0, 0, .5);
 	min-width: 220px;
 	min-height: 66px;
-	position: absolute;
-	left: 90px;
+	position: relative;
+	text-align:left;
+	left: 0px;
 	top: 0;
 	height: 100%;
 	padding-top: 0;
@@ -1447,12 +1458,12 @@ header .top-bar a {
 	color: #f2f2f2;
 	padding: 15px;
 	text-decoration: none;
-	text-align: center;
-	display: block;
+	text-align: left;
+	display: flex;
 }
 
 header .top-bar a.active {
-	background-color: var(--accent);
+	background-color: var(--foreground-accent);
 	color: white;
 }
 
@@ -1499,7 +1510,8 @@ header .logo a {
 
 .menu-toggle span {
 	display: block;
-	background-color: var(--secondary);
+	background-color: var(--menu-hamburger);
+	mix-blend-mode:  ;
 	width: 24px;
 	height: 3px;
 	margin-top: -1.5px;
@@ -1563,7 +1575,7 @@ header .logo a {
 
 .menu-toggle.is-clicked span::before,
 .menu-toggle.is-clicked span::after {
-	background-color: var(--secondary);
+	background-color: var(--accent);
 	-moz-transition-delay: 0s, 0.2s;
 	-o-transition-delay: 0s, 0.2s;
 	-webkit-transition-delay: 0s, 0.2s;
@@ -1624,13 +1636,13 @@ header .logo a {
 }
 
 .main-navigation li a:hover {
-	color: var(--secondary);
+	color: var(--accent);
 	padding-left: 1rem;
 }
 
 .main-navigation li.current>a {
 	background: none;
-	color: var(--secondary);
+	color: var(--accent-dark);
 }
 
 /**
@@ -1644,6 +1656,7 @@ header .logo a {
 		width: 100%;
 		box-sizing: border-box;
 	}
+	
 }
 
 @media only screen and (max-width:768px) {
@@ -1679,7 +1692,8 @@ header .logo a {
  */
 #intro {
 	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
-	-webkit-background-size: cover;
+	/* Dall-E prompt: DALL·E 2024-07-12 19.29.14 - A background image for a machine learning engineer's website, depicting a neural network forming the shape of a city skyline. The image should feature */
+	-webkit-background-size: cover; 
 	-moz-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
@@ -2625,7 +2639,7 @@ header .logo a {
 }
 
 #services .section-intro h5 {
-	color: var(--secondary);
+	color: var(--text-white);
 }
 
 #services .section-intro p {
@@ -2783,7 +2797,7 @@ header .logo a {
 }
 
 #contact .section-intro h5 {
-	color: var(--secondary);
+	color: var(--text-white);
 }
 
 #contact .section-intro p {
