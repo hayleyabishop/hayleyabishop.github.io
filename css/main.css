@@ -1511,7 +1511,7 @@ header .logo a {
 .menu-toggle span {
 	display: block;
 	background-color: var(--menu-hamburger);
-	mix-blend-mode:  ;
+	/* mix-blend-mode: ; */
 	width: 24px;
 	height: 3px;
 	margin-top: -1.5px;
