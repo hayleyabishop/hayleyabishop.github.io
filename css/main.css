@@ -29,6 +29,17 @@
  * =================================================================== 
  */
 
+/** 
+ * ===================================================================
+ * 01. webfonts and iconfonts - (_document-setup.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+ @import url("fonts.css");
+ @import url("font-awesome/css/font-awesome.min.css");
+ @import url("micons/micons.css");
+ 
+
 
 /** 
  * ===================================================================
@@ -113,15 +124,6 @@
 }
 
 
-/** 
- * ===================================================================
- * 01. webfonts and iconfonts - (_document-setup.scss)
- *
- * ------------------------------------------------------------------- 
- */
-@import url("fonts.css");
-@import url("font-awesome/css/font-awesome.min.css");
-@import url("micons/micons.css");
 
 
 /** 
@@ -1691,7 +1693,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	background: #151515 url(/images/intro-bg.jpg) no-repeat center bottom;
 	/* Dall-E prompt: DALL·E 2024-07-12 19.29.14 - A background image for a machine learning engineer's website, depicting a neural network forming the shape of a city skyline. The image should feature */
 	-webkit-background-size: cover; 
 	-moz-background-size: cover;
@@ -1798,7 +1800,7 @@ header .logo a {
 .intro-content .button::after {
 	display: inline-block;
 	content: "\f107";
-	font-family: fontAwesome;
+	font-family: 'FontAwesome';
 	font-size: 1.6rem;
 	line-height: inherit;
 	text-align: center;
@@ -2610,7 +2612,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #services {
-	background: #313131 url(../images/bg.jpg) no-repeat center;
+	background: #313131 url(/images/bg.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
