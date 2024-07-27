@@ -1,2 +1,5 @@
 ### Ignore Readme File that came with the website template.
 *readme.txt
+
+### Ignore GIMP files -- nobody needs to have my work-in-progress files around. 
+*.xcf
