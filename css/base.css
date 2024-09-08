@@ -419,7 +419,7 @@ textarea {
 	float: left;
 }
 
-[class*="col-"] + [class*="col-"].end {
+[class*="col-"]+[class*="col-"].end {
 	float: right;
 }
 
@@ -506,8 +506,8 @@ textarea {
 @media screen and (max-width:768px) {
 	.row {
 		width: auto;
-		padding-left: 30px;
-		padding-right: 30px;
+		/* padding-left: 30px; */
+		/* padding-right: 30px; */
 	}
 
 	.row .row {
@@ -553,8 +553,8 @@ textarea {
  */
 @media screen and (max-width:600px) {
 	.row {
-		padding-left: 25px;
-		padding-right: 25px;
+		/* padding-left: 25px; */
+		/* padding-right: 25px; */
 	}
 
 	.row .row {
@@ -605,7 +605,7 @@ textarea {
 		padding: 0;
 	}
 
-	[class*="col-"] + [class*="col-"].end {
+	[class*="col-"]+[class*="col-"].end {
 		float: none;
 	}
 
@@ -631,6 +631,14 @@ textarea {
 	width: 16.66667%;
 }
 
+.block-1-5 .bgrid {
+	/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+	width: 20%;
+	margin-left: auto;
+	margin-top: auto;
+}
+
 .block-1-4 .bgrid {
 	width: 25%;
 }
@@ -648,6 +656,7 @@ textarea {
  * different heights to align properly.
  */
 .block-1-6 .bgrid:nth-child(6n+1),
+.block-1-5 .bgrid:nth-child(5n+1),
 .block-1-4 .bgrid:nth-child(4n+1),
 .block-1-3 .bgrid:nth-child(3n+1),
 .block-1-2 .bgrid:nth-child(2n+1) {
@@ -663,6 +672,25 @@ textarea {
 		width: 16.66667%;
 	}
 
+	.block-s-2-5 .bgrid {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		width: 33.33%;
+	}
+
+	.block-s-2-5 .bgrid:nth-child(4) {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		margin-left: 16.67%;
+		margin-top: 20px;
+	}
+
+	.block-s-2-5 .bgrid:nth-child(5) {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		margin-top: 20px;
+	}
+
 	.block-s-1-4 .bgrid {
 		width: 25%;
 	}
@@ -670,6 +698,8 @@ textarea {
 	.block-s-1-3 .bgrid {
 		width: 33.33333%;
 	}
+
+
 
 	.block-s-1-2 .bgrid {
 		width: 50%;
@@ -685,8 +715,10 @@ textarea {
 	}
 
 	.block-s-1-6 .bgrid:nth-child(6n+1),
+	.block-s-1-5 .bgrid:nth-child(5n+1),
 	.block-s-1-4 .bgrid:nth-child(4n+1),
 	.block-s-1-3 .bgrid:nth-child(3n+1),
+	.block-s-2-5 .bgrid:nth-child(3n+1),
 	.block-s-1-2 .bgrid:nth-child(2n+1) {
 		clear: both;
 	}
@@ -702,6 +734,10 @@ textarea {
 		width: 16.66667%;
 	}
 
+	.block-tab-1-5 .bgrid {
+		width: 20%;
+	}
+
 	.block-tab-1-4 .bgrid {
 		width: 25%;
 	}
@@ -714,6 +750,22 @@ textarea {
 		width: 50%;
 	}
 
+	.block-tab-5-2 .bgrid {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		width: 50%;
+	}
+	.block-tab-5-2 .bgrid:nth-child(4) {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		margin-left: 0;
+	}
+	.block-tab-5-2 .bgrid:nth-child(5) {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		margin-left: 25%;
+	}
+
 	.block-tab-full .bgrid {
 		width: 100%;
 		clear: both;
@@ -724,9 +776,11 @@ textarea {
 	}
 
 	.block-tab-1-6 .bgrid:nth-child(6n+1),
+	.block-tab-1-5 .bgrid:nth-child(5n+1),
 	.block-tab-1-4 .bgrid:nth-child(4n+1),
 	.block-tab-1-3 .bgrid:nth-child(3n+1),
-	.block-tab-1-2 .bgrid:nth-child(2n+1) {
+	.block-tab-1-2 .bgrid:nth-child(2n+1),
+	.block-tab-5-2 .bgrid:nth-child(2n+1) {
 		clear: both;
 	}
 
@@ -756,6 +810,18 @@ textarea {
 	.block-mob-full .bgrid {
 		width: 100%;
 		clear: both;
+		margin: auto;
+	}
+
+	.block-mob-full .bgrid:nth-child(5) {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		margin-left: 0%;
+	}
+	.block-mob-full .bgrid:nth-child(4) {
+		/* Special-made for when we only have 
+		5 stats in the statistics section.  */
+		margin-left: 0%;
 	}
 
 	[class*="block-mob-"] .bgrid:nth-child(n) {

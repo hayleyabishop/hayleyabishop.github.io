@@ -1170,6 +1170,7 @@ input::-moz-focus-inner {
 
 .stats-tabs li {
 	display: inline-block;
+	align-items: center;
 	margin: 0 1.5rem 3rem 0;
 	padding: 0 1.5rem 0 0;
 	border-right: 1px solid #ccc;
@@ -1428,15 +1429,16 @@ section {
  */
 header {
 	position: fixed;
-	width: 0%;
+	width: 100%;
 	min-height: 66px;
 	z-index: 600;
+	padding: 0;
 }
 
 header .row {
 	position: relative;
 	min-height: 66px;
-	width: 20%;
+	width: auto;
 }
 
 header .top-bar {
@@ -1454,6 +1456,7 @@ header .top-bar {
 	top: 0;
 	height: 100%;
 	padding-top: 0;
+	padding-left: 10%;
 }
 
 header .top-bar a {
@@ -1654,7 +1657,7 @@ header .logo a {
  */
 @media only screen and (max-width:1024px) {
 	header .top-bar {
-		left: 0;
+		padding-left: 10%;
 		width: 100%;
 		box-sizing: border-box;
 	}
@@ -1663,7 +1666,7 @@ header .logo a {
 
 @media only screen and (max-width:768px) {
 	header .top-bar {
-		left: 0;
+		padding-left: 10%;
 		width: 100%;
 		box-sizing: border-box;
 	}
@@ -1671,7 +1674,7 @@ header .logo a {
 
 @media only screen and (max-width:600px) {
 	header .top-bar {
-		left: 0;
+		padding-left: 0;
 		width: 100%;
 		box-sizing: border-box;
 	}
@@ -1679,7 +1682,7 @@ header .logo a {
 
 @media only screen and (max-width:400px) {
 	header .top-bar {
-		left: 0px;
+		padding-left: 0px;
 		width: 100%;
 		box-sizing: border-box;
 	}
