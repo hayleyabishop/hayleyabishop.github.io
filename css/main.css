@@ -1696,7 +1696,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url("../images/intro-bg.jpg") no-repeat center center;
+	background: #151515 url("../intro-bg.jpg") no-repeat center center;
 	/* Dall-E prompt: DALL·E 2024-07-12 19.29.14 - A background image for a machine learning engineer's website, depicting a neural network forming the shape of a city skyline. The image should feature */
 	-webkit-background-size: cover; 
 	-moz-background-size: cover;
