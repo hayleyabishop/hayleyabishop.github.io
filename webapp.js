@@ -57,5 +57,5 @@ console.log("\n\nI found the following matches: \n")
 
 console.log(matches.map(match => match.map(index=>chords[index])))
 
-for(i in chords)
-    console.log(`<option value="${chords[i]}">${chords[i]}</option>`)
+// for(i in chords)
+//     console.log(`<option value="${chords[i]}">${chords[i]}</option>`)
