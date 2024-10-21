@@ -1,145 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reorderable Chord Tags</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+      body {
+        font-family: Arial, sans-serif;
+      }
 
-        .tag-container {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+      "" .tag-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
 
-        .tag {
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            cursor: move;
-        }
+      .tag {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        cursor: move;
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease;
+        animation: fadeIn 0.3s forwards; /* Animation for appearance */
+        
+      }
 
-        .tag span {
-            margin-right: 10px;
-        }
+      .tag.dragging {
+        opacity: 0.5; /* Fade when dragging */
+      }
 
-        .tag button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
         }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
 
-        .chordInput {
-            margin-bottom: 20px;
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+          transform: scale(1);
         }
+        to {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+      }
 
-        .tag-container.dragging {
-            background-color: #f1f1f1;
-        }
+      .tag span {
+        margin-right: 10px;
+      }
+
+      .tag button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .chordInput {
+        margin-bottom: 20px;
+      }
+
+      .tag-container.dragging {
+        background-color: #f1f1f1;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <h2>Reorderable Chord Tags</h2>
-    
+
     <select name="" id="chordInput" class="chordInput">
-        <option value=""></option>
-        <option value="A">A</option>
-        <option value="A# / Bb">A# / Bb</option>
-        <option value="B">B</option>
-        <option value="C">C</option>
-        <option value="C# / Db">C# / Db</option>
-        <option value="D">D</option>
-        <option value="D# / Eb">D# / Eb</option>
-        <option value="E">E</option>
-        <option value="F">F</option>
-        <option value="F# / Gb">F# / Gb</option>
-        <option value="G">G</option>
-        <option value="G# / Ab">G# / Ab</option>
+      <option value=""></option>
+      <option value="A">A</option>
+      <option value="A# / Bb">A# / Bb</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="C# / Db">C# / Db</option>
+      <option value="D">D</option>
+      <option value="D# / Eb">D# / Eb</option>
+      <option value="E">E</option>
+      <option value="F">F</option>
+      <option value="F# / Gb">F# / Gb</option>
+      <option value="G">G</option>
+      <option value="G# / Ab">G# / Ab</option>
     </select>
-    
+
     <div class="tag-container" id="tagContainer"></div>
 
     <script>
-        const selectElement = document.getElementById('chordInput');
-        const tagContainer = document.getElementById('tagContainer');
-        let draggedTag = null;
+      const selectElement = document.getElementById("chordInput");
+      const tagContainer = document.getElementById("tagContainer");
+      let draggedTag = null;
 
-        selectElement.addEventListener('change', function () {
-            const selectedValue = this.value;
-            if (selectedValue !== "") {
-                createTag(selectedValue);
-                this.value = ""; // Reset select input after adding a tag
-            }
+      selectElement.addEventListener("change", function () {
+        const selectedValue = this.value;
+        if (selectedValue !== "") {
+          createTag(selectedValue);
+          this.value = ""; // Reset select input after adding a tag
+        }
+      });
+
+      function createTag(chord) {
+        // Create the tag element
+        const tag = document.createElement("div");
+        tag.classList.add("tag");
+        tag.setAttribute("draggable", true);
+        tag.innerHTML = `<span>${chord}</span><button onclick="removeTag(this)">x</button>`;
+
+        // Add drag event listeners
+        tag.addEventListener("dragstart", handleDragStart);
+        tag.addEventListener("dragover", handleDragOver);
+        tag.addEventListener("drop", handleDrop);
+        tag.addEventListener("dragend", handleDragEnd);
+
+        // Append the tag to the container
+        tagContainer.appendChild(tag);
+      }
+
+      function removeTag(button) {
+        const tag = button.parentElement;
+        tag.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
+
+        // Remove the tag from the DOM after the animation
+        tag.addEventListener("animationend", () => {
+          tagContainer.removeChild(tag);
         });
+      }
 
-        function createTag(chord) {
-            // Create the tag element
-            const tag = document.createElement('div');
-            tag.classList.add('tag');
-            tag.setAttribute('draggable', true);
-            tag.innerHTML = `<span>${chord}</span><button onclick="removeTag(this)">x</button>`;
+      function handleDragStart(e) {
+        draggedTag = this;
+        setTimeout(() => this.classList.add("dragging"), 0);
+      }
 
-            // Add drag event listeners
-            tag.addEventListener('dragstart', handleDragStart);
-            tag.addEventListener('dragover', handleDragOver);
-            tag.addEventListener('drop', handleDrop);
-            tag.addEventListener('dragend', handleDragEnd);
-
-            // Append the tag to the container
-            tagContainer.appendChild(tag);
+      function handleDragOver(e) {
+        e.preventDefault(); // Prevent default to allow drop
+        const afterElement = getDragAfterElement(tagContainer, e.clientX);
+        if (afterElement == null) {
+          tagContainer.appendChild(draggedTag);
+        } else {
+          tagContainer.insertBefore(draggedTag, afterElement);
         }
+      }
 
-        function removeTag(button) {
-            const tag = button.parentElement;
-            tagContainer.removeChild(tag);
-        }
+      function handleDrop() {
+        this.classList.remove("dragging");
+      }
 
-        function handleDragStart(e) {
-            draggedTag = this;
-            setTimeout(() => this.classList.add('dragging'), 0);
-        }
+      function handleDragEnd() {
+        this.classList.remove("dragging");
+        draggedTag = null;
+      }
 
-        function handleDragOver(e) {
-            e.preventDefault(); // Prevent default to allow drop
-            const afterElement = getDragAfterElement(tagContainer, e.clientX);
-            if (afterElement == null) {
-                tagContainer.appendChild(draggedTag);
+      function getDragAfterElement(container, x) {
+        const draggableElements = [
+          ...container.querySelectorAll(".tag:not(.dragging)"),
+        ];
+        return draggableElements.reduce(
+          (closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = x - box.left - box.width / 2;
+            if (offset < 0 && offset > closest.offset) {
+              return { offset: offset, element: child };
             } else {
-                tagContainer.insertBefore(draggedTag, afterElement);
+              return closest;
             }
-        }
-
-        function handleDrop() {
-            this.classList.remove('dragging');
-        }
-
-        function handleDragEnd() {
-            this.classList.remove('dragging');
-            draggedTag = null;
-        }
-
-        function getDragAfterElement(container, x) {
-            const draggableElements = [...container.querySelectorAll('.tag:not(.dragging)')];
-            return draggableElements.reduce((closest, child) => {
-                const box = child.getBoundingClientRect();
-                const offset = x - box.left - box.width / 2;
-                if (offset < 0 && offset > closest.offset) {
-                    return { offset: offset, element: child };
-                } else {
-                    return closest;
-                }
-            }, { offset: Number.NEGATIVE_INFINITY }).element;
-        }
+          },
+          { offset: Number.NEGATIVE_INFINITY }
+        ).element;
+      }
     </script>
-
-</body>
+  </body>
 </html>
