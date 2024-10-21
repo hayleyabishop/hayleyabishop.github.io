@@ -27,7 +27,6 @@
         transform: scale(0.95);
         transition: all 0.3s ease;
         animation: fadeIn 0.3s forwards; /* Animation for appearance */
-        
       }
 
       .tag.dragging {
@@ -146,10 +145,16 @@
       function handleDragOver(e) {
         e.preventDefault(); // Prevent default to allow drop
         const afterElement = getDragAfterElement(tagContainer, e.clientX);
-        if (afterElement == null) {
+        if (
+          afterElement == null &&
+          tagContainer.lastElementChild !== draggedTag
+        ) {
           tagContainer.appendChild(draggedTag);
         } else {
-          tagContainer.insertBefore(draggedTag, afterElement);
+          // Only reorder if the element is actually moving
+          if (draggedTag !== afterElement.previousSibling) {
+            tagContainer.insertBefore(draggedTag, afterElement);
+          }
         }
       }
 
