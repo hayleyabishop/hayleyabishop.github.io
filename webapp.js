@@ -1,4 +1,11 @@
 
+//Event listeners
+
+document.getElementById("chordInput1").addEventListener("change", handle)
+
+
+
+
 
 inputChords = ["C", "F#", "G"];
 console.log("Input Chords: \n" + inputChords);
@@ -40,7 +47,7 @@ for(i=0;Math.max(...intervals)<12;i++){
     // console.log(intervals)
     foundIntervals = intervals.filter((interval) => autoharpIntervals.includes(interval));
     // console.log(foundIntervals)
-    if (foundIntervals.length==intervals.length){
+    if (foundIntervals.length == intervals.length){
         matches.push(foundIntervals);
     }
     intervals=intervals.map(element => element+1);
