@@ -114,8 +114,10 @@
         // Create the tag element
         const tag = document.createElement("div");
         tag.classList.add("tag");
+        tag.setAttribute("role", "listitem"); // ARIA role for list item
+        tag.setAttribute("aria-grabbed", "false"); // Not grabbed yet
         tag.setAttribute("draggable", true);
-        tag.innerHTML = `<span>${chord}</span><button onclick="removeTag(this)">x</button>`;
+        tag.innerHTML = `<span>${chord}</span><button onclick="removeTag(this)" aria-label="Remove ${chord} tag">x</button>`;
 
         // Add drag event listeners
         tag.addEventListener("dragstart", handleDragStart);
@@ -125,13 +127,23 @@
 
         // Append the tag to the container
         tagContainer.appendChild(tag);
+
+        // Add ARIA role for tag container if not already set
+        tagContainer.setAttribute("role", "list");
+      }
+
+      function handleDragStart(e) {
+        draggedTag = this;
+        this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
+        setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
       }
 
       function removeTag(button) {
         const tag = button.parentElement;
+        tag.setAttribute("aria-hidden", "true"); // ARIA hidden for accessibility during removal
         tag.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
 
-        // Remove the tag from the DOM after the animation
+        // Wait for the animation to complete before removing the element
         tag.addEventListener("animationend", () => {
           tagContainer.removeChild(tag);
         });
@@ -163,6 +175,7 @@
       }
 
       function handleDragEnd() {
+        this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
         this.classList.remove("dragging");
         draggedTag = null;
       }
