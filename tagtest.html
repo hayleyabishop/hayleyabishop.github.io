@@ -187,7 +187,7 @@
       }
 
       function removeTag(button) {
-        const tag = button.parentElement.parentElement; //First-level parent element is the tag-content; second-level is tag. 
+        const tag = button.closest(".tag"); //Find the parent tag. Better than repeated .parentElement.
         tag.setAttribute("aria-hidden", "true"); // ARIA hidden for accessibility during removal
         tag.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
 
