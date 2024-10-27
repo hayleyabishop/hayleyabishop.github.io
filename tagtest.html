@@ -14,48 +14,48 @@
       }
 
       .tag-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    position: relative;
-    transform: scale(0.95);
-    transition: all 0.3s ease;
-    animation: fadeIn 0.3s forwards;
-}
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        position: relative;
+        transform: scale(0.95);
+        transition: all 0.3s ease;
+        animation: fadeIn 0.3s forwards;
+      }
 
-.tag {
-    position: relative; 
-    opacity: 0.99;
-    background: #eee;
-    border-top: 8px solid #e2e2e2;
-    border-bottom: 3px solid #7b7676;
-    border-radius: 2px;
-    height: 31px;
-    overflow: visible;
-    min-width: 22px;
-    min-height: 31px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 5px 10px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    cursor: move;
-}
+      .tag {
+        position: relative;
+        opacity: 0.99;
+        background: #eee;
+        border-top: 8px solid #e2e2e2;
+        border-bottom: 3px solid #7b7676;
+        border-radius: 2px;
+        height: 31px;
+        overflow: visible;
+        min-width: 22px;
+        min-height: 31px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding: 5px 10px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        cursor: move;
+      }
 
-/* Create a new inner container for the content */
-.tag-content {
-    position: relative;
-    z-index: 2; /* Higher than pseudo-elements */
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
+      /* Create a new inner container for the content */
+      .tag-content {
+        position: relative;
+        z-index: 2; /* Higher than pseudo-elements */
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
 
-/* .tag::before,
+      /* .tag::before,
 .tag::after {
     content: "";
     position: absolute;
@@ -163,37 +163,31 @@
       });
 
       function createTag(chord) {
-    const tag = document.createElement("div");
-    tag.classList.add("tag");
-    tag.setAttribute("role", "listitem");
-    tag.setAttribute("aria-grabbed", "false");
-    tag.setAttribute("draggable", true);
-    
-    // Create inner container for content
-    const content = document.createElement("div");
-    content.classList.add("tag-content");
-    content.innerHTML = `<span>${chord}</span><button onclick="removeTag(this)" aria-label="Remove ${chord} tag">x</button>`;
-    
-    tag.appendChild(content);
+        const tag = document.createElement("div");
+        tag.classList.add("tag");
+        tag.setAttribute("role", "listitem");
+        tag.setAttribute("aria-grabbed", "false");
+        tag.setAttribute("draggable", true);
 
-    // Add drag event listeners
-    tag.addEventListener("dragstart", handleDragStart);
-    tag.addEventListener("dragover", handleDragOver);
-    tag.addEventListener("drop", handleDrop);
-    tag.addEventListener("dragend", handleDragEnd);
+        // Create inner container for content
+        const content = document.createElement("div");
+        content.classList.add("tag-content");
+        content.innerHTML = `<span>${chord}</span><button onclick="removeTag(this)" aria-label="Remove ${chord} tag">x</button>`;
 
-    tagContainer.appendChild(tag);
-    tagContainer.setAttribute("role", "list");
-}
+        tag.appendChild(content);
 
-      function handleDragStart(e) {
-        draggedTag = this;
-        this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
-        setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
+        // Add drag event listeners
+        tag.addEventListener("dragstart", handleDragStart);
+        tag.addEventListener("dragover", handleDragOver);
+        tag.addEventListener("drop", handleDrop);
+        tag.addEventListener("dragend", handleDragEnd);
+
+        tagContainer.appendChild(tag);
+        tagContainer.setAttribute("role", "list");
       }
 
       function removeTag(button) {
-        const tag = button.parentElement;
+        const tag = button.parentElement.parentElement; //First-level parent element is the tag-content; second-level is tag. 
         tag.setAttribute("aria-hidden", "true"); // ARIA hidden for accessibility during removal
         tag.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
 
@@ -201,6 +195,12 @@
         tag.addEventListener("animationend", () => {
           tagContainer.removeChild(tag);
         });
+      }
+
+      function handleDragStart(e) {
+        draggedTag = this;
+        this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
+        setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
       }
 
       function handleDragStart(e) {
