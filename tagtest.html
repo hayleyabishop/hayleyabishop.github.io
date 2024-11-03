@@ -203,10 +203,6 @@
         setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
       }
 
-      function handleDragStart(e) {
-        draggedTag = this;
-        setTimeout(() => this.classList.add("dragging"), 0);
-      }
 
       function handleDragOver(e) {
         e.preventDefault(); // Prevent default to allow drop
