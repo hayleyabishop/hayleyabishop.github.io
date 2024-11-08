@@ -1,48 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transpose</title>
-</head>
-<body style="background: url(Autoharp\ image.jpg); transform: scale(); width: 100%; height: 650px; background-size: 200%;background-repeat: no-repeat;background-color: black;">
+  </head>
+  <body
+    style="
+      background: url(Autoharp\ image.jpg);
+      transform: scale();
+      width: 100%;
+      height: 650px;
+      background-size: 200%;
+      background-repeat: no-repeat;
+      background-color: black;
+    "
+  >
+    <div style="background-color: gray; background-blend-mode: overlay">
+      Transposing chords for my autoharp.
 
-    <div style="background-color: gray; background-blend-mode: overlay;">Transposing chords for my autoharp. 
+      <div>
+        <form action="">
+          <select name="" id="chordInput1" class="chordInput">
+            <option value=""></option>
+            <option value="A">A</option>
+            <option value="A# / Bb">A# / Bb</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="C# / Db">C# / Db</option>
+            <option value="D">D</option>
+            <option value="D# / Eb">D# / Eb</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="F# / Gb">F# / Gb</option>
+            <option value="G">G</option>
+            <option value="G# / Ab">G# / Ab</option>
+          </select>
+          <!-- on user selection, append additional input box. -->
+        </form>
+        <div class="results">
+          Resulting Chords:
 
+          <div class="chordGroup">
+            <div id="chord 1" class="chord" draggable="true">Chord 1</div>
+            <div id="chord 2" class="chord" draggable="true">Chord 2</div>
+            <div id="chord 3" class="chord" draggable="true">Chord 3</div>
+          </div>
 
-        <div >
-            <form action="">
-                <select name="" id="chordInput1" class="chordInput">
-                    <option value=""></option>
-                    <option value="A">A</option>
-                    <option value="A# / Bb">A# / Bb</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="C# / Db">C# / Db</option>
-                    <option value="D">D</option>
-                    <option value="D# / Eb">D# / Eb</option>
-                    <option value="E">E</option>
-                    <option value="F">F</option>
-                    <option value="F# / Gb">F# / Gb</option>
-                    <option value="G">G</option>
-                    <option value="G# / Ab">G# / Ab</option>
-                </select>
-                <!-- on user selection, append additional input box. -->
-            </form>
-            <div class="results">
-                Resulting Chords:
-        
-                <div class="chordGroup">
-                    Chord 1
-                    Chord 2
-                    Chord 3
-                </div>
-            </div>
-            </div>
-
+          <script>
+            const chordGroups = document.querySelectorAll(".chordGroup");
+            let draggables = document.querySelectorAll('[draggable="true"]');
+            draggables.forEach((draggable) => {
+              draggable.addEventListener("dragstart", (event) => {
+                draggable.innerHTML = "drag start";
+                // draggable.parentNode.removeChild(draggable);
+                // console.log(event);
+              });
+              draggable.addEventListener("drag", (event) => {
+                draggable.innerHTML = "drag";
+                draggable.parentNode.removeChild(draggable);
+                // console.log(event);
+              });
+              draggable.addEventListener("dragend", (event) => {});
+              draggable.addEventListener("dragover", (event) => {
+                event.preventDefault();
+                // console.log(event);
+                draggable.innerHTML = "drag over";
+              });
+              draggable.addEventListener("drop", (event) => {
+                event.preventDefault();
+                console.log(event);
+                event.target.parentNode.appendChild(draggable);
+              });
+            });
+          </script>
+          <svg
+            id="chord background"
+            width="22"
+            height="31"
+            viewBox="0 0 22 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask id="path-1-inside-1_10_79" fill="white">
+              <path
+                d="M0 1.5C0 0.671573 0.671573 0 1.5 0H20.5C21.3284 0 22 0.671573 22 1.5V29.5C22 30.3284 21.3284 31 20.5 31H1.5C0.671573 31 0 30.3284 0 29.5V1.5Z"
+              />
+            </mask>
+            <g filter="url(#filter0_i_10_79)">
+              <path
+                d="M0 1.5C0 0.671573 0.671573 0 1.5 0H20.5C21.3284 0 22 0.671573 22 1.5V29.5C22 30.3284 21.3284 31 20.5 31H1.5C0.671573 31 0 30.3284 0 29.5V1.5Z"
+                fill="#EEEEEE"
+              />
+            </g>
+            <path
+              d="M0 1.5C0 -0.985281 2.01472 -3 4.5 -3H17.5C19.9853 -3 22 -0.985281 22 1.5V3C22 3 21.3284 3 20.5 3H1.5C0.671573 3 0 3 0 3V1.5ZM22 29.5C22 30.8807 20.8807 32 19.5 32H2.5C1.11929 32 0 30.8807 0 29.5C0 29.7761 0.671573 30 1.5 30H20.5C21.3284 30 22 29.7761 22 29.5ZM0 31V0V31ZM22 0V31V0Z"
+              fill="url(#paint0_linear_10_79)"
+              mask="url(#path-1-inside-1_10_79)"
+            />
+            <defs>
+              <filter
+                id="filter0_i_10_79"
+                x="0"
+                y="0"
+                width="22"
+                height="35"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feComposite
+                  in2="hardAlpha"
+                  operator="arithmetic"
+                  k2="-1"
+                  k3="1"
+                />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="shape"
+                  result="effect1_innerShadow_10_79"
+                />
+              </filter>
+              <linearGradient
+                id="paint0_linear_10_79"
+                x1="11"
+                y1="0"
+                x2="11"
+                y2="31"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#E7E7E7" />
+                <stop offset="0.0459998" stop-color="#EBEBEB" />
+                <stop offset="0.101" stop-color="white" />
+                <stop offset="0.851" stop-color="#F0F0F0" />
+                <stop offset="0.9659" stop-color="#D4D4D4" />
+                <stop offset="0.966" stop-color="#D1D1D1" />
+                <stop offset="0.9999" stop-color="#7B7676" />
+                <stop offset="1" stop-color="#666666" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
-
-
-
