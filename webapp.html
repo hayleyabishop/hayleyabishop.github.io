@@ -161,23 +161,24 @@
 
 
             function appendChord(chord) {
-              const newChord = Object.assign(document.createElement("div"), {
-                class: "chord",
-                role: "listitem",
-                "aria-grabbed": "false",
-                draggable: "true",
-              });
+              const newChord = document.createElement("div")
+              newChord.setAttribute("role", "listitem");
+              newChord.classList.add("chord")
+              newChord.setAttribute("aria-grabbed", "false");
+              newChord.setAttribute("draggable", true);
+              addDragListeners(newChord)
+
               // Create inner container for content
               const content = document.createElement("div");
-              content.classList.add("chordGroup");
+              // content.classList.add("chordGroup");
               content.innerHTML = `<span>${chord}</span><button onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
               newChord.appendChild(content);
 
               // Add drag event listeners
-              newChord.addEventListener("dragstart", handleDragStart);
-              newChord.addEventListener("dragover", handleDragOver);
-              newChord.addEventListener("drop", handleDrop);
-              newChord.addEventListener("dragend", handleDragEnd);
+              // newChord.addEventListener("dragstart", handleDragStart);
+              // newChord.addEventListener("dragover", handleDragOver);
+              // newChord.addEventListener("drop", handleDrop);
+              // newChord.addEventListener("dragend", handleDragEnd);
 
               chordGroup.appendChild(newChord);
               chordGroup.setAttribute("role", "list");
@@ -207,8 +208,8 @@
                   console.log(event);
                   event.target.parentNode.appendChild(draggable);
                 });
-              });
-            }
+              }
+            
           </script>
         </div>
       </div>
