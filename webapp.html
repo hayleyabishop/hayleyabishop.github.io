@@ -182,33 +182,33 @@
               chordGroup.appendChild(newChord);
               chordGroup.setAttribute("role", "list");
             }
-            let draggables = document.querySelectorAll('[draggable="true"]');
-            draggables.forEach(addDragListeners(draggable));
-            // const chordGroups = document.querySelectorAll(".chordGroup");
-            function addDragListeners(draggable){
-              draggable.addEventListener("dragstart", (event) => {
-                draggable.innerHTML = "drag start";
-                // draggable.parentNode.removeChild(draggable);
-                // console.log(event);
+              let draggables = document.querySelectorAll('[draggable="true"]');
+              draggables.forEach(addDragListeners(draggable));
+              // const chordGroups = document.querySelectorAll(".chordGroup");
+              function addDragListeners(draggable){
+                draggable.addEventListener("dragstart", (event) => {
+                  draggable.innerHTML = "drag start";
+                  // draggable.parentNode.removeChild(draggable);
+                  // console.log(event);
+                });
+                draggable.addEventListener("drag", (event) => {
+                  draggable.innerHTML = "drag";
+                  draggable.parentNode.removeChild(draggable);
+                  // console.log(event);
+                });
+                draggable.addEventListener("dragend", (event) => {});
+                draggable.addEventListener("dragover", (event) => {
+                  event.preventDefault();
+                  // console.log(event);
+                  draggable.innerHTML = "drag over";
+                });
+                draggable.addEventListener("drop", (event) => {
+                  event.preventDefault();
+                  console.log(event);
+                  event.target.parentNode.appendChild(draggable);
+                });
               });
-              draggable.addEventListener("drag", (event) => {
-                draggable.innerHTML = "drag";
-                draggable.parentNode.removeChild(draggable);
-                // console.log(event);
-              });
-              draggable.addEventListener("dragend", (event) => {});
-              draggable.addEventListener("dragover", (event) => {
-                event.preventDefault();
-                // console.log(event);
-                draggable.innerHTML = "drag over";
-              });
-              draggable.addEventListener("drop", (event) => {
-                event.preventDefault();
-                console.log(event);
-                event.target.parentNode.appendChild(draggable);
-              });
-            });
-          }
+            }
           </script>
         </div>
       </div>
