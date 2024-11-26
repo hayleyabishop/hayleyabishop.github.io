@@ -4,6 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transpose</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: x-large;
+        background: rgb(104, 104, 104);
+        /* background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2231%22%20viewBox%3D%220%200%2022%2031%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cmask%20id%3D%22path-1-inside-1_15_2%22%20fill%3D%22white%22%3E%0A%3Cpath%20d%3D%22M0%200H22V31H0V0Z%22%2F%3E%0A%3C%2Fmask%3E%0A%3Cg%20filter%3D%22url%28%23filter0_i_15_2%29%22%3E%0A%3Cpath%20d%3D%22M0%200H22V31H0V0Z%22%20fill%3D%22%23EEEEEE%22%2F%3E%0A%3C%2Fg%3E%0A%3Cpath%20d%3D%22M0%203H22V-3H0V3ZM22%2030H0V32H22V30Z%22%20fill%3D%22url%28%23paint0_linear_15_2%29%22%20mask%3D%22url%28%23path-1-inside-1_15_2%29%22%2F%3E%0A%3Cdefs%3E%0A%3Cfilter%20id%3D%22filter0_i_15_2%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2222%22%20height%3D%2235%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%0A%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22%2F%3E%0A%3CfeColorMatrix%20in%3D%22SourceAlpha%22%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200%22%20result%3D%22hardAlpha%22%2F%3E%0A%3CfeOffset%20dy%3D%224%22%2F%3E%0A%3CfeGaussianBlur%20stdDeviation%3D%222%22%2F%3E%0A%3CfeComposite%20in2%3D%22hardAlpha%22%20operator%3D%22arithmetic%22%20k2%3D%22-1%22%20k3%3D%221%22%2F%3E%0A%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%201%200%200%200%200%201%200%200%200%200%201%200%200%200%201%200%22%2F%3E%0A%3CfeBlend%20mode%3D%22normal%22%20in2%3D%22shape%22%20result%3D%22effect1_innerShadow_15_2%22%2F%3E%0A%3C%2Ffilter%3E%0A%3ClinearGradient%20id%3D%22paint0_linear_15_2%22%20x1%3D%2211%22%20y1%3D%220%22%20x2%3D%2211%22%20y2%3D%2231%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20stop-color%3D%22%23E7E7E7%22%2F%3E%0A%3Cstop%20offset%3D%220.0459998%22%20stop-color%3D%22%23EBEBEB%22%2F%3E%0A%3Cstop%20offset%3D%220.101%22%20stop-color%3D%22white%22%2F%3E%0A%3Cstop%20offset%3D%220.851%22%20stop-color%3D%22%23F0F0F0%22%2F%3E%0A%3Cstop%20offset%3D%220.9659%22%20stop-color%3D%22%23D4D4D4%22%2F%3E%0A%3Cstop%20offset%3D%220.966%22%20stop-color%3D%22%23D1D1D1%22%2F%3E%0A%3Cstop%20offset%3D%220.9999%22%20stop-color%3D%22%237B7676%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23666666%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A"); */
+      }
+
+      .chordGroup {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        position: relative;
+        transform: scale(0.95);
+        transition: all 0.3s ease;
+        animation: fadeIn 0.3s forwards;
+      }
+
+      .chord {
+        position: relative;
+        opacity: 0.99;
+        background: #eee;
+        border-top: 8px solid #e2e2e2;
+        border-bottom: 3px solid #7b7676;
+        border-radius: 2px;
+        height: 31px;
+        overflow: visible;
+        min-width: 22px;
+        min-height: 31px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding: 5px 10px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        cursor: move;
+      }
+
+      /* Create a new inner container for the content */
+      .chord-content {
+        position: relative;
+        z-index: 2; /* Higher than pseudo-elements */
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      .chord.dragging {
+        opacity: 0.5; /* Fade when dragging */
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+      }
+
+      .chord span {
+        margin-right: 10px;
+      }
+
+      .chord button {
+        /* background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2231%22%20viewBox%3D%220%200%2022%2031%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cmask%20id%3D%22path-1-inside-1_15_2%22%20fill%3D%22white%22%3E%0A%3Cpath%20d%3D%22M0%200H22V31H0V0Z%22%2F%3E%0A%3C%2Fmask%3E%0A%3Cg%20filter%3D%22url%28%23filter0_i_15_2%29%22%3E%0A%3Cpath%20d%3D%22M0%200H22V31H0V0Z%22%20fill%3D%22%23EEEEEE%22%2F%3E%0A%3C%2Fg%3E%0A%3Cpath%20d%3D%22M0%203H22V-3H0V3ZM22%2030H0V32H22V30Z%22%20fill%3D%22url%28%23paint0_linear_15_2%29%22%20mask%3D%22url%28%23path-1-inside-1_15_2%29%22%2F%3E%0A%3Cdefs%3E%0A%3Cfilter%20id%3D%22filter0_i_15_2%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2222%22%20height%3D%2235%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%0A%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22%2F%3E%0A%3CfeColorMatrix%20in%3D%22SourceAlpha%22%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200%22%20result%3D%22hardAlpha%22%2F%3E%0A%3CfeOffset%20dy%3D%224%22%2F%3E%0A%3CfeGaussianBlur%20stdDeviation%3D%222%22%2F%3E%0A%3CfeComposite%20in2%3D%22hardAlpha%22%20operator%3D%22arithmetic%22%20k2%3D%22-1%22%20k3%3D%221%22%2F%3E%0A%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%201%200%200%200%200%201%200%200%200%200%201%200%200%200%201%200%22%2F%3E%0A%3CfeBlend%20mode%3D%22normal%22%20in2%3D%22shape%22%20result%3D%22effect1_innerShadow_15_2%22%2F%3E%0A%3C%2Ffilter%3E%0A%3ClinearGradient%20id%3D%22paint0_linear_15_2%22%20x1%3D%2211%22%20y1%3D%220%22%20x2%3D%2211%22%20y2%3D%2231%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20stop-color%3D%22%23E7E7E7%22%2F%3E%0A%3Cstop%20offset%3D%220.0459998%22%20stop-color%3D%22%23EBEBEB%22%2F%3E%0A%3Cstop%20offset%3D%220.101%22%20stop-color%3D%22white%22%2F%3E%0A%3Cstop%20offset%3D%220.851%22%20stop-color%3D%22%23F0F0F0%22%2F%3E%0A%3Cstop%20offset%3D%220.9659%22%20stop-color%3D%22%23D4D4D4%22%2F%3E%0A%3Cstop%20offset%3D%220.966%22%20stop-color%3D%22%23D1D1D1%22%2F%3E%0A%3Cstop%20offset%3D%220.9999%22%20stop-color%3D%22%237B7676%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23666666%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A"); */
+        background: cover;
+        background-repeat: no-repeat;
+        border: none;
+        color: black;
+        font-size: 16px;
+        cursor: move;
+      }
+
+      .chordInput {
+        margin-bottom: 20px;
+      }
+
+      .chordGroup.dragging {
+        /* background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 22 31" fill="none" xmlns="http://www.w3.org/2000/svg"> <mask id="path-1-inside-1_10_79" fill="white"> <path d="M0 1.5C0 0.671573 0.671573 0 1.5 0H20.5C21.3284 0 22 0.671573 22 1.5V29.5C22 30.3284 21.3284 31 20.5 31H1.5C0.671573 31 0 30.3284 0 29.5V1.5Z"/> </mask> <g filter="url(#filter0_i_10_79)"> <path d="M0 1.5C0 0.671573 0.671573 0 1.5 0H20.5C21.3284 0 22 0.671573 22 1.5V29.5C22 30.3284 21.3284 31 20.5 31H1.5C0.671573 31 0 30.3284 0 29.5V1.5Z" fill="#EEEEEE"/> </g> <path d="M0 1.5C0 -0.985281 2.01472 -3 4.5 -3H17.5C19.9853 -3 22 -0.985281 22 1.5V3C22 3 21.3284 3 20.5 3H1.5C0.671573 3 0 3 0 3V1.5ZM22 29.5C22 30.8807 20.8807 32 19.5 32H2.5C1.11929 32 0 30.8807 0 29.5C0 29.7761 0.671573 30 1.5 30H20.5C21.3284 30 22 29.7761 22 29.5ZM0 31V0V31ZM22 0V31V0Z" fill="url(#paint0_linear_10_79)" mask="url(#path-1-inside-1_10_79)"/> <defs> <filter id="filter0_i_10_79" x="0" y="0" width="22" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"> <feFlood flood-opacity="0" result="BackgroundImageFix"/> <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/> <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/> <feOffset dy="4"/> <feGaussianBlur stdDeviation="2"/> <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/> <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/> <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10_79"/> </filter> <linearGradient id="paint0_linear_10_79" x1="11" y1="0" x2="11" y2="31" gradientUnits="userSpaceOnUse"> <stop stop-color="#E7E7E7"/> <stop offset="0.0459998" stop-color="#EBEBEB"/> <stop offset="0.101" stop-color="white"/> <stop offset="0.851" stop-color="#F0F0F0"/> <stop offset="0.9659" stop-color="#D4D4D4"/> <stop offset="0.966" stop-color="#D1D1D1"/> <stop offset="0.9999" stop-color="#7B7676"/> <stop offset="1" stop-color="#666666"/> </linearGradient> </defs> </svg>'); */
+        cursor: grabbing;
+      }
+    </style>
   </head>
   <body
     style="
@@ -48,6 +146,15 @@
           </div>
 
           <script>
+            function appendChord(chord){
+            const newChord = document.createElement("div"),{
+              class: "chord",
+              role: "listitem",
+              aria-grabbed: "false",
+              draggable: "true"
+            }
+
+
             const chordGroups = document.querySelectorAll(".chordGroup");
             let draggables = document.querySelectorAll('[draggable="true"]');
             draggables.forEach((draggable) => {
