@@ -184,7 +184,7 @@
               chordGroup.setAttribute("role", "list");
             }
               let draggables = document.querySelectorAll('[draggable="true"]');
-              draggables.forEach(addDragListeners(draggable));
+              draggables.forEach(addDragListeners);
               // const chordGroups = document.querySelectorAll(".chordGroup");
               function addDragListeners(draggable){
                 draggable.addEventListener("dragstart", (event) => {
