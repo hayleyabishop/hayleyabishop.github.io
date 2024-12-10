@@ -179,12 +179,7 @@
         content.innerHTML = `<span>${chord}</span><button onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
         newChord.appendChild(content);
 
-        // Add drag event listeners
-        // newChord.addEventListener("dragstart", handleDragStart);
-        // newChord.addEventListener("dragover", handleDragOver);
-        // newChord.addEventListener("drop", handleDrop);
-        // newChord.addEventListener("dragend", handleDragEnd);
-
+        
         chordGroup.appendChild(newChord);
         chordGroup.setAttribute("role", "list");
       }
@@ -192,29 +187,15 @@
         draggables.forEach(addDragListeners);
         // const chordGroups = document.querySelectorAll(".chordGroup");
         function addDragListeners(draggable){
-          draggable.addEventListener("dragstart", (event) => {
-            // draggable.innerHTML = "drag start";
-            // draggable.parentNode.removeChild(draggable);
-            // console.log(event);
-          });
-          draggable.addEventListener("drag", (event) => {
-            // draggable.innerHTML = "drag";
-            //draggable.parentNode.removeChild(draggable);
-            // console.log(event);
-          });
-          draggable.addEventListener("dragend", (event) => {});
-          draggable.addEventListener("dragover", (event) => {
-            event.preventDefault();
-            // console.log(event);
-            // draggable.innerHTML = "drag over";
-          });
-          draggable.addEventListener("drop", (event) => {
-            event.preventDefault();
-            console.log(event);
-            event.target.parentNode.appendChild(draggable);
-          });
+          // Add drag event listeners
+        draggable.addEventListener("dragstart", handleDragStart);
+        draggable.addEventListener("dragover", handleDragOver);
+        draggable.addEventListener("drop", handleDrop);
+        draggable.addEventListener("dragend", handleDragEnd);
+
+          
         }
-        function removeTag(button) {
+        function removeChord(button) {
   const newChord = button.closest(".chord"); //Find the parent chord. Better than repeated .parentElement.
   newChord.setAttribute("aria-hidden", "true"); // ARIA hidden for accessibility during removal
   newChord.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
@@ -226,9 +207,11 @@
 }
 
 function handleDragStart(e) {
-  draggedTag = this;
+  draggedChord = this;
+  console.log("drag start handler")
   this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
   setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
+  
 }
 
 
@@ -237,13 +220,13 @@ function handleDragOver(e) {
   const afterElement = getDragAfterElement(chordGroup, e.clientX);
   if (
     afterElement == null &&
-    chordGroup.lastElementChild !== draggedTag
+    chordGroup.lastElementChild !== draggedChord
   ) {
-    chordGroup.appendChild(draggedTag);
+    chordGroup.appendChild(draggedChord);
   } else {
     // Only reorder if the element is actually moving
-    if (draggedTag !== afterElement.previousSibling) {
-      chordGroup.insertBefore(draggedTag, afterElement);
+    if (draggedChord !== afterElement.previousSibling) {
+      chordGroup.insertBefore(draggedChord, afterElement);
     }
   }
 }
@@ -255,12 +238,12 @@ function handleDrop() {
 function handleDragEnd() {
   this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
   this.classList.remove("dragging");
-  draggedTag = null;
+  draggedChord = null;
 }
 
 function getDragAfterElement(container, x) {
   const draggableElements = [
-    ...container.querySelectorAll(".tag:not(.dragging)"),
+    ...container.querySelectorAll(".chord:not(.dragging)"),
   ];
   return draggableElements.reduce(
     (closest, child) => {
