@@ -14,6 +14,7 @@
 
       .chordGroup {
         display: flex;
+        width: 100%;
         gap: 10px;
         flex-wrap: wrap;
         position: relative;
@@ -144,75 +145,136 @@
             <div id="chord 2" class="chord" draggable="true">Chord 2</div>
             <div id="chord 3" class="chord" draggable="true">Chord 3</div>
           </div>
-
-          <script>
-            const chordInput = document.getElementById("chordInput1");
-            const chordGroup = document.getElementById("chordGroup1");
-
-            //When user selects a chord from the dropdown list, spawn a new chord!
-
-            chordInput.addEventListener("change", function () {
-              const selectedValue = this.value;
-              if (selectedValue !== "") {
-                appendChord(selectedValue);
-                this.value = "selected";
-              }
-            });
-
-
-            function appendChord(chord) {
-              const newChord = document.createElement("div")
-              newChord.setAttribute("role", "listitem");
-              newChord.classList.add("chord")
-              newChord.setAttribute("aria-grabbed", "false");
-              newChord.setAttribute("draggable", true);
-              addDragListeners(newChord)
-
-              // Create inner container for content
-              const content = document.createElement("div");
-              // content.classList.add("chordGroup");
-              content.innerHTML = `<span>${chord}</span><button onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
-              newChord.appendChild(content);
-
-              // Add drag event listeners
-              // newChord.addEventListener("dragstart", handleDragStart);
-              // newChord.addEventListener("dragover", handleDragOver);
-              // newChord.addEventListener("drop", handleDrop);
-              // newChord.addEventListener("dragend", handleDragEnd);
-
-              chordGroup.appendChild(newChord);
-              chordGroup.setAttribute("role", "list");
-            }
-              let draggables = document.querySelectorAll('[draggable="true"]');
-              draggables.forEach(addDragListeners);
-              // const chordGroups = document.querySelectorAll(".chordGroup");
-              function addDragListeners(draggable){
-                draggable.addEventListener("dragstart", (event) => {
-                  draggable.innerHTML = "drag start";
-                  // draggable.parentNode.removeChild(draggable);
-                  // console.log(event);
-                });
-                draggable.addEventListener("drag", (event) => {
-                  draggable.innerHTML = "drag";
-                  draggable.parentNode.removeChild(draggable);
-                  // console.log(event);
-                });
-                draggable.addEventListener("dragend", (event) => {});
-                draggable.addEventListener("dragover", (event) => {
-                  event.preventDefault();
-                  // console.log(event);
-                  draggable.innerHTML = "drag over";
-                });
-                draggable.addEventListener("drop", (event) => {
-                  event.preventDefault();
-                  console.log(event);
-                  event.target.parentNode.appendChild(draggable);
-                });
-              }
-            
-          </script>
+        </div>
+          
         </div>
       </div>
     </div>
+    <script>
+      const chordInput = document.getElementById("chordInput1");
+      const chordGroup = document.getElementById("chordGroup1");
+
+      //When user selects a chord from the dropdown list, spawn a new chord!
+
+      chordInput.addEventListener("change", function () {
+        const selectedValue = this.value;
+        if (selectedValue !== "") {
+          appendChord(selectedValue);
+          this.value = "selected";
+        }
+      });
+
+
+      function appendChord(chord) {
+        const newChord = document.createElement("div")
+        newChord.setAttribute("role", "listitem");
+        newChord.classList.add("chord")
+        newChord.setAttribute("aria-grabbed", "false");
+        newChord.setAttribute("draggable", true);
+        addDragListeners(newChord)
+
+        // Create inner container for content
+        const content = document.createElement("div");
+        // content.classList.add("chordGroup");
+        content.innerHTML = `<span>${chord}</span><button onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
+        newChord.appendChild(content);
+
+        // Add drag event listeners
+        // newChord.addEventListener("dragstart", handleDragStart);
+        // newChord.addEventListener("dragover", handleDragOver);
+        // newChord.addEventListener("drop", handleDrop);
+        // newChord.addEventListener("dragend", handleDragEnd);
+
+        chordGroup.appendChild(newChord);
+        chordGroup.setAttribute("role", "list");
+      }
+        let draggables = document.querySelectorAll('[draggable="true"]');
+        draggables.forEach(addDragListeners);
+        // const chordGroups = document.querySelectorAll(".chordGroup");
+        function addDragListeners(draggable){
+          draggable.addEventListener("dragstart", (event) => {
+            // draggable.innerHTML = "drag start";
+            // draggable.parentNode.removeChild(draggable);
+            // console.log(event);
+          });
+          draggable.addEventListener("drag", (event) => {
+            // draggable.innerHTML = "drag";
+            //draggable.parentNode.removeChild(draggable);
+            // console.log(event);
+          });
+          draggable.addEventListener("dragend", (event) => {});
+          draggable.addEventListener("dragover", (event) => {
+            event.preventDefault();
+            // console.log(event);
+            // draggable.innerHTML = "drag over";
+          });
+          draggable.addEventListener("drop", (event) => {
+            event.preventDefault();
+            console.log(event);
+            event.target.parentNode.appendChild(draggable);
+          });
+        }
+        function removeTag(button) {
+  const newChord = button.closest(".chord"); //Find the parent chord. Better than repeated .parentElement.
+  newChord.setAttribute("aria-hidden", "true"); // ARIA hidden for accessibility during removal
+  newChord.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
+
+  // Wait for the animation to complete before removing the element
+  newChord.addEventListener("animationend", () => {
+    chordGroup.removeChild(newChord);
+  });
+}
+
+function handleDragStart(e) {
+  draggedTag = this;
+  this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
+  setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
+}
+
+
+function handleDragOver(e) {
+  e.preventDefault(); // Prevent default to allow drop
+  const afterElement = getDragAfterElement(chordGroup, e.clientX);
+  if (
+    afterElement == null &&
+    chordGroup.lastElementChild !== draggedTag
+  ) {
+    chordGroup.appendChild(draggedTag);
+  } else {
+    // Only reorder if the element is actually moving
+    if (draggedTag !== afterElement.previousSibling) {
+      chordGroup.insertBefore(draggedTag, afterElement);
+    }
+  }
+}
+
+function handleDrop() {
+  this.classList.remove("dragging");
+}
+
+function handleDragEnd() {
+  this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
+  this.classList.remove("dragging");
+  draggedTag = null;
+}
+
+function getDragAfterElement(container, x) {
+  const draggableElements = [
+    ...container.querySelectorAll(".tag:not(.dragging)"),
+  ];
+  return draggableElements.reduce(
+    (closest, child) => {
+      const box = child.getBoundingClientRect();
+      const offset = x - box.left - box.width / 2;
+      if (offset < 0 && offset > closest.offset) {
+        return { offset: offset, element: child };
+      } else {
+        return closest;
+      }
+    },
+    { offset: Number.NEGATIVE_INFINITY }
+  ).element;
+}
+    </script>
   </body>
 </html>
