@@ -164,14 +164,13 @@
         }
       });
 
-
       function appendChord(chord) {
-        const newChord = document.createElement("div")
+        const newChord = document.createElement("div");
         newChord.setAttribute("role", "listitem");
-        newChord.classList.add("chord")
+        newChord.classList.add("chord");
         newChord.setAttribute("aria-grabbed", "false");
         newChord.setAttribute("draggable", true);
-        addDragListeners(newChord)
+        addDragListeners(newChord);
 
         // Create inner container for content
         const content = document.createElement("div");
@@ -179,85 +178,78 @@
         content.innerHTML = `<span>${chord}</span><button onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
         newChord.appendChild(content);
 
-        
         chordGroup.appendChild(newChord);
         chordGroup.setAttribute("role", "list");
       }
-        let draggables = document.querySelectorAll('[draggable="true"]');
-        draggables.forEach(addDragListeners);
-        // const chordGroups = document.querySelectorAll(".chordGroup");
-        function addDragListeners(draggable){
-          // Add drag event listeners
+      let draggables = document.querySelectorAll('[draggable="true"]');
+      draggables.forEach(addDragListeners);
+      // const chordGroups = document.querySelectorAll(".chordGroup");
+      function addDragListeners(draggable) {
+        // Add drag event listeners
         draggable.addEventListener("dragstart", handleDragStart);
         draggable.addEventListener("dragover", handleDragOver);
         draggable.addEventListener("drop", handleDrop);
         draggable.addEventListener("dragend", handleDragEnd);
-
-          
-        }
-        function removeChord(button) {
-  const newChord = button.closest(".chord"); //Find the parent chord. Better than repeated .parentElement.
-  newChord.setAttribute("aria-hidden", "true"); // ARIA hidden for accessibility during removal
-  newChord.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
-
-  // Wait for the animation to complete before removing the element
-  newChord.addEventListener("animationend", () => {
-    chordGroup.removeChild(newChord);
-  });
-}
-
-function handleDragStart(e) {
-  draggedChord = this;
-  console.log("drag start handler")
-  this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
-  setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
-  
-}
-
-
-function handleDragOver(e) {
-  e.preventDefault(); // Prevent default to allow drop
-  const afterElement = getDragAfterElement(chordGroup, e.clientX);
-  if (
-    afterElement == null &&
-    chordGroup.lastElementChild !== draggedChord
-  ) {
-    chordGroup.appendChild(draggedChord);
-  } else {
-    // Only reorder if the element is actually moving
-    if (draggedChord !== afterElement.previousSibling) {
-      chordGroup.insertBefore(draggedChord, afterElement);
-    }
-  }
-}
-
-function handleDrop() {
-  this.classList.remove("dragging");
-}
-
-function handleDragEnd() {
-  this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
-  this.classList.remove("dragging");
-  draggedChord = null;
-}
-
-function getDragAfterElement(container, x) {
-  const draggableElements = [
-    ...container.querySelectorAll(".chord:not(.dragging)"),
-  ];
-  return draggableElements.reduce(
-    (closest, child) => {
-      const box = child.getBoundingClientRect();
-      const offset = x - box.left - box.width / 2;
-      if (offset < 0 && offset > closest.offset) {
-        return { offset: offset, element: child };
-      } else {
-        return closest;
       }
-    },
-    { offset: Number.NEGATIVE_INFINITY }
-  ).element;
-}
+      function removeChord(button) {
+        const newChord = button.closest(".chord"); //Find the parent chord. Better than repeated .parentElement.
+        newChord.setAttribute("aria-hidden", "true"); // ARIA hidden for accessibility during removal
+        newChord.style.animation = "fadeOut 0.3s forwards"; // Fade out animation
+
+        // Wait for the animation to complete before removing the element
+        newChord.addEventListener("animationend", () => {
+          chordGroup.removeChild(newChord);
+        });
+      }
+
+      function handleDragStart(e) {
+        draggedChord = this;
+        console.log("drag start handler");
+        this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
+        setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
+      }
+
+      function handleDragOver(e) {
+        e.preventDefault(); // Prevent default to allow drop
+        const afterElement = getDragAfterElement(chordGroup, e.clientX);
+
+        if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
+          chordGroup.appendChild(draggedChord);
+        } else {
+          // Only reorder if the element is actually moving
+          if (draggedChord !== afterElement.previousSibling) {
+            chordGroup.insertBefore(draggedChord, afterElement);
+          }
+        }
+      }
+
+      function handleDrop() {
+        this.classList.remove("dragging");
+      }
+
+      function handleDragEnd() {
+        this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
+        this.classList.remove("dragging");
+        draggedChord = null;
+      }
+
+      function getDragAfterElement(container, x) {
+        const draggableElements = [
+          ...container.querySelectorAll(".chord:not(.dragging)"),
+        ];
+        return draggableElements.reduce(
+          (closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = x - box.left - box.width / 2;
+            if (offset < 0 && offset > closest.offset) {
+              return { offset: offset, element: child };
+            } else {
+              return closest;
+            }
+          },
+          { offset: Number.NEGATIVE_INFINITY }
+        ).element;
+      }
     </script>
   </body>
 </html>
