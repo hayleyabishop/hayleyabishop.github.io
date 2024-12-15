@@ -19,11 +19,14 @@
         flex-wrap: wrap;
         position: relative;
         transform: scale(0.95);
-        transition: all 0.3s ease;
+        transition: all .3s ease;
         animation: fadeIn 0.3s forwards;
       }
 
       .chord {
+        transform: scale(0.95);
+        transition: all 2s ease-in-out;
+        animation: fadeIn 0.3s forwards;
         position: relative;
         opacity: 0.99;
         background: #eee;
@@ -79,6 +82,7 @@
           transform: scale(0.95);
         }
       }
+
 
       .chord span {
         margin-right: 10px;
@@ -151,6 +155,7 @@
       </div>
     </div>
     <script>
+      //Define the Input dropdown and the draggables container as js variables for manipulation. 
       const chordInput = document.getElementById("chordInput1");
       const chordGroup = document.getElementById("chordGroup1");
 
@@ -212,15 +217,21 @@
       function handleDragOver(e) {
         e.preventDefault(); // Prevent default to allow drop
         const afterElement = getDragAfterElement(chordGroup, e.clientX);
-
-        if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
+        console.log(afterElement, chordGroup.lastElementChild)
+        if (afterElement == null && chordGroup.lastElementChild == draggedChord) {
+          //Do nothing. We are already at the end.
+          console.log("at the end")
+        } else if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
           chordGroup.appendChild(draggedChord);
-        } else {
+          draggedChord.style.animation = ""
+          console.log("moved to end")
+        } else if(afterElement !== null) {
           // Only reorder if the element is actually moving
-          if (draggedChord !== afterElement.previousSibling) {
+          console.log(afterElement==null)
+          if (draggedChord !== afterElement.previousElementSibling) {
             chordGroup.insertBefore(draggedChord, afterElement);
           }
-        }
+        } else {}
       }
 
       function handleDrop() {
