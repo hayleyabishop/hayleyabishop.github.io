@@ -39,8 +39,8 @@
         background-color: rgba(183, 183, 183, 0.5); 
         background-blend-mode: color-burn;
         border-left-style:none;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
         border-top-width: 2px;
         border-left-width: 10px;
         z-index:0;
@@ -50,12 +50,17 @@
       }
       .panel::before{
         position:absolute;
-        background: no-repeat url("musical bracket brace custom-cropped.svg");
-        background-position: 0%;
-        background-size: 6% 100%;
+        background: no-repeat black;
+        mask-image: url("musical bracket brace custom-cropped.svg");
+        mask-repeat: no-repeat;
+        mask-position: 0% -4px;
+        mask-size: 8% 104%;
+        background-position: 0% -2%;
+        /* background-size:; */
         top: 0; right: 0; bottom: 0; left: -1%;
         content:'';
         min-height: 30%;
+        mix-blend-mode:overlay;
         /* max-width: 6%; */
         
       }
