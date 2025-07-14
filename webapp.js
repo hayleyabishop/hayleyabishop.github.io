@@ -1,13 +1,13 @@
 
 //Event listeners
 
-document.getElementById("chordInput1").addEventListener("change", handle)
+// document.getElementById("chordInput1").addEventListener("change", handle)
 
 
 
 
 
-inputChords = ["C", "F#", "G"];
+inputChords = ["C", "F# / Gb", "G"];
 console.log("Input Chords: \n" + inputChords);
 
 
@@ -27,7 +27,7 @@ for (let i in autoharpChords){
     autoharpIntervals.push(chords.indexOf(autoharpChords[i]));
 
 }
-console.log("\nAutoharp Chord Intervals: \n" + autoharpIntervals)
+console.log("\n Available Autoharp Chords Index: \n" + autoharpIntervals)
 
 for (let i in inputChords){
     //
