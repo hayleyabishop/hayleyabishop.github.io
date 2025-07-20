@@ -35,31 +35,25 @@
         margin-top: 10%;
         margin-left: 5%;
         padding-top: 5%;
-        padding-left: 6%;
-        padding-bottom: 5%;
-        padding-right: 5%;
-        background-color: #fdf6e3; /* Light parchment */
-        /* Subtle horizontal lines for sheet music staves */
-        background-image:
-          repeating-linear-gradient(
-            to bottom,
-            rgba(0,0,0,0.04) 0px,
-            rgba(0,0,0,0.04) 2px,
-            transparent 2px,
-            transparent 32px
-          );
-        border: 2px solid #3e2c17; /* Thin, dark brown border */
-        border-radius: 30px;
-        box-shadow: 0 4px 16px rgba(60, 40, 20, 0.12); /* Subtle drop shadow */
-        background-blend-mode: normal;
-        z-index: 0;
-        display: flexbox;
-        position: relative;
-        min-width: 100%;
+        padding-left:6%;
+        padding-bottom:5%;
+        padding-right:5%;
+        background-color: rgb(253, 253, 253);
+        border-left-style:none;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-width: 2px;
+        border-left-width: 10px;
+        z-index:0;
+        display:flexbox;
+        position:relative;
+        min-width:100%;
       }
+
+      /****** Musical Bracket Icon **** */
       .panel::before{
         position:absolute;
-        background: no-repeat black;
+        background: no-repeat rgb(0, 0, 0);
         mask-image: url("musical bracket brace custom-cropped.svg");
         mask-repeat: no-repeat;
         mask-position: 0% -4px;
@@ -69,7 +63,7 @@
         top: 0; right: 0; bottom: 0; left: -1%;
         content:'';
         min-height: 30%;
-        mix-blend-mode:overlay;
+        mix-blend-mode: normal;
         /* max-width: 6%; */
         pointer-events: none;
         animation:none;
