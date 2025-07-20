@@ -20,7 +20,7 @@ intervals = [];
 //Find the input chords' relationship to one another. 
 //Transpose that relationship by finding other chords in the autoharpChords list 
 //that have the same relationship. 
-//TODO: find the relationships between the autoharp chords. 
+
 
 for (let i in autoharpChords){
  
@@ -29,13 +29,16 @@ for (let i in autoharpChords){
 }
 console.log("\n Available Autoharp Chords Index: \n" + autoharpIntervals)
 
+//Available Autoharp Chords Index: 0,1,2,3,5,6,7,8,10,11
+
 for (let i in inputChords){
     //
     intervals.push(chords.indexOf(inputChords[i]));
     // console.log(intervals)
 }
 
-intervals = intervals.map(element => element - intervals[0]);
+//Subtract smallest chord number from all elements, to find lowest common denominator of intervals.
+intervals = intervals.map(element => element - intervals[0]); 
 
 matches = [];
 
@@ -43,17 +46,23 @@ console.log("\nInput Chord Intervals: \n" + intervals);
 
 console.log()
 
-for(i=0;Math.max(...intervals)<12;i++){
-    // console.log(intervals)
-    foundIntervals = intervals.filter((interval) => autoharpIntervals.includes(interval));
-    // console.log(foundIntervals)
+for(i=0;Math.max(...intervals)<12;i++){ //Try looking for all 3 items in the autoharp set; try again, going up by a half note, until the largest interval is 12.
+
+    //Use .filter() to find and save a match if the interval exists in autoharpintervals.
+    foundIntervals = intervals.filter((e) => autoharpIntervals.includes(e));
+
+    //If all intervals are present, save this set as a match.
     if (foundIntervals.length == intervals.length){
         matches.push(foundIntervals);
     }
     intervals=intervals.map(element => element+1);
 }
 console.log("\nFound the following chord intervals: \n")
-    console.log(matches)
+
+//Print each chord grouping, no matter how many matches there are.
+for (const match of matches) {
+    console.log(match);
+}
 
 // foundIntervals = intervals.filter((interval) => autoharpIntervals.includes(interval));
 
@@ -62,7 +71,13 @@ console.log("\nFound the following chord intervals: \n")
 
 console.log("\n\nI found the following matches: \n")
 
-console.log(matches.map(match => match.map(index=>chords[index])))
+//Convert the index numbers in matches to the actual chord names.
+chordMatches = matches.map(match => match.map(index=>chords[index]))
 
+for (const match of chordMatches) {
+    console.log(match);
+}
+
+console.log("Complete.")
 // for(i in chords)
 //     console.log(`<option value="${chords[i]}">${chords[i]}</option>`)
