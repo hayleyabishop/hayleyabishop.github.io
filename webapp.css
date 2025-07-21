@@ -154,8 +154,8 @@ display: none;
     height: 100%;
     background-color: transparent;
     /* background-color: rgba(255, 255, 255, 0.5); */
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -187,22 +187,6 @@ display: none;
     padding-left: 5%;
     min-height: 40px;
     width: 100%;
-    /* background-image:
-        linear-gradient(to bottom, black 2px, transparent 2px, transparent 8px),
-        linear-gradient(to bottom, black 2px, transparent 2px, transparent 16px),
-        linear-gradient(to bottom, black 2px, transparent 2px, transparent 24px),
-        linear-gradient(to bottom, black 2px, transparent 2px, transparent 32px),
-        linear-gradient(to bottom, black 2px, transparent 2px, transparent 40px),
-        linear-gradient(to right, black 2px, transparent 2px);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position:
-        left 0px,
-        left 8px,
-        left 16px,
-        left 24px,
-        left 32px,
-        left top; */
 }
 
 /* Musical Bracket Icon */
