@@ -1,187 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transpose</title>
-         <link rel="stylesheet" href="webapp.css">
 
-  </head>
-  <body>
-<!-- <div style="border:white 2px;background-color: aqua;width:fit-content;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transpose</title>
+  <link rel="stylesheet" href="webapp.css">
+
+</head>
+
+<body>
+  <!-- <div style="border:white 2px;background-color: aqua;width:fit-content;">
   <svg>
     <g transform="translate(.000000,.000000) scale(.300000)" fill="#FFFFFF" stroke="none">
       <path d="M 217.86 249.42 C 220.845 251.22 227.339 258.76 234.163 268.641 C 240.987 278.521 247.801 290.823 250.747 302.302 C 255.142 319.414 251.46 345.297 247.498 371.257 C 243.538 397.22 239.964 423.145 242.575 440.676 C 247.172 471.539 268.805 493.446 268.768 493.418 C 268.732 493.39 267.87 494.261 267.34 494.542 C 266.752 494.855 235.865 468.781 229.3 431.996 C 224.775 413.656 228.926 386.248 233.245 359.388 C 237.563 332.531 242.052 306.225 238.2 290.092 C 235.979 280.778 229.979 270.568 224.536 262.682 C 219.093 254.798 214.391 249.984 214.36 249.551 C 214.331 249.118 219.379 244.239 224.822 236.356 C 230.267 228.469 236.265 218.259 238.487 208.945 C 242.338 192.812 237.85 166.506 233.532 139.649 C 229.212 112.79 225.062 85.382 229.587 67.042 C 236.152 30.256 267.038 4.182 267.627 4.495 C 268.156 4.776 269.02 5.649 269.055 5.619 C 269.09 5.591 247.458 27.498 242.863 58.361 C 240.252 75.892 243.825 101.817 247.786 127.779 C 251.746 153.741 255.428 179.625 251.035 196.734 C 248.088 208.214 241.273 220.517 234.449 230.397 C 227.624 240.278 220.845 247.618 217.86 249.42 Z"/>
     </g>
   </svg>
 </div> -->
-<!-- <div  class="brace"> -->
-      <div class="panel">
-        Transposing chords for my autoharp.
-        <div>
-          <form action="">
-            <select name="" id="chordInput1" class="chordInput">
-              <option value=""></option>
-              <option value="A">A</option>
-              <option value="A# / Bb">A# / Bb</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="C# / Db">C# / Db</option>
-              <option value="D">D</option>
-              <option value="D# / Eb">D# / Eb</option>
-              <option value="E">E</option>
-              <option value="F">F</option>
-              <option value="F# / Gb">F# / Gb</option>
-              <option value="G">G</option>
-              <option value="G# / Ab">G# / Ab</option>
-            </select>
-          </form>
-          <div class="bracketed-section">
-            <div class="inputs">
-              <!-- Simple staff: 5 horizontal lines + left vertical line -->
+  <!-- <div  class="brace"> -->
+  <div class="panel">
+    Transposing chords for my autoharp.
+    <div>
+      <form action="">
+        <select name="" id="chordInput1" class="chordInput">
+          <option value=""></option>
+          <option value="A">A</option>
+          <option value="A# / Bb">A# / Bb</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="C# / Db">C# / Db</option>
+          <option value="D">D</option>
+          <option value="D# / Eb">D# / Eb</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="F# / Gb">F# / Gb</option>
+          <option value="G">G</option>
+          <option value="G# / Ab">G# / Ab</option>
+        </select>
+      </form>
+      <div class="bracketed-section">
+        Input Chords:
+        <div class="barline-section">
+          <!-- Simple staff: 5 horizontal lines + left vertical line -->          
+          <div class="chordGroup" id="chordGroupInputs"></div>
 
-              Input Chords:
-              <div class="chordGroup" id="chordGroupInputs"></div>
-            </div>
-            <div class="results">
-              Resulting Chords:
-              <div class="chordGroup" id="chordGroupResults"></div>
-            </div>
-          </div>
-      
+          <div class="results">
+            Resulting Chords:
+            <div class="chordGroup" id="chordGroupResults"></div>
           </div>
         </div>
       </div>
-    <script src="webapp.js"></script>
-<script>
-  //Define the Input dropdown and the draggables container as js variables for manipulation. 
-  const chordInput = document.getElementById("chordInput1");
-  const chordGroup = document.getElementById("chordGroupInputs");
-  const chordGroupResults = document.getElementById("chordGroupResults");
 
-  //When user selects a chord from the dropdown list, spawn a new chord!
-  chordInput.addEventListener("change", function () {
-    const selectedValue = this.value;
-    if (selectedValue !== "") {
-      appendChord(selectedValue);
-      this.value = "selected";
+    </div>
+  </div>
+  </div>
+  <script src="webapp.js"></script>
+  <script>
+    //Define the Input dropdown and the draggables container as js variables for manipulation. 
+    const chordInput = document.getElementById("chordInput1");
+    const chordGroup = document.getElementById("chordGroupInputs");
+    const chordGroupResults = document.getElementById("chordGroupResults");
+
+    //When user selects a chord from the dropdown list, spawn a new chord!
+    chordInput.addEventListener("change", function () {
+      const selectedValue = this.value;
+      if (selectedValue !== "") {
+        appendChord(selectedValue);
+        this.value = "selected";
+        onInputChordsChanged();
+      }
+    });
+
+    function appendChord(chord) {
+      const newChord = document.createElement("div");
+      newChord.setAttribute("role", "listitem");
+      newChord.classList.add("chord");
+      newChord.setAttribute("aria-grabbed", "false");
+      newChord.setAttribute("draggable", true);
+      addDragListeners(newChord);
+
+      // Create inner container for content
+      const content = document.createElement("div");
+      content.innerHTML = `<span>${chord}</span><button class="xbutton" onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
+      newChord.appendChild(content);
+
+      chordGroup.appendChild(newChord);
+      chordGroup.setAttribute("role", "list");
       onInputChordsChanged();
     }
-  });
 
-  function appendChord(chord) {
-    const newChord = document.createElement("div");
-    newChord.setAttribute("role", "listitem");
-    newChord.classList.add("chord");
-    newChord.setAttribute("aria-grabbed", "false");
-    newChord.setAttribute("draggable", true);
-    addDragListeners(newChord);
+    //When chord created, make it draggable.
+    let draggables = document.querySelectorAll('[draggable="true"]');
+    draggables.forEach(addDragListeners);
 
-    // Create inner container for content
-    const content = document.createElement("div");
-    content.innerHTML = `<span>${chord}</span><button class="xbutton" onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
-    newChord.appendChild(content);
+    function addDragListeners(draggable) {
+      draggable.addEventListener("dragstart", handleDragStart);
+      draggable.addEventListener("dragover", handleDragOver);
+      draggable.addEventListener("drop", handleDrop);
+      draggable.addEventListener("dragend", handleDragEnd);
+    }
 
-    chordGroup.appendChild(newChord);
-    chordGroup.setAttribute("role", "list");
-    onInputChordsChanged();
-  }
+    function removeChord(button) {
+      const newChord = button.closest(".chord");
+      newChord.setAttribute("aria-hidden", "true");
+      newChord.style.animation = "fadeOut 0.3s forwards";
+      newChord.addEventListener("animationend", () => {
+        chordGroup.removeChild(newChord);
+        onInputChordsChanged();
+      });
+    }
 
-  //When chord created, make it draggable.
-  let draggables = document.querySelectorAll('[draggable="true"]');
-  draggables.forEach(addDragListeners);
+    function handleDragStart(e) {
+      draggedChord = this;
+      console.log("drag start handler");
+      this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
+      setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
+    }
 
-  function addDragListeners(draggable) {
-    draggable.addEventListener("dragstart", handleDragStart);
-    draggable.addEventListener("dragover", handleDragOver);
-    draggable.addEventListener("drop", handleDrop);
-    draggable.addEventListener("dragend", handleDragEnd);
-  }
-
-  function removeChord(button) {
-    const newChord = button.closest(".chord");
-    newChord.setAttribute("aria-hidden", "true");
-    newChord.style.animation = "fadeOut 0.3s forwards";
-    newChord.addEventListener("animationend", () => {
-      chordGroup.removeChild(newChord);
-      onInputChordsChanged();
-    });
-  }
-
-  function handleDragStart(e) {
-    draggedChord = this;
-    console.log("drag start handler");
-    this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
-    setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
-  }
-
-  function handleDragOver(e) {
-    e.preventDefault();
-    const afterElement = getDragAfterElement(chordGroup, e.clientX);
-    if (afterElement == null && chordGroup.lastElementChild == draggedChord) {
-      //Do nothing. We are already at the end.
-    } else if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
-      chordGroup.appendChild(draggedChord);
-    } else if(afterElement !== null) {
-      if (draggedChord !== afterElement.previousElementSibling) {
-        chordGroup.insertBefore(draggedChord, afterElement);
+    function handleDragOver(e) {
+      e.preventDefault();
+      const afterElement = getDragAfterElement(chordGroup, e.clientX);
+      if (afterElement == null && chordGroup.lastElementChild == draggedChord) {
+        //Do nothing. We are already at the end.
+      } else if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
+        chordGroup.appendChild(draggedChord);
+      } else if (afterElement !== null) {
+        if (draggedChord !== afterElement.previousElementSibling) {
+          chordGroup.insertBefore(draggedChord, afterElement);
+        }
       }
     }
-  }
 
-  function handleDrop() {
-    this.classList.remove("dragging");
-  }
-
-  function handleDragEnd() {
-    this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
-    this.classList.remove("dragging");
-    draggedChord = null;
-    onInputChordsChanged(); // Recalculate resulting chords after drag
-  }
-
-  // Insert the chord before the next element. 
-  // Calculate which element is next based on drop location.
-  function getDragAfterElement(container, x) {
-    const draggableElements = [
-      ...container.querySelectorAll(".chord:not(.dragging)"),
-    ];
-    return draggableElements.reduce(
-      (closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = x - box.left - box.width / 2;
-        if (offset < 0 && offset > closest.offset) {
-          return { offset: offset, element: child };
-        } else {
-          return closest;
-        }
-      },
-      { offset: Number.NEGATIVE_INFINITY }
-    ).element;
-  }
-
-  function getInputChords() {
-    // Get all chord names from the input chordGroup -- the text within the Span.
-    return Array.from(chordGroup.querySelectorAll('.chord span')).map(span => span.textContent);
-  }
-
-  function onInputChordsChanged() {
-    const inputChords = getInputChords();
-    if (inputChords.length < 2) {
-      chordGroupResults.innerHTML = '';
-      return;
+    function handleDrop() {
+      this.classList.remove("dragging");
     }
-    // Call calculation logic from webapp.js
-    const resultingChords = calculateResultingChords(inputChords);
-    chordGroupResults.innerHTML = '';
-    resultingChords.forEach((chordSet, i) => {
-      const div = document.createElement('div');
-      div.className = 'chord';
-      // Do NOT set draggable attribute for resulting chords
-      div.innerHTML = `<div class="chord-content">${chordSet.join(', ')}</div>`;
-      chordGroupResults.appendChild(div);
-    });
-  }
-</script>
-  </body>
+
+    function handleDragEnd() {
+      this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
+      this.classList.remove("dragging");
+      draggedChord = null;
+      onInputChordsChanged(); // Recalculate resulting chords after drag
+    }
+
+    // Insert the chord before the next element. 
+    // Calculate which element is next based on drop location.
+    function getDragAfterElement(container, x) {
+      const draggableElements = [
+        ...container.querySelectorAll(".chord:not(.dragging)"),
+      ];
+      return draggableElements.reduce(
+        (closest, child) => {
+          const box = child.getBoundingClientRect();
+          const offset = x - box.left - box.width / 2;
+          if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child };
+          } else {
+            return closest;
+          }
+        },
+        { offset: Number.NEGATIVE_INFINITY }
+      ).element;
+    }
+
+    function getInputChords() {
+      // Get all chord names from the input chordGroup -- the text within the Span.
+      return Array.from(chordGroup.querySelectorAll('.chord span')).map(span => span.textContent);
+    }
+
+    function onInputChordsChanged() {
+      const inputChords = getInputChords();
+      if (inputChords.length < 2) {
+        chordGroupResults.innerHTML = '';
+        return;
+      }
+      // Call calculation logic from webapp.js
+      const resultingChords = calculateResultingChords(inputChords);
+      chordGroupResults.innerHTML = '';
+      resultingChords.forEach((chordSet, i) => {
+        const div = document.createElement('div');
+        div.className = 'chord';
+        // Do NOT set draggable attribute for resulting chords
+        div.innerHTML = `<div class="chord-content">${chordSet.join(', ')}</div>`;
+        chordGroupResults.appendChild(div);
+      });
+    }
+  </script>
+</body>
+
 </html>
