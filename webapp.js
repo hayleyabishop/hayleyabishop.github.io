@@ -3,6 +3,8 @@
 function calculateResultingChords(inputChords) {
   const chords = ["A","A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab"];
   const autoharpChords = ["A", "A# / Bb", "B", "C", "D", "D# / Eb", "E", "F", "G", "G# / Ab"];
+  const autoharpChords21 = ["A","A7","Ab","Am","B7","Bb","Bb7","C","C7","Cm","D","D7","Dm","E7","Eb","Em","F","F7","G","G7","Gm"];
+  
 let autoharpIntervals = [];
 
 let intervals = [];
