@@ -6,11 +6,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border:#aaa dashed 1px;
 }
 
 body::before{
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,6 +33,7 @@ body {
     background-color: black;
     font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
     font-size: x-large;
+    margin: 0;
     /* background: rgb(104, 104, 104); */
     /* background-image: url("data:image/svg+xml,..."); */
 }
@@ -174,7 +176,7 @@ display: none;
    }
 
    .label{
-    text-align: center;
+    text-align: left;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.8);
    }
@@ -192,7 +194,7 @@ display: none;
 /* Musical Bracket Icon */
 .bracketed-section::before {
     position: absolute;
-    background: no-repeat rgb(0, 0, 0);
+    background: no-repeat #825e35;
     mask-image: url("musical bracket brace custom-cropped.svg");
     mask-repeat: no-repeat;
     mask-position: 0% -4px;
@@ -213,7 +215,7 @@ display: none;
 }
 
 .barline-section{
-    background-image: linear-gradient(to right, black 2px, transparent 2px);
+    background-image: linear-gradient(to right, #9e8263 2px, transparent 2px);
     background-size: 2px 100%;
     background-position: left top;
     background-repeat: no-repeat;
@@ -237,15 +239,15 @@ display: none;
     min-width: auto;
     max-width: auto;
 background-image:
-    linear-gradient(to bottom, black 2px, transparent 2px),
-    linear-gradient(to bottom, black 2px, transparent 2px),
-    linear-gradient(to bottom, black 2px, transparent 2px),
-    linear-gradient(to bottom, black 2px, transparent 2px),
-    linear-gradient(to bottom, black 2px, transparent 2px),
-    linear-gradient(to right, black 2px, transparent 2px),
-    linear-gradient(to right, black 2px, transparent 2px),
-    linear-gradient(to right, black 2px, transparent 2px),
-    linear-gradient(to right, black 2px, transparent 2px);
+    linear-gradient(to bottom, #9e8263 2px, transparent 2px),
+    linear-gradient(to bottom, #9e8263 2px, transparent 2px),
+    linear-gradient(to bottom, #9e8263 2px, transparent 2px),
+    linear-gradient(to bottom, #9e8263 2px, transparent 2px),
+    linear-gradient(to top, #9e8263 2px, transparent 2px),
+    linear-gradient(to right, #9e8263 2px, transparent 2px),
+    linear-gradient(to right, #9e8263 2px, transparent 2px),
+    linear-gradient(to right, #9e8263 2px, transparent 2px),
+    linear-gradient(to right, #9e8263 2px, transparent 2px);
 
 background-size:
    100% 2px, 100% 2px, 100% 2px, 100% 2px, 100% 2px, 2px 100%, 2px 100%, 2px 100%, 2px 100%;
@@ -297,6 +299,11 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
 /* =========================
    Specific Chord Groups
    ========================= */
+#chordGroupResults{
+    background: none;
+    padding: 0%;
+    justify-content: space-evenly;
+}
 
 #chordGroupResults .chord {
     cursor: default;
