@@ -27,7 +27,7 @@ body {
     /* background: url(Autoharp\ image.jpg); */
     transform: none;
     width: 100%;
-    height: 650px;
+    height: 100%;
     background-size: 200%;
     background-repeat: no-repeat;
     background-color: black;
@@ -40,10 +40,17 @@ body {
 
 @media (orientation: portrait) {
     body::before {
+        /* Swap width and height for rotated image */
+        width: 100vh;
+        height: 100vw;
+        left: 50%;
+        top: 50%;
+        transform:  translate(-50%, -50%) rotate(90deg);
         background-image: url(Autoharp\ image.jpg);
-        transform:rotate(90deg);
+        background-size: cover;
     }
 }
+
 
 /* =========================
    Panel Styles
