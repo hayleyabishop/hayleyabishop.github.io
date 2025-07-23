@@ -70,17 +70,18 @@
           </select>
         </form>
       </div>
-      
-      
+
+
       <div class="bracketed-section">
-        
+
         <div class="barline-section">
           <!-- Simple staff: 5 horizontal lines + left vertical line -->
           <div class="chordGroup" id="chordGroupInputs" role="list">
-            
+
           </div>
-          <div class="staffSpacer"></div>
-          <div class="label">Available Chord Progressions</div>
+          <div class="staffSpacer">
+            <div class="label">Available Chord Progressions</div>
+          </div>
           <div class="chordGroup" id="chordGroupResults">
             <div class="chordGroup"></div>
           </div>
@@ -95,7 +96,7 @@
     //Create available chords from selected Autoharp Type.
     const chordInputType = document.querySelectorAll("[name='autoharpType']")
     chordInputType.addEventListener("change", onChordTypeChanged(this));
-    
+
     function onChordTypeChanged() {
       const selectedType = this.value;
       let chordList = [];
@@ -117,7 +118,7 @@
         case "typeCustomChords": //Create a dropdown with sliding stuff around!
 
       }
-      };
+    };
 
 
     //Define the Input dropdown and the draggables container as js variables for manipulation. 
