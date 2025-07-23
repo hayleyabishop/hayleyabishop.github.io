@@ -91,6 +91,35 @@
   </div>
   <script src="webapp.js"></script>
   <script>
+
+    //Create available chords from selected Autoharp Type.
+    const chordInputType = document.querySelectorAll("[name='autoharpType']")
+    chordInputType.addEventListener("change", onChordTypeChanged(this));
+    
+    function onChordTypeChanged() {
+      const selectedType = this.value;
+      let chordList = [];
+      switch (selectedType) {
+        case "type12Chord": //TODO: Make hardcoded variables, and add them to the list!
+        //appendChords .staticChords
+        // chordList = ["A","A7","Ab","Am","B7","Bb","Bb7","C","C7","Cm","D","D7","Dm","E7","Eb","Em","F","F7","G","G7","Gm"];
+        // chord degrees = a, a minor, b, b minor, etc. 
+        // if progression is c to d minor, find the c to d comparison, then check if d minor exists
+        // rootNoteInterval = result interval;
+        // 0 0m 1 1m 2 2m 2D7... 
+        // interval is 1 to minor +1;
+
+
+        case "type15Chord":
+
+        case "type21Chord":
+
+        case "typeCustomChords": //Create a dropdown with sliding stuff around!
+
+      }
+      };
+
+
     //Define the Input dropdown and the draggables container as js variables for manipulation. 
     const chordInput = document.getElementById("chordInput1");
     const chordGroup = document.getElementById("chordGroupInputs");
