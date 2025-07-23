@@ -94,11 +94,12 @@
   <script>
 
     //Create available chords from selected Autoharp Type.
-    const chordInputType = document.querySelectorAll("[name='autoharpType']")
-    chordInputType.addEventListener("change", onChordTypeChanged(this));
+    const chordInputType = document.querySelectorAll("[name='autoharpType']").forEach(inputType => {
+      inputType.addEventListener("change", onChordTypeChanged)
+    });
 
-    function onChordTypeChanged() {
-      const selectedType = this.value;
+    function onChordTypeChanged(event) {
+      const selectedType = event.target.value;
       let chordList = [];
       switch (selectedType) {
         case "type12Chord": //TODO: Make hardcoded variables, and add them to the list!
