@@ -303,6 +303,33 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
     cursor: grab;
 }
 
+.staticChord{
+    color:#825e35;
+    transition: transform 0.3s ease, padding 0.5s ease;
+    display: flex;
+    transform: scale(1);
+    /* transition: all 2s ease-in-out; */
+    animation: fadeIn 0.3s forwards;
+    position: relative;
+    opacity: 0.99;
+    background: #eeeeee00;
+    border-top: 8px solid #e3ddd6;
+    border-bottom: 3px solid #7a634d;
+    border-radius: 6px;
+    height: min-content;
+    width: min-content;
+    overflow: visible;
+    min-width: fit-content;
+    min-height: fit-content;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 5px 10px;
+    /* display: inline-flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 /* =========================
    Specific Chord Groups
    ========================= */
