@@ -25,12 +25,8 @@
 
       <div class="labels">
 
-
-      </div>
-      <div class="label">Input Chords</div>
-      <div class="bracketed-section">
-        <form action="">
-
+<form action="">
+<div class="label">Input Chords</div>
           <select name="" id="chordInput1" class="chordInput">
             <option value=""></option>
             <option value="A">A</option>
@@ -47,45 +43,20 @@
             <option value="G# / Ab">G# / Ab</option>
           </select>
         </form>
+      </div>
+      
+      
+      <div class="bracketed-section">
+        
         <div class="barline-section">
           <!-- Simple staff: 5 horizontal lines + left vertical line -->
           <div class="chordGroup" id="chordGroupInputs" role="list">
-            <div role="listitem" class="chord" aria-grabbed="false" draggable="true">
-              <div><span>C</span><button class="xbutton" onclick="removeChord(this)"
-                  aria-label="Remove C chord">x</button></div>
-            </div>
-            <div role="listitem" class="chord" aria-grabbed="false" draggable="true">
-              <div><span>C# / Db</span><button class="xbutton" onclick="removeChord(this)"
-                  aria-label="Remove C# / Db chord">x</button></div>
-            </div>
-            <div role="listitem" class="chord" aria-grabbed="false" draggable="true">
-              <div><span>D# / Eb</span><button class="xbutton" onclick="removeChord(this)"
-                  aria-label="Remove D# / Eb chord">x</button></div>
-            </div>
+            
           </div>
           <div class="staffSpacer"></div>
           <div class="label">Available Chord Progressions</div>
           <div class="chordGroup" id="chordGroupResults">
-            <div class="chordGroup">
-              <div class="chord" role="listitem" aria-grabbed="false"><span>A</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>A# / Bb</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>C</span></div>
-            </div>
-            <div class="chordGroup">
-              <div class="chord" role="listitem" aria-grabbed="false"><span>B</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>C</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>D</span></div>
-            </div>
-            <div class="chordGroup">
-              <div class="chord" role="listitem" aria-grabbed="false"><span>D</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>D# / Eb</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>F</span></div>
-            </div>
-            <div class="chordGroup">
-              <div class="chord" role="listitem" aria-grabbed="false"><span>E</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>F</span></div>
-              <div class="chord" role="listitem" aria-grabbed="false"><span>G</span></div>
-            </div>
+            <div class="chordGroup"></div>
           </div>
         </div>
       </div>
