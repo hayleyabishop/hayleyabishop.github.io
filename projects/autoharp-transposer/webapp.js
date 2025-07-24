@@ -3,9 +3,9 @@
 // =============================================================================
 
 const CHORD_LISTS = {
-  all: ["A","A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab"],
+  all: ["A", "A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab"],
   autoharp12: ["A", "A# / Bb", "B", "C", "D", "D# / Eb", "E", "F", "G", "G# / Ab"],
-  autoharp21: ["A","A7","Ab","Am","B7","Bb","Bb7","C","C7","Cm","D","D7","Dm","E7","Eb","Em","F","F7","G","G7","Gm"]
+  autoharp21: ["A", "A7", "Ab", "Am", "B7", "Bb", "Bb7", "C", "C7", "Cm", "D", "D7", "Dm", "E7", "Eb", "Em", "F", "F7", "G", "G7", "Gm"]
 };
 
 // Global variables
@@ -25,7 +25,7 @@ function initializeAutoharpTypeListeners() {
 function onChordTypeChanged(event) {
   const selectedType = event.target.value;
   let chordList = [];
-  
+
   switch (selectedType) {
     case "type12Chord":
       // TODO: Make hardcoded variables, and add them to the list!
@@ -184,10 +184,10 @@ function getDragAfterElement(container, x) {
 function calculateResultingChords(inputChords) {
   const chords = CHORD_LISTS.all;
   const autoharpChords = CHORD_LISTS.autoharp12;
-  
+
   let autoharpIntervals = [];
   let intervals = [];
-  
+
   // Find the input chords' relationship to one another.
   // Transpose that relationship by finding other chords in the autoharpChords list
   // that have the same relationship.
@@ -212,7 +212,7 @@ function calculateResultingChords(inputChords) {
 
   for (i = 0; Math.max(...intervals) < 12; i++) {
     // Try looking for all 3 items in the autoharp set; try again, going up by a half note, until the largest interval is 12.
-    
+
     // Use .filter() to find and save a match if the interval exists in autoharpintervals.
     foundIntervals = intervals.filter((e) => autoharpIntervals.includes(e));
 
@@ -240,7 +240,7 @@ function calculateResultingChords(inputChords) {
 function onInputChordsChanged() {
   const inputChords = getInputChords();
   chordGroupResults.innerHTML = '';
-  
+
   if (inputChords.length < 2) {
     // Always render an empty chordGroup for staff background
     const emptyDiv = document.createElement('div');
@@ -248,11 +248,11 @@ function onInputChordsChanged() {
     chordGroupResults.appendChild(emptyDiv);
     return;
   }
-  
+
   // Call calculation logic
   const resultingChords = calculateResultingChords(inputChords);
   chordGroupResults.innerHTML = '';
-  
+
   if (resultingChords.length === 0) {
     // Always render an empty chordGroup for staff background
     const emptyDiv = document.createElement('div');
@@ -260,7 +260,7 @@ function onInputChordsChanged() {
     chordGroupResults.appendChild(emptyDiv);
     return;
   }
-  
+
   resultingChords.forEach((chordSet, i) => {
     const div = document.createElement('div');
     div.className = 'chordGroup';
@@ -284,7 +284,7 @@ function onInputChordsChanged() {
 // =============================================================================
 
 // Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   initializeDOMReferences();
   initializeAutoharpTypeListeners();
   initializeChordInputListener();
@@ -295,9 +295,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // TODO LIST
 // =============================================================================
 
-// TODO: Render these results in the UI.
-// TODO: Make the results draggable.
-// TODO: Allow the user to select which result they want to use.
-// TODO: Allow the user to save their favorite progressions.
-// TODO: Allow the user to load their favorite progressions.
-// TODO: Allow the user to share their favorite progressions.
+// TODO: Add collapsible section in Availabe Chords.
+//TODO: When autoharp type chosen, render available chords.
+//TODO: Add list of minor chords. Work through problem of interval degree.
+//TODO: Add section for chord degrees / nashville numbers. 
+//TODO: Render chord degrees as chips. Use capital or lowercase for major minor. ex. I vi ii V I
+//TODO: Support 7 chords. 
+//TODO: Add chord synonym suggestions. 
+//TODO: Add degrees indicators by each chord group. 
+//TODO: Add save functionality that allows users to save chords.
+//TODO: Add Custom Chords text input to allow users to paste in a list of chords.
+//TODO: Add Custom Chords highlighted buttons that allows user to toggle chords on/off of availability. 
