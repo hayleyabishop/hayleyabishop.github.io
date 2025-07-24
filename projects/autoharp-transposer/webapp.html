@@ -29,26 +29,26 @@
           <div class="radioList">
 
             <div class="radioOption">
-              <input type="radio" class="chordInputType" name="autoharpType" id="type12Chord" value="type12Chord">
+              <input type="radio" class="chordInputType" name="autoharpType" id="type12Chord" value="type12Chord" onclick="onChordTypeChanged()">
               <label for="type12Chord">12-Chord</label>
             </div>
             <div class="radioOption">
-              <input type="radio" class="chordInputType" name="autoharpType" id="type15Chord" value="type15Chord">
+              <input type="radio" class="chordInputType" name="autoharpType" id="type15Chord" value="type15Chord" onclick="onChordTypeChanged()">
               <label for="type15Chord">15-Chord</label>
             </div>
             <div class="radioOption">
-              <input type="radio" class="chordInputType" name="autoharpType" id="type21Chord" value="type21Chord">
+              <input type="radio" class="chordInputType" name="autoharpType" id="type21Chord" value="type21Chord" onclick="onChordTypeChanged()">
               <label for="type21Chord">21-Chord</label>
             </div>
             <div class="radioOption">
               <input type="radio" class="chordInputType" name="autoharpType" id="typeCustomChords"
-                value="typeCustomChords">
+                value="typeCustomChords" onclick="onChordTypeChanged()">
               <label for="typeCustomChords">Custom</label>
             </div>
           </div>
 
           <div class="collapsibleSection">
-            <div class="label">Available Chords</div> <button type="collapseSection"> + </button>
+            <div class="label">Available Chords</div> <button type="collapseSection" onclick="toggleCollapseSection()"> + </button>
           </div>
           <div class="staticChord">Eb</div>
           , Bb, F, F7, C, C7, G, G7, Gm, D7, D, Dm, A7, Am, and E7
