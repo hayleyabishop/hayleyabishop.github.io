@@ -9,7 +9,7 @@ const CHORD_LISTS = {
 };
 
 // Global variable to store the current autoharp chord list
-let currentAutoharpChords = CHORD_LISTS.autoharp12; // Default to 12-chord
+let currentAutoharpChords = CHORD_LISTS.autoharp21; // Default to 21-chord
 
 // Global variables
 let draggedChord = null;
@@ -57,6 +57,7 @@ function onAutoharpTypeChanged(event) {
   
   // Update the available chords display
   renderAvailableChords(currentAutoharpChords);
+  onInputChordsChanged();
 }
 
 function renderAvailableChords(chordList) {
@@ -334,8 +335,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // TODO: Add list of minor chords. Work through problem of interval degree.
 // TODO: Add audible chords sound playing. 
 // TODO: Add section for chord degrees / nashville numbers. 
-// TODO: Render chord degrees as chips. Use capital or lowercase for major minor. ex. I vi ii V I
+// TODO: Render chord DEGREES/nashville no.s as chips. Use capital or lowercase for major minor. ex. I vi ii V I
 // TODO: Support "7" chords. 
+// TODO: Add "Found # progressions" results message. 
 // TODO: Add chord synonym suggestions. 
 // TODO: Add degrees indicators by each chord group. 
 // TODO: Add save functionality that allows users to save chords.
