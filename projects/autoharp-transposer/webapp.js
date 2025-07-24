@@ -69,23 +69,11 @@ function renderAvailableChords(chordList) {
   
   // Create chord keys similar to the existing Eb key
   chordList.forEach((chord, index) => {
-    if (index === 0) {
-      // First chord gets the staticChord class like the original Eb
       const chordKey = document.createElement('div');
       chordKey.className = 'staticChord';
       chordKey.textContent = chord;
       availableChordsContainer.appendChild(chordKey);
-    } else {
-      // Add comma and space for subsequent chords
-      const separator = document.createTextNode(', ');
-      availableChordsContainer.appendChild(separator);
-      
-      // Create a span for each chord to potentially style them individually
-      const chordSpan = document.createElement('span');
-      chordSpan.className = 'availableChord';
-      chordSpan.textContent = chord;
-      availableChordsContainer.appendChild(chordSpan);
-    }
+    
   });
 }
 

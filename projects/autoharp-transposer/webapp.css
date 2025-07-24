@@ -102,7 +102,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    /* justify-content: space-between; */
     padding: 0;
 }
 
@@ -377,6 +378,7 @@ select:after {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 1%;
 }
 
 /* =========================
