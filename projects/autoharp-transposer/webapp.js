@@ -58,7 +58,7 @@ function onAutoharpTypeChanged(event) {
 
 function renderAvailableChords(chordList) {
   // Find the container where chords should be displayed
-  const availableChordsContainer = document.querySelector('.collapsibleSection').nextElementSibling;
+  const availableChordsContainer = document.querySelector('.availableChordsSection');
   
   if (!availableChordsContainer || chordList.length === 0) {
     return;

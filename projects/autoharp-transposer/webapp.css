@@ -85,7 +85,7 @@ body {
     Section styles 
     ======================== */
 
-.collapsibleSection {
+.collapsibleSectionHeader {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -93,9 +93,17 @@ body {
     background: #dedbd7;
 }
 
-.collapsibleSection>* {
+.collapsibleSectionHeader>* {
     width: fit-content;
     height: fit-content;
+}
+
+.availableChordsSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
 }
 
 
