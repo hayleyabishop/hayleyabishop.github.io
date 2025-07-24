@@ -6,7 +6,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    border: #aaa dashed 1px;
+    /* border: #aaa dashed 1px; */
 }
 
 body::before {
