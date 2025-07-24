@@ -326,6 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // =============================================================================
 
 // TODO: Add collapsible section in Availabe Chords.
+// TODO: Add collapsible section in Input Chords.
 //TODO: When autoharp type chosen, render available chords.
 //TODO: Add list of minor chords. Work through problem of interval degree.
 //TODO: Add section for chord degrees / nashville numbers. 
