@@ -18,11 +18,11 @@ let draggedChord = null;
 function initializeAutoharpTypeListeners() {
   const chordInputType = document.querySelectorAll("[name='autoharpType']");
   chordInputType.forEach(inputType => {
-    inputType.addEventListener("change", onChordTypeChanged);
+    inputType.addEventListener("change", onAutoharpTypeChanged);
   });
 }
 
-function onChordTypeChanged(event) {
+function onAutoharpTypeChanged(event) {
   const selectedType = event.target.value;
   let chordList = [];
 
@@ -36,15 +36,57 @@ function onChordTypeChanged(event) {
       // rootNoteInterval = result interval;
       // 0 0m 1 1m 2 2m 2D7... 
       // interval is 1 to minor +1;
+      
+      chordList = CHORD_LISTS.autoharp12;
       break;
     case "type15Chord":
+      // 15-chord autoharp typically has these chords
+      chordList = ["Eb", "Bb", "F", "F7", "C", "C7", "G", "G7", "Gm", "D7", "D", "Dm", "A7", "Am", "E7"];
       break;
     case "type21Chord":
+      chordList = CHORD_LISTS.autoharp21;
       break;
     case "typeCustomChords":
-      // Create a dropdown with sliding stuff around!
+      // For custom, show all available chords
+      chordList = CHORD_LISTS.all;
       break;
   }
+  
+  // Update the available chords display
+  renderAvailableChords(chordList);
+}
+
+function renderAvailableChords(chordList) {
+  // Find the container where chords should be displayed
+  const availableChordsContainer = document.querySelector('.collapsibleSection').nextElementSibling;
+  
+  if (!availableChordsContainer || chordList.length === 0) {
+    return;
+  }
+  
+  // Clear existing content
+  availableChordsContainer.innerHTML = '';
+  
+  // Create chord keys similar to the existing Eb key
+  chordList.forEach((chord, index) => {
+    if (index === 0) {
+      // First chord gets the staticChord class like the original Eb
+      const chordKey = document.createElement('div');
+      chordKey.className = 'staticChord';
+      chordKey.textContent = chord;
+      availableChordsContainer.appendChild(chordKey);
+    } else {
+      // Add comma and space for subsequent chords
+      const separator = document.createTextNode(', ');
+      availableChordsContainer.appendChild(separator);
+      
+      // Create a span for each chord to potentially style them individually
+      const chordSpan = document.createElement('span');
+      chordSpan.className = 'availableChord';
+      chordSpan.textContent = chord;
+      availableChordsContainer.appendChild(chordSpan);
+    }
+  });
 }
 
 // =============================================================================
