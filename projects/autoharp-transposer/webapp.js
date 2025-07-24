@@ -319,21 +319,22 @@ document.addEventListener('DOMContentLoaded', function () {
   initializeAutoharpTypeListeners();
   initializeChordInputListener();
   initializeDragAndDrop();
-});
+}); 
 
 // =============================================================================
 // TODO LIST
 // =============================================================================
 
 // TODO: Add collapsible section in Availabe Chords.
-// TODO: Add collapsible section in Input Chords.
-//TODO: When autoharp type chosen, render available chords.
-//TODO: Add list of minor chords. Work through problem of interval degree.
-//TODO: Add section for chord degrees / nashville numbers. 
-//TODO: Render chord degrees as chips. Use capital or lowercase for major minor. ex. I vi ii V I
-//TODO: Support 7 chords. 
-//TODO: Add chord synonym suggestions. 
-//TODO: Add degrees indicators by each chord group. 
-//TODO: Add save functionality that allows users to save chords.
-//TODO: Add Custom Chords text input to allow users to paste in a list of chords.
-//TODO: Add Custom Chords highlighted buttons that allows user to toggle chords on/off of availability. 
+// TODO: Move "Available Chords" off to the side or bottom. 
+// TODO: Drag and drop support using touch screens?????? 
+// TODO: Add list of minor chords. Work through problem of interval degree.
+// TODO: Add audible chords sound playing. 
+// TODO: Add section for chord degrees / nashville numbers. 
+// TODO: Render chord degrees as chips. Use capital or lowercase for major minor. ex. I vi ii V I
+// TODO: Support "7" chords. 
+// TODO: Add chord synonym suggestions. 
+// TODO: Add degrees indicators by each chord group. 
+// TODO: Add save functionality that allows users to save chords.
+// TODO: Add Custom Chords text input to allow users to paste in a list of chords.
+// TODO: Add Custom Chords highlighted buttons that allows user to toggle chords on/off of availability. 
