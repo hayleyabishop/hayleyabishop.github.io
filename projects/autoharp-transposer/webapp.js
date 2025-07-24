@@ -8,6 +8,9 @@ const CHORD_LISTS = {
   autoharp21: ["A", "A7", "Ab", "Am", "B7", "Bb", "Bb7", "C", "C7", "Cm", "D", "D7", "Dm", "E7", "Eb", "Em", "F", "F7", "G", "G7", "Gm"]
 };
 
+// Global variable to store the current autoharp chord list
+let currentAutoharpChords = CHORD_LISTS.autoharp12; // Default to 12-chord
+
 // Global variables
 let draggedChord = null;
 
@@ -24,7 +27,6 @@ function initializeAutoharpTypeListeners() {
 
 function onAutoharpTypeChanged(event) {
   const selectedType = event.target.value;
-  let chordList = [];
 
   switch (selectedType) {
     case "type12Chord":
@@ -37,23 +39,24 @@ function onAutoharpTypeChanged(event) {
       // 0 0m 1 1m 2 2m 2D7... 
       // interval is 1 to minor +1;
       
-      chordList = CHORD_LISTS.autoharp12;
+      currentAutoharpChords = CHORD_LISTS.autoharp12;
       break;
     case "type15Chord":
       // 15-chord autoharp typically has these chords
-      chordList = ["Eb", "Bb", "F", "F7", "C", "C7", "G", "G7", "Gm", "D7", "D", "Dm", "A7", "Am", "E7"];
+      currentAutoharpChords = ["Eb", "Bb", "F", "F7", "C", "C7", "G", "G7", "Gm", "D7", "D", "Dm", "A7", "Am", "E7"];
       break;
     case "type21Chord":
-      chordList = CHORD_LISTS.autoharp21;
+      currentAutoharpChords = CHORD_LISTS.autoharp21;
       break;
     case "typeCustomChords":
       // For custom, show all available chords
-      chordList = CHORD_LISTS.all;
+      // TODO: Make variable chord list!
+      currentAutoharpChords = CHORD_LISTS.all;
       break;
   }
   
   // Update the available chords display
-  renderAvailableChords(chordList);
+  renderAvailableChords(currentAutoharpChords);
 }
 
 function renderAvailableChords(chordList) {
@@ -213,7 +216,7 @@ function getDragAfterElement(container, x) {
 
 function calculateResultingChords(inputChords) {
   const chords = CHORD_LISTS.all;
-  const autoharpChords = CHORD_LISTS.autoharp12;
+  const autoharpChords = currentAutoharpChords;
 
   let autoharpIntervals = [];
   let intervals = [];
