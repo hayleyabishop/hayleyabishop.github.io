@@ -115,13 +115,29 @@ body {
 
 
 /* =========================
-   Input Styles
+   Radio Button and Input Styles
    ========================= */
+
+   .radioList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+   }
+
+   .radioOption{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+   }
+
 .chordInput {
       position: relative;
       float: left;
   min-width: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     height: 40px;
     width:100px;  
 
