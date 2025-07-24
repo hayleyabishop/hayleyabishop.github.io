@@ -5,11 +5,11 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  border:#aaa dashed 1px;
+    box-sizing: border-box;
+    border: #aaa dashed 1px;
 }
 
-body::before{
+body::before {
     content: '';
     position: fixed;
     top: 0;
@@ -20,9 +20,11 @@ body::before{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;
-    z-index: -1; /* Ensure it stays behind other content */
+    z-index: -1;
+    /* Ensure it stays behind other content */
 
 }
+
 body {
     /* background: url(Autoharp\ image.jpg); */
     transform: none;
@@ -45,7 +47,7 @@ body {
         height: 100vw;
         left: 50%;
         top: 50%;
-        transform:  translate(-50%, -50%) rotate(90deg);
+        transform: translate(-50%, -50%) rotate(90deg);
         background-image: url(Autoharp\ image.jpg);
         background-size: cover;
     }
@@ -71,10 +73,11 @@ body {
 }
 
 /* Space the text sections in the Panel out with a 5% after-margin. */
-.panel > div > div {
+.panel>div>div {
     margin-bottom: 5%;
 }
-.panel > div > div:last-child {
+
+.panel>div>div:last-child {
     margin-bottom: 0;
 }
 
@@ -82,7 +85,7 @@ body {
     Section styles 
     ======================== */
 
-.collapsibleSection{
+.collapsibleSection {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -90,9 +93,9 @@ body {
     background: #dedbd7;
 }
 
-.collapsibleSection > *{
+.collapsibleSection>* {
     width: fit-content;
-    height:fit-content;
+    height: fit-content;
 }
 
 
@@ -100,106 +103,107 @@ body {
    Label Styles
    ========================= */
 
-   .labels{
+.labels {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 0px;
-   }
+}
 
-   .label{
+.label {
     text-align: left;
     padding: 5px;
     /* background-color: rgba(255, 255, 255, 0.8); */
-   }
+}
 
 
 /* =========================
    Radio Button and Input Styles
    ========================= */
 
-   .radioList{
+.radioList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 0px;
-   }
+    padding: 0;
+}
 
-   .radioOption{
+.radioOption {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 0px;
-   }
+    justify-content: space-around;
+    margin: 1%
+}
 
 .chordInput {
-      position: relative;
-      float: left;
-  min-width: 60px;
+    position: relative;
+    float: left;
+    min-width: 60px;
     margin-bottom: 0px;
     height: 40px;
-    width:100px;  
+    width: 100px;
 
 }
+
 /* IE11 hide native button */
 select::-ms-expand {
-display: none;
+    display: none;
 }
 
 .chordInput:after {
-  content: '<>';
-  font: 17px "Consolas", monospace;
-  color: #333;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  right: 11px;
-  /*Adjust for position however you want*/
-  
-  top: 18px;
-  padding: 0 0 2px;
-  border-bottom: 1px solid #999;
-  /*left line */
-  
-  position: absolute;
-  pointer-events: none;
+    content: '<>';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 11px;
+    /*Adjust for position however you want*/
+
+    top: 18px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    /*left line */
+
+    position: absolute;
+    pointer-events: none;
 }
 
 .chordInput select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* Add some styling */
-  
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  height: 50px;
-  float: left;
-  margin: 5px 0px;
-  padding: 0px 24px;
-  font-size: 16px;
-  line-height: 1.75;
-  color: #333;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  -ms-word-break: normal;
-  word-break: normal;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    float: left;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -ms-word-break: normal;
+    word-break: normal;
 }
 
 
 /* // Custom arrow */
-  select:after {
+select:after {
     content: "";
     justify-self: end;
     width: 0.8em;
     height: 0.5em;
     background-color: black;
     clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-  }
+}
 
 /* // Interim solution until :focus-within has better support */
 
@@ -237,7 +241,7 @@ display: none;
 .bracketed-section::before {
     position: absolute;
     background: no-repeat #825e35;
-    mask-image: url("musical bracket brace custom-cropped.svg");
+    mask-image: url("./icons/musical bracket brace custom-cropped.svg");
     mask-repeat: no-repeat;
     mask-position: 0% -4px;
     mask-size: 8% 104%;
@@ -256,7 +260,7 @@ display: none;
     z-index: 0;
 }
 
-.barline-section{
+.barline-section {
     background-image: linear-gradient(to right, #9e8263 2px, transparent 2px);
     background-size: 2px 100%;
     background-position: left top;
@@ -280,33 +284,33 @@ display: none;
     min-height: 18vh;
     min-width: auto;
     max-width: auto;
-background-image:
-    linear-gradient(to bottom, #9e8263 2px, transparent 2px),
-    linear-gradient(to bottom, #9e836374 2px, transparent 2px),
-    linear-gradient(to bottom, #9e826374 2px, transparent 2px),
-    linear-gradient(to bottom, #9e826374 2px, transparent 2px),
-    linear-gradient(to top, #9e8263 2px, transparent 2px),
-    linear-gradient(to right, #9e826374 2px, transparent 2px),
-    linear-gradient(to right, #9e826374 2px, transparent 2px),
-    linear-gradient(to right, #9e826374 2px, transparent 2px),
-    linear-gradient(to right, #9e8263 2px, transparent 2px);
+    background-image:
+        linear-gradient(to bottom, #9e8263 2px, transparent 2px),
+        linear-gradient(to bottom, #9e836374 2px, transparent 2px),
+        linear-gradient(to bottom, #9e826374 2px, transparent 2px),
+        linear-gradient(to bottom, #9e826374 2px, transparent 2px),
+        linear-gradient(to top, #9e8263 2px, transparent 2px),
+        linear-gradient(to right, #9e826374 2px, transparent 2px),
+        linear-gradient(to right, #9e826374 2px, transparent 2px),
+        linear-gradient(to right, #9e826374 2px, transparent 2px),
+        linear-gradient(to right, #9e8263 2px, transparent 2px);
 
-background-size:
-   100% 2px, 100% 2px, 100% 2px, 100% 2px, 100% 2px, 2px 100%, 2px 100%, 2px 100%, 2px 100%;
+    background-size:
+        100% 2px, 100% 2px, 100% 2px, 100% 2px, 100% 2px, 2px 100%, 2px 100%, 2px 100%, 2px 100%;
 
-background-repeat: no-repeat;
-background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top, 34% top, 67% top, 100% top;
+    background-repeat: no-repeat;
+    background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top, 34% top, 67% top, 100% top;
 }
 
-.chordGroup > .dragging {
+.chordGroup>.dragging {
     /* background-image: url('data:image/svg+xml;utf8,...'); */
     cursor: grabbing;
 }
 
-.staffSpacer{
+.staffSpacer {
     height: 10vh;
-    min-height:max-content;
-    align-content:end;
+    min-height: max-content;
+    align-content: end;
 }
 
 
@@ -340,8 +344,8 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
     cursor: grab;
 }
 
-.staticChord{
-    color:#825e35;
+.staticChord {
+    color: #825e35;
     transition: transform 0.3s ease, padding 0.5s ease;
     display: flex;
     transform: scale(1);
@@ -370,7 +374,7 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
 /* =========================
    Specific Chord Groups
    ========================= */
-#chordGroupResults{
+#chordGroupResults {
     background: none;
     padding: 0%;
     justify-content: space-evenly;
@@ -426,7 +430,7 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
 
 .chord span {
     /* margin-right: 10px; */
-    
+
 }
 
 .chord .xbutton {
@@ -437,6 +441,7 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
     font-size: 16px;
     cursor: auto;
 }
+
 .chord .xbutton:hover {
     background-color: #d1d1d1;
 }
@@ -449,6 +454,7 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -460,6 +466,7 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
         opacity: 1;
         transform: scale(1);
     }
+
     to {
         opacity: 0;
         transform: scale(0.95);
@@ -470,6 +477,7 @@ background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top,
     from {
         opacity: 0;
     }
+
     to {
         opacity: auto;
     }
