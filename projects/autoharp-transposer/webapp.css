@@ -6,7 +6,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* border: #aaa dashed 1px; */
+    border: #aaa dashed 1;
 }
 
 body::before {
@@ -34,7 +34,7 @@ body {
     background-repeat: no-repeat;
     background-color: black;
     font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
-    font-size: x-large;
+    font-size: 1rem;
     margin: 0;
     /* background: rgb(104, 104, 104); */
     /* background-image: url("data:image/svg+xml,..."); */
@@ -63,9 +63,9 @@ body {
     padding: 5% 5% 5% 6%;
     background-color: rgb(253, 253, 253);
     border-left-style: none;
-    border-radius: 30px 0 0 30px;
-    border-top-width: 2px;
-    border-left-width: 10px;
+    border-radius: 2rem 0 0 2rem;
+    border-top-width: .13rem;
+    border-left-width: .6rem;
     z-index: 0;
     display: inline-block;
     position: relative;
@@ -84,6 +84,15 @@ body {
 /* =========================
     Section styles 
     ======================== */
+
+.sectionHeader{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background: #dedbd7;
+    padding: .3rem;
+}
 
 .collapsibleSectionHeader {
     display: flex;
@@ -117,11 +126,13 @@ body {
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 0px;
+    min-height:min-content;
+    min-width:min-content;
 }
 
 .label {
     text-align: left;
-    padding: 5px;
+    padding: .3rem;
     /* background-color: rgba(255, 255, 255, 0.8); */
 }
 
@@ -145,9 +156,32 @@ body {
     margin: 1%
 }
 
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #825e35;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="radio"]{
+    display: grid;
+    place-content: center;
+}
+
+
 .chordInput {
     position: relative;
     float: left;
+    border: #825e35 solid .13rem;
+    border-radius: .3rem;
+    box-shadow: 0 .13rem 4px rgba(0, 0, 0, 0.1);
     min-width: 60px;
     margin-bottom: 0px;
     height: 40px;
@@ -172,7 +206,7 @@ select::-ms-expand {
     /*Adjust for position however you want*/
 
     top: 18px;
-    padding: 0 0 2px;
+    padding: 0 0 .13rem;
     border-bottom: 1px solid #999;
     /*left line */
 
@@ -191,7 +225,7 @@ select::-ms-expand {
     max-width: 320px;
     height: 50px;
     float: left;
-    margin: 5px 0px;
+    margin: .3rem 0px;
     padding: 0px 24px;
     font-size: 16px;
     line-height: 1.75;
@@ -229,7 +263,7 @@ select:after {
     background-color: transparent;
     /* background-color: rgba(255, 255, 255, 0.5); */
     /* border: 1px solid #ccc; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: 0 .13rem 4px rgba(0, 0, 0, 0.1); */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -270,8 +304,8 @@ select:after {
 }
 
 .barline-section {
-    background-image: linear-gradient(to right, #9e8263 2px, transparent 2px);
-    background-size: 2px 100%;
+    background-image: linear-gradient(to right, #9e8263 .13rem, transparent .13rem);
+    background-size: .13rem 100%;
     background-position: left top;
     background-repeat: no-repeat;
 }
@@ -282,30 +316,30 @@ select:after {
 .chordGroup {
     display: flex;
     width: 100%;
-    gap: 10px;
+    gap: .6rem;
     flex-wrap: wrap;
     position: relative;
     transition: all .3s ease;
     /* Optional background for staff lines */
     /* background-color: rgba(255, 255, 255, 0.5); */
     /* border: 1px solid #ccc; */
-    padding: 10px;
+    padding: .6rem;
     min-height: 18vh;
     min-width: auto;
     max-width: auto;
     background-image:
-        linear-gradient(to bottom, #9e8263 2px, transparent 2px),
-        linear-gradient(to bottom, #9e836374 2px, transparent 2px),
-        linear-gradient(to bottom, #9e826374 2px, transparent 2px),
-        linear-gradient(to bottom, #9e826374 2px, transparent 2px),
-        linear-gradient(to top, #9e8263 2px, transparent 2px),
-        linear-gradient(to right, #9e826374 2px, transparent 2px),
-        linear-gradient(to right, #9e826374 2px, transparent 2px),
-        linear-gradient(to right, #9e826374 2px, transparent 2px),
-        linear-gradient(to right, #9e8263 2px, transparent 2px);
+        linear-gradient(to bottom, #9e8263 .13rem, transparent .13rem),
+        linear-gradient(to bottom, #9e836374 .13rem, transparent .13rem),
+        linear-gradient(to bottom, #9e826374 .13rem, transparent .13rem),
+        linear-gradient(to bottom, #9e826374 .13rem, transparent .13rem),
+        linear-gradient(to top, #9e8263 .13rem, transparent .13rem),
+        linear-gradient(to right, #9e826374 .13rem, transparent .13rem),
+        linear-gradient(to right, #9e826374 .13rem, transparent .13rem),
+        linear-gradient(to right, #9e826374 .13rem, transparent .13rem),
+        linear-gradient(to right, #9e8263 .13rem, transparent .13rem);
 
     background-size:
-        100% 2px, 100% 2px, 100% 2px, 100% 2px, 100% 2px, 2px 100%, 2px 100%, 2px 100%, 2px 100%;
+        100% .13rem, 100% .13rem, 100% .13rem, 100% .13rem, 100% .13rem, .13rem 100%, .13rem 100%, .13rem 100%, .13rem 100%;
 
     background-repeat: no-repeat;
     background-position: left 0%, left 25%, left 50%, left 75%, left 100%, left top, 34% top, 67% top, 100% top;
@@ -317,9 +351,10 @@ select:after {
 }
 
 .staffSpacer {
-    height: 10vh;
-    min-height: max-content;
+    min-height: 10vh;
+    height: auto;
     align-content: end;
+    padding-top: .6rem;
 }
 
 
@@ -338,14 +373,14 @@ select:after {
     background: #eee;
     border-top: 8px solid #e2e2e2;
     border-bottom: 3px solid #7b7676;
-    border-radius: 2px;
+    border-radius: .13rem;
     height: max-content;
     overflow: visible;
     min-width: fit-content;
     min-height: fit-content;
     background-size: 100%;
     background-repeat: no-repeat;
-    padding: 5px 10px;
+    padding: .3rem .6rem;
     /* display: inline-flex; */
     flex-direction: column;
     justify-content: space-around;
@@ -363,8 +398,10 @@ select:after {
     position: relative;
     opacity: 0.99;
     background: #eeeeee00;
-    border-top: 8px solid #e3ddd6;
-    border-bottom: 3px solid #7a634d;
+    border-top: 1px solid #e3ddd6;
+    border-left: 1px solid #e3ddd6;
+    border-right: 1px solid #e3ddd6;
+    border-bottom: 1px solid #e3ddd6;
     border-radius: 6px;
     height: min-content;
     width: min-content;
@@ -373,7 +410,7 @@ select:after {
     min-height: fit-content;
     background-size: 100%;
     background-repeat: no-repeat;
-    padding: 5px 10px;
+    padding: .3rem .6rem;
     /* display: inline-flex; */
     flex-direction: column;
     justify-content: space-around;
@@ -397,7 +434,7 @@ select:after {
     border-bottom: 3px solid #7b7676;
     color: #000;
     min-height: fit-content;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .13rem 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Inner container for chord content */
@@ -413,7 +450,7 @@ select:after {
 .chord.dragging {
     flex-basis: 5%;
     /* min-width:min-content; */
-    /* width:10px; */
+    /* width:.6rem; */
     /* overflow: hidden; */
     /* transform:matrix(.1,0,0,1,0,0); */
 
@@ -434,12 +471,12 @@ select:after {
     color: rgba(0, 0, 0, 1);
     /* display: none; */
     /* scale: .2; */
-    /* width:5px; */
+    /* width:.3rem; */
     transition: all .5s;
 }
 
 .chord span {
-    /* margin-right: 10px; */
+    /* margin-right: .6rem; */
 
 }
 
@@ -448,7 +485,7 @@ select:after {
     background: cover;
     background-repeat: no-repeat;
     border: none;
-    font-size: 16px;
+    font-size: 16;
     cursor: auto;
 }
 
