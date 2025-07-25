@@ -4,7 +4,15 @@
 
 const CHORD_LISTS = {
   all: ["A", "A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab"],
-  autoharp12: ["A", "A# / Bb", "B", "C", "D", "D# / Eb", "E", "F", "G", "G# / Ab"],
+  autoharp12Maj: ["A# / Bb","C","F","G"],
+  autoharp12Min: ["Am","Dm","Gm"],
+  autoharp127th: ["A7","C7","D7","E7","G7"],
+  autoharp15Maj: ["A", "A# / Bb", "B", "C", "D", "D# / Eb", "E", "F", "G", "G# / Ab"],
+  autoharp15Min: [],
+  autoharp157th: [],
+  autoharp21Maj: [],
+  autoharp21Min: [],
+  autoharp217th: [],
   autoharp21: ["A", "A7", "Ab", "Am", "B7", "Bb", "Bb7", "C", "C7", "Cm", "D", "D7", "Dm", "E7", "Eb", "Em", "F", "F7", "G", "G7", "Gm"]
 };
 
