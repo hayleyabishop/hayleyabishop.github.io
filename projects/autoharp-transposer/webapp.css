@@ -185,8 +185,60 @@ input[type="radio"]{
     min-width: 60px;
     margin-bottom: 0px;
     height: 40px;
-    width: 100px;
+    margin-right: 1%
+}
 
+/* Chord Selection Interface */
+.chordSelectionInterface {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+}
+
+.chordRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+/* Progressive indentation for each row */
+.chordRow.majorChords {
+    margin-left: 0;
+}
+
+.chordRow.minorChords {
+    margin-left: 1rem;
+}
+
+.chordRow.seventhChords {
+    margin-left: 2rem;
+}
+
+.chordButton {
+    background: #eee;
+    border: 2px solid #825e35;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.chordButton:hover {
+    background: #825e35;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 0.2rem 6px rgba(0, 0, 0, 0.2);
+}
+
+.chordButton:active {
+    transform: translateY(0);
+    box-shadow: 0 0.1rem 3px rgba(0, 0, 0, 0.2);
 }
 
 /* IE11 hide native button */

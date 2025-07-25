@@ -59,21 +59,55 @@
 
           </div>
           <div class="label sectionHeader">Input Chords</div>
-          <select name="" id="chordInput1" class="chordInput">
-            <option value=""></option>
-            <option value="A">A</option>
-            <option value="A# / Bb">A# / Bb</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="C# / Db">C# / Db</option>
-            <option value="D">D</option>
-            <option value="D# / Eb">D# / Eb</option>
-            <option value="E">E</option>
-            <option value="F">F</option>
-            <option value="F# / Gb">F# / Gb</option>
-            <option value="G">G</option>
-            <option value="G# / Ab">G# / Ab</option>
-          </select>
+          <div class="chordSelectionInterface">
+            <!-- Major Chords Row -->
+            <div class="chordRow majorChords">
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('A')"><span>A</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('A# / Bb')"><span>A#</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('B')"><span>B</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('C')"><span>C</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('C# / Db')"><span>C#</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('D')"><span>D</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('D# / Eb')"><span>D#</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('E')"><span>E</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('F')"><span>F</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('F# / Gb')"><span>F#</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('G')"><span>G</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('G# / Ab')"><span>G#</span></button>
+            </div>
+            
+            <!-- Minor Chords Row -->
+            <div class="chordRow minorChords">
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('Am')"><span>Am</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('A#m')"><span>A#m</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('Bm')"><span>Bm</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('Cm')"><span>Cm</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('C#m')"><span>C#m</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('Dm')"><span>Dm</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('D#m')"><span>D#m</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('Em')"><span>Em</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('Fm')"><span>Fm</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('F#m')"><span>F#m</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('Gm')"><span>Gm</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('G#m')"><span>G#m</span></button>
+            </div>
+            
+            <!-- Seventh Chords Row -->
+            <div class="chordRow seventhChords">
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('A7')"><span>A7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('A#7')"><span>A#7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('B7')"><span>B7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('C7')"><span>C7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('C#7')"><span>C#7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('D7')"><span>D7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('D#7')"><span>D#7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('E7')"><span>E7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('F7')"><span>F7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('F#7')"><span>F#7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('G7')"><span>G7</span></button>
+              <button type="button" class="chord chordButton" onclick="addChordFromButton('G#7')"><span>G#7</span></button>
+            </div>
+          </div>
         </form>
       </div>
 

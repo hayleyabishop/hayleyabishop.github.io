@@ -94,8 +94,7 @@ function renderAvailableChords(chordList) {
 // =============================================================================
 
 function initializeDOMReferences() {
-  // Define the Input dropdown and the draggables container as js variables for manipulation.
-  window.chordInput = document.getElementById("chordInput1");
+  // Define the draggables container as js variables for manipulation.
   window.chordGroup = document.getElementById("chordGroupInputs");
   window.chordGroupResults = document.getElementById("chordGroupResults");
 }
@@ -105,15 +104,16 @@ function initializeDOMReferences() {
 // =============================================================================
 
 function initializeChordInputListener() {
-  // When user selects a chord from the dropdown list, spawn a new chord!
-  chordInput.addEventListener("change", function () {
-    const selectedValue = this.value;
-    if (selectedValue !== "") {
-      appendChord(selectedValue);
-      this.value = "selected";
-      onInputChordsChanged();
-    }
-  });
+  // Chord buttons now use inline onclick handlers
+  // This function is kept for compatibility but no longer needed
+}
+
+// Function called by chord button onclick handlers
+function addChordFromButton(chordValue) {
+  if (chordValue) {
+    appendChord(chordValue);
+    onInputChordsChanged();
+  }
 }
 
 function appendChord(chord) {
