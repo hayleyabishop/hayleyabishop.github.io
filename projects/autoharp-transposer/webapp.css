@@ -217,10 +217,14 @@ input[type="radio"]{
     margin-left: 2rem;
 }
 
-.chordButton {
+.chordButton[type="button"]{
+
     background: #eee;
-    border: 2px solid #825e35;
-    border-radius: 0.3rem;
+    border: none;
+    font:inherit;
+    border-top: 8px solid #e2e2e2;
+    border-bottom: 3px solid #7b7676;
+    border-radius: 15px;
     padding: 0.3rem 0.6rem;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -229,9 +233,9 @@ input[type="radio"]{
     text-align: center;
 }
 
+
 .chordButton:hover {
-    background: #825e35;
-    color: white;
+    
     transform: translateY(-1px);
     box-shadow: 0 0.2rem 6px rgba(0, 0, 0, 0.2);
 }
@@ -248,7 +252,7 @@ select::-ms-expand {
 
 .chordInput:after {
     content: '<>';
-    font: 17px "Consolas", monospace;
+    font: 17px monospace;
     color: #333;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -279,7 +283,7 @@ select::-ms-expand {
     float: left;
     margin: .3rem 0px;
     padding: 0px 24px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.75;
     color: #333;
     background-color: #ffffff;
@@ -438,6 +442,10 @@ select:after {
     justify-content: space-around;
     align-items: center;
     cursor: grab;
+}
+
+.chord:hover{
+box-shadow: 0 0.2rem 6px rgba(0, 0, 0, 0.2);
 }
 
 .staticChord {
