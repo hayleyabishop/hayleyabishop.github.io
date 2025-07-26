@@ -497,26 +497,28 @@ select:after {
 }
 
 .chordNames .chordButton.active {
-    background: #2196F3;
-    border-color: #1976D2;
-    color: white;
+    background: #bbdefb;
+    border-color: #64b5f6;
+    color: black;
 }
 
 .chordTypes .chordButton {
-    background: #f3e5f5;
-    border-color: #ce93d8;
+    background: #f6f3f0;       /* light brown background */
+    border-color: #cfbca7;     /* medium-light brown border */
 }
 
 .chordTypes .chordButton:hover {
-    background: #e1bee7;
-    border-color: #ba68c8;
+    background: #ebe7e2;       /* slightly darker on hover */
+    border-color: #ae9f8d;     /* medium-dark brown border */
 }
 
 .chordTypes .chordButton.active {
-    background: #9C27B0;
-    border-color: #7B1FA2;
-    color: white;
+    background: #ebe7e2;       /* dark brown for active */
+    border-color: #ae9f8d;     /* very dark brown outline */
+    color: black;
 }
+
+
 
 /* =========================
    Transposition Results

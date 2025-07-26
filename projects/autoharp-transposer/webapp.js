@@ -153,6 +153,20 @@ function initializeChordInputListener() {
 // =============================================================================
 
 function selectChordName(chordName) {
+  const selectedButton = document.querySelector(`[data-chord="${chordName}"]`);
+  
+  // Check if the button is already active (toggle behavior)
+  if (selectedButton.classList.contains('active')) {
+    // Remove active class from all chord name buttons
+    document.querySelectorAll('.chordName').forEach(btn => {
+      btn.classList.remove('active');
+      btn.classList.remove('grayed-out');
+    });
+    
+    selectedChordName = null;
+    return;
+  }
+  
   // Remove active class from all chord name buttons
   document.querySelectorAll('.chordName').forEach(btn => {
     btn.classList.remove('active');
@@ -160,7 +174,6 @@ function selectChordName(chordName) {
   });
   
   // Add active class to selected button and gray out others
-  const selectedButton = document.querySelector(`[data-chord="${chordName}"]`);
   selectedButton.classList.add('active');
   
   document.querySelectorAll('.chordName').forEach(btn => {
@@ -174,6 +187,20 @@ function selectChordName(chordName) {
 }
 
 function selectChordType(chordType) {
+  const selectedButton = document.querySelector(`[data-type="${chordType}"]`);
+  
+  // Check if the button is already active (toggle behavior)
+  if (selectedButton.classList.contains('active')) {
+    // Remove active class from all chord type buttons
+    document.querySelectorAll('.chordType').forEach(btn => {
+      btn.classList.remove('active');
+      btn.classList.remove('grayed-out');
+    });
+    
+    selectedChordType = null;
+    return;
+  }
+  
   // Remove active class from all chord type buttons
   document.querySelectorAll('.chordType').forEach(btn => {
     btn.classList.remove('active');
@@ -181,7 +208,6 @@ function selectChordType(chordType) {
   });
   
   // Add active class to selected button and gray out others
-  const selectedButton = document.querySelector(`[data-type="${chordType}"]`);
   selectedButton.classList.add('active');
   
   document.querySelectorAll('.chordType').forEach(btn => {
@@ -209,10 +235,18 @@ function resetChordSelection() {
   selectedChordName = null;
   selectedChordType = null;
   
-  // Remove all active and grayed-out classes
+  // First, gray out all buttons for visual feedback
   document.querySelectorAll('.chordName, .chordType').forEach(btn => {
-    btn.classList.remove('active', 'grayed-out');
+    btn.classList.remove('active');
+    btn.classList.add('grayed-out');
   });
+  
+  // After a brief delay, return all buttons to normal state
+  setTimeout(() => {
+    document.querySelectorAll('.chordName, .chordType').forEach(btn => {
+      btn.classList.remove('grayed-out');
+    });
+  }, 100); // 200ms delay
 }
 
 function formatChordName(chordName, chordType) {
