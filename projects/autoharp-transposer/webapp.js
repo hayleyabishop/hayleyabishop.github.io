@@ -3,11 +3,11 @@
 // =============================================================================
 
 const CHORD_LISTS = {
-  all: ["A", "A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab"],
-  autoharp12Maj: ["C","F","G","A# / Bb"],
+  all: ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"],
+  autoharp12Maj: ["C","F","G","A#/Bb"],
   autoharp12Min: ["Dm","Gm","Am"],
   autoharp127th: ["C7","D7","E7","G7","A7"],
-  autoharp15Maj: ["C", "D", "D# / Eb", "E", "F", "G", "A# / Bb"],
+  autoharp15Maj: ["C", "D", "D#/Eb", "E", "F", "G", "A#/Bb"],
   autoharp15Min: ["Dm", "Am", "Gm"],
   autoharp157th: ["C7","D7","E7","F7","G7","A7"],
   autoharp21Maj: [],
@@ -323,12 +323,16 @@ function calculateResultingChords(inputChords) {
   console.log("Input Chords: \n" + inputChords);
 
   for (let i in autoharpChords) {
+    console.log(i + ": " + autoharpChords[i]);
+    console.log(chords.indexOf(autoharpChords[i]));
     autoharpIntervals.push(chords.indexOf(autoharpChords[i]));
   }
   console.log("\n Available Autoharp Chords Index: \n" + autoharpIntervals);
 
   // Available Autoharp Chords Index: 0,1,2,3,5,6,7,8,10,11
   for (let i in inputChords) {
+    console.log(i + ": " + inputChords[i]);
+    console.log(chords.indexOf(inputChords[i]));
     intervals.push(chords.indexOf(inputChords[i]));
     console.log(intervals);
   }
