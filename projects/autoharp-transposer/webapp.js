@@ -323,10 +323,16 @@ function initializeDragAndDrop() {
 }
 
 function addDragListeners(draggable) {
+  // Mouse drag events
   draggable.addEventListener("dragstart", handleDragStart);
   draggable.addEventListener("dragover", handleDragOver);
   draggable.addEventListener("drop", handleDrop);
   draggable.addEventListener("dragend", handleDragEnd);
+  
+  // Touch events for mobile/touchscreen support
+  draggable.addEventListener("touchstart", handleTouchStart, { passive: false });
+  draggable.addEventListener("touchmove", handleTouchMove, { passive: false });
+  draggable.addEventListener("touchend", handleTouchEnd);
 }
 
 function handleDragStart(e) {
@@ -379,6 +385,73 @@ function getDragAfterElement(container, x) {
     },
     { offset: Number.NEGATIVE_INFINITY }
   ).element;
+}
+
+// =============================================================================
+// TOUCH EVENT HANDLERS FOR MOBILE SUPPORT
+// =============================================================================
+
+let touchStartX = 0;
+let touchStartY = 0;
+let isDragging = false;
+
+function handleTouchStart(e) {
+  // Prevent default to avoid scrolling while dragging
+  e.preventDefault();
+  
+  draggedChord = this;
+  const touch = e.touches[0];
+  touchStartX = touch.clientX;
+  touchStartY = touch.clientY;
+  isDragging = false;
+  
+  this.setAttribute("aria-grabbed", "true");
+  console.log("touch start handler");
+}
+
+function handleTouchMove(e) {
+  if (!draggedChord) return;
+  
+  e.preventDefault();
+  const touch = e.touches[0];
+  const deltaX = Math.abs(touch.clientX - touchStartX);
+  const deltaY = Math.abs(touch.clientY - touchStartY);
+  
+  // Start dragging if moved more than 10px (threshold to distinguish from tap)
+  if (!isDragging && (deltaX > 10 || deltaY > 10)) {
+    isDragging = true;
+    draggedChord.classList.add("dragging");
+  }
+  
+  if (isDragging) {
+    // Find the element we're dragging over
+    const afterElement = getDragAfterElement(chordGroup, touch.clientX);
+    
+    if (afterElement == null && chordGroup.lastElementChild == draggedChord) {
+      // Do nothing. We are already at the end.
+    } else if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
+      chordGroup.appendChild(draggedChord);
+    } else if (afterElement !== null) {
+      if (draggedChord !== afterElement.previousElementSibling) {
+        chordGroup.insertBefore(draggedChord, afterElement);
+      }
+    }
+  }
+}
+
+function handleTouchEnd(e) {
+  if (!draggedChord) return;
+  
+  this.setAttribute("aria-grabbed", "false");
+  this.classList.remove("dragging");
+  
+  if (isDragging) {
+    onInputChordsChanged(); // Recalculate resulting chords after drag
+  }
+  
+  draggedChord = null;
+  isDragging = false;
+  console.log("touch end handler");
 }
 
 // =============================================================================
