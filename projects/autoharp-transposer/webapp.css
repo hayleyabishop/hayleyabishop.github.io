@@ -85,7 +85,7 @@ body {
     Section styles 
     ======================== */
 
-.sectionHeader{
+.sectionHeader {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -126,8 +126,8 @@ body {
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 0px;
-    min-height:min-content;
-    min-width:min-content;
+    min-height: min-content;
+    min-width: min-content;
 }
 
 .label {
@@ -170,7 +170,7 @@ input[type="radio"]:checked::before {
     transform: scale(1);
 }
 
-input[type="radio"]{
+input[type="radio"] {
     display: grid;
     place-content: center;
 }
@@ -217,11 +217,11 @@ input[type="radio"]{
     margin-left: 2rem;
 }
 
-.chordButton[type="button"]{
+.chordButton[type="button"] {
 
     background: #eee;
     border: none;
-    font:inherit;
+    font: inherit;
     border-top: 8px solid #e2e2e2;
     border-bottom: 3px solid #7b7676;
     border-radius: 15px;
@@ -235,7 +235,7 @@ input[type="radio"]{
 
 
 .chordButton:hover {
-    
+
     transform: translateY(-1px);
     box-shadow: 0 0.2rem 6px rgba(0, 0, 0, 0.2);
 }
@@ -342,7 +342,7 @@ select:after {
     background: no-repeat #825e35;
     mask-image: url("./icons/musical bracket brace custom-cropped.svg");
     mask-repeat: no-repeat;
-    mask-position: 0% -4px;
+    mask-position: 0% -.25rem;
     mask-size: 8% 104%;
     background-position: 0% -2%;
     top: 0;
@@ -380,7 +380,7 @@ select:after {
     /* background-color: rgba(255, 255, 255, 0.5); */
     /* border: 1px solid #ccc; */
     padding: .6rem;
-    min-height: 18vh;
+    min-height: 7rem;
     min-width: auto;
     max-width: auto;
     background-image:
@@ -407,13 +407,18 @@ select:after {
 }
 
 .staffSpacer {
-    min-height: 10vh;
+    min-height: 4rem;
     height: auto;
     align-content: end;
     padding-top: .6rem;
 }
 
-
+.chordGroupWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.6rem;
+}
 
 /* =========================
    Chord Selection Interface
@@ -514,6 +519,51 @@ select:after {
 }
 
 /* =========================
+   Transposition Results
+   ========================= */
+
+#chordGroupResults .chordGroup::before {
+    content: var(--transposition-text);
+    position: absolute;
+    top: -1rem;
+  left: 1.2rem;
+    font-size: .7rem;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.transposed-chord {
+    color: #825e35;
+    display: block;
+}
+
+.original-chord {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    font-style: italic;
+    display: block;
+}
+
+/* #chordGroupResults .chord {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    text-align: center;
+} */
+
+/* #chordGroupResults .chordGroup {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 12px;
+    background: #fafbfc;
+} */
+
+/* =========================
    Chord Styles
    ========================= */
 .chord {
@@ -542,8 +592,8 @@ select:after {
     cursor: grab;
 }
 
-.chord:hover{
-box-shadow: 0 0.2rem 6px rgba(0, 0, 0, 0.2);
+.chord:hover {
+    box-shadow: 0 0.2rem 6px rgba(0, 0, 0, 0.2);
 }
 
 .staticChord {
@@ -584,6 +634,11 @@ box-shadow: 0 0.2rem 6px rgba(0, 0, 0, 0.2);
     padding: 0%;
     justify-content: space-evenly;
 }
+
+#chordGroupResults .chordGroup {
+    margin-top: 1rem;
+}
+
 
 #chordGroupResults .chord {
     cursor: default;

@@ -3,22 +3,62 @@
 // =============================================================================
 
 const CHORD_LISTS = {
-  all: ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"],
+  notes: ["C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab","A", "A#/Bb", "B"],
   autoharp12Maj: ["C","F","G","A#/Bb"],
   autoharp12Min: ["Dm","Gm","Am"],
   autoharp127th: ["C7","D7","E7","G7","A7"],
   autoharp15Maj: ["C", "D", "D#/Eb", "E", "F", "G", "A#/Bb"],
   autoharp15Min: ["Dm", "Am", "Gm"],
   autoharp157th: ["C7","D7","E7","F7","G7","A7"],
-  autoharp21Maj: [],
-  autoharp21Min: [],
-  autoharp217th: [],
-  autoharp21: [ "C", "C7", "Cm", "D", "D7", "Dm", "E7", "D#/Eb", "Em", "F", "F7", "G", "G7", "Gm", "Ab/G#","A", "A7", "Am", "B7", "A#/Bb", "A#/Bb7",]
+  autoharp15MajIntervals: [0,2,3,4,5,7,10],
+  autoharp15MinIntervals: [2,9,7],
+  autoharp157thIntervals: [0,2,4,5,7,9],
+  autoharp21Maj: ["C","D","D#/Eb","F","G","G#/Ab","A","A#/Bb"],
+  autoharp21Min: ["Cm","Dm","Em","Gm","Am"],
+  autoharp217th: ["C7","D7", "E7","F7", "G7","A7","B7", "A#/Bb7"],
+  autoharp21MajIntervals: [0,2,3,5,7,8,9,10],
+  autoharp21MinIntervals: [0,2,4,7,9],
+  autoharp217thIntervals: [0,2,4,5,7,9,11,10],
+
 };
 
 const REGEX_CHORDS = /[A-G](#|b)?(\/[A-G](#|b)?)?/gm;
+
+// Function to parse a chord string and extract root note and type
+function parseChord(chordString) {
+  // Match the root note (including sharps/flats and enharmonic equivalents)
+  const rootMatch = chordString.match(/^[A-G](#\/[A-G]b|b\/[A-G]#|#|b)?/);
+  if (!rootMatch) return null;
+  
+  const root = rootMatch[0];
+  const remainder = chordString.slice(root.length);
+  
+  // Determine chord type based on remainder
+  let chordType = 'major'; // default
+  
+  if (remainder.includes('m7')) {
+    chordType = 'minor7';
+  } else if (remainder.includes('maj7')) {
+    chordType = 'major7';
+  } else if (remainder.includes('m')) {
+    chordType = 'minor';
+  } else if (remainder.includes('7')) {
+    chordType = 'dominant7';
+  } else if (remainder.includes('dim')) {
+    chordType = 'diminished';
+  } else if (remainder.includes('aug')) {
+    chordType = 'augmented';
+  }
+  
+  return {
+    root: root,
+    type: chordType,
+    original: chordString
+  };
+}
+
 // Global variable to store the current autoharp chord list
-let currentAutoharpChords = CHORD_LISTS.autoharp21; // Default to 21-chord
+let currentAutoharpChords = CHORD_LISTS.autoharp21Maj.concat(CHORD_LISTS.autoharp21Min.concat(CHORD_LISTS.autoharp217th)); // Default to 21-chord
 
 // Global variables
 let draggedChord = null;
@@ -59,7 +99,7 @@ function onAutoharpTypeChanged(event) {
     case "typeCustomChords":
       // For custom, show all available chords
       // TODO: Make variable chord list!
-      currentAutoharpChords = CHORD_LISTS.all;
+      currentAutoharpChords = CHORD_LISTS.notes;
       break;
   }
   
@@ -312,7 +352,7 @@ function getDragAfterElement(container, x) {
 // =============================================================================
 
 function calculateResultingChords(inputChords) {
-  const chords = CHORD_LISTS.all;
+  const chords = CHORD_LISTS.notes;
   const autoharpChords = currentAutoharpChords;
 
   let autoharpIntervals = [];
@@ -324,47 +364,90 @@ function calculateResultingChords(inputChords) {
   console.log("Input Chords: \n" + inputChords);
 
   for (let i in autoharpChords) {
-    console.log(i + ": " + autoharpChords[i].match(REGEX_CHORDS)[0] + " of " + autoharpChords[i]);
-    console.log(chords.indexOf(autoharpChords[i].match(REGEX_CHORDS)[0]));
+    // console.log(i + ": " + autoharpChords[i].match(REGEX_CHORDS)[0] + " of " + autoharpChords[i]);
+    // console.log(chords.indexOf(autoharpChords[i].match(REGEX_CHORDS)[0]));
     autoharpIntervals.push(chords.indexOf(autoharpChords[i].match(REGEX_CHORDS)[0]));
   }
   console.log("\n Available Autoharp Chords Index: \n" + autoharpIntervals);
 
-  // Available Autoharp Chords Index: 0,1,2,3,5,6,7,8,10,11
+  // Parse input chords to extract root notes and types
+  let parsedInputChords = [];
   for (let i in inputChords) {
-    console.log(i + ": " + inputChords[i]);
-    console.log(chords.indexOf(inputChords[i]));
-    intervals.push(chords.indexOf(inputChords[i]));
-    console.log(intervals);
-  }
-
-  // Subtract smallest chord number from all elements, to find lowest common denominator of intervals.
-  intervals = intervals.map(element => element - intervals[0]);
-  let matches = [];
-
-  console.log("\nInput Chord Intervals: \n" + intervals);
-
-  for (i = 0; Math.max(...intervals) < 12; i++) {
-    // Try looking for all 3 items in the autoharp set; try again, going up by a half note, until the largest interval is 12.
-
-    // Use .filter() to find and save a match if the interval exists in autoharpintervals.
-    foundIntervals = intervals.filter((e) => autoharpIntervals.includes(e));
-
-    // If all intervals are present, save this set as a match.
-    if (foundIntervals.length == intervals.length) {
-      matches.push(foundIntervals);
+    const parsed = parseChord(inputChords[i]);
+    if (parsed) {
+      const rootIndex = chords.indexOf(parsed.root);
+      parsedInputChords.push({
+        index: rootIndex,
+        type: parsed.type,
+        original: parsed.original,
+        root: parsed.root
+      });
+      intervals.push(rootIndex);
+      console.log(`Chord ${i}: ${parsed.original} -> Root: ${parsed.root} (index ${rootIndex}), Type: ${parsed.type}`);
+    } else {
+      console.warn(`Could not parse chord: ${inputChords[i]}`);
     }
-    intervals = intervals.map(element => element + 1);
+  }
+  console.log("Parsed input chords:", parsedInputChords);
+  console.log("Input chord intervals:", intervals);
+  // Create a map of available autoharp chords by root note and type
+  let autoharpChordMap = new Map();
+  for (let chord of autoharpChords) {
+    const parsed = parseChord(chord);
+    if (parsed) {
+      const rootIndex = chords.indexOf(parsed.root);
+      const key = `${rootIndex}-${parsed.type}`;
+      if (!autoharpChordMap.has(key)) {
+        autoharpChordMap.set(key, []);
+      }
+      autoharpChordMap.get(key).push(chord);
+    }
   }
 
-  // Convert the index numbers in matches to the actual chord names.
-  let chordMatches = matches.map(match => match.map(index => chords[index]));
+  console.log("Available autoharp chords by type:", autoharpChordMap);
 
-  // Print each chord grouping, no matter how many matches there are.
-  for (const match of matches) {
-    console.log(match.map(index => chords[index]));
+  // Find all possible transpositions
+  let matches = [];
+  
+  // Try each possible transposition (0-11 semitones)
+  for (let transposition = 0; transposition < 12; transposition++) {
+    let transposedChords = [];
+    let allChordsAvailable = true;
+    
+    // Check if all input chords can be transposed and are available on autoharp
+    for (let inputChord of parsedInputChords) {
+      const transposedRootIndex = (inputChord.index + transposition) % 12;
+      const transposedKey = `${transposedRootIndex}-${inputChord.type}`;
+      
+      if (autoharpChordMap.has(transposedKey)) {
+        // Found a matching chord on the autoharp
+        const availableChords = autoharpChordMap.get(transposedKey);
+        transposedChords.push({
+          original: inputChord.original,
+          transposed: availableChords[0], // Use first available chord
+          rootIndex: transposedRootIndex,
+          type: inputChord.type
+        });
+      } else {
+        // This chord type is not available at this transposition
+        allChordsAvailable = false;
+        break;
+      }
+    }
+    
+    if (allChordsAvailable && transposedChords.length > 0) {
+      matches.push({
+        transposition: transposition,
+        chords: transposedChords
+      });
+      
+      console.log(`Transposition +${transposition} semitones:`, 
+        transposedChords.map(c => `${c.original} → ${c.transposed}`).join(', '));
+    }
   }
-  return chordMatches;
+
+  console.log(`Found ${matches.length} valid transpositions`);
+  return matches;
 }
 
 // =============================================================================
@@ -395,20 +478,34 @@ function onInputChordsChanged() {
     return;
   }
 
-  resultingChords.forEach((chordSet, i) => {
+  resultingChords.forEach((transpositionResult, i) => {
     const div = document.createElement('div');
     div.className = 'chordGroup';
-    chordSet.forEach((chord, j) => {
+    
+    // Add transposition header
+    const semitones = transpositionResult.transposition;
+    const direction = semitones === 0 ? '+0' : 
+                     semitones > 0 ? `+${semitones} semitones` : 
+                     `${Math.abs(semitones)} semitones`;
+    div.style.setProperty('--transposition-text', `"${direction}"`);
+    div.setAttribute('data-transposition', direction);
+    
+    // Add the transposed chords
+    transpositionResult.chords.forEach((chordInfo, j) => {
       const chordDiv = document.createElement('div');
       chordDiv.className = 'chord';
       chordDiv.setAttribute('role', 'listitem');
       chordDiv.setAttribute('aria-grabbed', 'false');
-      chordDiv.innerHTML = `<span>${chord}</span>`;
+      
+      // Show both original and transposed chord
+      chordDiv.innerHTML = `
+        <span class="transposed-chord">${chordInfo.transposed}</span>
+      `;
 
       // Do NOT set draggable attribute for resulting chords
       div.appendChild(chordDiv);
     });
-    // Do NOT set draggable attribute for resulting chords
+    
     chordGroupResults.appendChild(div);
   });
 }
