@@ -16,6 +16,7 @@ const CHORD_LISTS = {
   autoharp21: ["A", "A7", "Ab", "Am", "B7", "Bb", "Bb7", "C", "C7", "Cm", "D", "D7", "Dm", "E7", "Eb", "Em", "F", "F7", "G", "G7", "Gm"]
 };
 
+const REGEX_CHORDS = /[A-G](#|b)?(\/[A-G](#|b)?)?/gm;
 // Global variable to store the current autoharp chord list
 let currentAutoharpChords = CHORD_LISTS.autoharp21; // Default to 21-chord
 
