@@ -4,9 +4,9 @@
 
 const CHORD_LISTS = {
   all: ["A", "A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab"],
-  autoharp12Maj: ["A# / Bb","C","F","G"],
-  autoharp12Min: ["Am","Dm","Gm"],
-  autoharp127th: ["A7","C7","D7","E7","G7"],
+  autoharp12Maj: ["C","F","G","A# / Bb"],
+  autoharp12Min: ["Dm","Gm","Am"],
+  autoharp127th: ["C7","D7","E7","G7","A7"],
   autoharp15Maj: ["C", "D", "D# / Eb", "E", "F", "G", "A# / Bb"],
   autoharp15Min: ["Dm", "Am", "Gm"],
   autoharp157th: ["C7","D7","E7","F7","G7","A7"],
@@ -40,23 +40,20 @@ function onAutoharpTypeChanged(event) {
 
   switch (selectedType) {
     case "type12Chord":
-      // TODO: Make hardcoded variables, and add them to the list!
-      // appendChords .staticChords
-      // chordList = ["A","A7","Ab","Am","B7","Bb","Bb7","C","C7","Cm","D","D7","Dm","E7","Eb","Em","F","F7","G","G7","Gm"];
-      // chord degrees = a, a minor, b, b minor, etc. 
+      // TODO: Minor/major/7th chords integration
       // if progression is c to d minor, find the c to d comparison, then check if d minor exists
       // rootNoteInterval = result interval;
       // 0 0m 1 1m 2 2m 2D7... 
       // interval is 1 to minor +1;
       
-      currentAutoharpChords = CHORD_LISTS.autoharp12;
+      currentAutoharpChords = CHORD_LISTS.autoharp12Maj.concat(CHORD_LISTS.autoharp12Min.concat(CHORD_LISTS.autoharp127th));
       break;
     case "type15Chord":
       // 15-chord autoharp typically has these chords
-      currentAutoharpChords = ["Eb", "Bb", "F", "F7", "C", "C7", "G", "G7", "Gm", "D7", "D", "Dm", "A7", "Am", "E7"];
+      currentAutoharpChords = CHORD_LISTS.autoharp15Maj.concat(CHORD_LISTS.autoharp15Min.concat(CHORD_LISTS.autoharp157th));
       break;
     case "type21Chord":
-      currentAutoharpChords = CHORD_LISTS.autoharp21;
+      currentAutoharpChords = CHORD_LISTS.autoharp21Maj.concat(CHORD_LISTS.autoharp21Min.concat(CHORD_LISTS.autoharp217th));
       break;
     case "typeCustomChords":
       // For custom, show all available chords
