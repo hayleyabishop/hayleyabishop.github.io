@@ -21,6 +21,8 @@ let currentAutoharpChords = CHORD_LISTS.autoharp21; // Default to 21-chord
 
 // Global variables
 let draggedChord = null;
+let selectedChordName = null;
+let selectedChordType = null;
 
 // =============================================================================
 // AUTOHARP TYPES
@@ -108,7 +110,95 @@ function initializeChordInputListener() {
   // This function is kept for compatibility but no longer needed
 }
 
-// Function called by chord button onclick handlers
+// =============================================================================
+// CHORD SELECTION FUNCTIONS
+// =============================================================================
+
+function selectChordName(chordName) {
+  // Remove active class from all chord name buttons
+  document.querySelectorAll('.chordName').forEach(btn => {
+    btn.classList.remove('active');
+    btn.classList.remove('grayed-out');
+  });
+  
+  // Add active class to selected button and gray out others
+  const selectedButton = document.querySelector(`[data-chord="${chordName}"]`);
+  selectedButton.classList.add('active');
+  
+  document.querySelectorAll('.chordName').forEach(btn => {
+    if (btn !== selectedButton) {
+      btn.classList.add('grayed-out');
+    }
+  });
+  
+  selectedChordName = chordName;
+  tryAddChord();
+}
+
+function selectChordType(chordType) {
+  // Remove active class from all chord type buttons
+  document.querySelectorAll('.chordType').forEach(btn => {
+    btn.classList.remove('active');
+    btn.classList.remove('grayed-out');
+  });
+  
+  // Add active class to selected button and gray out others
+  const selectedButton = document.querySelector(`[data-type="${chordType}"]`);
+  selectedButton.classList.add('active');
+  
+  document.querySelectorAll('.chordType').forEach(btn => {
+    if (btn !== selectedButton) {
+      btn.classList.add('grayed-out');
+    }
+  });
+  
+  selectedChordType = chordType;
+  tryAddChord();
+}
+
+function tryAddChord() {
+  if (selectedChordName && selectedChordType) {
+    const chordValue = formatChordName(selectedChordName, selectedChordType);
+    appendChord(chordValue);
+    onInputChordsChanged();
+    
+    // Reset selections
+    resetChordSelection();
+  }
+}
+
+function resetChordSelection() {
+  selectedChordName = null;
+  selectedChordType = null;
+  
+  // Remove all active and grayed-out classes
+  document.querySelectorAll('.chordName, .chordType').forEach(btn => {
+    btn.classList.remove('active', 'grayed-out');
+  });
+}
+
+function formatChordName(chordName, chordType) {
+  switch (chordType) {
+    case 'major':
+      return chordName;
+    case 'minor':
+      return chordName + 'm';
+    case '7th':
+      return chordName + '7';
+    case 'm7':
+      return chordName + 'm7';
+    case 'maj7':
+      return chordName + 'maj7';
+    case 'dim':
+      return chordName + 'dim';
+    case 'aug':
+      return chordName + 'aug';
+    default:
+      return chordName;
+  }
+}
+
+// Legacy function for backward compatibility
 function addChordFromButton(chordValue) {
   if (chordValue) {
     appendChord(chordValue);
