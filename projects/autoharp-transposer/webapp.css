@@ -6,7 +6,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    border: #aaa dashed 1;
+    /* border: #aaa dashed 1; */
+    color:black;
 }
 
 body::before {
