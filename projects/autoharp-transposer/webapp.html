@@ -89,9 +89,32 @@
               <button type="button" class="chordButton chordType" data-type="aug" onclick="selectChordType('aug')"><span>aug</span></button>
             </div>
           </div>
+          
+          <!-- New Hybrid Input Section -->
+          <div class="hybrid-input-section">
+            <div class="input-methods">
+              <!-- Text Input with Suggestions -->
+              <div class="text-input-container">
+                <div class="input-with-controls">
+                  <input type="text" id="chordTextInput" placeholder="Type chord name (e.g., Gm, F#7, Asus2)" autocomplete="off">
+                  <button id="addChordBtn" class="add-chord-btn" type="button">Add</button>
+                  <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+                <div id="chordSuggestions" class="suggestions-container" style="display: none;"></div>
+              </div>
+              
+              <!-- Quick Action Buttons -->
+              <div class="quick-actions">
+                <button id="clearAllChords" class="utility-btn" type="button">Clear All</button>
+                <button id="playAllChords" class="utility-btn" type="button">Play All</button>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
 
+      <!-- App Messages -->
+      <div id="app-message" class="app-message" style="display: none;"></div>
 
       <div class="bracketed-section">
 
@@ -111,6 +134,9 @@
 
     </div>
   </div>
+  
+  <!-- Load modules -->
+  <script type="module" src="modules/appIntegration.js"></script>
   <script src="webapp.js"></script>
 </body>
 
