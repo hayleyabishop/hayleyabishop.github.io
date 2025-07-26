@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chord Selector</title>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background: #f4f1ec;
+      padding: 20px;
+    }
+    .staff {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px;
+    }
+    .staff-line {
+      height: 1px;
+      background: black;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    .staff-line:nth-child(2) { top: 25%; }
+    .staff-line:nth-child(3) { top: 50%; }
+    .staff-line:nth-child(4) { top: 75%; }
+    .chords {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .chord {
+      background: white;
+      border: 1px solid black;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .chord.active {
+      background: #d2cfc7;
+      border-color: #000;
+    }
+    .selected-chord {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .input-area {
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #chordInput {
+      padding: 8px;
+      font-size: 16px;
+      width: 250px;
+    }
+    #addBtn {
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+    #suggestions {
+      position: absolute;
+      background: white;
+      border: 1px solid #aaa;
+      max-height: 150px;
+      overflow-y: auto;
+      width: 250px;
+      top: 36px;
+      left: 40px;
+      z-index: 10;
+    }
+    .suggestion {
+      padding: 8px;
+      cursor: pointer;
+    }
+    .suggestion:hover {
+      background: #eee;
+    }
+    #soundToggle {
+      cursor: pointer;
+      padding: 6px 10px;
+      border: 1px solid black;
+      background: white;
+      font-weight: bold;
+    }
+    #soundToggle.active {
+      background: #d2ffd2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chord Selector (Sheet Music Style)</h1>
+
+  <div class="staff">
+    <div class="staff-line"></div>
+    <div class="staff-line"></div>
+    <div class="staff-line"></div>
+    <div class="staff-line"></div>
+    <div class="staff-line"></div>
+  </div>
+
+  <div class="input-area">
+    <div id="soundToggle">🔇</div>
+    <input type="text" id="chordInput" placeholder="Enter a chord (e.g., Gm, Asus2, F#7)">
+    <div id="suggestions"></div>
+    <button id="addBtn" onclick="addChord()">Add</button>
+  </div>
+
+  <div class="chords" id="chords">
+    <div class="chord">Cmaj7</div>
+    <div class="chord">Dm</div>
+    <div class="chord">Em</div>
+    <div class="chord">F</div>
+    <div class="chord">G</div>
+    <div class="chord">Am</div>
+    <div class="chord">Bdim</div>
+  </div>
+
+  <div class="selected-chord">Selected: <span id="selected">None</span></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const chords = document.getElementById('chords');
+      const selectedDisplay = document.getElementById('selected');
+      const chordInput = document.getElementById('chordInput');
+      const suggestionsBox = document.getElementById('suggestions');
+      const soundToggle = document.getElementById('soundToggle');
+
+      let soundEnabled = false;
+
+      soundToggle.addEventListener('click', () => {
+        soundEnabled = !soundEnabled;
+        soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+        soundToggle.classList.toggle('active', soundEnabled);
+      });
+
+      const noteFrequencies = {
+        'C': 261.63, 'C#': 277.18, 'Db': 277.18,
+        'D': 293.66, 'D#': 311.13, 'Eb': 311.13,
+        'E': 329.63,
+        'F': 349.23, 'F#': 369.99, 'Gb': 369.99,
+        'G': 392.00, 'G#': 415.30, 'Ab': 415.30,
+        'A': 440.00, 'A#': 466.16, 'Bb': 466.16,
+        'B': 493.88
+      };
+
+      const chordFormulas = {
+        '': [0, 4, 7],
+        'm': [0, 3, 7],
+        '7': [0, 4, 7, 10],
+        'maj7': [0, 4, 7, 11],
+        'dim': [0, 3, 6],
+        'aug': [0, 4, 8],
+        'sus2': [0, 2, 7],
+        'sus4': [0, 5, 7]
+      };
+
+      function parseChord(chord) {
+        const match = chord.match(/^([A-G][b#]?)(.*)$/);
+        return match ? { root: match[1], type: match[2] } : null;
+      }
+
+      function playChord(chordName) {
+        if (!soundEnabled) return;
+        const parsed = parseChord(chordName);
+        if (!parsed || !noteFrequencies[parsed.root]) return;
+
+        const context = new (window.AudioContext || window.webkitAudioContext)();
+        const baseFreq = noteFrequencies[parsed.root];
+        const intervals = chordFormulas[parsed.type || ''] || chordFormulas[''];
+
+        intervals.forEach((semitones, i) => {
+          const freq = baseFreq * Math.pow(2, semitones / 12);
+          const osc = context.createOscillator();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, context.currentTime);
+          const gain = context.createGain();
+          gain.gain.setValueAtTime(0.3, context.currentTime);
+          osc.connect(gain).connect(context.destination);
+          osc.start(context.currentTime + i * 0.01);
+          osc.stop(context.currentTime + 0.5);
+        });
+      }
+
+      const chordSuggestions = [
+        'C', 'Cm', 'Cmaj7', 'C7', 'Cdim', 'Caug', 'Csus2', 'Csus4',
+        'D', 'Dm', 'Dmaj7', 'D7', 'Ddim', 'Daug', 'Dsus2', 'Dsus4',
+        'E', 'Em', 'Emaj7', 'E7', 'Edim', 'Eaug', 'Esus2', 'Esus4',
+        'F', 'Fm', 'Fmaj7', 'F7', 'Fdim', 'Faug', 'Fsus2', 'Fsus4',
+        'G', 'Gm', 'Gmaj7', 'G7', 'Gdim', 'Gaug', 'Gsus2', 'Gsus4',
+        'A', 'Am', 'Amaj7', 'A7', 'Adim', 'Aaug', 'Asus2', 'Asus4',
+        'B', 'Bm', 'Bmaj7', 'B7', 'Bdim', 'Baug', 'Bsus2', 'Bsus4'
+      ];
+
+      const fuse = new Fuse(chordSuggestions, {
+        includeScore: true,
+        threshold: 0.4
+      });
+
+      function normalizeChord(input) {
+        input = input.toLowerCase().replace(/\s+/g, '');
+        input = input.replace(/^([a-g])/, (_, p1) => p1.toUpperCase());
+        input = input.replace(/minor/, 'm');
+        input = input.replace(/major/, 'maj');
+        input = input.replace(/sus([24])/, 'sus$1');
+        return input;
+      }
+
+      function updateListeners() {
+        document.querySelectorAll('.chord').forEach(chord => {
+          chord.addEventListener('click', () => {
+            document.querySelectorAll('.chord').forEach(c => c.classList.remove('active'));
+            chord.classList.add('active');
+            selectedDisplay.textContent = chord.textContent;
+            playChord(chord.textContent);
+          });
+        });
+      }
+
+      function addChord() {
+        let value = chordInput.value.trim();
+        value = normalizeChord(value);
+        if (value && /^[A-G][b#]?(maj7|maj|min|m|dim|aug|sus[24]?|7)?$/.test(value)) {
+          const newChord = document.createElement('div');
+          newChord.classList.add('chord');
+          newChord.textContent = value;
+          chords.appendChild(newChord);
+          updateListeners();
+          chordInput.value = '';
+          suggestionsBox.innerHTML = '';
+          playChord(value);
+        } else {
+          alert('Invalid chord format');
+        }
+      }
+
+      chordInput.addEventListener('input', () => {
+        const input = normalizeChord(chordInput.value);
+        suggestionsBox.innerHTML = '';
+        if (input.length > 0) {
+          const results = fuse.search(input);
+          results.forEach(result => {
+            const match = result.item;
+            const div = document.createElement('div');
+            div.classList.add('suggestion');
+            div.textContent = match;
+            div.onclick = () => {
+              chordInput.value = match;
+              suggestionsBox.innerHTML = '';
+              chordInput.focus();
+            };
+            suggestionsBox.appendChild(div);
+          });
+        }
+      });
+
+      chordInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          addChord();
+        }
+      });
+
+      updateListeners();
+    });
+  </script>
+</body>
+</html>
