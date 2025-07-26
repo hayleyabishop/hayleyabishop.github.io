@@ -13,7 +13,7 @@ const CHORD_LISTS = {
   autoharp21Maj: [],
   autoharp21Min: [],
   autoharp217th: [],
-  autoharp21: ["A", "A7", "Ab", "Am", "B7", "Bb", "Bb7", "C", "C7", "Cm", "D", "D7", "Dm", "E7", "Eb", "Em", "F", "F7", "G", "G7", "Gm"]
+  autoharp21: [ "C", "C7", "Cm", "D", "D7", "Dm", "E7", "D#/Eb", "Em", "F", "F7", "G", "G7", "Gm", "Ab/G#","A", "A7", "Am", "B7", "A#/Bb", "A#/Bb7",]
 };
 
 const REGEX_CHORDS = /[A-G](#|b)?(\/[A-G](#|b)?)?/gm;
@@ -324,9 +324,9 @@ function calculateResultingChords(inputChords) {
   console.log("Input Chords: \n" + inputChords);
 
   for (let i in autoharpChords) {
-    console.log(i + ": " + autoharpChords[i]);
-    console.log(chords.indexOf(autoharpChords[i]));
-    autoharpIntervals.push(chords.indexOf(autoharpChords[i]));
+    console.log(i + ": " + autoharpChords[i].match(REGEX_CHORDS)[0] + " of " + autoharpChords[i]);
+    console.log(chords.indexOf(autoharpChords[i].match(REGEX_CHORDS)[0]));
+    autoharpIntervals.push(chords.indexOf(autoharpChords[i].match(REGEX_CHORDS)[0]));
   }
   console.log("\n Available Autoharp Chords Index: \n" + autoharpIntervals);
 
