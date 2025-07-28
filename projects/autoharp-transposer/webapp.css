@@ -691,10 +691,6 @@ select:after {
     transition: all .5s;
 }
 
-.chord span {
-    /* margin-right: .6rem; */
-
-}
 
 .chord .xbutton {
     /* background-image: url("data:image/svg+xml,..."); */
@@ -703,6 +699,25 @@ select:after {
     border: none;
     font-size: 16;
     cursor: auto;
+
+}
+
+.chord-group-wrapper {
+    position: relative;
+}
+
+.drop-indicator {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #007bff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 999;
+}
+
+.drop-indicator.active {
+    opacity: 1;
 }
 
 .chord .xbutton:hover {
