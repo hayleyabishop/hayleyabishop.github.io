@@ -395,9 +395,19 @@ class EventCoordinator {
   updateProgressions() {
     const selectedChords = this.stateManager.get('selectedChords');
     
-    // Call existing progression calculation function
-    if (typeof window.onInputChordsChanged === 'function') {
-      window.onInputChordsChanged();
+    // Ensure DOM references are initialized before calling legacy functions
+    if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {
+      window.initializeDOMReferences();
+    }
+    
+    // Call existing progression calculation function safely
+    if (typeof window.onInputChordsChanged === 'function' && window.chordGroup) {
+      try {
+        window.onInputChordsChanged();
+      } catch (error) {
+        console.warn('Error calling legacy onInputChordsChanged:', error);
+        // Continue without legacy progression updates
+      }
     }
   }
 

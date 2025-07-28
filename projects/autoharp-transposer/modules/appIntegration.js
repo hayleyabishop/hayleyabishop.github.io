@@ -9,6 +9,7 @@ import { InputManager } from './inputManager.js';
 import { StateManager } from './stateManager.js';
 import { EventCoordinator } from './eventCoordinator.js';
 import { storageManager } from './storageManager.js';
+import { integrationBridge } from './integrationBridge.js';
 
 class AutoharpTransposerApp {
   constructor() {
@@ -21,14 +22,26 @@ class AutoharpTransposerApp {
     try {
       console.log('Initializing Autoharp Transposer App...');
       
+      // Make integration bridge available globally
+      window.integrationBridge = integrationBridge;
+      
+      // Wait for chord data to be available
+      await this.waitForChordData();
+      
       // Initialize core modules
       await this.initializeModules();
       
       // Set up module connections
       this.connectModules();
       
+      // Bridge legacy functions
+      integrationBridge.bridgeLegacyFunctions(this);
+      
       // Load saved state
       this.loadSavedState();
+      
+      // Sync with legacy system
+      integrationBridge.syncLegacyToNewSystem(this);
       
       // Initialize UI
       this.initializeUI();
@@ -43,6 +56,16 @@ class AutoharpTransposerApp {
       console.error('Error initializing app:', error);
       this.handleInitializationError(error);
     }
+  }
+
+  async waitForChordData() {
+    return new Promise((resolve) => {
+      integrationBridge.onReady(() => {
+        integrationBridge.setModuleSystemReady();
+        console.log('Chord data ready for modules');
+        resolve();
+      });
+    });
   }
 
   async initializeModules() {
@@ -129,10 +152,21 @@ class AutoharpTransposerApp {
   }
 
   initializeUI() {
+    // Ensure legacy DOM references are initialized first
+    if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {
+      window.initializeDOMReferences();
+    }
+    
     // Update UI to reflect current state
     this.updateAutoharpTypeUI();
     this.updateAudioToggleUI();
-    this.updateSelectedChordsUI();
+    
+    // Only update selected chords UI if DOM is ready
+    if (window.chordGroup) {
+      this.updateSelectedChordsUI();
+    } else {
+      console.warn('DOM not ready for selected chords UI update');
+    }
     
     // Set up auto-save
     this.setupAutoSave();
@@ -158,8 +192,23 @@ class AutoharpTransposerApp {
   }
 
   updateSelectedChordsUI() {
-    // This will be handled by the event coordinator
-    this.modules.eventCoordinator.updateUI();
+    // Ensure DOM references are initialized before updating UI
+    if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {
+      window.initializeDOMReferences();
+    }
+    
+    // Only update UI if DOM is ready
+    if (window.chordGroup) {
+      this.modules.eventCoordinator.updateUI();
+    } else {
+      console.warn('Skipping selected chords UI update - DOM not ready');
+      // Try again after a short delay
+      setTimeout(() => {
+        if (window.chordGroup) {
+          this.modules.eventCoordinator.updateUI();
+        }
+      }, 200);
+    }
   }
 
   setupAutoSave() {
@@ -326,9 +375,13 @@ function initializeApp() {
 
 // Auto-initialize if DOM is ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initializeApp);
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add small delay to ensure legacy scripts have loaded
+    setTimeout(initializeApp, 100);
+  });
 } else {
-  initializeApp();
+  // Add small delay to ensure legacy scripts have loaded
+  setTimeout(initializeApp, 100);
 }
 
 export { AutoharpTransposerApp, initializeApp };

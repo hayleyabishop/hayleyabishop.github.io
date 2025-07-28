@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Transpose</title>
   <link rel="stylesheet" href="webapp.css">
+  <link rel="stylesheet" href="hybrid-input.css">
 
 </head>
 
@@ -60,8 +61,7 @@
           </div>
           <div class="label sectionHeader">Input Chords</div>
           <div class="chordSelectionInterface">
-            <!-- Chord Names Row -->
-            <div class="chordRow chordNames">
+            <!-- <div class="chordRow chordNames">
               <div class="rowLabel">Chord:</div>
               <button type="button" class="chordButton chordName" data-chord="C" onclick="selectChordName('C')"><span>C</span></button>
               <button type="button" class="chordButton chordName" data-chord="C#/Db" onclick="selectChordName('C#/Db')"><span>C#/Db</span></button>
@@ -77,7 +77,7 @@
               <button type="button" class="chordButton chordName" data-chord="B" onclick="selectChordName('B')"><span>B</span></button>
             </div>
             
-            <!-- Chord Types Row -->
+            
             <div class="chordRow chordTypes">
               <div class="rowLabel">Type:</div>
               <button type="button" class="chordButton chordType" data-type="major" onclick="selectChordType('major')"><span>Major</span></button>
@@ -88,7 +88,7 @@
               <button type="button" class="chordButton chordType" data-type="dim" onclick="selectChordType('dim')"><span>dim</span></button>
               <button type="button" class="chordButton chordType" data-type="aug" onclick="selectChordType('aug')"><span>aug</span></button>
             </div>
-          </div>
+          </div> -->
           
           <!-- New Hybrid Input Section -->
           <div class="hybrid-input-section">
@@ -138,6 +138,7 @@
   <!-- Load modules -->
   <script type="module" src="modules/appIntegration.js"></script>
   <script src="webapp.js"></script>
+  <script src="test-integration.js"></script>
 </body>
 
 </html>

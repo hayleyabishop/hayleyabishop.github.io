@@ -158,7 +158,12 @@ class StateManager {
 
   // Helper methods
   getAvailableChordsForType(type) {
-    // Import chord lists from existing constants
+    // Use integration bridge to get chord data
+    if (window.integrationBridge) {
+      return window.integrationBridge.getAvailableChordsForType(type);
+    }
+    
+    // Fallback to direct access if bridge not available
     const CHORD_LISTS = window.CHORD_LISTS || {};
     
     switch (type) {
