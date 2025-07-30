@@ -7,6 +7,54 @@ class ChordParser {
   constructor(availableChords = []) {
     this.availableChords = availableChords;
     this.chordHistory = this.loadChordHistory();
+    
+    // Comprehensive list of all valid Western music chords for normalization
+    // This is separate from availableChords (which varies by autoharp type)
+    this.allValidChords = this.generateAllValidChords();
+  }
+  
+  /**
+   * Generate comprehensive list of all valid Western music chords
+   * Used for normalization/validation, independent of autoharp type
+   */
+  generateAllValidChords() {
+    const roots = ['C', 'C#', 'Db', 'D', 'D#', 'Eb', 'E', 'F', 'F#', 'Gb', 'G', 'G#', 'Ab', 'A', 'A#', 'Bb', 'B'];
+    const chordTypes = [
+      '',      // Major
+      'm',     // Minor
+      '7',     // Dominant 7th
+      'maj7',  // Major 7th
+      'm7',    // Minor 7th
+      'dim',   // Diminished
+      'aug',   // Augmented
+      'sus2',  // Suspended 2nd
+      'sus4',  // Suspended 4th
+      'add9',  // Add 9
+      '6',     // Major 6th
+      'm6',    // Minor 6th
+      '9',     // Dominant 9th
+      'maj9',  // Major 9th
+      'm9',    // Minor 9th
+      '11',    // Dominant 11th
+      '13',    // Dominant 13th
+      'dim7',  // Diminished 7th
+      'm7b5',  // Half-diminished
+      '7sus4', // Dominant 7 suspended 4
+      'maj7#11', // Major 7 sharp 11
+      'add2',  // Add 2
+      '5'      // Power chord (fifth)
+    ];
+    
+    const allChords = [];
+    
+    // Generate all combinations
+    for (const root of roots) {
+      for (const type of chordTypes) {
+        allChords.push(root + type);
+      }
+    }
+    
+    return allChords;
   }
 
   updateAvailableChords(chords) {
@@ -26,29 +74,62 @@ class ChordParser {
     const cleanInput = input.trim();
     if (!cleanInput) return null;
 
-    // Step 1: Try exact match first
-    const exactMatch = this.availableChords.find(chord => 
+    // Step 1: Try exact match against all valid chords (for normalization)
+    const exactValidMatch = this.allValidChords.find(chord => 
       chord.toLowerCase() === cleanInput.toLowerCase()
     );
-    if (exactMatch) return exactMatch;
-
-    // Step 2: Try enhanced chord parsing with normalization
-    const normalizedChord = this.normalizeChordInput(cleanInput);
-    if (normalizedChord) {
-      // Try exact match with normalized chord
-      const normalizedMatch = this.availableChords.find(chord => 
-        chord.toLowerCase() === normalizedChord.toLowerCase()
+    if (exactValidMatch) {
+      // Check if this valid chord is available on this autoharp
+      const availableMatch = this.availableChords.find(chord => 
+        chord.toLowerCase() === exactValidMatch.toLowerCase()
       );
-      if (normalizedMatch) return normalizedMatch;
-      
-      // Try fuzzy matching with normalized chord
-      const fuzzyMatches = this.getFuzzyMatches(normalizedChord);
-      if (fuzzyMatches.length > 0) return fuzzyMatches[0].chord;
+      if (availableMatch) {
+        return availableMatch;
+      }
+      // Return the normalized valid chord even if not available (for user feedback)
+      return exactValidMatch;
     }
 
-    // Step 3: Try original fuzzy matching as fallback
-    const originalFuzzyMatches = this.getFuzzyMatches(cleanInput);
-    return originalFuzzyMatches.length > 0 ? originalFuzzyMatches[0].chord : null;
+    // Step 2: Try enhanced chord parsing with normalization against all valid chords
+    const normalizedChord = this.normalizeChordInput(cleanInput);
+    if (normalizedChord) {
+      // Check if normalized chord is valid
+      const validNormalizedMatch = this.allValidChords.find(chord => 
+        chord.toLowerCase() === normalizedChord.toLowerCase()
+      );
+      if (validNormalizedMatch) {
+        // Check if available on this autoharp
+        const availableNormalizedMatch = this.availableChords.find(chord => 
+          chord.toLowerCase() === validNormalizedMatch.toLowerCase()
+        );
+        if (availableNormalizedMatch) {
+          return availableNormalizedMatch;
+        }
+        return validNormalizedMatch;
+      }
+      
+      // Try fuzzy matching against valid chords first
+      const validFuzzyMatches = this.getFuzzyMatches(normalizedChord, 5, this.allValidChords);
+      if (validFuzzyMatches.length > 0) {
+        const validFuzzyMatch = validFuzzyMatches[0].chord;
+        // Check if available on this autoharp
+        const availableFuzzyMatch = this.availableChords.find(chord => 
+          chord.toLowerCase() === validFuzzyMatch.toLowerCase()
+        );
+        if (availableFuzzyMatch) {
+          return availableFuzzyMatch;
+        }
+        return validFuzzyMatch;
+      }
+    }
+
+    // Step 3: Try original fuzzy matching as fallback (against available chords only)
+    const originalFuzzyMatches = this.getFuzzyMatches(cleanInput, 5, this.availableChords);
+    if (originalFuzzyMatches.length > 0) {
+      return originalFuzzyMatches[0].chord;
+    }
+    
+    return null;
   }
 
   /**
@@ -71,6 +152,7 @@ class ChordParser {
     
     let root = rootMatch[1].toUpperCase(); // Normalize to uppercase
     let remainder = normalized.slice(rootMatch[0].length).trim();
+    
     
     // Handle enharmonic equivalents and normalize sharps/flats
     const enharmonicMap = {
@@ -190,13 +272,16 @@ class ChordParser {
     return root;
   }
 
-  getFuzzyMatches(input, maxResults = 5) {
+  getFuzzyMatches(input, maxResults = 5, chordList = null) {
     if (!input) return [];
 
     const cleanInput = input.toLowerCase().trim();
     const matches = [];
+    
+    // Use provided chord list or default to availableChords
+    const chordsToSearch = chordList || this.availableChords;
 
-    this.availableChords.forEach(chord => {
+    chordsToSearch.forEach(chord => {
       const score = this.calculateSimilarity(cleanInput, chord.toLowerCase());
       if (score > 0.3) { // Minimum similarity threshold
         matches.push({ chord, score });

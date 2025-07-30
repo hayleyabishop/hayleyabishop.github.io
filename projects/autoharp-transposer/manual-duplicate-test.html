@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manual Duplicate Chord Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .result { margin: 10px 0; padding: 10px; background: #f5f5f5; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        button { padding: 10px 20px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Manual Duplicate Chord Test</h1>
+    
+    <div class="test-section">
+        <h2>Test Instructions</h2>
+        <p>This test will verify that duplicate chords can now be added to the autoharp transposer.</p>
+        <button onclick="runDuplicateTest()">Run Duplicate Test</button>
+        <div id="testResults"></div>
+    </div>
+
+    <script type="module">
+        // Import the modules
+        import { ChordParser } from './modules/chordParser.js';
+        import { InputManager } from './modules/inputManager.js';
+        import { AudioManager } from './modules/audioManager.js';
+
+        async function runDuplicateTest() {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.innerHTML = '<p>🔄 Running test...</p>';
+            
+            try {
+                // Initialize components
+                const availableChords = ['A', 'Am', 'B', 'Bm', 'C', 'Cm', 'D', 'Dm', 'E', 'Em', 'F', 'Fm', 'G', 'Gm'];
+                const chordParser = new ChordParser(availableChords);
+                const audioManager = new AudioManager();
+                const inputManager = new InputManager(audioManager, chordParser);
+                
+                let results = [];
+                results.push('✅ Components initialized successfully');
+                
+                // Test 1: Add first A chord
+                console.log('[TEST] Adding first A chord...');
+                const result1 = inputManager.addChord('A', 'test');
+                results.push(`📝 Test 1 - Add first A: ${result1 ? 'SUCCESS' : 'FAILED'}`);
+                results.push(`   Selected chords: [${inputManager.selectedChords.join(', ')}]`);
+                
+                // Test 2: Add duplicate A chord
+                console.log('[TEST] Adding duplicate A chord...');
+                const result2 = inputManager.addChord('A', 'test');
+                results.push(`📝 Test 2 - Add duplicate A: ${result2 ? 'SUCCESS' : 'FAILED'}`);
+                results.push(`   Selected chords: [${inputManager.selectedChords.join(', ')}]`);
+                
+                // Test 3: Add third A chord
+                console.log('[TEST] Adding third A chord...');
+                const result3 = inputManager.addChord('A', 'test');
+                results.push(`📝 Test 3 - Add third A: ${result3 ? 'SUCCESS' : 'FAILED'}`);
+                results.push(`   Selected chords: [${inputManager.selectedChords.join(', ')}]`);
+                
+                // Test 4: Add different chord
+                console.log('[TEST] Adding C chord...');
+                const result4 = inputManager.addChord('C', 'test');
+                results.push(`📝 Test 4 - Add C: ${result4 ? 'SUCCESS' : 'FAILED'}`);
+                results.push(`   Selected chords: [${inputManager.selectedChords.join(', ')}]`);
+                
+                // Test 5: Add duplicate C chord
+                console.log('[TEST] Adding duplicate C chord...');
+                const result5 = inputManager.addChord('C', 'test');
+                results.push(`📝 Test 5 - Add duplicate C: ${result5 ? 'SUCCESS' : 'FAILED'}`);
+                results.push(`   Selected chords: [${inputManager.selectedChords.join(', ')}]`);
+                
+                // Analyze results
+                const totalChords = inputManager.selectedChords.length;
+                const expectedChords = 5; // A, A, A, C, C
+                
+                results.push('');
+                results.push('🔍 ANALYSIS:');
+                results.push(`Total chords added: ${totalChords}`);
+                results.push(`Expected chords: ${expectedChords}`);
+                results.push(`Final chord list: [${inputManager.selectedChords.join(', ')}]`);
+                
+                if (totalChords === expectedChords) {
+                    results.push('');
+                    results.push('🎉 SUCCESS: Duplicate chords are now allowed!');
+                    results.push('✅ Duplicate prevention has been successfully removed');
+                    resultsDiv.className = 'result success';
+                } else {
+                    results.push('');
+                    results.push('❌ FAILURE: Duplicate prevention is still active');
+                    results.push(`Expected ${expectedChords} chords but got ${totalChords}`);
+                    resultsDiv.className = 'result error';
+                }
+                
+                resultsDiv.innerHTML = results.map(r => `<p>${r}</p>`).join('');
+                
+            } catch (error) {
+                console.error('Test failed:', error);
+                resultsDiv.innerHTML = `<p class="error">❌ Test failed with error: ${error.message}</p>`;
+                resultsDiv.className = 'result error';
+            }
+        }
+        
+        // Make function globally available
+        window.runDuplicateTest = runDuplicateTest;
+    </script>
+</body>
+</html>

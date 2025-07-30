@@ -318,7 +318,13 @@ function removeChord(button) {
 
 function getInputChords() {
   // Get all chord names from the input chordGroup -- the text within the Span.
-  return Array.from(chordGroup.querySelectorAll('.chord span')).map(span => span.textContent);
+  // Updated to use correct element ID: chordGroupInputs instead of chordGroup
+  const chordGroupElement = document.getElementById('chordGroupInputs') || chordGroup;
+  if (!chordGroupElement) {
+    console.warn('Neither chordGroupInputs nor chordGroup element found');
+    return [];
+  }
+  return Array.from(chordGroupElement.querySelectorAll('.chord span')).map(span => span.textContent);
 }
 
 // =============================================================================

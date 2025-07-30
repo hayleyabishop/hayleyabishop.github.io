@@ -64,12 +64,8 @@ class InputManager {
     
     console.log(`[DEBUG] Chord "${chordToAdd}" passed validation`);
     
-
-    // Avoid duplicates
-    if (this.selectedChords.includes(chordToAdd)) {
-      console.info(`Chord ${chordToAdd} already selected`);
-      return false;
-    }
+    // Duplicate prevention removed - users can now add duplicate chords
+    // This allows for chord progressions that repeat chords (e.g., A-D-A-E)
 
     // Add to selection
     this.selectedChords.push(chordToAdd);

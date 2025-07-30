@@ -129,10 +129,10 @@ class StateManager {
   }
 
   addSelectedChord(chord) {
-    if (!this.state.selectedChords.includes(chord)) {
-      const newChords = [...this.state.selectedChords, chord];
-      this.setState({ selectedChords: newChords });
-    }
+    // Duplicate prevention removed - allow duplicate chords in progressions
+    // This enables realistic chord progressions like A-D-A-E or C-Am-F-G-C
+    const newChords = [...this.state.selectedChords, chord];
+    this.setState({ selectedChords: newChords });
   }
 
   removeSelectedChord(chord) {

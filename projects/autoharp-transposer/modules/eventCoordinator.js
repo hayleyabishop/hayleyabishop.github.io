@@ -4,9 +4,14 @@
 // =============================================================================
 
 class EventCoordinator {
-  constructor(inputManager, stateManager) {
+  constructor(inputManager, stateManager, audioManager) {
     this.inputManager = inputManager;
     this.stateManager = stateManager;
+    this.audioManager = audioManager;
+    
+    // Flag to prevent suggestions from showing immediately after submission
+    this.justSubmitted = false;
+    
     this.textInputTimeout = null;
     this.setupEventListeners();
     this.setupStateListeners();
@@ -80,6 +85,11 @@ class EventCoordinator {
     if (textInput) {
       // Input event for real-time suggestions
       textInput.addEventListener('input', (e) => {
+        // Don't show suggestions immediately after submission
+        if (this.justSubmitted) {
+          this.justSubmitted = false;
+          return;
+        }
         this.handleTextInput(e.target.value);
       });
       
@@ -387,12 +397,17 @@ class EventCoordinator {
   }
 
   handleTextInputSubmit(inputValue) {
+    // Set flag to prevent suggestions from showing after submission
+    this.justSubmitted = true;
+    
+    // Clear suggestions immediately
+    this.clearSuggestions();
+    
     // If there are suggestions visible, use the selected one
     const selectedSuggestion = document.querySelector('.suggestion-item.selected');
     if (selectedSuggestion) {
       const chord = selectedSuggestion.dataset.chord;
       this.inputManager.addChord(chord, 'suggestion');
-      this.clearSuggestions();
       this.clearTextInput();
       return;
     }
@@ -401,12 +416,18 @@ class EventCoordinator {
     if (inputValue && inputValue.trim()) {
       const result = this.inputManager.processTextInput(inputValue.trim());
       if (result.success) {
+        // Actually add the parsed chord to the selected chords
+        this.inputManager.addChord(result.chord, 'text');
         this.clearTextInput();
-        this.clearSuggestions();
       } else {
         this.showMessage(result.message, 'error');
       }
     }
+    
+    // Reset the flag after a short delay to allow normal suggestions again
+    setTimeout(() => {
+      this.justSubmitted = false;
+    }, 100);
   }
 
   clearTextInput() {
@@ -494,7 +515,11 @@ class EventCoordinator {
       return;
     }
     
-    const suggestions = this.inputManager.getSuggestions(input, 5);
+    // Normalize input before getting suggestions for consistent chord parsing
+    const normalizedInput = this.inputManager.chordParser.normalizeChordInput(input);
+    const inputForSuggestions = normalizedInput || input; // Fallback to original if normalization fails
+    
+    const suggestions = this.inputManager.getSuggestions(inputForSuggestions, 5);
     this.showSuggestions(suggestions);
   }
 
@@ -550,11 +575,22 @@ class EventCoordinator {
   // Utility methods
   createChordElement(chord, index) {
     const element = document.createElement('div');
-    element.className = 'chord-display';
+    // Use 'chord' class to match legacy transcription system expectations
+    element.className = 'chord';
     element.innerHTML = `
-      <span class="chord-name">${chord}</span>
+      <span>${chord}</span>
       <button class="remove-chord-btn" data-chord="${chord}" aria-label="Remove ${chord}">×</button>
     `;
+    
+    // Add click handler for remove button
+    const removeBtn = element.querySelector('.remove-chord-btn');
+    if (removeBtn) {
+      removeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.stateManager.removeSelectedChord(chord);
+      });
+    }
+    
     return element;
   }
 
