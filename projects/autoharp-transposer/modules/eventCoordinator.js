@@ -198,26 +198,7 @@ class EventCoordinator {
 
   // Handle add chord button click - REMOVED DUPLICATE (kept the more complete version at line 258)
   
-  // Handle text input submission (Enter key)
-  handleTextInputSubmit(value) {
-    if (!value || !value.trim()) return;
-    
-    const result = this.inputManager.processTextInput(value.trim());
-    if (result && result.chord) {
-      console.log(`[DEBUG] Adding chord from text input: "${result.chord}"`);
-      const success = this.inputManager.addChord(result.chord, 'text');
-      if (success) {
-        this.clearTextInput();
-        this.clearSuggestions();
-      } else {
-        console.warn('Failed to add chord:', result.chord);
-        this.showMessage('Failed to add chord: ' + result.chord, 'error');
-      }
-    } else {
-      console.warn('Invalid chord input:', value);
-      this.showMessage('Invalid chord: ' + value, 'error');
-    }
-  }
+
 
   setupStateListeners() {
     // Listen to input manager events
@@ -303,34 +284,7 @@ class EventCoordinator {
     }
   }
 
-  handleTextInputSubmit(inputValue) {
-    console.log(`[DEBUG] handleTextInputSubmit called with: "${inputValue}"`);
-    
-    if (!inputValue || !inputValue.trim()) {
-      this.showMessage('Please enter a chord name', 'warning');
-      return;
-    }
-    
-    const trimmedInput = inputValue.trim();
-    console.log(`[DEBUG] Trimmed input: "${trimmedInput}"`);
-    
-    // Use InputManager's addChord method directly
-    // This bypasses fuzzy matching and accepts any valid chord format
-    console.log(`[DEBUG] Calling inputManager.addChord with: "${trimmedInput}"`);
-    const success = this.inputManager.addChord(trimmedInput, 'text');
-    
-    if (success) {
-      // Clear the input field after successful addition
-      const textInput = document.getElementById('chordTextInput');
-      if (textInput) {
-        textInput.value = '';
-      }
-      console.log(`Successfully added chord: ${trimmedInput}`);
-    } else {
-      console.warn('Failed to add chord:', trimmedInput);
-      this.showMessage('Invalid chord: ' + trimmedInput, 'error');
-    }
-  }
+
 
   handleRemoveChordClick(button) {
     const chord = button.dataset.chord;
