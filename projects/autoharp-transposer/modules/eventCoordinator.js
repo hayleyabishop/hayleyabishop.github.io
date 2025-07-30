@@ -118,6 +118,7 @@ class EventCoordinator {
   }
 
   setupAudioControlListeners() {
+    // Sound Toggle Button - Toggles audio feedback on/off for chord interactions
     const soundToggle = document.getElementById('soundToggle');
     if (soundToggle) {
       soundToggle.addEventListener('click', () => {
@@ -127,10 +128,27 @@ class EventCoordinator {
   }
 
   setupUtilityButtonListeners() {
+    // Add Chord Button - Adds chord from text input when clicked
+    const addChordBtn = document.getElementById('addChordBtn');
+    if (addChordBtn) {
+      addChordBtn.addEventListener('click', () => {
+        this.handleAddChordClick();
+      });
+    }
+    
+    // Clear All Button - Clears all selected chords when clicked
     const clearAllBtn = document.getElementById('clearAllChords');
     if (clearAllBtn) {
       clearAllBtn.addEventListener('click', () => {
         this.handleClearAll();
+      });
+    }
+    
+    // Play All Button - Plays all selected chords in sequence when clicked
+    const playAllBtn = document.getElementById('playAllChords');
+    if (playAllBtn) {
+      playAllBtn.addEventListener('click', () => {
+        this.handlePlayAll();
       });
     }
   }
@@ -166,6 +184,29 @@ class EventCoordinator {
           break;
       }
     });
+  }
+
+  // Handle add chord button click - REMOVED DUPLICATE (kept the more complete version at line 258)
+  
+  // Handle text input submission (Enter key)
+  handleTextInputSubmit(value) {
+    if (!value || !value.trim()) return;
+    
+    const result = this.inputManager.processTextInput(value.trim());
+    if (result && result.chord) {
+      console.log(`[DEBUG] Adding chord from text input: "${result.chord}"`);
+      const success = this.inputManager.addChord(result.chord, 'text');
+      if (success) {
+        this.clearTextInput();
+        this.clearSuggestions();
+      } else {
+        console.warn('Failed to add chord:', result.chord);
+        this.showMessage('Failed to add chord: ' + result.chord, 'error');
+      }
+    } else {
+      console.warn('Invalid chord input:', value);
+      this.showMessage('Invalid chord: ' + value, 'error');
+    }
   }
 
   setupStateListeners() {
@@ -224,14 +265,60 @@ class EventCoordinator {
   }
 
   handleAddChordClick() {
-    const chordName = this.stateManager.get('currentChordName');
-    const chordType = this.stateManager.get('currentChordType');
+    console.log(`[DEBUG] handleAddChordClick called`);
+    const textInput = document.getElementById('chordTextInput');
+    if (!textInput) return;
     
-    if (chordName && chordType) {
-      const fullChord = this.formatChordName(chordName, chordType);
-      this.inputManager.addChord(fullChord, 'button');
+    const inputValue = textInput.value.trim();
+    console.log(`[DEBUG] Raw input value: "${textInput.value}"`);
+    console.log(`[DEBUG] Trimmed input value: "${inputValue}"`);
+    
+    if (!inputValue) {
+      this.showMessage('Please enter a chord name', 'warning');
+      return;
+    }
+    
+    // Use InputManager's addChord method directly
+    // This bypasses fuzzy matching and accepts any valid chord format
+    console.log(`[DEBUG] Calling inputManager.addChord with: "${inputValue}"`);
+    const success = this.inputManager.addChord(inputValue, 'text');
+    
+    if (success) {
+      // Clear the input field after successful addition
+      textInput.value = '';
+      console.log(`Successfully added chord: ${inputValue}`);
     } else {
-      this.showMessage('Please select both a chord name and type', 'warning');
+      console.warn('Failed to add chord:', inputValue);
+      this.showMessage('Invalid chord: ' + inputValue, 'error');
+    }
+  }
+
+  handleTextInputSubmit(inputValue) {
+    console.log(`[DEBUG] handleTextInputSubmit called with: "${inputValue}"`);
+    
+    if (!inputValue || !inputValue.trim()) {
+      this.showMessage('Please enter a chord name', 'warning');
+      return;
+    }
+    
+    const trimmedInput = inputValue.trim();
+    console.log(`[DEBUG] Trimmed input: "${trimmedInput}"`);
+    
+    // Use InputManager's addChord method directly
+    // This bypasses fuzzy matching and accepts any valid chord format
+    console.log(`[DEBUG] Calling inputManager.addChord with: "${trimmedInput}"`);
+    const success = this.inputManager.addChord(trimmedInput, 'text');
+    
+    if (success) {
+      // Clear the input field after successful addition
+      const textInput = document.getElementById('chordTextInput');
+      if (textInput) {
+        textInput.value = '';
+      }
+      console.log(`Successfully added chord: ${trimmedInput}`);
+    } else {
+      console.warn('Failed to add chord:', trimmedInput);
+      this.showMessage('Invalid chord: ' + trimmedInput, 'error');
     }
   }
 
@@ -240,6 +327,38 @@ class EventCoordinator {
     if (chord) {
       this.inputManager.removeChord(chord);
     }
+  }
+
+  /**
+   * Handle Play All button click - Plays all selected chords in sequence
+   * Provides audio feedback for the user's current chord selection
+   */
+  handlePlayAll() {
+    console.log('[DEBUG] handlePlayAll called');
+    
+    const selectedChords = this.inputManager.getSelectedChords();
+    if (!selectedChords || selectedChords.length === 0) {
+      this.showMessage('No chords selected to play', 'warning');
+      return;
+    }
+    
+    console.log(`[DEBUG] Playing ${selectedChords.length} chords:`, selectedChords);
+    
+    // Check if audio manager is available
+    if (!this.audioManager) {
+      this.showMessage('Audio not available', 'error');
+      return;
+    }
+    
+    // Play chords in sequence
+    this.audioManager.playChordSequence(selectedChords)
+      .then(() => {
+        console.log('Finished playing all chords');
+      })
+      .catch((error) => {
+        console.warn('Error playing chords:', error);
+        this.showMessage('Error playing chords', 'error');
+      });
   }
 
   handleTextInput(value) {
@@ -254,20 +373,6 @@ class EventCoordinator {
     }, 150);
   }
 
-  handleTextInputSubmit(value) {
-    const result = this.inputManager.processTextInput(value);
-    
-    if (result.success) {
-      this.inputManager.addChord(result.chord, 'text');
-      this.showMessage(`Added: ${result.chord}`, 'success');
-    } else {
-      this.showMessage(result.message, 'error');
-      if (result.suggestions && result.suggestions.length > 0) {
-        this.showSuggestions(result.suggestions);
-      }
-    }
-  }
-
   handleTextInputFocus() {
     const input = document.getElementById('chordTextInput');
     if (input && input.value) {
@@ -278,6 +383,37 @@ class EventCoordinator {
   handleSuggestionClick(chord) {
     this.inputManager.addChord(chord, 'suggestion');
     this.clearSuggestions();
+    this.clearTextInput();
+  }
+
+  handleTextInputSubmit(inputValue) {
+    // If there are suggestions visible, use the selected one
+    const selectedSuggestion = document.querySelector('.suggestion-item.selected');
+    if (selectedSuggestion) {
+      const chord = selectedSuggestion.dataset.chord;
+      this.inputManager.addChord(chord, 'suggestion');
+      this.clearSuggestions();
+      this.clearTextInput();
+      return;
+    }
+    
+    // If no suggestions are selected but input has value, try to add it directly
+    if (inputValue && inputValue.trim()) {
+      const result = this.inputManager.processTextInput(inputValue.trim());
+      if (result.success) {
+        this.clearTextInput();
+        this.clearSuggestions();
+      } else {
+        this.showMessage(result.message, 'error');
+      }
+    }
+  }
+
+  clearTextInput() {
+    const textInput = document.getElementById('chordTextInput');
+    if (textInput) {
+      textInput.value = '';
+    }
   }
 
   handleSuggestionNavigation(key) {
@@ -422,7 +558,8 @@ class EventCoordinator {
     return element;
   }
 
-  formatChordName(chordName, chordType) {
+  // Wrapper for legacy formatChordName function - renamed to avoid confusion
+  formatChordNameLegacy(chordName, chordType) {
     // Use existing formatting function if available
     if (typeof window.formatChordName === 'function') {
       return window.formatChordName(chordName, chordType);
@@ -441,13 +578,31 @@ class EventCoordinator {
   }
 
   clearTextInput() {
-    const input = document.getElementById('chordTextInput');
-    if (input) {
-      input.value = '';
+    const textInput = document.getElementById('chordTextInput');
+    if (textInput) {
+      textInput.value = '';
     }
     this.clearSuggestions();
   }
-
+  
+  // Show message to user
+  showMessage(message, type = 'info') {
+    const messageContainer = document.getElementById('app-message');
+    if (!messageContainer) {
+      console.log(`[${type.toUpperCase()}] ${message}`);
+      return;
+    }
+    
+    messageContainer.textContent = message;
+    messageContainer.className = `app-message ${type}`;
+    messageContainer.style.display = 'block';
+    
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+      messageContainer.style.display = 'none';
+    }, 3000);
+  }
+  
   removeLastChord() {
     const selectedChords = this.stateManager.get('selectedChords');
     if (selectedChords.length > 0) {
@@ -485,6 +640,107 @@ class EventCoordinator {
         textInputTimeout: !!this.textInputTimeout
       }
     };
+  }
+
+  // =============================================================================
+  // LEGACY FUNCTIONS - Moved from webapp.js for better organization
+  // =============================================================================
+
+  /**
+   * LEGACY FUNCTION: Handles chord name selection
+   * Originally from webapp.js - moved here for better organization
+   * @param {string} chordName - Selected chord name
+   */
+  selectChordNameLegacy(chordName) {
+    const selectedButton = document.querySelector(`[data-chord="${chordName}"]`);
+    if (!selectedButton) return;
+
+    if (selectedButton.classList.contains('active')) {
+      selectedButton.classList.remove('active');
+      window.selectedChordName = null;
+      return;
+    }
+
+    // Remove active class from all chord name buttons
+    const chordNameButtons = document.querySelectorAll('[data-chord]');
+    chordNameButtons.forEach(btn => {
+      if (btn !== selectedButton) {
+        btn.classList.remove('active');
+      }
+    });
+
+    selectedButton.classList.add('active');
+    window.selectedChordName = chordName;
+    console.log(`Selected chord name: ${chordName}`);
+  }
+
+  /**
+   * LEGACY FUNCTION: Handles chord type selection
+   * Originally from webapp.js - moved here for better organization
+   * @param {string} chordType - Selected chord type
+   */
+  selectChordTypeLegacy(chordType) {
+    const selectedButton = document.querySelector(`[data-type="${chordType}"]`);
+    if (!selectedButton) return;
+
+    if (selectedButton.classList.contains('active')) {
+      selectedButton.classList.remove('active');
+      window.selectedChordType = null;
+      return;
+    }
+
+    // Remove active class from all chord type buttons
+    const chordTypeButtons = document.querySelectorAll('[data-type]');
+    chordTypeButtons.forEach(btn => {
+      if (btn !== selectedButton) {
+        btn.classList.remove('active');
+      }
+    });
+
+    selectedButton.classList.add('active');
+    window.selectedChordType = chordType;
+    console.log(`Selected chord type: ${chordType}`);
+  }
+
+  /**
+   * LEGACY FUNCTION: Attempts to add selected chord
+   * Originally from webapp.js - moved here for better organization
+   */
+  tryAddChordLegacy() {
+    if (window.selectedChordName && window.selectedChordType) {
+      const chordValue = this.formatChordNameLegacy(window.selectedChordName, window.selectedChordType);
+      if (typeof window.appendChord === 'function') {
+        window.appendChord(chordValue);
+      }
+      if (typeof window.onInputChordsChanged === 'function') {
+        window.onInputChordsChanged();
+      }
+      this.resetChordSelectionLegacy();
+    }
+  }
+
+  /**
+   * LEGACY FUNCTION: Resets chord selection UI state
+   * Originally from webapp.js - moved here for better organization
+   */
+  resetChordSelectionLegacy() {
+    // Remove active class from all buttons
+    const allButtons = document.querySelectorAll('[data-chord], [data-type]');
+    allButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Reset global variables
+    window.selectedChordName = null;
+    window.selectedChordType = null;
+  }
+
+  /**
+   * LEGACY FUNCTION: Initializes chord input listener
+   * Originally from webapp.js - moved here for better organization
+   */
+  initializeChordInputListenerLegacy() {
+    // This function is kept for compatibility but no longer needed
+    // Chord buttons now use inline onclick handlers
+    console.log('Legacy chord input listener initialized');
   }
 }
 

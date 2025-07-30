@@ -22,10 +22,19 @@ const CHORD_LISTS = {
 
 };
 
+// Expose CHORD_LISTS to global window for module access
+window.CHORD_LISTS = CHORD_LISTS;
+
 const REGEX_CHORDS = /[A-G](#|b)?(\/[A-G](#|b)?)?/gm;
 
 // Function to parse a chord string and extract root note and type
-function parseChord(chordString) {
+/**
+ * LEGACY FUNCTION: Parses chord notation string into structured data
+ * NOTE: This is different from chordParser.parseChord() which finds matching chords from available list
+ * @param {string} chordString - Chord notation (e.g., "Cm7", "F#maj7")
+ * @returns {Object|null} - {root, type, original} or null if invalid
+ */
+function parseChordString(chordString) {
   // Match the root note (including sharps/flats and enharmonic equivalents)
   const rootMatch = chordString.match(/^[A-G](#\/[A-G]b|b\/[A-G]#|#|b)?/);
   if (!rootMatch) return null;
@@ -480,7 +489,7 @@ function calculateResultingChords(inputChords) {
   // Parse input chords to extract root notes and types
   let parsedInputChords = [];
   for (let i in inputChords) {
-    const parsed = parseChord(inputChords[i]);
+    const parsed = parseChordString(inputChords[i]);
     if (parsed) {
       const rootIndex = chords.indexOf(parsed.root);
       parsedInputChords.push({
@@ -500,7 +509,7 @@ function calculateResultingChords(inputChords) {
   // Create a map of available autoharp chords by root note and type
   let autoharpChordMap = new Map();
   for (let chord of autoharpChords) {
-    const parsed = parseChord(chord);
+    const parsed = parseChordString(chord);
     if (parsed) {
       const rootIndex = chords.indexOf(parsed.root);
       const key = `${rootIndex}-${parsed.type}`;

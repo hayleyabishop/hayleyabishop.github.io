@@ -101,12 +101,14 @@ function testIntegration() {
 }
 
 // Run test when everything is loaded
-function runTestWhenReady() {
+function runTestWhenReady(attempts = 0, maxAttempts = 20) {
   if (window.AutoharpApp && window.integrationBridge) {
     testIntegration();
+  } else if (attempts < maxAttempts) {
+    console.log(`Waiting for app to initialize... (${attempts + 1}/${maxAttempts})`);
+    setTimeout(() => runTestWhenReady(attempts + 1, maxAttempts), 500);
   } else {
-    console.log('Waiting for app to initialize...');
-    setTimeout(runTestWhenReady, 500);
+    console.error('App failed to initialize within timeout period (10 seconds)');
   }
 }
 

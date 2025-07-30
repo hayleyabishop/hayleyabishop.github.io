@@ -28,39 +28,73 @@ class InputManager {
     }
   }
 
+  /**
+   * INTERNAL API: Add a chord to the selected chords list
+   * Called by public API methods and internal event handlers
+   * @param {string} chord - Chord name to add
+   * @param {string} source - Source of the chord addition
+   * @returns {boolean} - Success status
+   */
   addChord(chord, source = 'unknown') {
-    if (!chord) return false;
-
-    // Validate chord against available chords
-    if (!this.chordParser.validateChord(chord)) {
-      console.warn(`Invalid chord: ${chord}`);
+    console.log(`[DEBUG] InputManager.addChord called with: "${chord}" from source: ${source}`);
+    
+    if (!chord) {
+      console.log(`[DEBUG] Chord is empty, returning false`);
       return false;
     }
 
+    // Normalize the chord input using the chord parser
+    const normalizedChord = this.chordParser.parseChord(chord);
+    if (!normalizedChord) {
+      console.warn(`Could not parse chord: ${chord}`);
+      return false;
+    }
+    
+    console.log(`[DEBUG] Chord "${chord}" normalized to "${normalizedChord}"`);
+    
+    // Use the normalized chord for all further processing
+    const chordToAdd = normalizedChord;
+
+    // Basic validation - just check if it's a reasonable chord format
+    // The app should accept any valid chord and let transposition logic handle availability
+    if (!this.isValidChordFormat(chordToAdd)) {
+      console.warn(`Invalid chord format: ${chordToAdd}`);
+      return false;
+    }
+    
+    console.log(`[DEBUG] Chord "${chordToAdd}" passed validation`);
+    
+
     // Avoid duplicates
-    if (this.selectedChords.includes(chord)) {
-      console.info(`Chord ${chord} already selected`);
+    if (this.selectedChords.includes(chordToAdd)) {
+      console.info(`Chord ${chordToAdd} already selected`);
       return false;
     }
 
     // Add to selection
-    this.selectedChords.push(chord);
+    this.selectedChords.push(chordToAdd);
     
     // Add to history
-    this.chordParser.addToHistory(chord);
+    this.chordParser.addToHistory(chordToAdd);
 
     // Play audio feedback if enabled
     if (this.audioManager && this.audioManager.soundEnabled) {
-      this.audioManager.playChord(chord);
+      this.audioManager.playChord(chordToAdd);
     }
 
     // Emit event
-    this.emit('onChordAdded', { chord, source, selectedChords: [...this.selectedChords] });
+    this.emit('onChordAdded', { chord: chordToAdd, source, selectedChords: [...this.selectedChords] });
 
-    console.log(`Added chord: ${chord} (from ${source})`);
+    console.log(`Added chord: ${chordToAdd} (from ${source})`);
     return true;
   }
 
+  /**
+   * INTERNAL API: Remove a chord from the selected chords list
+   * Called by public API methods and internal event handlers
+   * @param {string} chord - Chord name to remove
+   * @returns {boolean} - Success status
+   */
   removeChord(chord) {
     const index = this.selectedChords.indexOf(chord);
     if (index === -1) return false;
@@ -109,6 +143,20 @@ class InputManager {
   getChordCount() {
     return this.selectedChords.length;
   }
+  
+  // Validate chord format (musical validity, not autoharp availability)
+  isValidChordFormat(chord) {
+    if (!chord || typeof chord !== 'string') return false;
+    
+    const trimmed = chord.trim();
+    if (!trimmed) return false;
+    
+    // Basic chord pattern: Root note + optional modifiers
+    // Examples: C, Gm, F#7, Asus2, Bb/D, C#m7b5
+    const chordPattern = /^[A-G][#b]?(m|maj|min|dim|aug|sus[24]?|add[0-9]+|[0-9]+)*(\/[A-G][#b]?)?$/i;
+    
+    return chordPattern.test(trimmed);
+  }
 
   // Text input processing
   processTextInput(input) {
@@ -142,11 +190,7 @@ class InputManager {
 
   // Get suggestions for autocomplete
   getSuggestions(input, maxSuggestions = 5) {
-    return this.chordParser.getContextualSuggestions(
-      input, 
-      this.selectedChords, 
-      maxSuggestions
-    );
+    return this.chordParser.getSuggestions(input, maxSuggestions);
   }
 
   // Reorder chords (for drag and drop)
@@ -252,6 +296,84 @@ class InputManager {
       audioEnabled: this.audioManager?.soundEnabled || false,
       chordHistory: this.chordParser.chordHistory.slice(0, 5) // First 5 for brevity
     };
+  }
+
+  // =============================================================================
+  // LEGACY FUNCTIONS - Moved from webapp.js for better organization
+  // =============================================================================
+
+  /**
+   * LEGACY FUNCTION: Gets current input chords from DOM
+   * Originally from webapp.js - moved here for better organization
+   * @returns {Array<string>} - Array of chord names from DOM elements
+   */
+  getInputChordsLegacy() {
+    const chordElements = document.querySelectorAll('.chord span');
+    return Array.from(chordElements).map(element => element.textContent.trim());
+  }
+
+  /**
+   * LEGACY FUNCTION: Appends chord to DOM chord group
+   * Originally from webapp.js - moved here for better organization
+   * @param {string} chord - Chord name to append
+   */
+  appendChordLegacy(chord) {
+    const chordGroup = document.getElementById('chordGroup');
+    if (!chordGroup) return;
+
+    const newChord = document.createElement('div');
+    newChord.classList.add('chord');
+    newChord.setAttribute('draggable', 'true');
+
+    const content = document.createElement('div');
+    content.classList.add('chord-content');
+    content.innerHTML = `<span>${chord}</span><button class="xbutton" onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
+
+    newChord.appendChild(content);
+    chordGroup.appendChild(newChord);
+
+    // Add drag and drop listeners if function exists
+    if (typeof window.addDragListeners === 'function') {
+      window.addDragListeners(newChord);
+    }
+  }
+
+  /**
+   * LEGACY FUNCTION: Removes chord from DOM with animation
+   * Originally from webapp.js - moved here for better organization
+   * @param {HTMLElement} button - Remove button element
+   */
+  removeChordLegacy(button) {
+    const newChord = button.closest(".chord");
+    if (!newChord) return;
+
+    const chordGroup = document.getElementById('chordGroup');
+    if (!chordGroup) return;
+
+    newChord.setAttribute("aria-hidden", "true");
+    newChord.style.animation = "fadeOut 0.3s forwards";
+    newChord.addEventListener("animationend", () => {
+      chordGroup.removeChild(newChord);
+      // Trigger change event if function exists
+      if (typeof window.onInputChordsChanged === 'function') {
+        window.onInputChordsChanged();
+      }
+    });
+  }
+
+  /**
+   * LEGACY FUNCTION: Adds chord from button click
+   * Originally from webapp.js - moved here for better organization
+   * @param {string} chordValue - Chord value to add
+   */
+  addChordFromButtonLegacy(chordValue) {
+    if (chordValue) {
+      this.appendChordLegacy(chordValue);
+      // Trigger change event if function exists
+      if (typeof window.onInputChordsChanged === 'function') {
+        window.onInputChordsChanged();
+      }
+    }
   }
 }
 

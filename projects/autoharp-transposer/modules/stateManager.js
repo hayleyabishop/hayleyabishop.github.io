@@ -23,6 +23,25 @@ class StateManager {
     
     this.listeners = {};
     this.loadFromStorage();
+    
+    // Initialize available chords after construction
+    this.initializeAvailableChords();
+  }
+  
+  // Initialize available chords with default autoharp type
+  initializeAvailableChords() {
+    const currentType = this.get('autoharpType');
+    const chords = this.getAvailableChordsForType(currentType);
+    if (chords && chords.length > 0) {
+      this.set('availableChords', chords);
+      console.log(`Initialized ${chords.length} available chords for ${currentType}`);
+    } else {
+      console.warn('No chords found for type:', currentType);
+      // Fallback to a basic chord set if no chords are available
+      const fallbackChords = ['C', 'F', 'G', 'Am', 'Dm', 'Em'];
+      this.set('availableChords', fallbackChords);
+      console.log('Using fallback chord set:', fallbackChords);
+    }
   }
 
   // State subscription system
@@ -281,12 +300,10 @@ class StateManager {
   // Reset to defaults
   reset() {
     this.state = {
-      autoharpType: 'type21Chord',
-      availableChords: this.getAvailableChordsForType('type21Chord'),
+      autoharpType: 'type21Chord', // Default to 21-chord autoharp
       selectedChords: [],
+      availableChords: [], // Will be populated after initialization
       audioEnabled: false,
-      inputMode: 'hybrid',
-      suggestions: [],
       currentChordName: null,
       currentChordType: null,
       progressions: [],

@@ -13,21 +13,181 @@ class ChordParser {
     this.availableChords = chords;
   }
 
+  /**
+   * MODERN FUNCTION: Finds matching chord from available chord list with enhanced fuzzy matching
+   * NOTE: This is different from webapp.js parseChordString() which parses notation into structured data
+   * Handles spaces, different chord names, capitalizations, and common misspellings
+   * @param {string} input - Chord name to search for (e.g., "Cm7", "F#maj7", "c minor", "D major")
+   * @returns {string|null} - Matching chord name from available list or null if not found
+   */
   parseChord(input) {
     if (!input || typeof input !== 'string') return null;
     
     const cleanInput = input.trim();
     if (!cleanInput) return null;
 
-    // Try exact match first
+    // Step 1: Try exact match first
     const exactMatch = this.availableChords.find(chord => 
       chord.toLowerCase() === cleanInput.toLowerCase()
     );
     if (exactMatch) return exactMatch;
 
-    // Try fuzzy matching
-    const fuzzyMatches = this.getFuzzyMatches(cleanInput);
-    return fuzzyMatches.length > 0 ? fuzzyMatches[0].chord : null;
+    // Step 2: Try enhanced chord parsing with normalization
+    const normalizedChord = this.normalizeChordInput(cleanInput);
+    if (normalizedChord) {
+      // Try exact match with normalized chord
+      const normalizedMatch = this.availableChords.find(chord => 
+        chord.toLowerCase() === normalizedChord.toLowerCase()
+      );
+      if (normalizedMatch) return normalizedMatch;
+      
+      // Try fuzzy matching with normalized chord
+      const fuzzyMatches = this.getFuzzyMatches(normalizedChord);
+      if (fuzzyMatches.length > 0) return fuzzyMatches[0].chord;
+    }
+
+    // Step 3: Try original fuzzy matching as fallback
+    const originalFuzzyMatches = this.getFuzzyMatches(cleanInput);
+    return originalFuzzyMatches.length > 0 ? originalFuzzyMatches[0].chord : null;
+  }
+
+  /**
+   * Normalizes chord input to handle spaces, different names, capitalizations, and misspellings
+   * @param {string} input - Raw chord input
+   * @returns {string|null} - Normalized chord name or null if cannot be parsed
+   */
+  normalizeChordInput(input) {
+    if (!input || typeof input !== 'string') return null;
+    
+    // Clean and normalize the input
+    let normalized = input.trim().toLowerCase();
+    
+    // Remove extra spaces and normalize spacing
+    normalized = normalized.replace(/\s+/g, ' ');
+    
+    // Extract root note (handle sharps/flats and case insensitivity)
+    const rootMatch = normalized.match(/^([a-g][#b]?)/);
+    if (!rootMatch) return null;
+    
+    let root = rootMatch[1].toUpperCase(); // Normalize to uppercase
+    let remainder = normalized.slice(rootMatch[0].length).trim();
+    
+    // Handle enharmonic equivalents and normalize sharps/flats
+    const enharmonicMap = {
+      'db': 'C#', 'c#': 'C#',
+      'eb': 'D#', 'd#': 'D#', 
+      'gb': 'F#', 'f#': 'F#',
+      'ab': 'G#', 'g#': 'G#',
+      'bb': 'A#', 'a#': 'A#'
+    };
+    
+    if (enharmonicMap[root.toLowerCase()]) {
+      root = enharmonicMap[root.toLowerCase()];
+    }
+    
+    // Define chord type mappings with fuzzy matching
+    const chordTypeMappings = {
+      // Major variations (empty result means major)
+      '': '',
+      'major': '',
+      'maj': '',
+      'majr': '', // misspelling
+      'najor': '', // misspelling
+      'maojr': '', // misspelling
+      
+      // Minor variations
+      'minor': 'm',
+      'min': 'm',
+      'mino': 'm', // misspelling
+      'mjnor': 'm', // misspelling
+      'minpr': 'm', // misspelling
+      'm': 'm',
+      
+      // Augmented variations
+      'augmented': 'aug',
+      'aug': 'aug',
+      '°': 'aug', // degree symbol
+      '+': 'aug',
+      
+      // Diminished variations
+      'diminished': 'dim',
+      'dim': 'dim',
+      'o': 'dim',
+      
+      // 7th chord variations
+      '7': '7',
+      '7th': '7',
+      'seventh': '7',
+      'dom 7': '7',
+      'dominant 7': '7',
+      'dominant 7th': '7',
+      'dominant seventh': '7',
+      
+      // Major 7th variations
+      'maj7': 'maj7',
+      'major 7': 'maj7',
+      'major 7th': 'maj7',
+      'major seventh': 'maj7',
+      'm7': 'maj7', // when preceded by capital letter (DM7 -> Dmaj7)
+      
+      // Minor 7th variations
+      'minor 7': 'm7',
+      'minor 7th': 'm7',
+      'minor seventh': 'm7',
+      
+      // Dominant 7th with confusing names
+      'maj min 7': '7',
+      'major minpr 7': '7', // misspelling
+      'mm7': '7', // DMm7 -> D7
+      
+      // Add9 variations
+      '9': 'add9',
+      'add9': 'add9',
+      'add 9': 'add9'
+    };
+    
+    // Handle special cases for compound chord types
+    if (remainder) {
+      // Handle cases like "DM7" where M should be "maj"
+      if (remainder.match(/^m7$/i) && /[A-Z]/.test(input)) {
+        // If original input had uppercase M, treat as major 7th
+        remainder = 'maj7';
+      }
+      
+      // Handle "DMm7" -> "D7" pattern
+      if (remainder.match(/^mm7$/i)) {
+        remainder = '7';
+      }
+      
+      // Normalize the chord type
+      let chordType = '';
+      
+      // Try exact mapping first
+      if (chordTypeMappings.hasOwnProperty(remainder)) {
+        chordType = chordTypeMappings[remainder];
+      } else {
+        // Try fuzzy matching for chord types
+        let bestMatch = '';
+        let bestScore = 0;
+        
+        for (const [key, value] of Object.entries(chordTypeMappings)) {
+          if (key === '') continue; // Skip empty key
+          
+          const score = this.calculateSimilarity(remainder, key);
+          if (score > bestScore && score > 0.6) { // Higher threshold for chord types
+            bestScore = score;
+            bestMatch = value;
+          }
+        }
+        
+        chordType = bestMatch;
+      }
+      
+      return root + chordType;
+    }
+    
+    // If no chord type specified, return just the root (major)
+    return root;
   }
 
   getFuzzyMatches(input, maxResults = 5) {
@@ -57,8 +217,114 @@ class ChordParser {
         .slice(0, maxSuggestions);
     }
 
-    const fuzzyMatches = this.getFuzzyMatches(input, maxSuggestions);
-    return fuzzyMatches.map(match => match.chord);
+    // Generate root-note-based chord permutations
+    return this.getRootNotePermutations(input, maxSuggestions);
+  }
+
+  getRootNotePermutations(input, maxSuggestions = 5) {
+    // Extract the root note from the input
+    const rootNote = this.extractRootNote(input);
+    if (!rootNote) {
+      // Fallback to fuzzy matching if we can't extract a root note
+      const fuzzyMatches = this.getFuzzyMatches(input, maxSuggestions);
+      return fuzzyMatches.map(match => match.chord);
+    }
+
+    // Generate common chord variations for the root note
+    const chordVariations = this.generateChordVariations(rootNote);
+    
+    // Filter and prioritize based on input
+    const filteredVariations = this.filterAndPrioritizeVariations(chordVariations, input, maxSuggestions);
+    
+    return filteredVariations;
+  }
+
+  extractRootNote(input) {
+    // Match common root note patterns (C, C#, Db, etc.)
+    const rootNotePattern = /^([A-G][#b]?)/i;
+    const match = input.match(rootNotePattern);
+    if (!match) return null;
+    
+    // Normalize to uppercase
+    let rootNote = match[1].toUpperCase();
+    
+    // Handle enharmonic equivalents and normalize sharps/flats
+    const enharmonicMap = {
+      'DB': 'C#', 'C#': 'C#',
+      'EB': 'D#', 'D#': 'D#', 
+      'GB': 'F#', 'F#': 'F#',
+      'AB': 'G#', 'G#': 'G#',
+      'BB': 'A#', 'A#': 'A#'
+    };
+    
+    if (enharmonicMap[rootNote]) {
+      rootNote = enharmonicMap[rootNote];
+    }
+    
+    return rootNote;
+  }
+
+  generateChordVariations(rootNote) {
+    // Common chord types in order of popularity
+    const chordTypes = [
+      '',        // Major (default)
+      'm',       // Minor
+      '7',       // Dominant 7th
+      'maj7',    // Major 7th
+      'm7',      // Minor 7th
+      'sus4',    // Suspended 4th
+      'sus2',    // Suspended 2nd
+      'dim',     // Diminished
+      'aug',     // Augmented
+      '6',       // Major 6th
+      'm6',      // Minor 6th
+      '9',       // Dominant 9th
+      'maj9',    // Major 9th
+      'm9',      // Minor 9th
+      'add9',    // Add 9th
+      '11',      // 11th
+      '13',      // 13th
+      '7sus4',   // 7th suspended 4th
+      'dim7',    // Diminished 7th
+      'aug7',    // Augmented 7th
+    ];
+
+    return chordTypes.map(type => rootNote + type);
+  }
+
+  filterAndPrioritizeVariations(variations, input, maxSuggestions) {
+    const inputLower = input.toLowerCase();
+    
+    // Score each variation based on how well it matches the input
+    const scoredVariations = variations.map(variation => {
+      const variationLower = variation.toLowerCase();
+      let score = 0;
+      
+      // Exact match gets highest priority
+      if (variationLower === inputLower) {
+        score = 100;
+      }
+      // Starts with input gets high priority
+      else if (variationLower.startsWith(inputLower)) {
+        score = 80;
+      }
+      // Contains input gets medium priority
+      else if (variationLower.includes(inputLower)) {
+        score = 60;
+      }
+      // Just the root note gets base priority
+      else {
+        score = 40;
+      }
+      
+      return { chord: variation, score };
+    });
+    
+    // Sort by score (descending) and return top results
+    return scoredVariations
+      .sort((a, b) => b.score - a.score)
+      .slice(0, maxSuggestions)
+      .map(item => item.chord);
   }
 
   validateChord(chord) {
@@ -238,6 +504,77 @@ class ChordParser {
 
     const root = chord.replace(/[^A-G#b]/g, '');
     return relationships[root] || [];
+  }
+
+  // =============================================================================
+  // LEGACY FUNCTIONS - Moved from webapp.js for better organization
+  // =============================================================================
+
+  /**
+   * LEGACY FUNCTION: Parses chord notation string into structured data
+   * Originally from webapp.js - moved here for better organization
+   * NOTE: This is different from parseChord() which finds matching chords from available list
+   * @param {string} chordString - Chord notation (e.g., "Cm7", "F#maj7")
+   * @returns {Object|null} - {root, type, original} or null if invalid
+   */
+  static parseChordStringLegacy(chordString) {
+    // Match the root note (including sharps/flats and enharmonic equivalents)
+    const rootMatch = chordString.match(/^[A-G](#\/[A-G]b|b\/[A-G]#|#|b)?/);
+    if (!rootMatch) return null;
+    
+    const root = rootMatch[0];
+    const remainder = chordString.slice(root.length);
+    
+    // Determine chord type based on remainder
+    let chordType = 'major'; // default
+    
+    if (remainder.includes('m7')) {
+      chordType = 'minor7';
+    } else if (remainder.includes('maj7')) {
+      chordType = 'major7';
+    } else if (remainder.includes('m')) {
+      chordType = 'minor';
+    } else if (remainder.includes('7')) {
+      chordType = 'dominant7';
+    } else if (remainder.includes('dim')) {
+      chordType = 'diminished';
+    } else if (remainder.includes('aug')) {
+      chordType = 'augmented';
+    }
+    
+    return {
+      root: root,
+      type: chordType,
+      original: chordString
+    };
+  }
+
+  /**
+   * LEGACY FUNCTION: Formats chord name with type
+   * Originally from webapp.js - moved here for better organization
+   * @param {string} chordName - Root chord name (e.g., "C", "F#")
+   * @param {string} chordType - Chord type (e.g., "major", "minor", "7th")
+   * @returns {string} - Formatted chord name
+   */
+  static formatChordNameLegacy(chordName, chordType) {
+    switch (chordType) {
+      case 'major':
+        return chordName;
+      case 'minor':
+        return chordName + 'm';
+      case '7th':
+        return chordName + '7';
+      case 'm7':
+        return chordName + 'm7';
+      case 'maj7':
+        return chordName + 'maj7';
+      case 'dim':
+        return chordName + 'dim';
+      case 'aug':
+        return chordName + 'aug';
+      default:
+        return chordName;
+    }
   }
 }
 

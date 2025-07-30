@@ -15,10 +15,10 @@ class AutoharpTransposerApp {
   constructor() {
     this.modules = {};
     this.initialized = false;
-    this.initializeApp();
+    this.initializeModules();
   }
 
-  async initializeApp() {
+  async initializeModules() {
     try {
       console.log('Initializing Autoharp Transposer App...');
       
@@ -29,7 +29,7 @@ class AutoharpTransposerApp {
       await this.waitForChordData();
       
       // Initialize core modules
-      await this.initializeModules();
+      await this.initializeCoreModules();
       
       // Set up module connections
       this.connectModules();
@@ -60,15 +60,31 @@ class AutoharpTransposerApp {
 
   async waitForChordData() {
     return new Promise((resolve) => {
-      integrationBridge.onReady(() => {
+      // Check if chord data is already available
+      if (window.CHORD_LISTS && integrationBridge.legacyDataReady) {
+        console.log('Chord data already available, proceeding with initialization');
         integrationBridge.setModuleSystemReady();
+        resolve();
+        return;
+      }
+      
+      // Register callback for when data becomes ready
+      integrationBridge.onReady(() => {
         console.log('Chord data ready for modules');
+        integrationBridge.setModuleSystemReady();
         resolve();
       });
+      
+      // Fallback timeout to prevent hanging
+      setTimeout(() => {
+        console.warn('Chord data wait timeout, proceeding anyway');
+        integrationBridge.setModuleSystemReady();
+        resolve();
+      }, 2000);
     });
   }
 
-  async initializeModules() {
+  async initializeCoreModules() {
     // Initialize state manager first
     this.modules.stateManager = new StateManager();
     
@@ -175,10 +191,13 @@ class AutoharpTransposerApp {
   }
 
   updateAutoharpTypeUI() {
-    const currentType = this.modules.stateManager.get('autoharpType');
-    const radio = document.getElementById(currentType);
+    const autoharpType = this.modules.stateManager.get('autoharpType');
+    const radio = document.getElementById(autoharpType);
     if (radio) {
       radio.checked = true;
+      console.log(`Set default autoharp type to: ${autoharpType}`);
+    } else {
+      console.warn(`Radio button not found for autoharp type: ${autoharpType}`);
     }
   }
 
@@ -235,19 +254,41 @@ class AutoharpTransposerApp {
     }
   }
 
-  // Public API methods
+  // =============================================================================
+  // PUBLIC API METHODS - These are the main interface for external usage
+  // =============================================================================
+  
+  /**
+   * PUBLIC API: Add a chord to the selected chords list
+   * @param {string} chord - Chord name to add
+   * @param {string} source - Source of the chord addition (default: 'api')
+   * @returns {boolean} - Success status
+   */
   addChord(chord, source = 'api') {
     return this.modules.inputManager.addChord(chord, source);
   }
 
+  /**
+   * PUBLIC API: Remove a chord from the selected chords list
+   * @param {string} chord - Chord name to remove
+   * @returns {boolean} - Success status
+   */
   removeChord(chord) {
     return this.modules.inputManager.removeChord(chord);
   }
 
+  /**
+   * PUBLIC API: Clear all selected chords
+   * @returns {boolean} - Success status
+   */
   clearAllChords() {
     return this.modules.inputManager.clearAll();
   }
 
+  /**
+   * PUBLIC API: Get list of currently selected chords
+   * @returns {Array<string>} - Array of selected chord names
+   */
   getSelectedChords() {
     return this.modules.inputManager.getSelectedChords();
   }
