@@ -10,10 +10,11 @@
 
 ### **1. Pre-Work Validation**
 Before making ANY code changes:
-- [ ] **Run duplicate detection:** `node detect-duplicates.js`
-- [ ] **Check for method conflicts:** Search for method name with `grep_search`
 - [ ] **Verify file ownership:** Confirm you own the file per agent assignments
 - [ ] **Review interface contracts:** Ensure changes don't break other modules
+- [ ] **Run duplicate detection:** `node detect-duplicates.js`
+- [ ] **Check for method conflicts:** Search for method name with `grep_search`
+
 
 ### **2. Post-Work Requirements**
 After making ANY code changes:
