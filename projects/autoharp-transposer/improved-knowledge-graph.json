@@ -1,0 +1,5896 @@
+{
+  "metadata": {
+    "generatedAt": "2025-07-30T23:52:03.419Z",
+    "projectPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer",
+    "totalFiles": 24,
+    "totalClasses": 11,
+    "totalMethods": 229,
+    "totalFunctions": 59,
+    "duplicatesFound": 23
+  },
+  "files": {
+    "codebase-mapper.js": {
+      "path": "codebase-mapper.js",
+      "size": 10666,
+      "lines": 314,
+      "classes": [
+        "CodebaseMapper"
+      ],
+      "functions": [],
+      "methods": [
+        "for",
+        "findJavaScriptFiles",
+        "for",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "buildRelationships",
+        "generateReport",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "exportKnowledgeGraph",
+        "if"
+      ]
+    },
+    "detect-duplicates.js": {
+      "path": "detect-duplicates.js",
+      "size": 10635,
+      "lines": 326,
+      "classes": [
+        "RobustDuplicateDetector"
+      ],
+      "functions": [],
+      "methods": [
+        "scanProject",
+        "findJavaScriptFiles",
+        "for",
+        "scanFile",
+        "if",
+        "analyzeResults",
+        "if",
+        "if",
+        "if",
+        "findSimilarMethodNames",
+        "for",
+        "for",
+        "areMethodNamesSimilar",
+        "for",
+        "if",
+        "for",
+        "if",
+        "generateReport",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "getResults",
+        "if"
+      ]
+    },
+    "improved-codebase-mapper.js": {
+      "path": "improved-codebase-mapper.js",
+      "size": 8049,
+      "lines": 272,
+      "classes": [
+        "ImprovedCodebaseMapper"
+      ],
+      "functions": [],
+      "methods": [
+        "generateKnowledgeGraph",
+        "findJavaScriptFiles",
+        "for",
+        "analyzeFile",
+        "extractClasses",
+        "if",
+        "if",
+        "extractFunctions",
+        "if",
+        "if",
+        "buildMethodIndex",
+        "if",
+        "findDuplicates",
+        "if",
+        "updateMetadata",
+        "saveResults",
+        "generateSummary",
+        "if",
+        "if",
+        "if"
+      ]
+    },
+    "modules\\appIntegration.js": {
+      "path": "modules\\appIntegration.js",
+      "size": 12367,
+      "lines": 429,
+      "classes": [
+        "AutoharpTransposerApp"
+      ],
+      "functions": [
+        "initializeApp"
+      ],
+      "methods": [
+        "if",
+        "connectModules",
+        "if",
+        "if",
+        "loadSavedState",
+        "if",
+        "if",
+        "initializeUI",
+        "if",
+        "if",
+        "updateAutoharpTypeUI",
+        "if",
+        "updateAudioToggleUI",
+        "if",
+        "updateSelectedChordsUI",
+        "if",
+        "if",
+        "if",
+        "setupAutoSave",
+        "saveCurrentSession",
+        "addChord",
+        "removeChord",
+        "clearAllChords",
+        "getSelectedChords",
+        "setAutoharpType",
+        "toggleAudio",
+        "getState",
+        "on",
+        "if",
+        "if",
+        "emit",
+        "if",
+        "exportData",
+        "importData",
+        "if",
+        "if",
+        "getDebugInfo",
+        "destroy",
+        "if",
+        "if",
+        "handleInitializationError",
+        "if",
+        "if"
+      ]
+    },
+    "modules\\chordAudio.js": {
+      "path": "modules\\chordAudio.js",
+      "size": 5606,
+      "lines": 169,
+      "classes": [
+        "ChordAudioManager"
+      ],
+      "functions": [],
+      "methods": [
+        "initializeAudioContext",
+        "toggleSound",
+        "if",
+        "if",
+        "playChord",
+        "if",
+        "if",
+        "stopAllSounds",
+        "getChordFrequencies",
+        "switch",
+        "parseChordName",
+        "destroy",
+        "if"
+      ]
+    },
+    "modules\\chordParser.js": {
+      "path": "modules\\chordParser.js",
+      "size": 20613,
+      "lines": 667,
+      "classes": [
+        "ChordParser"
+      ],
+      "functions": [
+        "normalize"
+      ],
+      "methods": [
+        "generateAllValidChords",
+        "for",
+        "for",
+        "updateAvailableChords",
+        "parseChord",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "normalizeChordInput",
+        "if",
+        "if",
+        "getFuzzyMatches",
+        "if",
+        "getSuggestions",
+        "if",
+        "getRootNotePermutations",
+        "if",
+        "extractRootNote",
+        "if",
+        "generateChordVariations",
+        "filterAndPrioritizeVariations",
+        "if",
+        "validateChord",
+        "calculateSimilarity",
+        "levenshteinDistance",
+        "for",
+        "for",
+        "for",
+        "for",
+        "soundexMatch",
+        "normalizeChordName",
+        "addToHistory",
+        "if",
+        "loadChordHistory",
+        "saveChordHistory",
+        "parseAdvancedChord",
+        "for",
+        "getContextualSuggestions",
+        "if",
+        "getHarmonicallyRelatedChords",
+        "switch"
+      ]
+    },
+    "modules\\eventCoordinator.js": {
+      "path": "modules\\eventCoordinator.js",
+      "size": 22647,
+      "lines": 738,
+      "classes": [
+        "EventCoordinator"
+      ],
+      "functions": [],
+      "methods": [
+        "setupEventListeners",
+        "if",
+        "initializeEventListeners",
+        "setupAutoharpTypeListeners",
+        "if",
+        "setupChordButtonListeners",
+        "setupTextInputListeners",
+        "if",
+        "if",
+        "if",
+        "if",
+        "setupAudioControlListeners",
+        "if",
+        "setupUtilityButtonListeners",
+        "if",
+        "if",
+        "if",
+        "setupKeyboardShortcuts",
+        "if",
+        "switch",
+        "if",
+        "setupStateListeners",
+        "handleAutoharpTypeChange",
+        "handleChordNameSelection",
+        "handleChordTypeSelection",
+        "handleAddChordClick",
+        "if",
+        "if",
+        "handleRemoveChordClick",
+        "if",
+        "handlePlayAll",
+        "if",
+        "if",
+        "handleTextInput",
+        "if",
+        "handleTextInputFocus",
+        "if",
+        "handleSuggestionClick",
+        "handleTextInputSubmit",
+        "if",
+        "if",
+        "clearTextInput",
+        "if",
+        "handleSuggestionNavigation",
+        "if",
+        "handleSoundToggle",
+        "handleClearAll",
+        "updateUI",
+        "updateSelectedChordsDisplay",
+        "updateChordButtons",
+        "updateAvailableChordButtons",
+        "updateSuggestions",
+        "if",
+        "showSuggestions",
+        "if",
+        "clearSuggestions",
+        "if",
+        "updateProgressions",
+        "if",
+        "if",
+        "createChordElement",
+        "if",
+        "formatChordNameLegacy",
+        "if",
+        "focusTextInput",
+        "if",
+        "clearTextInput",
+        "if",
+        "showMessage",
+        "if",
+        "removeLastChord",
+        "if",
+        "showMessage",
+        "if",
+        "getDebugInfo",
+        "selectChordNameLegacy",
+        "if",
+        "selectChordTypeLegacy",
+        "if",
+        "tryAddChordLegacy",
+        "if",
+        "if",
+        "if",
+        "resetChordSelectionLegacy",
+        "initializeChordInputListenerLegacy"
+      ]
+    },
+    "modules\\inputManager.js": {
+      "path": "modules\\inputManager.js",
+      "size": 11246,
+      "lines": 377,
+      "classes": [
+        "InputManager"
+      ],
+      "functions": [],
+      "methods": [
+        "on",
+        "if",
+        "emit",
+        "if",
+        "addChord",
+        "if",
+        "if",
+        "if",
+        "removeChord",
+        "removeChordAt",
+        "clearAll",
+        "getSelectedChords",
+        "hasChord",
+        "getChordCount",
+        "isValidChordFormat",
+        "processTextInput",
+        "if",
+        "getSuggestions",
+        "reorderChords",
+        "updateAvailableChords",
+        "if",
+        "addChords",
+        "replaceChords",
+        "exportState",
+        "importState",
+        "validateAllSelected",
+        "if",
+        "getDebugInfo",
+        "getInputChordsLegacy",
+        "appendChordLegacy",
+        "if",
+        "removeChordLegacy",
+        "if",
+        "addChordFromButtonLegacy",
+        "if",
+        "if"
+      ]
+    },
+    "modules\\integrationBridge.js": {
+      "path": "modules\\integrationBridge.js",
+      "size": 8759,
+      "lines": 285,
+      "classes": [
+        "IntegrationBridge"
+      ],
+      "functions": [],
+      "methods": [
+        "setupLegacyDataWatcher",
+        "if",
+        "if",
+        "if",
+        "onLegacyDataReady",
+        "checkReadiness",
+        "if",
+        "if",
+        "setModuleSystemReady",
+        "useFallbackChordData",
+        "setModuleSystemReady",
+        "checkReadiness",
+        "if",
+        "onReady",
+        "if",
+        "executePendingCallbacks",
+        "getAvailableChordsForType",
+        "if",
+        "switch",
+        "bridgeLegacyFunctions",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "getCurrentAutoharpType",
+        "getCurrentSelectedChords",
+        "if",
+        "if",
+        "syncLegacyToNewSystem",
+        "if",
+        "syncNewSystemToLegacy",
+        "if"
+      ]
+    },
+    "modules\\stateManager.js": {
+      "path": "modules\\stateManager.js",
+      "size": 10127,
+      "lines": 372,
+      "classes": [
+        "StateManager"
+      ],
+      "functions": [],
+      "methods": [
+        "initializeAvailableChords",
+        "if",
+        "subscribe",
+        "if",
+        "if",
+        "emit",
+        "if",
+        "getState",
+        "get",
+        "setState",
+        "if",
+        "set",
+        "updateAutoharpType",
+        "updateSelectedChords",
+        "addSelectedChord",
+        "removeSelectedChord",
+        "clearSelectedChords",
+        "updateProgressions",
+        "updateSuggestions",
+        "toggleAudio",
+        "setInputMode",
+        "updateCurrentChord",
+        "getAvailableChordsForType",
+        "if",
+        "switch",
+        "isChordAvailable",
+        "isChordSelected",
+        "getSelectedChordCount",
+        "saveToStorage",
+        "loadFromStorage",
+        "if",
+        "clearStorage",
+        "validateState",
+        "if",
+        "if",
+        "reset",
+        "getDebugInfo",
+        "exportState",
+        "importState",
+        "if",
+        "if"
+      ]
+    },
+    "modules\\storageManager.js": {
+      "path": "modules\\storageManager.js",
+      "size": 9527,
+      "lines": 387,
+      "classes": [
+        "StorageManager"
+      ],
+      "functions": [],
+      "methods": [
+        "save",
+        "load",
+        "if",
+        "remove",
+        "exists",
+        "savePreferences",
+        "loadPreferences",
+        "saveChordHistory",
+        "loadChordHistory",
+        "addToChordHistory",
+        "if",
+        "saveChordProgression",
+        "loadChordProgressions",
+        "deleteChordProgression",
+        "updateProgressionLastUsed",
+        "if",
+        "saveSession",
+        "loadSession",
+        "if",
+        "if",
+        "clearSession",
+        "saveUsageStats",
+        "loadUsageStats",
+        "incrementStat",
+        "incrementChordUsage",
+        "exportAllData",
+        "if",
+        "importAllData",
+        "if",
+        "if",
+        "if",
+        "clearAllData",
+        "getStorageInfo",
+        "for",
+        "getStorageQuota",
+        "for",
+        "while",
+        "cleanupOldData",
+        "if",
+        "if",
+        "if",
+        "migrateFromOldVersion"
+      ]
+    },
+    "simple-duplicate-check.js": {
+      "path": "simple-duplicate-check.js",
+      "size": 5602,
+      "lines": 186,
+      "classes": [],
+      "functions": [
+        "findJavaScriptFiles",
+        "extractMethods",
+        "checkForDuplicates"
+      ],
+      "methods": []
+    },
+    "tests\\test-duplicate-chord-addition.js": {
+      "path": "tests\\test-duplicate-chord-addition.js",
+      "size": 3328,
+      "lines": 83,
+      "classes": [],
+      "functions": [
+        "testDuplicateChordAddition"
+      ],
+      "methods": []
+    },
+    "tests\\test-duplicate-fixes.js": {
+      "path": "tests\\test-duplicate-fixes.js",
+      "size": 8556,
+      "lines": 229,
+      "classes": [],
+      "functions": [
+        "testDuplicateFixes",
+        "runTestWhenAppReady"
+      ],
+      "methods": []
+    },
+    "tests\\test-duplicate-interaction.js": {
+      "path": "tests\\test-duplicate-interaction.js",
+      "size": 4602,
+      "lines": 126,
+      "classes": [],
+      "functions": [
+        "testDuplicateChordInteraction",
+        "getCurrentChordCount",
+        "getCurrentChords"
+      ],
+      "methods": []
+    },
+    "tests\\test-event-audit-integration.js": {
+      "path": "tests\\test-event-audit-integration.js",
+      "size": 12850,
+      "lines": 363,
+      "classes": [],
+      "functions": [
+        "testEventAuditIntegration",
+        "runTest2",
+        "runTest3",
+        "runTest4",
+        "runTest5",
+        "finishTests",
+        "testSpecificWorkflow",
+        "testChordInputWorkflow",
+        "runEventAuditTestWhenReady"
+      ],
+      "methods": []
+    },
+    "tests\\test-fuzzy-matching.js": {
+      "path": "tests\\test-fuzzy-matching.js",
+      "size": 6679,
+      "lines": 173,
+      "classes": [],
+      "functions": [
+        "testFuzzyChordMatching",
+        "testNormalizationOnly",
+        "testChordInput",
+        "runFuzzyTestWhenReady"
+      ],
+      "methods": []
+    },
+    "tests\\test-input-flow-debug.js": {
+      "path": "tests\\test-input-flow-debug.js",
+      "size": 5944,
+      "lines": 138,
+      "classes": [],
+      "functions": [
+        "addInputFlowDebugging"
+      ],
+      "methods": []
+    },
+    "tests\\test-integration.js": {
+      "path": "tests\\test-integration.js",
+      "size": 4035,
+      "lines": 126,
+      "classes": [],
+      "functions": [
+        "testIntegration",
+        "runTestWhenReady"
+      ],
+      "methods": []
+    },
+    "tests\\test-normalization-fix.js": {
+      "path": "tests\\test-normalization-fix.js",
+      "size": 7230,
+      "lines": 218,
+      "classes": [],
+      "functions": [
+        "testChordNormalizationFix",
+        "testSpecificInput",
+        "runNormalizationTestWhenReady"
+      ],
+      "methods": []
+    },
+    "tests\\test-suggestion-panel-fix.js": {
+      "path": "tests\\test-suggestion-panel-fix.js",
+      "size": 3616,
+      "lines": 91,
+      "classes": [],
+      "functions": [],
+      "methods": []
+    },
+    "tests\\test-transcription-debug.js": {
+      "path": "tests\\test-transcription-debug.js",
+      "size": 4917,
+      "lines": 137,
+      "classes": [],
+      "functions": [
+        "runTranscriptionDebugTest"
+      ],
+      "methods": []
+    },
+    "tests\\test-transcription-end-to-end.js": {
+      "path": "tests\\test-transcription-end-to-end.js",
+      "size": 5506,
+      "lines": 149,
+      "classes": [],
+      "functions": [
+        "runEndToEndTest"
+      ],
+      "methods": []
+    },
+    "webapp.js": {
+      "path": "webapp.js",
+      "size": 22889,
+      "lines": 665,
+      "classes": [],
+      "functions": [
+        "parseChordString",
+        "initializeAutoharpTypeListeners",
+        "onAutoharpTypeChanged",
+        "renderAvailableChords",
+        "initializeDOMReferences",
+        "initializeChordInputListener",
+        "selectChordName",
+        "selectChordType",
+        "tryAddChord",
+        "resetChordSelection",
+        "formatChordName",
+        "addChordFromButton",
+        "appendChord",
+        "removeChord",
+        "getInputChords",
+        "initializeDragAndDrop",
+        "addDragListeners",
+        "handleDragStart",
+        "handleDragOver",
+        "handleDrop",
+        "handleDragEnd",
+        "getDragAfterElement",
+        "handleTouchStart",
+        "handleTouchMove",
+        "handleTouchEnd",
+        "calculateResultingChords",
+        "onInputChordsChanged"
+      ],
+      "methods": []
+    }
+  },
+  "classes": {
+    "CodebaseMapper": {
+      "name": "CodebaseMapper",
+      "file": "codebase-mapper.js",
+      "line": 11,
+      "methods": [
+        "for",
+        "findJavaScriptFiles",
+        "for",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "buildRelationships",
+        "generateReport",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "exportKnowledgeGraph",
+        "if"
+      ]
+    },
+    "RobustDuplicateDetector": {
+      "name": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 11,
+      "methods": [
+        "scanProject",
+        "findJavaScriptFiles",
+        "for",
+        "scanFile",
+        "if",
+        "analyzeResults",
+        "if",
+        "if",
+        "if",
+        "findSimilarMethodNames",
+        "for",
+        "for",
+        "areMethodNamesSimilar",
+        "for",
+        "if",
+        "for",
+        "if",
+        "generateReport",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "getResults",
+        "if"
+      ]
+    },
+    "ImprovedCodebaseMapper": {
+      "name": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 11,
+      "methods": [
+        "generateKnowledgeGraph",
+        "findJavaScriptFiles",
+        "for",
+        "analyzeFile",
+        "extractClasses",
+        "if",
+        "if",
+        "extractFunctions",
+        "if",
+        "if",
+        "buildMethodIndex",
+        "if",
+        "findDuplicates",
+        "if",
+        "updateMetadata",
+        "saveResults",
+        "generateSummary",
+        "if",
+        "if",
+        "if"
+      ]
+    },
+    "AutoharpTransposerApp": {
+      "name": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 14,
+      "methods": [
+        "if",
+        "connectModules",
+        "if",
+        "if",
+        "loadSavedState",
+        "if",
+        "if",
+        "initializeUI",
+        "if",
+        "if",
+        "updateAutoharpTypeUI",
+        "if",
+        "updateAudioToggleUI",
+        "if",
+        "updateSelectedChordsUI",
+        "if",
+        "if",
+        "if",
+        "setupAutoSave",
+        "saveCurrentSession",
+        "addChord",
+        "removeChord",
+        "clearAllChords",
+        "getSelectedChords",
+        "setAutoharpType",
+        "toggleAudio",
+        "getState",
+        "on",
+        "if",
+        "if",
+        "emit",
+        "if",
+        "exportData",
+        "importData",
+        "if",
+        "if",
+        "getDebugInfo",
+        "destroy",
+        "if",
+        "if",
+        "handleInitializationError",
+        "if",
+        "if"
+      ]
+    },
+    "ChordAudioManager": {
+      "name": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 6,
+      "methods": [
+        "initializeAudioContext",
+        "toggleSound",
+        "if",
+        "if",
+        "playChord",
+        "if",
+        "if",
+        "stopAllSounds",
+        "getChordFrequencies",
+        "switch",
+        "parseChordName",
+        "destroy",
+        "if"
+      ]
+    },
+    "ChordParser": {
+      "name": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 6,
+      "methods": [
+        "generateAllValidChords",
+        "for",
+        "for",
+        "updateAvailableChords",
+        "parseChord",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "normalizeChordInput",
+        "if",
+        "if",
+        "getFuzzyMatches",
+        "if",
+        "getSuggestions",
+        "if",
+        "getRootNotePermutations",
+        "if",
+        "extractRootNote",
+        "if",
+        "generateChordVariations",
+        "filterAndPrioritizeVariations",
+        "if",
+        "validateChord",
+        "calculateSimilarity",
+        "levenshteinDistance",
+        "for",
+        "for",
+        "for",
+        "for",
+        "soundexMatch",
+        "normalizeChordName",
+        "addToHistory",
+        "if",
+        "loadChordHistory",
+        "saveChordHistory",
+        "parseAdvancedChord",
+        "for",
+        "getContextualSuggestions",
+        "if",
+        "getHarmonicallyRelatedChords",
+        "switch"
+      ]
+    },
+    "EventCoordinator": {
+      "name": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 6,
+      "methods": [
+        "setupEventListeners",
+        "if",
+        "initializeEventListeners",
+        "setupAutoharpTypeListeners",
+        "if",
+        "setupChordButtonListeners",
+        "setupTextInputListeners",
+        "if",
+        "if",
+        "if",
+        "if",
+        "setupAudioControlListeners",
+        "if",
+        "setupUtilityButtonListeners",
+        "if",
+        "if",
+        "if",
+        "setupKeyboardShortcuts",
+        "if",
+        "switch",
+        "if",
+        "setupStateListeners",
+        "handleAutoharpTypeChange",
+        "handleChordNameSelection",
+        "handleChordTypeSelection",
+        "handleAddChordClick",
+        "if",
+        "if",
+        "handleRemoveChordClick",
+        "if",
+        "handlePlayAll",
+        "if",
+        "if",
+        "handleTextInput",
+        "if",
+        "handleTextInputFocus",
+        "if",
+        "handleSuggestionClick",
+        "handleTextInputSubmit",
+        "if",
+        "if",
+        "clearTextInput",
+        "if",
+        "handleSuggestionNavigation",
+        "if",
+        "handleSoundToggle",
+        "handleClearAll",
+        "updateUI",
+        "updateSelectedChordsDisplay",
+        "updateChordButtons",
+        "updateAvailableChordButtons",
+        "updateSuggestions",
+        "if",
+        "showSuggestions",
+        "if",
+        "clearSuggestions",
+        "if",
+        "updateProgressions",
+        "if",
+        "if",
+        "createChordElement",
+        "if",
+        "formatChordNameLegacy",
+        "if",
+        "focusTextInput",
+        "if",
+        "clearTextInput",
+        "if",
+        "showMessage",
+        "if",
+        "removeLastChord",
+        "if",
+        "showMessage",
+        "if",
+        "getDebugInfo",
+        "selectChordNameLegacy",
+        "if",
+        "selectChordTypeLegacy",
+        "if",
+        "tryAddChordLegacy",
+        "if",
+        "if",
+        "if",
+        "resetChordSelectionLegacy",
+        "initializeChordInputListenerLegacy"
+      ]
+    },
+    "InputManager": {
+      "name": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 6,
+      "methods": [
+        "on",
+        "if",
+        "emit",
+        "if",
+        "addChord",
+        "if",
+        "if",
+        "if",
+        "removeChord",
+        "removeChordAt",
+        "clearAll",
+        "getSelectedChords",
+        "hasChord",
+        "getChordCount",
+        "isValidChordFormat",
+        "processTextInput",
+        "if",
+        "getSuggestions",
+        "reorderChords",
+        "updateAvailableChords",
+        "if",
+        "addChords",
+        "replaceChords",
+        "exportState",
+        "importState",
+        "validateAllSelected",
+        "if",
+        "getDebugInfo",
+        "getInputChordsLegacy",
+        "appendChordLegacy",
+        "if",
+        "removeChordLegacy",
+        "if",
+        "addChordFromButtonLegacy",
+        "if",
+        "if"
+      ]
+    },
+    "IntegrationBridge": {
+      "name": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 6,
+      "methods": [
+        "setupLegacyDataWatcher",
+        "if",
+        "if",
+        "if",
+        "onLegacyDataReady",
+        "checkReadiness",
+        "if",
+        "if",
+        "setModuleSystemReady",
+        "useFallbackChordData",
+        "setModuleSystemReady",
+        "checkReadiness",
+        "if",
+        "onReady",
+        "if",
+        "executePendingCallbacks",
+        "getAvailableChordsForType",
+        "if",
+        "switch",
+        "bridgeLegacyFunctions",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "getCurrentAutoharpType",
+        "getCurrentSelectedChords",
+        "if",
+        "if",
+        "syncLegacyToNewSystem",
+        "if",
+        "syncNewSystemToLegacy",
+        "if"
+      ]
+    },
+    "StateManager": {
+      "name": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 6,
+      "methods": [
+        "initializeAvailableChords",
+        "if",
+        "subscribe",
+        "if",
+        "if",
+        "emit",
+        "if",
+        "getState",
+        "get",
+        "setState",
+        "if",
+        "set",
+        "updateAutoharpType",
+        "updateSelectedChords",
+        "addSelectedChord",
+        "removeSelectedChord",
+        "clearSelectedChords",
+        "updateProgressions",
+        "updateSuggestions",
+        "toggleAudio",
+        "setInputMode",
+        "updateCurrentChord",
+        "getAvailableChordsForType",
+        "if",
+        "switch",
+        "isChordAvailable",
+        "isChordSelected",
+        "getSelectedChordCount",
+        "saveToStorage",
+        "loadFromStorage",
+        "if",
+        "clearStorage",
+        "validateState",
+        "if",
+        "if",
+        "reset",
+        "getDebugInfo",
+        "exportState",
+        "importState",
+        "if",
+        "if"
+      ]
+    },
+    "StorageManager": {
+      "name": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 6,
+      "methods": [
+        "save",
+        "load",
+        "if",
+        "remove",
+        "exists",
+        "savePreferences",
+        "loadPreferences",
+        "saveChordHistory",
+        "loadChordHistory",
+        "addToChordHistory",
+        "if",
+        "saveChordProgression",
+        "loadChordProgressions",
+        "deleteChordProgression",
+        "updateProgressionLastUsed",
+        "if",
+        "saveSession",
+        "loadSession",
+        "if",
+        "if",
+        "clearSession",
+        "saveUsageStats",
+        "loadUsageStats",
+        "incrementStat",
+        "incrementChordUsage",
+        "exportAllData",
+        "if",
+        "importAllData",
+        "if",
+        "if",
+        "if",
+        "clearAllData",
+        "getStorageInfo",
+        "for",
+        "getStorageQuota",
+        "for",
+        "while",
+        "cleanupOldData",
+        "if",
+        "if",
+        "if",
+        "migrateFromOldVersion"
+      ]
+    }
+  },
+  "functions": {
+    "initializeApp": {
+      "name": "initializeApp",
+      "file": "modules\\appIntegration.js",
+      "line": 403,
+      "signature": "function initializeApp() {"
+    },
+    "normalize": {
+      "name": "normalize",
+      "file": "modules\\chordParser.js",
+      "line": 466,
+      "signature": "const normalize = (str) => {"
+    },
+    "findJavaScriptFiles": {
+      "name": "findJavaScriptFiles",
+      "file": "simple-duplicate-check.js",
+      "line": 11,
+      "signature": "function findJavaScriptFiles(dir) {"
+    },
+    "extractMethods": {
+      "name": "extractMethods",
+      "file": "simple-duplicate-check.js",
+      "line": 28,
+      "signature": "function extractMethods(filePath) {"
+    },
+    "checkForDuplicates": {
+      "name": "checkForDuplicates",
+      "file": "simple-duplicate-check.js",
+      "line": 77,
+      "signature": "function checkForDuplicates() {"
+    },
+    "testDuplicateChordAddition": {
+      "name": "testDuplicateChordAddition",
+      "file": "tests\\test-duplicate-chord-addition.js",
+      "line": 9,
+      "signature": "function testDuplicateChordAddition() {"
+    },
+    "testDuplicateFixes": {
+      "name": "testDuplicateFixes",
+      "file": "tests\\test-duplicate-fixes.js",
+      "line": 9,
+      "signature": "function testDuplicateFixes() {"
+    },
+    "runTestWhenAppReady": {
+      "name": "runTestWhenAppReady",
+      "file": "tests\\test-duplicate-fixes.js",
+      "line": 207,
+      "signature": "function runTestWhenAppReady() {"
+    },
+    "testDuplicateChordInteraction": {
+      "name": "testDuplicateChordInteraction",
+      "file": "tests\\test-duplicate-interaction.js",
+      "line": 9,
+      "signature": "function testDuplicateChordInteraction() {"
+    },
+    "getCurrentChordCount": {
+      "name": "getCurrentChordCount",
+      "file": "tests\\test-duplicate-interaction.js",
+      "line": 29,
+      "signature": "function getCurrentChordCount() {"
+    },
+    "getCurrentChords": {
+      "name": "getCurrentChords",
+      "file": "tests\\test-duplicate-interaction.js",
+      "line": 35,
+      "signature": "function getCurrentChords() {"
+    },
+    "testEventAuditIntegration": {
+      "name": "testEventAuditIntegration",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 10,
+      "signature": "function testEventAuditIntegration() {"
+    },
+    "runTest2": {
+      "name": "runTest2",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 86,
+      "signature": "function runTest2() {"
+    },
+    "runTest3": {
+      "name": "runTest3",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 138,
+      "signature": "function runTest3() {"
+    },
+    "runTest4": {
+      "name": "runTest4",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 184,
+      "signature": "function runTest4() {"
+    },
+    "runTest5": {
+      "name": "runTest5",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 226,
+      "signature": "function runTest5() {"
+    },
+    "finishTests": {
+      "name": "finishTests",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 265,
+      "signature": "function finishTests() {"
+    },
+    "testSpecificWorkflow": {
+      "name": "testSpecificWorkflow",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 283,
+      "signature": "function testSpecificWorkflow(workflowName) {"
+    },
+    "testChordInputWorkflow": {
+      "name": "testChordInputWorkflow",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 301,
+      "signature": "function testChordInputWorkflow() {"
+    },
+    "runEventAuditTestWhenReady": {
+      "name": "runEventAuditTestWhenReady",
+      "file": "tests\\test-event-audit-integration.js",
+      "line": 335,
+      "signature": "function runEventAuditTestWhenReady() {"
+    },
+    "testFuzzyChordMatching": {
+      "name": "testFuzzyChordMatching",
+      "file": "tests\\test-fuzzy-matching.js",
+      "line": 9,
+      "signature": "function testFuzzyChordMatching() {"
+    },
+    "testNormalizationOnly": {
+      "name": "testNormalizationOnly",
+      "file": "tests\\test-fuzzy-matching.js",
+      "line": 90,
+      "signature": "function testNormalizationOnly() {"
+    },
+    "testChordInput": {
+      "name": "testChordInput",
+      "file": "tests\\test-fuzzy-matching.js",
+      "line": 120,
+      "signature": "function testChordInput(input) {"
+    },
+    "runFuzzyTestWhenReady": {
+      "name": "runFuzzyTestWhenReady",
+      "file": "tests\\test-fuzzy-matching.js",
+      "line": 145,
+      "signature": "function runFuzzyTestWhenReady() {"
+    },
+    "addInputFlowDebugging": {
+      "name": "addInputFlowDebugging",
+      "file": "tests\\test-input-flow-debug.js",
+      "line": 8,
+      "signature": "function addInputFlowDebugging() {"
+    },
+    "testIntegration": {
+      "name": "testIntegration",
+      "file": "tests\\test-integration.js",
+      "line": 6,
+      "signature": "function testIntegration() {"
+    },
+    "runTestWhenReady": {
+      "name": "runTestWhenReady",
+      "file": "tests\\test-integration.js",
+      "line": 104,
+      "signature": "function runTestWhenReady(attempts = 0, maxAttempts = 20) {"
+    },
+    "testChordNormalizationFix": {
+      "name": "testChordNormalizationFix",
+      "file": "tests\\test-normalization-fix.js",
+      "line": 9,
+      "signature": "function testChordNormalizationFix() {"
+    },
+    "testSpecificInput": {
+      "name": "testSpecificInput",
+      "file": "tests\\test-normalization-fix.js",
+      "line": 153,
+      "signature": "function testSpecificInput(input) {"
+    },
+    "runNormalizationTestWhenReady": {
+      "name": "runNormalizationTestWhenReady",
+      "file": "tests\\test-normalization-fix.js",
+      "line": 192,
+      "signature": "function runNormalizationTestWhenReady() {"
+    },
+    "runTranscriptionDebugTest": {
+      "name": "runTranscriptionDebugTest",
+      "file": "tests\\test-transcription-debug.js",
+      "line": 9,
+      "signature": "function runTranscriptionDebugTest() {"
+    },
+    "runEndToEndTest": {
+      "name": "runEndToEndTest",
+      "file": "tests\\test-transcription-end-to-end.js",
+      "line": 8,
+      "signature": "function runEndToEndTest() {"
+    },
+    "parseChordString": {
+      "name": "parseChordString",
+      "file": "webapp.js",
+      "line": 37,
+      "signature": "function parseChordString(chordString) {"
+    },
+    "initializeAutoharpTypeListeners": {
+      "name": "initializeAutoharpTypeListeners",
+      "file": "webapp.js",
+      "line": 81,
+      "signature": "function initializeAutoharpTypeListeners() {"
+    },
+    "onAutoharpTypeChanged": {
+      "name": "onAutoharpTypeChanged",
+      "file": "webapp.js",
+      "line": 88,
+      "signature": "function onAutoharpTypeChanged(event) {"
+    },
+    "renderAvailableChords": {
+      "name": "renderAvailableChords",
+      "file": "webapp.js",
+      "line": 120,
+      "signature": "function renderAvailableChords(chordList) {"
+    },
+    "initializeDOMReferences": {
+      "name": "initializeDOMReferences",
+      "file": "webapp.js",
+      "line": 145,
+      "signature": "function initializeDOMReferences() {"
+    },
+    "initializeChordInputListener": {
+      "name": "initializeChordInputListener",
+      "file": "webapp.js",
+      "line": 155,
+      "signature": "function initializeChordInputListener() {"
+    },
+    "selectChordName": {
+      "name": "selectChordName",
+      "file": "webapp.js",
+      "line": 164,
+      "signature": "function selectChordName(chordName) {"
+    },
+    "selectChordType": {
+      "name": "selectChordType",
+      "file": "webapp.js",
+      "line": 198,
+      "signature": "function selectChordType(chordType) {"
+    },
+    "tryAddChord": {
+      "name": "tryAddChord",
+      "file": "webapp.js",
+      "line": 232,
+      "signature": "function tryAddChord() {"
+    },
+    "resetChordSelection": {
+      "name": "resetChordSelection",
+      "file": "webapp.js",
+      "line": 243,
+      "signature": "function resetChordSelection() {"
+    },
+    "formatChordName": {
+      "name": "formatChordName",
+      "file": "webapp.js",
+      "line": 261,
+      "signature": "function formatChordName(chordName, chordType) {"
+    },
+    "addChordFromButton": {
+      "name": "addChordFromButton",
+      "file": "webapp.js",
+      "line": 283,
+      "signature": "function addChordFromButton(chordValue) {"
+    },
+    "appendChord": {
+      "name": "appendChord",
+      "file": "webapp.js",
+      "line": 290,
+      "signature": "function appendChord(chord) {"
+    },
+    "removeChord": {
+      "name": "removeChord",
+      "file": "webapp.js",
+      "line": 309,
+      "signature": "function removeChord(button) {"
+    },
+    "getInputChords": {
+      "name": "getInputChords",
+      "file": "webapp.js",
+      "line": 319,
+      "signature": "function getInputChords() {"
+    },
+    "initializeDragAndDrop": {
+      "name": "initializeDragAndDrop",
+      "file": "webapp.js",
+      "line": 334,
+      "signature": "function initializeDragAndDrop() {"
+    },
+    "addDragListeners": {
+      "name": "addDragListeners",
+      "file": "webapp.js",
+      "line": 340,
+      "signature": "function addDragListeners(draggable) {"
+    },
+    "handleDragStart": {
+      "name": "handleDragStart",
+      "file": "webapp.js",
+      "line": 353,
+      "signature": "function handleDragStart(e) {"
+    },
+    "handleDragOver": {
+      "name": "handleDragOver",
+      "file": "webapp.js",
+      "line": 360,
+      "signature": "function handleDragOver(e) {"
+    },
+    "handleDrop": {
+      "name": "handleDrop",
+      "file": "webapp.js",
+      "line": 374,
+      "signature": "function handleDrop() {"
+    },
+    "handleDragEnd": {
+      "name": "handleDragEnd",
+      "file": "webapp.js",
+      "line": 378,
+      "signature": "function handleDragEnd() {"
+    },
+    "getDragAfterElement": {
+      "name": "getDragAfterElement",
+      "file": "webapp.js",
+      "line": 387,
+      "signature": "function getDragAfterElement(container, x) {"
+    },
+    "handleTouchStart": {
+      "name": "handleTouchStart",
+      "file": "webapp.js",
+      "line": 413,
+      "signature": "function handleTouchStart(e) {"
+    },
+    "handleTouchMove": {
+      "name": "handleTouchMove",
+      "file": "webapp.js",
+      "line": 427,
+      "signature": "function handleTouchMove(e) {"
+    },
+    "handleTouchEnd": {
+      "name": "handleTouchEnd",
+      "file": "webapp.js",
+      "line": 457,
+      "signature": "function handleTouchEnd(e) {"
+    },
+    "calculateResultingChords": {
+      "name": "calculateResultingChords",
+      "file": "webapp.js",
+      "line": 476,
+      "signature": "function calculateResultingChords(inputChords) {"
+    },
+    "onInputChordsChanged": {
+      "name": "onInputChordsChanged",
+      "file": "webapp.js",
+      "line": 579,
+      "signature": "function onInputChordsChanged() {"
+    }
+  },
+  "methods": {
+    "CodebaseMapper.for": {
+      "name": "for",
+      "class": "CodebaseMapper",
+      "file": "codebase-mapper.js",
+      "line": 51,
+      "signature": "for (const entry of entries) {"
+    },
+    "CodebaseMapper.findJavaScriptFiles": {
+      "name": "findJavaScriptFiles",
+      "class": "CodebaseMapper",
+      "file": "codebase-mapper.js",
+      "line": 47,
+      "signature": "findJavaScriptFiles(dir) {"
+    },
+    "CodebaseMapper.if": {
+      "name": "if",
+      "class": "CodebaseMapper",
+      "file": "codebase-mapper.js",
+      "line": 307,
+      "signature": "if (require.main === module) {"
+    },
+    "CodebaseMapper.buildRelationships": {
+      "name": "buildRelationships",
+      "class": "CodebaseMapper",
+      "file": "codebase-mapper.js",
+      "line": 199,
+      "signature": "buildRelationships() {"
+    },
+    "CodebaseMapper.generateReport": {
+      "name": "generateReport",
+      "class": "CodebaseMapper",
+      "file": "codebase-mapper.js",
+      "line": 217,
+      "signature": "generateReport() {"
+    },
+    "CodebaseMapper.exportKnowledgeGraph": {
+      "name": "exportKnowledgeGraph",
+      "class": "CodebaseMapper",
+      "file": "codebase-mapper.js",
+      "line": 272,
+      "signature": "exportKnowledgeGraph() {"
+    },
+    "RobustDuplicateDetector.scanProject": {
+      "name": "scanProject",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 24,
+      "signature": "scanProject() {"
+    },
+    "RobustDuplicateDetector.findJavaScriptFiles": {
+      "name": "findJavaScriptFiles",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 50,
+      "signature": "findJavaScriptFiles(dir) {"
+    },
+    "RobustDuplicateDetector.for": {
+      "name": "for",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 236,
+      "signature": "for (const suffix of commonSuffixes) {"
+    },
+    "RobustDuplicateDetector.scanFile": {
+      "name": "scanFile",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 75,
+      "signature": "scanFile(filePath) {"
+    },
+    "RobustDuplicateDetector.if": {
+      "name": "if",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 319,
+      "signature": "if (require.main === module) {"
+    },
+    "RobustDuplicateDetector.analyzeResults": {
+      "name": "analyzeResults",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 151,
+      "signature": "analyzeResults() {"
+    },
+    "RobustDuplicateDetector.findSimilarMethodNames": {
+      "name": "findSimilarMethodNames",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 191,
+      "signature": "findSimilarMethodNames() {"
+    },
+    "RobustDuplicateDetector.areMethodNamesSimilar": {
+      "name": "areMethodNamesSimilar",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 211,
+      "signature": "areMethodNamesSimilar(name1, name2) {"
+    },
+    "RobustDuplicateDetector.generateReport": {
+      "name": "generateReport",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 247,
+      "signature": "generateReport() {"
+    },
+    "RobustDuplicateDetector.getResults": {
+      "name": "getResults",
+      "class": "RobustDuplicateDetector",
+      "file": "detect-duplicates.js",
+      "line": 313,
+      "signature": "getResults() {"
+    },
+    "ImprovedCodebaseMapper.generateKnowledgeGraph": {
+      "name": "generateKnowledgeGraph",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 32,
+      "signature": "generateKnowledgeGraph() {"
+    },
+    "ImprovedCodebaseMapper.findJavaScriptFiles": {
+      "name": "findJavaScriptFiles",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 60,
+      "signature": "findJavaScriptFiles(dir) {"
+    },
+    "ImprovedCodebaseMapper.for": {
+      "name": "for",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 66,
+      "signature": "for (const entry of entries) {"
+    },
+    "ImprovedCodebaseMapper.analyzeFile": {
+      "name": "analyzeFile",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 84,
+      "signature": "analyzeFile(filePath) {"
+    },
+    "ImprovedCodebaseMapper.extractClasses": {
+      "name": "extractClasses",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 104,
+      "signature": "extractClasses(lines, fileInfo) {"
+    },
+    "ImprovedCodebaseMapper.if": {
+      "name": "if",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 265,
+      "signature": "if (require.main === module) {"
+    },
+    "ImprovedCodebaseMapper.extractFunctions": {
+      "name": "extractFunctions",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 146,
+      "signature": "extractFunctions(lines, fileInfo) {"
+    },
+    "ImprovedCodebaseMapper.buildMethodIndex": {
+      "name": "buildMethodIndex",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 183,
+      "signature": "buildMethodIndex() {"
+    },
+    "ImprovedCodebaseMapper.findDuplicates": {
+      "name": "findDuplicates",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 202,
+      "signature": "findDuplicates() {"
+    },
+    "ImprovedCodebaseMapper.updateMetadata": {
+      "name": "updateMetadata",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 213,
+      "signature": "updateMetadata() {"
+    },
+    "ImprovedCodebaseMapper.saveResults": {
+      "name": "saveResults",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 222,
+      "signature": "saveResults() {"
+    },
+    "ImprovedCodebaseMapper.generateSummary": {
+      "name": "generateSummary",
+      "class": "ImprovedCodebaseMapper",
+      "file": "improved-codebase-mapper.js",
+      "line": 232,
+      "signature": "generateSummary() {"
+    },
+    "AutoharpTransposerApp.if": {
+      "name": "if",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 418,
+      "signature": "if (document.readyState === 'loading') {"
+    },
+    "AutoharpTransposerApp.connectModules": {
+      "name": "connectModules",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 113,
+      "signature": "connectModules() {"
+    },
+    "AutoharpTransposerApp.loadSavedState": {
+      "name": "loadSavedState",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 142,
+      "signature": "loadSavedState() {"
+    },
+    "AutoharpTransposerApp.initializeUI": {
+      "name": "initializeUI",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 170,
+      "signature": "initializeUI() {"
+    },
+    "AutoharpTransposerApp.updateAutoharpTypeUI": {
+      "name": "updateAutoharpTypeUI",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 193,
+      "signature": "updateAutoharpTypeUI() {"
+    },
+    "AutoharpTransposerApp.updateAudioToggleUI": {
+      "name": "updateAudioToggleUI",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 204,
+      "signature": "updateAudioToggleUI() {"
+    },
+    "AutoharpTransposerApp.updateSelectedChordsUI": {
+      "name": "updateSelectedChordsUI",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 213,
+      "signature": "updateSelectedChordsUI() {"
+    },
+    "AutoharpTransposerApp.setupAutoSave": {
+      "name": "setupAutoSave",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 233,
+      "signature": "setupAutoSave() {"
+    },
+    "AutoharpTransposerApp.saveCurrentSession": {
+      "name": "saveCurrentSession",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 245,
+      "signature": "saveCurrentSession() {"
+    },
+    "AutoharpTransposerApp.addChord": {
+      "name": "addChord",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 267,
+      "signature": "addChord(chord, source = 'api') {"
+    },
+    "AutoharpTransposerApp.removeChord": {
+      "name": "removeChord",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 276,
+      "signature": "removeChord(chord) {"
+    },
+    "AutoharpTransposerApp.clearAllChords": {
+      "name": "clearAllChords",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 284,
+      "signature": "clearAllChords() {"
+    },
+    "AutoharpTransposerApp.getSelectedChords": {
+      "name": "getSelectedChords",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 292,
+      "signature": "getSelectedChords() {"
+    },
+    "AutoharpTransposerApp.setAutoharpType": {
+      "name": "setAutoharpType",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 296,
+      "signature": "setAutoharpType(type) {"
+    },
+    "AutoharpTransposerApp.toggleAudio": {
+      "name": "toggleAudio",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 300,
+      "signature": "toggleAudio() {"
+    },
+    "AutoharpTransposerApp.getState": {
+      "name": "getState",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 304,
+      "signature": "getState() {"
+    },
+    "AutoharpTransposerApp.on": {
+      "name": "on",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 309,
+      "signature": "on(event, callback) {"
+    },
+    "AutoharpTransposerApp.emit": {
+      "name": "emit",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 319,
+      "signature": "emit(event, data) {"
+    },
+    "AutoharpTransposerApp.exportData": {
+      "name": "exportData",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 332,
+      "signature": "exportData() {"
+    },
+    "AutoharpTransposerApp.importData": {
+      "name": "importData",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 340,
+      "signature": "importData(data) {"
+    },
+    "AutoharpTransposerApp.getDebugInfo": {
+      "name": "getDebugInfo",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 349,
+      "signature": "getDebugInfo() {"
+    },
+    "AutoharpTransposerApp.destroy": {
+      "name": "destroy",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 361,
+      "signature": "destroy() {"
+    },
+    "AutoharpTransposerApp.handleInitializationError": {
+      "name": "handleInitializationError",
+      "class": "AutoharpTransposerApp",
+      "file": "modules\\appIntegration.js",
+      "line": 382,
+      "signature": "handleInitializationError(error) {"
+    },
+    "ChordAudioManager.initializeAudioContext": {
+      "name": "initializeAudioContext",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 15,
+      "signature": "initializeAudioContext() {"
+    },
+    "ChordAudioManager.toggleSound": {
+      "name": "toggleSound",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 27,
+      "signature": "toggleSound() {"
+    },
+    "ChordAudioManager.if": {
+      "name": "if",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 162,
+      "signature": "if (this.audioContext) {"
+    },
+    "ChordAudioManager.playChord": {
+      "name": "playChord",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 43,
+      "signature": "playChord(chordName) {"
+    },
+    "ChordAudioManager.stopAllSounds": {
+      "name": "stopAllSounds",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 90,
+      "signature": "stopAllSounds() {"
+    },
+    "ChordAudioManager.getChordFrequencies": {
+      "name": "getChordFrequencies",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 101,
+      "signature": "getChordFrequencies(chordName) {"
+    },
+    "ChordAudioManager.switch": {
+      "name": "switch",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 120,
+      "signature": "switch (parsed.type) {"
+    },
+    "ChordAudioManager.parseChordName": {
+      "name": "parseChordName",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 140,
+      "signature": "parseChordName(chordName) {"
+    },
+    "ChordAudioManager.destroy": {
+      "name": "destroy",
+      "class": "ChordAudioManager",
+      "file": "modules\\chordAudio.js",
+      "line": 160,
+      "signature": "destroy() {"
+    },
+    "ChordParser.generateAllValidChords": {
+      "name": "generateAllValidChords",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 20,
+      "signature": "generateAllValidChords() {"
+    },
+    "ChordParser.for": {
+      "name": "for",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 552,
+      "signature": "for (const variation of variations) {"
+    },
+    "ChordParser.updateAvailableChords": {
+      "name": "updateAvailableChords",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 60,
+      "signature": "updateAvailableChords(chords) {"
+    },
+    "ChordParser.parseChord": {
+      "name": "parseChord",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 71,
+      "signature": "parseChord(input) {"
+    },
+    "ChordParser.if": {
+      "name": "if",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 565,
+      "signature": "if (recentChords.length > 0) {"
+    },
+    "ChordParser.normalizeChordInput": {
+      "name": "normalizeChordInput",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 140,
+      "signature": "normalizeChordInput(input) {"
+    },
+    "ChordParser.getFuzzyMatches": {
+      "name": "getFuzzyMatches",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 275,
+      "signature": "getFuzzyMatches(input, maxResults = 5, chordList = null) {"
+    },
+    "ChordParser.getSuggestions": {
+      "name": "getSuggestions",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 297,
+      "signature": "getSuggestions(input, maxSuggestions = 5) {"
+    },
+    "ChordParser.getRootNotePermutations": {
+      "name": "getRootNotePermutations",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 309,
+      "signature": "getRootNotePermutations(input, maxSuggestions = 5) {"
+    },
+    "ChordParser.extractRootNote": {
+      "name": "extractRootNote",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 327,
+      "signature": "extractRootNote(input) {"
+    },
+    "ChordParser.generateChordVariations": {
+      "name": "generateChordVariations",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 352,
+      "signature": "generateChordVariations(rootNote) {"
+    },
+    "ChordParser.filterAndPrioritizeVariations": {
+      "name": "filterAndPrioritizeVariations",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 380,
+      "signature": "filterAndPrioritizeVariations(variations, input, maxSuggestions) {"
+    },
+    "ChordParser.validateChord": {
+      "name": "validateChord",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 415,
+      "signature": "validateChord(chord) {"
+    },
+    "ChordParser.calculateSimilarity": {
+      "name": "calculateSimilarity",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 422,
+      "signature": "calculateSimilarity(input, target) {"
+    },
+    "ChordParser.levenshteinDistance": {
+      "name": "levenshteinDistance",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 433,
+      "signature": "levenshteinDistance(str1, str2) {"
+    },
+    "ChordParser.soundexMatch": {
+      "name": "soundexMatch",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 464,
+      "signature": "soundexMatch(str1, str2) {"
+    },
+    "ChordParser.normalizeChordName": {
+      "name": "normalizeChordName",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 481,
+      "signature": "normalizeChordName(chordName) {"
+    },
+    "ChordParser.addToHistory": {
+      "name": "addToHistory",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 501,
+      "signature": "addToHistory(chord) {"
+    },
+    "ChordParser.loadChordHistory": {
+      "name": "loadChordHistory",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 520,
+      "signature": "loadChordHistory() {"
+    },
+    "ChordParser.saveChordHistory": {
+      "name": "saveChordHistory",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 530,
+      "signature": "saveChordHistory() {"
+    },
+    "ChordParser.parseAdvancedChord": {
+      "name": "parseAdvancedChord",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 539,
+      "signature": "parseAdvancedChord(input) {"
+    },
+    "ChordParser.getContextualSuggestions": {
+      "name": "getContextualSuggestions",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 561,
+      "signature": "getContextualSuggestions(input, recentChords = []) {"
+    },
+    "ChordParser.getHarmonicallyRelatedChords": {
+      "name": "getHarmonicallyRelatedChords",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 578,
+      "signature": "getHarmonicallyRelatedChords(chord) {"
+    },
+    "ChordParser.switch": {
+      "name": "switch",
+      "class": "ChordParser",
+      "file": "modules\\chordParser.js",
+      "line": 645,
+      "signature": "switch (chordType) {"
+    },
+    "EventCoordinator.setupEventListeners": {
+      "name": "setupEventListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 20,
+      "signature": "setupEventListeners() {"
+    },
+    "EventCoordinator.if": {
+      "name": "if",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 705,
+      "signature": "if (typeof window.onInputChordsChanged === 'function') {"
+    },
+    "EventCoordinator.initializeEventListeners": {
+      "name": "initializeEventListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 29,
+      "signature": "initializeEventListeners() {"
+    },
+    "EventCoordinator.setupAutoharpTypeListeners": {
+      "name": "setupAutoharpTypeListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 49,
+      "signature": "setupAutoharpTypeListeners() {"
+    },
+    "EventCoordinator.setupChordButtonListeners": {
+      "name": "setupChordButtonListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 60,
+      "signature": "setupChordButtonListeners() {"
+    },
+    "EventCoordinator.setupTextInputListeners": {
+      "name": "setupTextInputListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 81,
+      "signature": "setupTextInputListeners() {"
+    },
+    "EventCoordinator.setupAudioControlListeners": {
+      "name": "setupAudioControlListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 130,
+      "signature": "setupAudioControlListeners() {"
+    },
+    "EventCoordinator.setupUtilityButtonListeners": {
+      "name": "setupUtilityButtonListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 140,
+      "signature": "setupUtilityButtonListeners() {"
+    },
+    "EventCoordinator.setupKeyboardShortcuts": {
+      "name": "setupKeyboardShortcuts",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 166,
+      "signature": "setupKeyboardShortcuts() {"
+    },
+    "EventCoordinator.switch": {
+      "name": "switch",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 173,
+      "signature": "switch (e.key) {"
+    },
+    "EventCoordinator.setupStateListeners": {
+      "name": "setupStateListeners",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 203,
+      "signature": "setupStateListeners() {"
+    },
+    "EventCoordinator.handleAutoharpTypeChange": {
+      "name": "handleAutoharpTypeChange",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 233,
+      "signature": "handleAutoharpTypeChange(type) {"
+    },
+    "EventCoordinator.handleChordNameSelection": {
+      "name": "handleChordNameSelection",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 238,
+      "signature": "handleChordNameSelection(chordName, button) {"
+    },
+    "EventCoordinator.handleChordTypeSelection": {
+      "name": "handleChordTypeSelection",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 248,
+      "signature": "handleChordTypeSelection(chordType, button) {"
+    },
+    "EventCoordinator.handleAddChordClick": {
+      "name": "handleAddChordClick",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 258,
+      "signature": "handleAddChordClick() {"
+    },
+    "EventCoordinator.handleRemoveChordClick": {
+      "name": "handleRemoveChordClick",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 289,
+      "signature": "handleRemoveChordClick(button) {"
+    },
+    "EventCoordinator.handlePlayAll": {
+      "name": "handlePlayAll",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 300,
+      "signature": "handlePlayAll() {"
+    },
+    "EventCoordinator.handleTextInput": {
+      "name": "handleTextInput",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 328,
+      "signature": "handleTextInput(value) {"
+    },
+    "EventCoordinator.handleTextInputFocus": {
+      "name": "handleTextInputFocus",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 340,
+      "signature": "handleTextInputFocus() {"
+    },
+    "EventCoordinator.handleSuggestionClick": {
+      "name": "handleSuggestionClick",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 347,
+      "signature": "handleSuggestionClick(chord) {"
+    },
+    "EventCoordinator.handleTextInputSubmit": {
+      "name": "handleTextInputSubmit",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 353,
+      "signature": "handleTextInputSubmit(inputValue) {"
+    },
+    "EventCoordinator.clearTextInput": {
+      "name": "clearTextInput",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 570,
+      "signature": "clearTextInput() {"
+    },
+    "EventCoordinator.handleSuggestionNavigation": {
+      "name": "handleSuggestionNavigation",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 394,
+      "signature": "handleSuggestionNavigation(key) {"
+    },
+    "EventCoordinator.handleSoundToggle": {
+      "name": "handleSoundToggle",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 412,
+      "signature": "handleSoundToggle() {"
+    },
+    "EventCoordinator.handleClearAll": {
+      "name": "handleClearAll",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 418,
+      "signature": "handleClearAll() {"
+    },
+    "EventCoordinator.updateUI": {
+      "name": "updateUI",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 424,
+      "signature": "updateUI() {"
+    },
+    "EventCoordinator.updateSelectedChordsDisplay": {
+      "name": "updateSelectedChordsDisplay",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 430,
+      "signature": "updateSelectedChordsDisplay() {"
+    },
+    "EventCoordinator.updateChordButtons": {
+      "name": "updateChordButtons",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 446,
+      "signature": "updateChordButtons() {"
+    },
+    "EventCoordinator.updateAvailableChordButtons": {
+      "name": "updateAvailableChordButtons",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 456,
+      "signature": "updateAvailableChordButtons() {"
+    },
+    "EventCoordinator.updateSuggestions": {
+      "name": "updateSuggestions",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 466,
+      "signature": "updateSuggestions(input) {"
+    },
+    "EventCoordinator.showSuggestions": {
+      "name": "showSuggestions",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 480,
+      "signature": "showSuggestions(suggestions) {"
+    },
+    "EventCoordinator.clearSuggestions": {
+      "name": "clearSuggestions",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 502,
+      "signature": "clearSuggestions() {"
+    },
+    "EventCoordinator.updateProgressions": {
+      "name": "updateProgressions",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 510,
+      "signature": "updateProgressions() {"
+    },
+    "EventCoordinator.createChordElement": {
+      "name": "createChordElement",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 530,
+      "signature": "createChordElement(chord, index) {"
+    },
+    "EventCoordinator.formatChordNameLegacy": {
+      "name": "formatChordNameLegacy",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 552,
+      "signature": "formatChordNameLegacy(chordName, chordType) {"
+    },
+    "EventCoordinator.focusTextInput": {
+      "name": "focusTextInput",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 563,
+      "signature": "focusTextInput() {"
+    },
+    "EventCoordinator.showMessage": {
+      "name": "showMessage",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 604,
+      "signature": "showMessage(message, type = 'info') {"
+    },
+    "EventCoordinator.removeLastChord": {
+      "name": "removeLastChord",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 596,
+      "signature": "removeLastChord() {"
+    },
+    "EventCoordinator.getDebugInfo": {
+      "name": "getDebugInfo",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 625,
+      "signature": "getDebugInfo() {"
+    },
+    "EventCoordinator.selectChordNameLegacy": {
+      "name": "selectChordNameLegacy",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 644,
+      "signature": "selectChordNameLegacy(chordName) {"
+    },
+    "EventCoordinator.selectChordTypeLegacy": {
+      "name": "selectChordTypeLegacy",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 672,
+      "signature": "selectChordTypeLegacy(chordType) {"
+    },
+    "EventCoordinator.tryAddChordLegacy": {
+      "name": "tryAddChordLegacy",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 699,
+      "signature": "tryAddChordLegacy() {"
+    },
+    "EventCoordinator.resetChordSelectionLegacy": {
+      "name": "resetChordSelectionLegacy",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 716,
+      "signature": "resetChordSelectionLegacy() {"
+    },
+    "EventCoordinator.initializeChordInputListenerLegacy": {
+      "name": "initializeChordInputListenerLegacy",
+      "class": "EventCoordinator",
+      "file": "modules\\eventCoordinator.js",
+      "line": 730,
+      "signature": "initializeChordInputListenerLegacy() {"
+    },
+    "InputManager.on": {
+      "name": "on",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 19,
+      "signature": "on(event, callback) {"
+    },
+    "InputManager.if": {
+      "name": "if",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 369,
+      "signature": "if (typeof window.onInputChordsChanged === 'function') {"
+    },
+    "InputManager.emit": {
+      "name": "emit",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 25,
+      "signature": "emit(event, data) {"
+    },
+    "InputManager.addChord": {
+      "name": "addChord",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 38,
+      "signature": "addChord(chord, source = 'unknown') {"
+    },
+    "InputManager.removeChord": {
+      "name": "removeChord",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 94,
+      "signature": "removeChord(chord) {"
+    },
+    "InputManager.removeChordAt": {
+      "name": "removeChordAt",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 107,
+      "signature": "removeChordAt(index) {"
+    },
+    "InputManager.clearAll": {
+      "name": "clearAll",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 120,
+      "signature": "clearAll() {"
+    },
+    "InputManager.getSelectedChords": {
+      "name": "getSelectedChords",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 131,
+      "signature": "getSelectedChords() {"
+    },
+    "InputManager.hasChord": {
+      "name": "hasChord",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 135,
+      "signature": "hasChord(chord) {"
+    },
+    "InputManager.getChordCount": {
+      "name": "getChordCount",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 139,
+      "signature": "getChordCount() {"
+    },
+    "InputManager.isValidChordFormat": {
+      "name": "isValidChordFormat",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 144,
+      "signature": "isValidChordFormat(chord) {"
+    },
+    "InputManager.processTextInput": {
+      "name": "processTextInput",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 158,
+      "signature": "processTextInput(input) {"
+    },
+    "InputManager.getSuggestions": {
+      "name": "getSuggestions",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 188,
+      "signature": "getSuggestions(input, maxSuggestions = 5) {"
+    },
+    "InputManager.reorderChords": {
+      "name": "reorderChords",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 193,
+      "signature": "reorderChords(fromIndex, toIndex) {"
+    },
+    "InputManager.updateAvailableChords": {
+      "name": "updateAvailableChords",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 213,
+      "signature": "updateAvailableChords(chords) {"
+    },
+    "InputManager.addChords": {
+      "name": "addChords",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 242,
+      "signature": "addChords(chords, source = 'batch') {"
+    },
+    "InputManager.replaceChords": {
+      "name": "replaceChords",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 251,
+      "signature": "replaceChords(chords, source = 'replace') {"
+    },
+    "InputManager.exportState": {
+      "name": "exportState",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 257,
+      "signature": "exportState() {"
+    },
+    "InputManager.importState": {
+      "name": "importState",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 264,
+      "signature": "importState(state) {"
+    },
+    "InputManager.validateAllSelected": {
+      "name": "validateAllSelected",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 274,
+      "signature": "validateAllSelected() {"
+    },
+    "InputManager.getDebugInfo": {
+      "name": "getDebugInfo",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 288,
+      "signature": "getDebugInfo() {"
+    },
+    "InputManager.getInputChordsLegacy": {
+      "name": "getInputChordsLegacy",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 306,
+      "signature": "getInputChordsLegacy() {"
+    },
+    "InputManager.appendChordLegacy": {
+      "name": "appendChordLegacy",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 316,
+      "signature": "appendChordLegacy(chord) {"
+    },
+    "InputManager.removeChordLegacy": {
+      "name": "removeChordLegacy",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 342,
+      "signature": "removeChordLegacy(button) {"
+    },
+    "InputManager.addChordFromButtonLegacy": {
+      "name": "addChordFromButtonLegacy",
+      "class": "InputManager",
+      "file": "modules\\inputManager.js",
+      "line": 365,
+      "signature": "addChordFromButtonLegacy(chordValue) {"
+    },
+    "IntegrationBridge.setupLegacyDataWatcher": {
+      "name": "setupLegacyDataWatcher",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 16,
+      "signature": "setupLegacyDataWatcher() {"
+    },
+    "IntegrationBridge.if": {
+      "name": "if",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 270,
+      "signature": "if (window.renderInputChords && typeof window.renderInputChords === 'function') {"
+    },
+    "IntegrationBridge.onLegacyDataReady": {
+      "name": "onLegacyDataReady",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 41,
+      "signature": "onLegacyDataReady() {"
+    },
+    "IntegrationBridge.checkReadiness": {
+      "name": "checkReadiness",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 100,
+      "signature": "checkReadiness() {"
+    },
+    "IntegrationBridge.setModuleSystemReady": {
+      "name": "setModuleSystemReady",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 95,
+      "signature": "setModuleSystemReady() {"
+    },
+    "IntegrationBridge.useFallbackChordData": {
+      "name": "useFallbackChordData",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 75,
+      "signature": "useFallbackChordData() {"
+    },
+    "IntegrationBridge.onReady": {
+      "name": "onReady",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 106,
+      "signature": "onReady(callback) {"
+    },
+    "IntegrationBridge.executePendingCallbacks": {
+      "name": "executePendingCallbacks",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 114,
+      "signature": "executePendingCallbacks() {"
+    },
+    "IntegrationBridge.getAvailableChordsForType": {
+      "name": "getAvailableChordsForType",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 125,
+      "signature": "getAvailableChordsForType(type) {"
+    },
+    "IntegrationBridge.switch": {
+      "name": "switch",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 131,
+      "signature": "switch (type) {"
+    },
+    "IntegrationBridge.bridgeLegacyFunctions": {
+      "name": "bridgeLegacyFunctions",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 158,
+      "signature": "bridgeLegacyFunctions(app) {"
+    },
+    "IntegrationBridge.getCurrentAutoharpType": {
+      "name": "getCurrentAutoharpType",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 212,
+      "signature": "getCurrentAutoharpType() {"
+    },
+    "IntegrationBridge.getCurrentSelectedChords": {
+      "name": "getCurrentSelectedChords",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 218,
+      "signature": "getCurrentSelectedChords() {"
+    },
+    "IntegrationBridge.syncLegacyToNewSystem": {
+      "name": "syncLegacyToNewSystem",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 242,
+      "signature": "syncLegacyToNewSystem(app) {"
+    },
+    "IntegrationBridge.syncNewSystemToLegacy": {
+      "name": "syncNewSystemToLegacy",
+      "class": "IntegrationBridge",
+      "file": "modules\\integrationBridge.js",
+      "line": 263,
+      "signature": "syncNewSystemToLegacy(app) {"
+    },
+    "StateManager.initializeAvailableChords": {
+      "name": "initializeAvailableChords",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 32,
+      "signature": "initializeAvailableChords() {"
+    },
+    "StateManager.if": {
+      "name": "if",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 348,
+      "signature": "if (!exportedState.autoharpType) {"
+    },
+    "StateManager.subscribe": {
+      "name": "subscribe",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 48,
+      "signature": "subscribe(event, callback) {"
+    },
+    "StateManager.emit": {
+      "name": "emit",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 63,
+      "signature": "emit(event, data) {"
+    },
+    "StateManager.getState": {
+      "name": "getState",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 76,
+      "signature": "getState() {"
+    },
+    "StateManager.get": {
+      "name": "get",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 80,
+      "signature": "get(key) {"
+    },
+    "StateManager.setState": {
+      "name": "setState",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 85,
+      "signature": "setState(updates) {"
+    },
+    "StateManager.set": {
+      "name": "set",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 109,
+      "signature": "set(key, value) {"
+    },
+    "StateManager.updateAutoharpType": {
+      "name": "updateAutoharpType",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 114,
+      "signature": "updateAutoharpType(type) {"
+    },
+    "StateManager.updateSelectedChords": {
+      "name": "updateSelectedChords",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 127,
+      "signature": "updateSelectedChords(chords) {"
+    },
+    "StateManager.addSelectedChord": {
+      "name": "addSelectedChord",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 131,
+      "signature": "addSelectedChord(chord) {"
+    },
+    "StateManager.removeSelectedChord": {
+      "name": "removeSelectedChord",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 138,
+      "signature": "removeSelectedChord(chord) {"
+    },
+    "StateManager.clearSelectedChords": {
+      "name": "clearSelectedChords",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 143,
+      "signature": "clearSelectedChords() {"
+    },
+    "StateManager.updateProgressions": {
+      "name": "updateProgressions",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 152,
+      "signature": "updateProgressions(progressions) {"
+    },
+    "StateManager.updateSuggestions": {
+      "name": "updateSuggestions",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 156,
+      "signature": "updateSuggestions(suggestions) {"
+    },
+    "StateManager.toggleAudio": {
+      "name": "toggleAudio",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 160,
+      "signature": "toggleAudio() {"
+    },
+    "StateManager.setInputMode": {
+      "name": "setInputMode",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 165,
+      "signature": "setInputMode(mode) {"
+    },
+    "StateManager.updateCurrentChord": {
+      "name": "updateCurrentChord",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 171,
+      "signature": "updateCurrentChord(chordName, chordType) {"
+    },
+    "StateManager.getAvailableChordsForType": {
+      "name": "getAvailableChordsForType",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 179,
+      "signature": "getAvailableChordsForType(type) {"
+    },
+    "StateManager.switch": {
+      "name": "switch",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 188,
+      "signature": "switch (type) {"
+    },
+    "StateManager.isChordAvailable": {
+      "name": "isChordAvailable",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 214,
+      "signature": "isChordAvailable(chord) {"
+    },
+    "StateManager.isChordSelected": {
+      "name": "isChordSelected",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 218,
+      "signature": "isChordSelected(chord) {"
+    },
+    "StateManager.getSelectedChordCount": {
+      "name": "getSelectedChordCount",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 222,
+      "signature": "getSelectedChordCount() {"
+    },
+    "StateManager.saveToStorage": {
+      "name": "saveToStorage",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 227,
+      "signature": "saveToStorage() {"
+    },
+    "StateManager.loadFromStorage": {
+      "name": "loadFromStorage",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 241,
+      "signature": "loadFromStorage() {"
+    },
+    "StateManager.clearStorage": {
+      "name": "clearStorage",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 261,
+      "signature": "clearStorage() {"
+    },
+    "StateManager.validateState": {
+      "name": "validateState",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 270,
+      "signature": "validateState() {"
+    },
+    "StateManager.reset": {
+      "name": "reset",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 301,
+      "signature": "reset() {"
+    },
+    "StateManager.getDebugInfo": {
+      "name": "getDebugInfo",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 321,
+      "signature": "getDebugInfo() {"
+    },
+    "StateManager.exportState": {
+      "name": "exportState",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 334,
+      "signature": "exportState() {"
+    },
+    "StateManager.importState": {
+      "name": "importState",
+      "class": "StateManager",
+      "file": "modules\\stateManager.js",
+      "line": 342,
+      "signature": "importState(exportedState) {"
+    },
+    "StorageManager.save": {
+      "name": "save",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 13,
+      "signature": "save(key, data) {"
+    },
+    "StorageManager.load": {
+      "name": "load",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 28,
+      "signature": "load(key, defaultValue = null) {"
+    },
+    "StorageManager.if": {
+      "name": "if",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 364,
+      "signature": "if (history.length > 50) {"
+    },
+    "StorageManager.remove": {
+      "name": "remove",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 48,
+      "signature": "remove(key) {"
+    },
+    "StorageManager.exists": {
+      "name": "exists",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 58,
+      "signature": "exists(key) {"
+    },
+    "StorageManager.savePreferences": {
+      "name": "savePreferences",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 63,
+      "signature": "savePreferences(preferences) {"
+    },
+    "StorageManager.loadPreferences": {
+      "name": "loadPreferences",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 72,
+      "signature": "loadPreferences() {"
+    },
+    "StorageManager.saveChordHistory": {
+      "name": "saveChordHistory",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 84,
+      "signature": "saveChordHistory(chords) {"
+    },
+    "StorageManager.loadChordHistory": {
+      "name": "loadChordHistory",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 90,
+      "signature": "loadChordHistory() {"
+    },
+    "StorageManager.addToChordHistory": {
+      "name": "addToChordHistory",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 94,
+      "signature": "addToChordHistory(chord) {"
+    },
+    "StorageManager.saveChordProgression": {
+      "name": "saveChordProgression",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 111,
+      "signature": "saveChordProgression(name, progression) {"
+    },
+    "StorageManager.loadChordProgressions": {
+      "name": "loadChordProgressions",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 124,
+      "signature": "loadChordProgressions() {"
+    },
+    "StorageManager.deleteChordProgression": {
+      "name": "deleteChordProgression",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 128,
+      "signature": "deleteChordProgression(name) {"
+    },
+    "StorageManager.updateProgressionLastUsed": {
+      "name": "updateProgressionLastUsed",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 134,
+      "signature": "updateProgressionLastUsed(name) {"
+    },
+    "StorageManager.saveSession": {
+      "name": "saveSession",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 144,
+      "signature": "saveSession(sessionData) {"
+    },
+    "StorageManager.loadSession": {
+      "name": "loadSession",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 152,
+      "signature": "loadSession() {"
+    },
+    "StorageManager.clearSession": {
+      "name": "clearSession",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 167,
+      "signature": "clearSession() {"
+    },
+    "StorageManager.saveUsageStats": {
+      "name": "saveUsageStats",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 172,
+      "signature": "saveUsageStats(stats) {"
+    },
+    "StorageManager.loadUsageStats": {
+      "name": "loadUsageStats",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 182,
+      "signature": "loadUsageStats() {"
+    },
+    "StorageManager.incrementStat": {
+      "name": "incrementStat",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 195,
+      "signature": "incrementStat(statName, value = 1) {"
+    },
+    "StorageManager.incrementChordUsage": {
+      "name": "incrementChordUsage",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 201,
+      "signature": "incrementChordUsage(chord) {"
+    },
+    "StorageManager.exportAllData": {
+      "name": "exportAllData",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 209,
+      "signature": "exportAllData() {"
+    },
+    "StorageManager.importAllData": {
+      "name": "importAllData",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 232,
+      "signature": "importAllData(importData) {"
+    },
+    "StorageManager.clearAllData": {
+      "name": "clearAllData",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 260,
+      "signature": "clearAllData() {"
+    },
+    "StorageManager.getStorageInfo": {
+      "name": "getStorageInfo",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 277,
+      "signature": "getStorageInfo() {"
+    },
+    "StorageManager.for": {
+      "name": "for",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 317,
+      "signature": "for (let i = 0; i < 1000; i++) {"
+    },
+    "StorageManager.getStorageQuota": {
+      "name": "getStorageQuota",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 308,
+      "signature": "getStorageQuota() {"
+    },
+    "StorageManager.while": {
+      "name": "while",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 321,
+      "signature": "while (true) {"
+    },
+    "StorageManager.cleanupOldData": {
+      "name": "cleanupOldData",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 343,
+      "signature": "cleanupOldData() {"
+    },
+    "StorageManager.migrateFromOldVersion": {
+      "name": "migrateFromOldVersion",
+      "class": "StorageManager",
+      "file": "modules\\storageManager.js",
+      "line": 375,
+      "signature": "migrateFromOldVersion(oldData) {"
+    }
+  },
+  "methodIndex": {
+    "initializeApp": [
+      {
+        "key": "initializeApp",
+        "file": "modules\\appIntegration.js",
+        "line": 403,
+        "class": null
+      }
+    ],
+    "normalize": [
+      {
+        "key": "normalize",
+        "file": "modules\\chordParser.js",
+        "line": 466,
+        "class": null
+      }
+    ],
+    "findJavaScriptFiles": [
+      {
+        "key": "findJavaScriptFiles",
+        "file": "simple-duplicate-check.js",
+        "line": 11,
+        "class": null
+      },
+      {
+        "key": "CodebaseMapper.findJavaScriptFiles",
+        "file": "codebase-mapper.js",
+        "line": 47,
+        "class": "CodebaseMapper"
+      },
+      {
+        "key": "RobustDuplicateDetector.findJavaScriptFiles",
+        "file": "detect-duplicates.js",
+        "line": 50,
+        "class": "RobustDuplicateDetector"
+      },
+      {
+        "key": "ImprovedCodebaseMapper.findJavaScriptFiles",
+        "file": "improved-codebase-mapper.js",
+        "line": 60,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "extractMethods": [
+      {
+        "key": "extractMethods",
+        "file": "simple-duplicate-check.js",
+        "line": 28,
+        "class": null
+      }
+    ],
+    "checkForDuplicates": [
+      {
+        "key": "checkForDuplicates",
+        "file": "simple-duplicate-check.js",
+        "line": 77,
+        "class": null
+      }
+    ],
+    "testDuplicateChordAddition": [
+      {
+        "key": "testDuplicateChordAddition",
+        "file": "tests\\test-duplicate-chord-addition.js",
+        "line": 9,
+        "class": null
+      }
+    ],
+    "testDuplicateFixes": [
+      {
+        "key": "testDuplicateFixes",
+        "file": "tests\\test-duplicate-fixes.js",
+        "line": 9,
+        "class": null
+      }
+    ],
+    "runTestWhenAppReady": [
+      {
+        "key": "runTestWhenAppReady",
+        "file": "tests\\test-duplicate-fixes.js",
+        "line": 207,
+        "class": null
+      }
+    ],
+    "testDuplicateChordInteraction": [
+      {
+        "key": "testDuplicateChordInteraction",
+        "file": "tests\\test-duplicate-interaction.js",
+        "line": 9,
+        "class": null
+      }
+    ],
+    "getCurrentChordCount": [
+      {
+        "key": "getCurrentChordCount",
+        "file": "tests\\test-duplicate-interaction.js",
+        "line": 29,
+        "class": null
+      }
+    ],
+    "getCurrentChords": [
+      {
+        "key": "getCurrentChords",
+        "file": "tests\\test-duplicate-interaction.js",
+        "line": 35,
+        "class": null
+      }
+    ],
+    "testEventAuditIntegration": [
+      {
+        "key": "testEventAuditIntegration",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 10,
+        "class": null
+      }
+    ],
+    "runTest2": [
+      {
+        "key": "runTest2",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 86,
+        "class": null
+      }
+    ],
+    "runTest3": [
+      {
+        "key": "runTest3",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 138,
+        "class": null
+      }
+    ],
+    "runTest4": [
+      {
+        "key": "runTest4",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 184,
+        "class": null
+      }
+    ],
+    "runTest5": [
+      {
+        "key": "runTest5",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 226,
+        "class": null
+      }
+    ],
+    "finishTests": [
+      {
+        "key": "finishTests",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 265,
+        "class": null
+      }
+    ],
+    "testSpecificWorkflow": [
+      {
+        "key": "testSpecificWorkflow",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 283,
+        "class": null
+      }
+    ],
+    "testChordInputWorkflow": [
+      {
+        "key": "testChordInputWorkflow",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 301,
+        "class": null
+      }
+    ],
+    "runEventAuditTestWhenReady": [
+      {
+        "key": "runEventAuditTestWhenReady",
+        "file": "tests\\test-event-audit-integration.js",
+        "line": 335,
+        "class": null
+      }
+    ],
+    "testFuzzyChordMatching": [
+      {
+        "key": "testFuzzyChordMatching",
+        "file": "tests\\test-fuzzy-matching.js",
+        "line": 9,
+        "class": null
+      }
+    ],
+    "testNormalizationOnly": [
+      {
+        "key": "testNormalizationOnly",
+        "file": "tests\\test-fuzzy-matching.js",
+        "line": 90,
+        "class": null
+      }
+    ],
+    "testChordInput": [
+      {
+        "key": "testChordInput",
+        "file": "tests\\test-fuzzy-matching.js",
+        "line": 120,
+        "class": null
+      }
+    ],
+    "runFuzzyTestWhenReady": [
+      {
+        "key": "runFuzzyTestWhenReady",
+        "file": "tests\\test-fuzzy-matching.js",
+        "line": 145,
+        "class": null
+      }
+    ],
+    "addInputFlowDebugging": [
+      {
+        "key": "addInputFlowDebugging",
+        "file": "tests\\test-input-flow-debug.js",
+        "line": 8,
+        "class": null
+      }
+    ],
+    "testIntegration": [
+      {
+        "key": "testIntegration",
+        "file": "tests\\test-integration.js",
+        "line": 6,
+        "class": null
+      }
+    ],
+    "runTestWhenReady": [
+      {
+        "key": "runTestWhenReady",
+        "file": "tests\\test-integration.js",
+        "line": 104,
+        "class": null
+      }
+    ],
+    "testChordNormalizationFix": [
+      {
+        "key": "testChordNormalizationFix",
+        "file": "tests\\test-normalization-fix.js",
+        "line": 9,
+        "class": null
+      }
+    ],
+    "testSpecificInput": [
+      {
+        "key": "testSpecificInput",
+        "file": "tests\\test-normalization-fix.js",
+        "line": 153,
+        "class": null
+      }
+    ],
+    "runNormalizationTestWhenReady": [
+      {
+        "key": "runNormalizationTestWhenReady",
+        "file": "tests\\test-normalization-fix.js",
+        "line": 192,
+        "class": null
+      }
+    ],
+    "runTranscriptionDebugTest": [
+      {
+        "key": "runTranscriptionDebugTest",
+        "file": "tests\\test-transcription-debug.js",
+        "line": 9,
+        "class": null
+      }
+    ],
+    "runEndToEndTest": [
+      {
+        "key": "runEndToEndTest",
+        "file": "tests\\test-transcription-end-to-end.js",
+        "line": 8,
+        "class": null
+      }
+    ],
+    "parseChordString": [
+      {
+        "key": "parseChordString",
+        "file": "webapp.js",
+        "line": 37,
+        "class": null
+      }
+    ],
+    "initializeAutoharpTypeListeners": [
+      {
+        "key": "initializeAutoharpTypeListeners",
+        "file": "webapp.js",
+        "line": 81,
+        "class": null
+      }
+    ],
+    "onAutoharpTypeChanged": [
+      {
+        "key": "onAutoharpTypeChanged",
+        "file": "webapp.js",
+        "line": 88,
+        "class": null
+      }
+    ],
+    "renderAvailableChords": [
+      {
+        "key": "renderAvailableChords",
+        "file": "webapp.js",
+        "line": 120,
+        "class": null
+      }
+    ],
+    "initializeDOMReferences": [
+      {
+        "key": "initializeDOMReferences",
+        "file": "webapp.js",
+        "line": 145,
+        "class": null
+      }
+    ],
+    "initializeChordInputListener": [
+      {
+        "key": "initializeChordInputListener",
+        "file": "webapp.js",
+        "line": 155,
+        "class": null
+      }
+    ],
+    "selectChordName": [
+      {
+        "key": "selectChordName",
+        "file": "webapp.js",
+        "line": 164,
+        "class": null
+      }
+    ],
+    "selectChordType": [
+      {
+        "key": "selectChordType",
+        "file": "webapp.js",
+        "line": 198,
+        "class": null
+      }
+    ],
+    "tryAddChord": [
+      {
+        "key": "tryAddChord",
+        "file": "webapp.js",
+        "line": 232,
+        "class": null
+      }
+    ],
+    "resetChordSelection": [
+      {
+        "key": "resetChordSelection",
+        "file": "webapp.js",
+        "line": 243,
+        "class": null
+      }
+    ],
+    "formatChordName": [
+      {
+        "key": "formatChordName",
+        "file": "webapp.js",
+        "line": 261,
+        "class": null
+      }
+    ],
+    "addChordFromButton": [
+      {
+        "key": "addChordFromButton",
+        "file": "webapp.js",
+        "line": 283,
+        "class": null
+      }
+    ],
+    "appendChord": [
+      {
+        "key": "appendChord",
+        "file": "webapp.js",
+        "line": 290,
+        "class": null
+      }
+    ],
+    "removeChord": [
+      {
+        "key": "removeChord",
+        "file": "webapp.js",
+        "line": 309,
+        "class": null
+      },
+      {
+        "key": "AutoharpTransposerApp.removeChord",
+        "file": "modules\\appIntegration.js",
+        "line": 276,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "InputManager.removeChord",
+        "file": "modules\\inputManager.js",
+        "line": 94,
+        "class": "InputManager"
+      }
+    ],
+    "getInputChords": [
+      {
+        "key": "getInputChords",
+        "file": "webapp.js",
+        "line": 319,
+        "class": null
+      }
+    ],
+    "initializeDragAndDrop": [
+      {
+        "key": "initializeDragAndDrop",
+        "file": "webapp.js",
+        "line": 334,
+        "class": null
+      }
+    ],
+    "addDragListeners": [
+      {
+        "key": "addDragListeners",
+        "file": "webapp.js",
+        "line": 340,
+        "class": null
+      }
+    ],
+    "handleDragStart": [
+      {
+        "key": "handleDragStart",
+        "file": "webapp.js",
+        "line": 353,
+        "class": null
+      }
+    ],
+    "handleDragOver": [
+      {
+        "key": "handleDragOver",
+        "file": "webapp.js",
+        "line": 360,
+        "class": null
+      }
+    ],
+    "handleDrop": [
+      {
+        "key": "handleDrop",
+        "file": "webapp.js",
+        "line": 374,
+        "class": null
+      }
+    ],
+    "handleDragEnd": [
+      {
+        "key": "handleDragEnd",
+        "file": "webapp.js",
+        "line": 378,
+        "class": null
+      }
+    ],
+    "getDragAfterElement": [
+      {
+        "key": "getDragAfterElement",
+        "file": "webapp.js",
+        "line": 387,
+        "class": null
+      }
+    ],
+    "handleTouchStart": [
+      {
+        "key": "handleTouchStart",
+        "file": "webapp.js",
+        "line": 413,
+        "class": null
+      }
+    ],
+    "handleTouchMove": [
+      {
+        "key": "handleTouchMove",
+        "file": "webapp.js",
+        "line": 427,
+        "class": null
+      }
+    ],
+    "handleTouchEnd": [
+      {
+        "key": "handleTouchEnd",
+        "file": "webapp.js",
+        "line": 457,
+        "class": null
+      }
+    ],
+    "calculateResultingChords": [
+      {
+        "key": "calculateResultingChords",
+        "file": "webapp.js",
+        "line": 476,
+        "class": null
+      }
+    ],
+    "onInputChordsChanged": [
+      {
+        "key": "onInputChordsChanged",
+        "file": "webapp.js",
+        "line": 579,
+        "class": null
+      }
+    ],
+    "for": [
+      {
+        "key": "CodebaseMapper.for",
+        "file": "codebase-mapper.js",
+        "line": 51,
+        "class": "CodebaseMapper"
+      },
+      {
+        "key": "RobustDuplicateDetector.for",
+        "file": "detect-duplicates.js",
+        "line": 236,
+        "class": "RobustDuplicateDetector"
+      },
+      {
+        "key": "ImprovedCodebaseMapper.for",
+        "file": "improved-codebase-mapper.js",
+        "line": 66,
+        "class": "ImprovedCodebaseMapper"
+      },
+      {
+        "key": "ChordParser.for",
+        "file": "modules\\chordParser.js",
+        "line": 552,
+        "class": "ChordParser"
+      },
+      {
+        "key": "StorageManager.for",
+        "file": "modules\\storageManager.js",
+        "line": 317,
+        "class": "StorageManager"
+      }
+    ],
+    "if": [
+      {
+        "key": "CodebaseMapper.if",
+        "file": "codebase-mapper.js",
+        "line": 307,
+        "class": "CodebaseMapper"
+      },
+      {
+        "key": "RobustDuplicateDetector.if",
+        "file": "detect-duplicates.js",
+        "line": 319,
+        "class": "RobustDuplicateDetector"
+      },
+      {
+        "key": "ImprovedCodebaseMapper.if",
+        "file": "improved-codebase-mapper.js",
+        "line": 265,
+        "class": "ImprovedCodebaseMapper"
+      },
+      {
+        "key": "AutoharpTransposerApp.if",
+        "file": "modules\\appIntegration.js",
+        "line": 418,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "ChordAudioManager.if",
+        "file": "modules\\chordAudio.js",
+        "line": 162,
+        "class": "ChordAudioManager"
+      },
+      {
+        "key": "ChordParser.if",
+        "file": "modules\\chordParser.js",
+        "line": 565,
+        "class": "ChordParser"
+      },
+      {
+        "key": "EventCoordinator.if",
+        "file": "modules\\eventCoordinator.js",
+        "line": 705,
+        "class": "EventCoordinator"
+      },
+      {
+        "key": "InputManager.if",
+        "file": "modules\\inputManager.js",
+        "line": 369,
+        "class": "InputManager"
+      },
+      {
+        "key": "IntegrationBridge.if",
+        "file": "modules\\integrationBridge.js",
+        "line": 270,
+        "class": "IntegrationBridge"
+      },
+      {
+        "key": "StateManager.if",
+        "file": "modules\\stateManager.js",
+        "line": 348,
+        "class": "StateManager"
+      },
+      {
+        "key": "StorageManager.if",
+        "file": "modules\\storageManager.js",
+        "line": 364,
+        "class": "StorageManager"
+      }
+    ],
+    "buildRelationships": [
+      {
+        "key": "CodebaseMapper.buildRelationships",
+        "file": "codebase-mapper.js",
+        "line": 199,
+        "class": "CodebaseMapper"
+      }
+    ],
+    "generateReport": [
+      {
+        "key": "CodebaseMapper.generateReport",
+        "file": "codebase-mapper.js",
+        "line": 217,
+        "class": "CodebaseMapper"
+      },
+      {
+        "key": "RobustDuplicateDetector.generateReport",
+        "file": "detect-duplicates.js",
+        "line": 247,
+        "class": "RobustDuplicateDetector"
+      }
+    ],
+    "exportKnowledgeGraph": [
+      {
+        "key": "CodebaseMapper.exportKnowledgeGraph",
+        "file": "codebase-mapper.js",
+        "line": 272,
+        "class": "CodebaseMapper"
+      }
+    ],
+    "scanProject": [
+      {
+        "key": "RobustDuplicateDetector.scanProject",
+        "file": "detect-duplicates.js",
+        "line": 24,
+        "class": "RobustDuplicateDetector"
+      }
+    ],
+    "scanFile": [
+      {
+        "key": "RobustDuplicateDetector.scanFile",
+        "file": "detect-duplicates.js",
+        "line": 75,
+        "class": "RobustDuplicateDetector"
+      }
+    ],
+    "analyzeResults": [
+      {
+        "key": "RobustDuplicateDetector.analyzeResults",
+        "file": "detect-duplicates.js",
+        "line": 151,
+        "class": "RobustDuplicateDetector"
+      }
+    ],
+    "findSimilarMethodNames": [
+      {
+        "key": "RobustDuplicateDetector.findSimilarMethodNames",
+        "file": "detect-duplicates.js",
+        "line": 191,
+        "class": "RobustDuplicateDetector"
+      }
+    ],
+    "areMethodNamesSimilar": [
+      {
+        "key": "RobustDuplicateDetector.areMethodNamesSimilar",
+        "file": "detect-duplicates.js",
+        "line": 211,
+        "class": "RobustDuplicateDetector"
+      }
+    ],
+    "getResults": [
+      {
+        "key": "RobustDuplicateDetector.getResults",
+        "file": "detect-duplicates.js",
+        "line": 313,
+        "class": "RobustDuplicateDetector"
+      }
+    ],
+    "generateKnowledgeGraph": [
+      {
+        "key": "ImprovedCodebaseMapper.generateKnowledgeGraph",
+        "file": "improved-codebase-mapper.js",
+        "line": 32,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "analyzeFile": [
+      {
+        "key": "ImprovedCodebaseMapper.analyzeFile",
+        "file": "improved-codebase-mapper.js",
+        "line": 84,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "extractClasses": [
+      {
+        "key": "ImprovedCodebaseMapper.extractClasses",
+        "file": "improved-codebase-mapper.js",
+        "line": 104,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "extractFunctions": [
+      {
+        "key": "ImprovedCodebaseMapper.extractFunctions",
+        "file": "improved-codebase-mapper.js",
+        "line": 146,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "buildMethodIndex": [
+      {
+        "key": "ImprovedCodebaseMapper.buildMethodIndex",
+        "file": "improved-codebase-mapper.js",
+        "line": 183,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "findDuplicates": [
+      {
+        "key": "ImprovedCodebaseMapper.findDuplicates",
+        "file": "improved-codebase-mapper.js",
+        "line": 202,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "updateMetadata": [
+      {
+        "key": "ImprovedCodebaseMapper.updateMetadata",
+        "file": "improved-codebase-mapper.js",
+        "line": 213,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "saveResults": [
+      {
+        "key": "ImprovedCodebaseMapper.saveResults",
+        "file": "improved-codebase-mapper.js",
+        "line": 222,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "generateSummary": [
+      {
+        "key": "ImprovedCodebaseMapper.generateSummary",
+        "file": "improved-codebase-mapper.js",
+        "line": 232,
+        "class": "ImprovedCodebaseMapper"
+      }
+    ],
+    "connectModules": [
+      {
+        "key": "AutoharpTransposerApp.connectModules",
+        "file": "modules\\appIntegration.js",
+        "line": 113,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "loadSavedState": [
+      {
+        "key": "AutoharpTransposerApp.loadSavedState",
+        "file": "modules\\appIntegration.js",
+        "line": 142,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "initializeUI": [
+      {
+        "key": "AutoharpTransposerApp.initializeUI",
+        "file": "modules\\appIntegration.js",
+        "line": 170,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "updateAutoharpTypeUI": [
+      {
+        "key": "AutoharpTransposerApp.updateAutoharpTypeUI",
+        "file": "modules\\appIntegration.js",
+        "line": 193,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "updateAudioToggleUI": [
+      {
+        "key": "AutoharpTransposerApp.updateAudioToggleUI",
+        "file": "modules\\appIntegration.js",
+        "line": 204,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "updateSelectedChordsUI": [
+      {
+        "key": "AutoharpTransposerApp.updateSelectedChordsUI",
+        "file": "modules\\appIntegration.js",
+        "line": 213,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "setupAutoSave": [
+      {
+        "key": "AutoharpTransposerApp.setupAutoSave",
+        "file": "modules\\appIntegration.js",
+        "line": 233,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "saveCurrentSession": [
+      {
+        "key": "AutoharpTransposerApp.saveCurrentSession",
+        "file": "modules\\appIntegration.js",
+        "line": 245,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "addChord": [
+      {
+        "key": "AutoharpTransposerApp.addChord",
+        "file": "modules\\appIntegration.js",
+        "line": 267,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "InputManager.addChord",
+        "file": "modules\\inputManager.js",
+        "line": 38,
+        "class": "InputManager"
+      }
+    ],
+    "clearAllChords": [
+      {
+        "key": "AutoharpTransposerApp.clearAllChords",
+        "file": "modules\\appIntegration.js",
+        "line": 284,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "getSelectedChords": [
+      {
+        "key": "AutoharpTransposerApp.getSelectedChords",
+        "file": "modules\\appIntegration.js",
+        "line": 292,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "InputManager.getSelectedChords",
+        "file": "modules\\inputManager.js",
+        "line": 131,
+        "class": "InputManager"
+      }
+    ],
+    "setAutoharpType": [
+      {
+        "key": "AutoharpTransposerApp.setAutoharpType",
+        "file": "modules\\appIntegration.js",
+        "line": 296,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "toggleAudio": [
+      {
+        "key": "AutoharpTransposerApp.toggleAudio",
+        "file": "modules\\appIntegration.js",
+        "line": 300,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "StateManager.toggleAudio",
+        "file": "modules\\stateManager.js",
+        "line": 160,
+        "class": "StateManager"
+      }
+    ],
+    "getState": [
+      {
+        "key": "AutoharpTransposerApp.getState",
+        "file": "modules\\appIntegration.js",
+        "line": 304,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "StateManager.getState",
+        "file": "modules\\stateManager.js",
+        "line": 76,
+        "class": "StateManager"
+      }
+    ],
+    "on": [
+      {
+        "key": "AutoharpTransposerApp.on",
+        "file": "modules\\appIntegration.js",
+        "line": 309,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "InputManager.on",
+        "file": "modules\\inputManager.js",
+        "line": 19,
+        "class": "InputManager"
+      }
+    ],
+    "emit": [
+      {
+        "key": "AutoharpTransposerApp.emit",
+        "file": "modules\\appIntegration.js",
+        "line": 319,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "InputManager.emit",
+        "file": "modules\\inputManager.js",
+        "line": 25,
+        "class": "InputManager"
+      },
+      {
+        "key": "StateManager.emit",
+        "file": "modules\\stateManager.js",
+        "line": 63,
+        "class": "StateManager"
+      }
+    ],
+    "exportData": [
+      {
+        "key": "AutoharpTransposerApp.exportData",
+        "file": "modules\\appIntegration.js",
+        "line": 332,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "importData": [
+      {
+        "key": "AutoharpTransposerApp.importData",
+        "file": "modules\\appIntegration.js",
+        "line": 340,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "getDebugInfo": [
+      {
+        "key": "AutoharpTransposerApp.getDebugInfo",
+        "file": "modules\\appIntegration.js",
+        "line": 349,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "EventCoordinator.getDebugInfo",
+        "file": "modules\\eventCoordinator.js",
+        "line": 625,
+        "class": "EventCoordinator"
+      },
+      {
+        "key": "InputManager.getDebugInfo",
+        "file": "modules\\inputManager.js",
+        "line": 288,
+        "class": "InputManager"
+      },
+      {
+        "key": "StateManager.getDebugInfo",
+        "file": "modules\\stateManager.js",
+        "line": 321,
+        "class": "StateManager"
+      }
+    ],
+    "destroy": [
+      {
+        "key": "AutoharpTransposerApp.destroy",
+        "file": "modules\\appIntegration.js",
+        "line": 361,
+        "class": "AutoharpTransposerApp"
+      },
+      {
+        "key": "ChordAudioManager.destroy",
+        "file": "modules\\chordAudio.js",
+        "line": 160,
+        "class": "ChordAudioManager"
+      }
+    ],
+    "handleInitializationError": [
+      {
+        "key": "AutoharpTransposerApp.handleInitializationError",
+        "file": "modules\\appIntegration.js",
+        "line": 382,
+        "class": "AutoharpTransposerApp"
+      }
+    ],
+    "initializeAudioContext": [
+      {
+        "key": "ChordAudioManager.initializeAudioContext",
+        "file": "modules\\chordAudio.js",
+        "line": 15,
+        "class": "ChordAudioManager"
+      }
+    ],
+    "toggleSound": [
+      {
+        "key": "ChordAudioManager.toggleSound",
+        "file": "modules\\chordAudio.js",
+        "line": 27,
+        "class": "ChordAudioManager"
+      }
+    ],
+    "playChord": [
+      {
+        "key": "ChordAudioManager.playChord",
+        "file": "modules\\chordAudio.js",
+        "line": 43,
+        "class": "ChordAudioManager"
+      }
+    ],
+    "stopAllSounds": [
+      {
+        "key": "ChordAudioManager.stopAllSounds",
+        "file": "modules\\chordAudio.js",
+        "line": 90,
+        "class": "ChordAudioManager"
+      }
+    ],
+    "getChordFrequencies": [
+      {
+        "key": "ChordAudioManager.getChordFrequencies",
+        "file": "modules\\chordAudio.js",
+        "line": 101,
+        "class": "ChordAudioManager"
+      }
+    ],
+    "switch": [
+      {
+        "key": "ChordAudioManager.switch",
+        "file": "modules\\chordAudio.js",
+        "line": 120,
+        "class": "ChordAudioManager"
+      },
+      {
+        "key": "ChordParser.switch",
+        "file": "modules\\chordParser.js",
+        "line": 645,
+        "class": "ChordParser"
+      },
+      {
+        "key": "EventCoordinator.switch",
+        "file": "modules\\eventCoordinator.js",
+        "line": 173,
+        "class": "EventCoordinator"
+      },
+      {
+        "key": "IntegrationBridge.switch",
+        "file": "modules\\integrationBridge.js",
+        "line": 131,
+        "class": "IntegrationBridge"
+      },
+      {
+        "key": "StateManager.switch",
+        "file": "modules\\stateManager.js",
+        "line": 188,
+        "class": "StateManager"
+      }
+    ],
+    "parseChordName": [
+      {
+        "key": "ChordAudioManager.parseChordName",
+        "file": "modules\\chordAudio.js",
+        "line": 140,
+        "class": "ChordAudioManager"
+      }
+    ],
+    "generateAllValidChords": [
+      {
+        "key": "ChordParser.generateAllValidChords",
+        "file": "modules\\chordParser.js",
+        "line": 20,
+        "class": "ChordParser"
+      }
+    ],
+    "updateAvailableChords": [
+      {
+        "key": "ChordParser.updateAvailableChords",
+        "file": "modules\\chordParser.js",
+        "line": 60,
+        "class": "ChordParser"
+      },
+      {
+        "key": "InputManager.updateAvailableChords",
+        "file": "modules\\inputManager.js",
+        "line": 213,
+        "class": "InputManager"
+      }
+    ],
+    "parseChord": [
+      {
+        "key": "ChordParser.parseChord",
+        "file": "modules\\chordParser.js",
+        "line": 71,
+        "class": "ChordParser"
+      }
+    ],
+    "normalizeChordInput": [
+      {
+        "key": "ChordParser.normalizeChordInput",
+        "file": "modules\\chordParser.js",
+        "line": 140,
+        "class": "ChordParser"
+      }
+    ],
+    "getFuzzyMatches": [
+      {
+        "key": "ChordParser.getFuzzyMatches",
+        "file": "modules\\chordParser.js",
+        "line": 275,
+        "class": "ChordParser"
+      }
+    ],
+    "getSuggestions": [
+      {
+        "key": "ChordParser.getSuggestions",
+        "file": "modules\\chordParser.js",
+        "line": 297,
+        "class": "ChordParser"
+      },
+      {
+        "key": "InputManager.getSuggestions",
+        "file": "modules\\inputManager.js",
+        "line": 188,
+        "class": "InputManager"
+      }
+    ],
+    "getRootNotePermutations": [
+      {
+        "key": "ChordParser.getRootNotePermutations",
+        "file": "modules\\chordParser.js",
+        "line": 309,
+        "class": "ChordParser"
+      }
+    ],
+    "extractRootNote": [
+      {
+        "key": "ChordParser.extractRootNote",
+        "file": "modules\\chordParser.js",
+        "line": 327,
+        "class": "ChordParser"
+      }
+    ],
+    "generateChordVariations": [
+      {
+        "key": "ChordParser.generateChordVariations",
+        "file": "modules\\chordParser.js",
+        "line": 352,
+        "class": "ChordParser"
+      }
+    ],
+    "filterAndPrioritizeVariations": [
+      {
+        "key": "ChordParser.filterAndPrioritizeVariations",
+        "file": "modules\\chordParser.js",
+        "line": 380,
+        "class": "ChordParser"
+      }
+    ],
+    "validateChord": [
+      {
+        "key": "ChordParser.validateChord",
+        "file": "modules\\chordParser.js",
+        "line": 415,
+        "class": "ChordParser"
+      }
+    ],
+    "calculateSimilarity": [
+      {
+        "key": "ChordParser.calculateSimilarity",
+        "file": "modules\\chordParser.js",
+        "line": 422,
+        "class": "ChordParser"
+      }
+    ],
+    "levenshteinDistance": [
+      {
+        "key": "ChordParser.levenshteinDistance",
+        "file": "modules\\chordParser.js",
+        "line": 433,
+        "class": "ChordParser"
+      }
+    ],
+    "soundexMatch": [
+      {
+        "key": "ChordParser.soundexMatch",
+        "file": "modules\\chordParser.js",
+        "line": 464,
+        "class": "ChordParser"
+      }
+    ],
+    "normalizeChordName": [
+      {
+        "key": "ChordParser.normalizeChordName",
+        "file": "modules\\chordParser.js",
+        "line": 481,
+        "class": "ChordParser"
+      }
+    ],
+    "addToHistory": [
+      {
+        "key": "ChordParser.addToHistory",
+        "file": "modules\\chordParser.js",
+        "line": 501,
+        "class": "ChordParser"
+      }
+    ],
+    "loadChordHistory": [
+      {
+        "key": "ChordParser.loadChordHistory",
+        "file": "modules\\chordParser.js",
+        "line": 520,
+        "class": "ChordParser"
+      },
+      {
+        "key": "StorageManager.loadChordHistory",
+        "file": "modules\\storageManager.js",
+        "line": 90,
+        "class": "StorageManager"
+      }
+    ],
+    "saveChordHistory": [
+      {
+        "key": "ChordParser.saveChordHistory",
+        "file": "modules\\chordParser.js",
+        "line": 530,
+        "class": "ChordParser"
+      },
+      {
+        "key": "StorageManager.saveChordHistory",
+        "file": "modules\\storageManager.js",
+        "line": 84,
+        "class": "StorageManager"
+      }
+    ],
+    "parseAdvancedChord": [
+      {
+        "key": "ChordParser.parseAdvancedChord",
+        "file": "modules\\chordParser.js",
+        "line": 539,
+        "class": "ChordParser"
+      }
+    ],
+    "getContextualSuggestions": [
+      {
+        "key": "ChordParser.getContextualSuggestions",
+        "file": "modules\\chordParser.js",
+        "line": 561,
+        "class": "ChordParser"
+      }
+    ],
+    "getHarmonicallyRelatedChords": [
+      {
+        "key": "ChordParser.getHarmonicallyRelatedChords",
+        "file": "modules\\chordParser.js",
+        "line": 578,
+        "class": "ChordParser"
+      }
+    ],
+    "setupEventListeners": [
+      {
+        "key": "EventCoordinator.setupEventListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 20,
+        "class": "EventCoordinator"
+      }
+    ],
+    "initializeEventListeners": [
+      {
+        "key": "EventCoordinator.initializeEventListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 29,
+        "class": "EventCoordinator"
+      }
+    ],
+    "setupAutoharpTypeListeners": [
+      {
+        "key": "EventCoordinator.setupAutoharpTypeListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 49,
+        "class": "EventCoordinator"
+      }
+    ],
+    "setupChordButtonListeners": [
+      {
+        "key": "EventCoordinator.setupChordButtonListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 60,
+        "class": "EventCoordinator"
+      }
+    ],
+    "setupTextInputListeners": [
+      {
+        "key": "EventCoordinator.setupTextInputListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 81,
+        "class": "EventCoordinator"
+      }
+    ],
+    "setupAudioControlListeners": [
+      {
+        "key": "EventCoordinator.setupAudioControlListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 130,
+        "class": "EventCoordinator"
+      }
+    ],
+    "setupUtilityButtonListeners": [
+      {
+        "key": "EventCoordinator.setupUtilityButtonListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 140,
+        "class": "EventCoordinator"
+      }
+    ],
+    "setupKeyboardShortcuts": [
+      {
+        "key": "EventCoordinator.setupKeyboardShortcuts",
+        "file": "modules\\eventCoordinator.js",
+        "line": 166,
+        "class": "EventCoordinator"
+      }
+    ],
+    "setupStateListeners": [
+      {
+        "key": "EventCoordinator.setupStateListeners",
+        "file": "modules\\eventCoordinator.js",
+        "line": 203,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleAutoharpTypeChange": [
+      {
+        "key": "EventCoordinator.handleAutoharpTypeChange",
+        "file": "modules\\eventCoordinator.js",
+        "line": 233,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleChordNameSelection": [
+      {
+        "key": "EventCoordinator.handleChordNameSelection",
+        "file": "modules\\eventCoordinator.js",
+        "line": 238,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleChordTypeSelection": [
+      {
+        "key": "EventCoordinator.handleChordTypeSelection",
+        "file": "modules\\eventCoordinator.js",
+        "line": 248,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleAddChordClick": [
+      {
+        "key": "EventCoordinator.handleAddChordClick",
+        "file": "modules\\eventCoordinator.js",
+        "line": 258,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleRemoveChordClick": [
+      {
+        "key": "EventCoordinator.handleRemoveChordClick",
+        "file": "modules\\eventCoordinator.js",
+        "line": 289,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handlePlayAll": [
+      {
+        "key": "EventCoordinator.handlePlayAll",
+        "file": "modules\\eventCoordinator.js",
+        "line": 300,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleTextInput": [
+      {
+        "key": "EventCoordinator.handleTextInput",
+        "file": "modules\\eventCoordinator.js",
+        "line": 328,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleTextInputFocus": [
+      {
+        "key": "EventCoordinator.handleTextInputFocus",
+        "file": "modules\\eventCoordinator.js",
+        "line": 340,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleSuggestionClick": [
+      {
+        "key": "EventCoordinator.handleSuggestionClick",
+        "file": "modules\\eventCoordinator.js",
+        "line": 347,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleTextInputSubmit": [
+      {
+        "key": "EventCoordinator.handleTextInputSubmit",
+        "file": "modules\\eventCoordinator.js",
+        "line": 353,
+        "class": "EventCoordinator"
+      }
+    ],
+    "clearTextInput": [
+      {
+        "key": "EventCoordinator.clearTextInput",
+        "file": "modules\\eventCoordinator.js",
+        "line": 570,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleSuggestionNavigation": [
+      {
+        "key": "EventCoordinator.handleSuggestionNavigation",
+        "file": "modules\\eventCoordinator.js",
+        "line": 394,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleSoundToggle": [
+      {
+        "key": "EventCoordinator.handleSoundToggle",
+        "file": "modules\\eventCoordinator.js",
+        "line": 412,
+        "class": "EventCoordinator"
+      }
+    ],
+    "handleClearAll": [
+      {
+        "key": "EventCoordinator.handleClearAll",
+        "file": "modules\\eventCoordinator.js",
+        "line": 418,
+        "class": "EventCoordinator"
+      }
+    ],
+    "updateUI": [
+      {
+        "key": "EventCoordinator.updateUI",
+        "file": "modules\\eventCoordinator.js",
+        "line": 424,
+        "class": "EventCoordinator"
+      }
+    ],
+    "updateSelectedChordsDisplay": [
+      {
+        "key": "EventCoordinator.updateSelectedChordsDisplay",
+        "file": "modules\\eventCoordinator.js",
+        "line": 430,
+        "class": "EventCoordinator"
+      }
+    ],
+    "updateChordButtons": [
+      {
+        "key": "EventCoordinator.updateChordButtons",
+        "file": "modules\\eventCoordinator.js",
+        "line": 446,
+        "class": "EventCoordinator"
+      }
+    ],
+    "updateAvailableChordButtons": [
+      {
+        "key": "EventCoordinator.updateAvailableChordButtons",
+        "file": "modules\\eventCoordinator.js",
+        "line": 456,
+        "class": "EventCoordinator"
+      }
+    ],
+    "updateSuggestions": [
+      {
+        "key": "EventCoordinator.updateSuggestions",
+        "file": "modules\\eventCoordinator.js",
+        "line": 466,
+        "class": "EventCoordinator"
+      },
+      {
+        "key": "StateManager.updateSuggestions",
+        "file": "modules\\stateManager.js",
+        "line": 156,
+        "class": "StateManager"
+      }
+    ],
+    "showSuggestions": [
+      {
+        "key": "EventCoordinator.showSuggestions",
+        "file": "modules\\eventCoordinator.js",
+        "line": 480,
+        "class": "EventCoordinator"
+      }
+    ],
+    "clearSuggestions": [
+      {
+        "key": "EventCoordinator.clearSuggestions",
+        "file": "modules\\eventCoordinator.js",
+        "line": 502,
+        "class": "EventCoordinator"
+      }
+    ],
+    "updateProgressions": [
+      {
+        "key": "EventCoordinator.updateProgressions",
+        "file": "modules\\eventCoordinator.js",
+        "line": 510,
+        "class": "EventCoordinator"
+      },
+      {
+        "key": "StateManager.updateProgressions",
+        "file": "modules\\stateManager.js",
+        "line": 152,
+        "class": "StateManager"
+      }
+    ],
+    "createChordElement": [
+      {
+        "key": "EventCoordinator.createChordElement",
+        "file": "modules\\eventCoordinator.js",
+        "line": 530,
+        "class": "EventCoordinator"
+      }
+    ],
+    "formatChordNameLegacy": [
+      {
+        "key": "EventCoordinator.formatChordNameLegacy",
+        "file": "modules\\eventCoordinator.js",
+        "line": 552,
+        "class": "EventCoordinator"
+      }
+    ],
+    "focusTextInput": [
+      {
+        "key": "EventCoordinator.focusTextInput",
+        "file": "modules\\eventCoordinator.js",
+        "line": 563,
+        "class": "EventCoordinator"
+      }
+    ],
+    "showMessage": [
+      {
+        "key": "EventCoordinator.showMessage",
+        "file": "modules\\eventCoordinator.js",
+        "line": 604,
+        "class": "EventCoordinator"
+      }
+    ],
+    "removeLastChord": [
+      {
+        "key": "EventCoordinator.removeLastChord",
+        "file": "modules\\eventCoordinator.js",
+        "line": 596,
+        "class": "EventCoordinator"
+      }
+    ],
+    "selectChordNameLegacy": [
+      {
+        "key": "EventCoordinator.selectChordNameLegacy",
+        "file": "modules\\eventCoordinator.js",
+        "line": 644,
+        "class": "EventCoordinator"
+      }
+    ],
+    "selectChordTypeLegacy": [
+      {
+        "key": "EventCoordinator.selectChordTypeLegacy",
+        "file": "modules\\eventCoordinator.js",
+        "line": 672,
+        "class": "EventCoordinator"
+      }
+    ],
+    "tryAddChordLegacy": [
+      {
+        "key": "EventCoordinator.tryAddChordLegacy",
+        "file": "modules\\eventCoordinator.js",
+        "line": 699,
+        "class": "EventCoordinator"
+      }
+    ],
+    "resetChordSelectionLegacy": [
+      {
+        "key": "EventCoordinator.resetChordSelectionLegacy",
+        "file": "modules\\eventCoordinator.js",
+        "line": 716,
+        "class": "EventCoordinator"
+      }
+    ],
+    "initializeChordInputListenerLegacy": [
+      {
+        "key": "EventCoordinator.initializeChordInputListenerLegacy",
+        "file": "modules\\eventCoordinator.js",
+        "line": 730,
+        "class": "EventCoordinator"
+      }
+    ],
+    "removeChordAt": [
+      {
+        "key": "InputManager.removeChordAt",
+        "file": "modules\\inputManager.js",
+        "line": 107,
+        "class": "InputManager"
+      }
+    ],
+    "clearAll": [
+      {
+        "key": "InputManager.clearAll",
+        "file": "modules\\inputManager.js",
+        "line": 120,
+        "class": "InputManager"
+      }
+    ],
+    "hasChord": [
+      {
+        "key": "InputManager.hasChord",
+        "file": "modules\\inputManager.js",
+        "line": 135,
+        "class": "InputManager"
+      }
+    ],
+    "getChordCount": [
+      {
+        "key": "InputManager.getChordCount",
+        "file": "modules\\inputManager.js",
+        "line": 139,
+        "class": "InputManager"
+      }
+    ],
+    "isValidChordFormat": [
+      {
+        "key": "InputManager.isValidChordFormat",
+        "file": "modules\\inputManager.js",
+        "line": 144,
+        "class": "InputManager"
+      }
+    ],
+    "processTextInput": [
+      {
+        "key": "InputManager.processTextInput",
+        "file": "modules\\inputManager.js",
+        "line": 158,
+        "class": "InputManager"
+      }
+    ],
+    "reorderChords": [
+      {
+        "key": "InputManager.reorderChords",
+        "file": "modules\\inputManager.js",
+        "line": 193,
+        "class": "InputManager"
+      }
+    ],
+    "addChords": [
+      {
+        "key": "InputManager.addChords",
+        "file": "modules\\inputManager.js",
+        "line": 242,
+        "class": "InputManager"
+      }
+    ],
+    "replaceChords": [
+      {
+        "key": "InputManager.replaceChords",
+        "file": "modules\\inputManager.js",
+        "line": 251,
+        "class": "InputManager"
+      }
+    ],
+    "exportState": [
+      {
+        "key": "InputManager.exportState",
+        "file": "modules\\inputManager.js",
+        "line": 257,
+        "class": "InputManager"
+      },
+      {
+        "key": "StateManager.exportState",
+        "file": "modules\\stateManager.js",
+        "line": 334,
+        "class": "StateManager"
+      }
+    ],
+    "importState": [
+      {
+        "key": "InputManager.importState",
+        "file": "modules\\inputManager.js",
+        "line": 264,
+        "class": "InputManager"
+      },
+      {
+        "key": "StateManager.importState",
+        "file": "modules\\stateManager.js",
+        "line": 342,
+        "class": "StateManager"
+      }
+    ],
+    "validateAllSelected": [
+      {
+        "key": "InputManager.validateAllSelected",
+        "file": "modules\\inputManager.js",
+        "line": 274,
+        "class": "InputManager"
+      }
+    ],
+    "getInputChordsLegacy": [
+      {
+        "key": "InputManager.getInputChordsLegacy",
+        "file": "modules\\inputManager.js",
+        "line": 306,
+        "class": "InputManager"
+      }
+    ],
+    "appendChordLegacy": [
+      {
+        "key": "InputManager.appendChordLegacy",
+        "file": "modules\\inputManager.js",
+        "line": 316,
+        "class": "InputManager"
+      }
+    ],
+    "removeChordLegacy": [
+      {
+        "key": "InputManager.removeChordLegacy",
+        "file": "modules\\inputManager.js",
+        "line": 342,
+        "class": "InputManager"
+      }
+    ],
+    "addChordFromButtonLegacy": [
+      {
+        "key": "InputManager.addChordFromButtonLegacy",
+        "file": "modules\\inputManager.js",
+        "line": 365,
+        "class": "InputManager"
+      }
+    ],
+    "setupLegacyDataWatcher": [
+      {
+        "key": "IntegrationBridge.setupLegacyDataWatcher",
+        "file": "modules\\integrationBridge.js",
+        "line": 16,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "onLegacyDataReady": [
+      {
+        "key": "IntegrationBridge.onLegacyDataReady",
+        "file": "modules\\integrationBridge.js",
+        "line": 41,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "checkReadiness": [
+      {
+        "key": "IntegrationBridge.checkReadiness",
+        "file": "modules\\integrationBridge.js",
+        "line": 100,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "setModuleSystemReady": [
+      {
+        "key": "IntegrationBridge.setModuleSystemReady",
+        "file": "modules\\integrationBridge.js",
+        "line": 95,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "useFallbackChordData": [
+      {
+        "key": "IntegrationBridge.useFallbackChordData",
+        "file": "modules\\integrationBridge.js",
+        "line": 75,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "onReady": [
+      {
+        "key": "IntegrationBridge.onReady",
+        "file": "modules\\integrationBridge.js",
+        "line": 106,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "executePendingCallbacks": [
+      {
+        "key": "IntegrationBridge.executePendingCallbacks",
+        "file": "modules\\integrationBridge.js",
+        "line": 114,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "getAvailableChordsForType": [
+      {
+        "key": "IntegrationBridge.getAvailableChordsForType",
+        "file": "modules\\integrationBridge.js",
+        "line": 125,
+        "class": "IntegrationBridge"
+      },
+      {
+        "key": "StateManager.getAvailableChordsForType",
+        "file": "modules\\stateManager.js",
+        "line": 179,
+        "class": "StateManager"
+      }
+    ],
+    "bridgeLegacyFunctions": [
+      {
+        "key": "IntegrationBridge.bridgeLegacyFunctions",
+        "file": "modules\\integrationBridge.js",
+        "line": 158,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "getCurrentAutoharpType": [
+      {
+        "key": "IntegrationBridge.getCurrentAutoharpType",
+        "file": "modules\\integrationBridge.js",
+        "line": 212,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "getCurrentSelectedChords": [
+      {
+        "key": "IntegrationBridge.getCurrentSelectedChords",
+        "file": "modules\\integrationBridge.js",
+        "line": 218,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "syncLegacyToNewSystem": [
+      {
+        "key": "IntegrationBridge.syncLegacyToNewSystem",
+        "file": "modules\\integrationBridge.js",
+        "line": 242,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "syncNewSystemToLegacy": [
+      {
+        "key": "IntegrationBridge.syncNewSystemToLegacy",
+        "file": "modules\\integrationBridge.js",
+        "line": 263,
+        "class": "IntegrationBridge"
+      }
+    ],
+    "initializeAvailableChords": [
+      {
+        "key": "StateManager.initializeAvailableChords",
+        "file": "modules\\stateManager.js",
+        "line": 32,
+        "class": "StateManager"
+      }
+    ],
+    "subscribe": [
+      {
+        "key": "StateManager.subscribe",
+        "file": "modules\\stateManager.js",
+        "line": 48,
+        "class": "StateManager"
+      }
+    ],
+    "get": [
+      {
+        "key": "StateManager.get",
+        "file": "modules\\stateManager.js",
+        "line": 80,
+        "class": "StateManager"
+      }
+    ],
+    "setState": [
+      {
+        "key": "StateManager.setState",
+        "file": "modules\\stateManager.js",
+        "line": 85,
+        "class": "StateManager"
+      }
+    ],
+    "set": [
+      {
+        "key": "StateManager.set",
+        "file": "modules\\stateManager.js",
+        "line": 109,
+        "class": "StateManager"
+      }
+    ],
+    "updateAutoharpType": [
+      {
+        "key": "StateManager.updateAutoharpType",
+        "file": "modules\\stateManager.js",
+        "line": 114,
+        "class": "StateManager"
+      }
+    ],
+    "updateSelectedChords": [
+      {
+        "key": "StateManager.updateSelectedChords",
+        "file": "modules\\stateManager.js",
+        "line": 127,
+        "class": "StateManager"
+      }
+    ],
+    "addSelectedChord": [
+      {
+        "key": "StateManager.addSelectedChord",
+        "file": "modules\\stateManager.js",
+        "line": 131,
+        "class": "StateManager"
+      }
+    ],
+    "removeSelectedChord": [
+      {
+        "key": "StateManager.removeSelectedChord",
+        "file": "modules\\stateManager.js",
+        "line": 138,
+        "class": "StateManager"
+      }
+    ],
+    "clearSelectedChords": [
+      {
+        "key": "StateManager.clearSelectedChords",
+        "file": "modules\\stateManager.js",
+        "line": 143,
+        "class": "StateManager"
+      }
+    ],
+    "setInputMode": [
+      {
+        "key": "StateManager.setInputMode",
+        "file": "modules\\stateManager.js",
+        "line": 165,
+        "class": "StateManager"
+      }
+    ],
+    "updateCurrentChord": [
+      {
+        "key": "StateManager.updateCurrentChord",
+        "file": "modules\\stateManager.js",
+        "line": 171,
+        "class": "StateManager"
+      }
+    ],
+    "isChordAvailable": [
+      {
+        "key": "StateManager.isChordAvailable",
+        "file": "modules\\stateManager.js",
+        "line": 214,
+        "class": "StateManager"
+      }
+    ],
+    "isChordSelected": [
+      {
+        "key": "StateManager.isChordSelected",
+        "file": "modules\\stateManager.js",
+        "line": 218,
+        "class": "StateManager"
+      }
+    ],
+    "getSelectedChordCount": [
+      {
+        "key": "StateManager.getSelectedChordCount",
+        "file": "modules\\stateManager.js",
+        "line": 222,
+        "class": "StateManager"
+      }
+    ],
+    "saveToStorage": [
+      {
+        "key": "StateManager.saveToStorage",
+        "file": "modules\\stateManager.js",
+        "line": 227,
+        "class": "StateManager"
+      }
+    ],
+    "loadFromStorage": [
+      {
+        "key": "StateManager.loadFromStorage",
+        "file": "modules\\stateManager.js",
+        "line": 241,
+        "class": "StateManager"
+      }
+    ],
+    "clearStorage": [
+      {
+        "key": "StateManager.clearStorage",
+        "file": "modules\\stateManager.js",
+        "line": 261,
+        "class": "StateManager"
+      }
+    ],
+    "validateState": [
+      {
+        "key": "StateManager.validateState",
+        "file": "modules\\stateManager.js",
+        "line": 270,
+        "class": "StateManager"
+      }
+    ],
+    "reset": [
+      {
+        "key": "StateManager.reset",
+        "file": "modules\\stateManager.js",
+        "line": 301,
+        "class": "StateManager"
+      }
+    ],
+    "save": [
+      {
+        "key": "StorageManager.save",
+        "file": "modules\\storageManager.js",
+        "line": 13,
+        "class": "StorageManager"
+      }
+    ],
+    "load": [
+      {
+        "key": "StorageManager.load",
+        "file": "modules\\storageManager.js",
+        "line": 28,
+        "class": "StorageManager"
+      }
+    ],
+    "remove": [
+      {
+        "key": "StorageManager.remove",
+        "file": "modules\\storageManager.js",
+        "line": 48,
+        "class": "StorageManager"
+      }
+    ],
+    "exists": [
+      {
+        "key": "StorageManager.exists",
+        "file": "modules\\storageManager.js",
+        "line": 58,
+        "class": "StorageManager"
+      }
+    ],
+    "savePreferences": [
+      {
+        "key": "StorageManager.savePreferences",
+        "file": "modules\\storageManager.js",
+        "line": 63,
+        "class": "StorageManager"
+      }
+    ],
+    "loadPreferences": [
+      {
+        "key": "StorageManager.loadPreferences",
+        "file": "modules\\storageManager.js",
+        "line": 72,
+        "class": "StorageManager"
+      }
+    ],
+    "addToChordHistory": [
+      {
+        "key": "StorageManager.addToChordHistory",
+        "file": "modules\\storageManager.js",
+        "line": 94,
+        "class": "StorageManager"
+      }
+    ],
+    "saveChordProgression": [
+      {
+        "key": "StorageManager.saveChordProgression",
+        "file": "modules\\storageManager.js",
+        "line": 111,
+        "class": "StorageManager"
+      }
+    ],
+    "loadChordProgressions": [
+      {
+        "key": "StorageManager.loadChordProgressions",
+        "file": "modules\\storageManager.js",
+        "line": 124,
+        "class": "StorageManager"
+      }
+    ],
+    "deleteChordProgression": [
+      {
+        "key": "StorageManager.deleteChordProgression",
+        "file": "modules\\storageManager.js",
+        "line": 128,
+        "class": "StorageManager"
+      }
+    ],
+    "updateProgressionLastUsed": [
+      {
+        "key": "StorageManager.updateProgressionLastUsed",
+        "file": "modules\\storageManager.js",
+        "line": 134,
+        "class": "StorageManager"
+      }
+    ],
+    "saveSession": [
+      {
+        "key": "StorageManager.saveSession",
+        "file": "modules\\storageManager.js",
+        "line": 144,
+        "class": "StorageManager"
+      }
+    ],
+    "loadSession": [
+      {
+        "key": "StorageManager.loadSession",
+        "file": "modules\\storageManager.js",
+        "line": 152,
+        "class": "StorageManager"
+      }
+    ],
+    "clearSession": [
+      {
+        "key": "StorageManager.clearSession",
+        "file": "modules\\storageManager.js",
+        "line": 167,
+        "class": "StorageManager"
+      }
+    ],
+    "saveUsageStats": [
+      {
+        "key": "StorageManager.saveUsageStats",
+        "file": "modules\\storageManager.js",
+        "line": 172,
+        "class": "StorageManager"
+      }
+    ],
+    "loadUsageStats": [
+      {
+        "key": "StorageManager.loadUsageStats",
+        "file": "modules\\storageManager.js",
+        "line": 182,
+        "class": "StorageManager"
+      }
+    ],
+    "incrementStat": [
+      {
+        "key": "StorageManager.incrementStat",
+        "file": "modules\\storageManager.js",
+        "line": 195,
+        "class": "StorageManager"
+      }
+    ],
+    "incrementChordUsage": [
+      {
+        "key": "StorageManager.incrementChordUsage",
+        "file": "modules\\storageManager.js",
+        "line": 201,
+        "class": "StorageManager"
+      }
+    ],
+    "exportAllData": [
+      {
+        "key": "StorageManager.exportAllData",
+        "file": "modules\\storageManager.js",
+        "line": 209,
+        "class": "StorageManager"
+      }
+    ],
+    "importAllData": [
+      {
+        "key": "StorageManager.importAllData",
+        "file": "modules\\storageManager.js",
+        "line": 232,
+        "class": "StorageManager"
+      }
+    ],
+    "clearAllData": [
+      {
+        "key": "StorageManager.clearAllData",
+        "file": "modules\\storageManager.js",
+        "line": 260,
+        "class": "StorageManager"
+      }
+    ],
+    "getStorageInfo": [
+      {
+        "key": "StorageManager.getStorageInfo",
+        "file": "modules\\storageManager.js",
+        "line": 277,
+        "class": "StorageManager"
+      }
+    ],
+    "getStorageQuota": [
+      {
+        "key": "StorageManager.getStorageQuota",
+        "file": "modules\\storageManager.js",
+        "line": 308,
+        "class": "StorageManager"
+      }
+    ],
+    "while": [
+      {
+        "key": "StorageManager.while",
+        "file": "modules\\storageManager.js",
+        "line": 321,
+        "class": "StorageManager"
+      }
+    ],
+    "cleanupOldData": [
+      {
+        "key": "StorageManager.cleanupOldData",
+        "file": "modules\\storageManager.js",
+        "line": 343,
+        "class": "StorageManager"
+      }
+    ],
+    "migrateFromOldVersion": [
+      {
+        "key": "StorageManager.migrateFromOldVersion",
+        "file": "modules\\storageManager.js",
+        "line": 375,
+        "class": "StorageManager"
+      }
+    ]
+  },
+  "duplicates": {
+    "findJavaScriptFiles": {
+      "count": 4,
+      "locations": [
+        {
+          "key": "findJavaScriptFiles",
+          "file": "simple-duplicate-check.js",
+          "line": 11,
+          "class": null
+        },
+        {
+          "key": "CodebaseMapper.findJavaScriptFiles",
+          "file": "codebase-mapper.js",
+          "line": 47,
+          "class": "CodebaseMapper"
+        },
+        {
+          "key": "RobustDuplicateDetector.findJavaScriptFiles",
+          "file": "detect-duplicates.js",
+          "line": 50,
+          "class": "RobustDuplicateDetector"
+        },
+        {
+          "key": "ImprovedCodebaseMapper.findJavaScriptFiles",
+          "file": "improved-codebase-mapper.js",
+          "line": 60,
+          "class": "ImprovedCodebaseMapper"
+        }
+      ]
+    },
+    "removeChord": {
+      "count": 3,
+      "locations": [
+        {
+          "key": "removeChord",
+          "file": "webapp.js",
+          "line": 309,
+          "class": null
+        },
+        {
+          "key": "AutoharpTransposerApp.removeChord",
+          "file": "modules\\appIntegration.js",
+          "line": 276,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "InputManager.removeChord",
+          "file": "modules\\inputManager.js",
+          "line": 94,
+          "class": "InputManager"
+        }
+      ]
+    },
+    "for": {
+      "count": 5,
+      "locations": [
+        {
+          "key": "CodebaseMapper.for",
+          "file": "codebase-mapper.js",
+          "line": 51,
+          "class": "CodebaseMapper"
+        },
+        {
+          "key": "RobustDuplicateDetector.for",
+          "file": "detect-duplicates.js",
+          "line": 236,
+          "class": "RobustDuplicateDetector"
+        },
+        {
+          "key": "ImprovedCodebaseMapper.for",
+          "file": "improved-codebase-mapper.js",
+          "line": 66,
+          "class": "ImprovedCodebaseMapper"
+        },
+        {
+          "key": "ChordParser.for",
+          "file": "modules\\chordParser.js",
+          "line": 552,
+          "class": "ChordParser"
+        },
+        {
+          "key": "StorageManager.for",
+          "file": "modules\\storageManager.js",
+          "line": 317,
+          "class": "StorageManager"
+        }
+      ]
+    },
+    "if": {
+      "count": 11,
+      "locations": [
+        {
+          "key": "CodebaseMapper.if",
+          "file": "codebase-mapper.js",
+          "line": 307,
+          "class": "CodebaseMapper"
+        },
+        {
+          "key": "RobustDuplicateDetector.if",
+          "file": "detect-duplicates.js",
+          "line": 319,
+          "class": "RobustDuplicateDetector"
+        },
+        {
+          "key": "ImprovedCodebaseMapper.if",
+          "file": "improved-codebase-mapper.js",
+          "line": 265,
+          "class": "ImprovedCodebaseMapper"
+        },
+        {
+          "key": "AutoharpTransposerApp.if",
+          "file": "modules\\appIntegration.js",
+          "line": 418,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "ChordAudioManager.if",
+          "file": "modules\\chordAudio.js",
+          "line": 162,
+          "class": "ChordAudioManager"
+        },
+        {
+          "key": "ChordParser.if",
+          "file": "modules\\chordParser.js",
+          "line": 565,
+          "class": "ChordParser"
+        },
+        {
+          "key": "EventCoordinator.if",
+          "file": "modules\\eventCoordinator.js",
+          "line": 705,
+          "class": "EventCoordinator"
+        },
+        {
+          "key": "InputManager.if",
+          "file": "modules\\inputManager.js",
+          "line": 369,
+          "class": "InputManager"
+        },
+        {
+          "key": "IntegrationBridge.if",
+          "file": "modules\\integrationBridge.js",
+          "line": 270,
+          "class": "IntegrationBridge"
+        },
+        {
+          "key": "StateManager.if",
+          "file": "modules\\stateManager.js",
+          "line": 348,
+          "class": "StateManager"
+        },
+        {
+          "key": "StorageManager.if",
+          "file": "modules\\storageManager.js",
+          "line": 364,
+          "class": "StorageManager"
+        }
+      ]
+    },
+    "generateReport": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "CodebaseMapper.generateReport",
+          "file": "codebase-mapper.js",
+          "line": 217,
+          "class": "CodebaseMapper"
+        },
+        {
+          "key": "RobustDuplicateDetector.generateReport",
+          "file": "detect-duplicates.js",
+          "line": 247,
+          "class": "RobustDuplicateDetector"
+        }
+      ]
+    },
+    "addChord": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.addChord",
+          "file": "modules\\appIntegration.js",
+          "line": 267,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "InputManager.addChord",
+          "file": "modules\\inputManager.js",
+          "line": 38,
+          "class": "InputManager"
+        }
+      ]
+    },
+    "getSelectedChords": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.getSelectedChords",
+          "file": "modules\\appIntegration.js",
+          "line": 292,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "InputManager.getSelectedChords",
+          "file": "modules\\inputManager.js",
+          "line": 131,
+          "class": "InputManager"
+        }
+      ]
+    },
+    "toggleAudio": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.toggleAudio",
+          "file": "modules\\appIntegration.js",
+          "line": 300,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "StateManager.toggleAudio",
+          "file": "modules\\stateManager.js",
+          "line": 160,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "getState": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.getState",
+          "file": "modules\\appIntegration.js",
+          "line": 304,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "StateManager.getState",
+          "file": "modules\\stateManager.js",
+          "line": 76,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "on": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.on",
+          "file": "modules\\appIntegration.js",
+          "line": 309,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "InputManager.on",
+          "file": "modules\\inputManager.js",
+          "line": 19,
+          "class": "InputManager"
+        }
+      ]
+    },
+    "emit": {
+      "count": 3,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.emit",
+          "file": "modules\\appIntegration.js",
+          "line": 319,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "InputManager.emit",
+          "file": "modules\\inputManager.js",
+          "line": 25,
+          "class": "InputManager"
+        },
+        {
+          "key": "StateManager.emit",
+          "file": "modules\\stateManager.js",
+          "line": 63,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "getDebugInfo": {
+      "count": 4,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.getDebugInfo",
+          "file": "modules\\appIntegration.js",
+          "line": 349,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "EventCoordinator.getDebugInfo",
+          "file": "modules\\eventCoordinator.js",
+          "line": 625,
+          "class": "EventCoordinator"
+        },
+        {
+          "key": "InputManager.getDebugInfo",
+          "file": "modules\\inputManager.js",
+          "line": 288,
+          "class": "InputManager"
+        },
+        {
+          "key": "StateManager.getDebugInfo",
+          "file": "modules\\stateManager.js",
+          "line": 321,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "destroy": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "AutoharpTransposerApp.destroy",
+          "file": "modules\\appIntegration.js",
+          "line": 361,
+          "class": "AutoharpTransposerApp"
+        },
+        {
+          "key": "ChordAudioManager.destroy",
+          "file": "modules\\chordAudio.js",
+          "line": 160,
+          "class": "ChordAudioManager"
+        }
+      ]
+    },
+    "switch": {
+      "count": 5,
+      "locations": [
+        {
+          "key": "ChordAudioManager.switch",
+          "file": "modules\\chordAudio.js",
+          "line": 120,
+          "class": "ChordAudioManager"
+        },
+        {
+          "key": "ChordParser.switch",
+          "file": "modules\\chordParser.js",
+          "line": 645,
+          "class": "ChordParser"
+        },
+        {
+          "key": "EventCoordinator.switch",
+          "file": "modules\\eventCoordinator.js",
+          "line": 173,
+          "class": "EventCoordinator"
+        },
+        {
+          "key": "IntegrationBridge.switch",
+          "file": "modules\\integrationBridge.js",
+          "line": 131,
+          "class": "IntegrationBridge"
+        },
+        {
+          "key": "StateManager.switch",
+          "file": "modules\\stateManager.js",
+          "line": 188,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "updateAvailableChords": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "ChordParser.updateAvailableChords",
+          "file": "modules\\chordParser.js",
+          "line": 60,
+          "class": "ChordParser"
+        },
+        {
+          "key": "InputManager.updateAvailableChords",
+          "file": "modules\\inputManager.js",
+          "line": 213,
+          "class": "InputManager"
+        }
+      ]
+    },
+    "getSuggestions": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "ChordParser.getSuggestions",
+          "file": "modules\\chordParser.js",
+          "line": 297,
+          "class": "ChordParser"
+        },
+        {
+          "key": "InputManager.getSuggestions",
+          "file": "modules\\inputManager.js",
+          "line": 188,
+          "class": "InputManager"
+        }
+      ]
+    },
+    "loadChordHistory": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "ChordParser.loadChordHistory",
+          "file": "modules\\chordParser.js",
+          "line": 520,
+          "class": "ChordParser"
+        },
+        {
+          "key": "StorageManager.loadChordHistory",
+          "file": "modules\\storageManager.js",
+          "line": 90,
+          "class": "StorageManager"
+        }
+      ]
+    },
+    "saveChordHistory": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "ChordParser.saveChordHistory",
+          "file": "modules\\chordParser.js",
+          "line": 530,
+          "class": "ChordParser"
+        },
+        {
+          "key": "StorageManager.saveChordHistory",
+          "file": "modules\\storageManager.js",
+          "line": 84,
+          "class": "StorageManager"
+        }
+      ]
+    },
+    "updateSuggestions": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "EventCoordinator.updateSuggestions",
+          "file": "modules\\eventCoordinator.js",
+          "line": 466,
+          "class": "EventCoordinator"
+        },
+        {
+          "key": "StateManager.updateSuggestions",
+          "file": "modules\\stateManager.js",
+          "line": 156,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "updateProgressions": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "EventCoordinator.updateProgressions",
+          "file": "modules\\eventCoordinator.js",
+          "line": 510,
+          "class": "EventCoordinator"
+        },
+        {
+          "key": "StateManager.updateProgressions",
+          "file": "modules\\stateManager.js",
+          "line": 152,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "exportState": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "InputManager.exportState",
+          "file": "modules\\inputManager.js",
+          "line": 257,
+          "class": "InputManager"
+        },
+        {
+          "key": "StateManager.exportState",
+          "file": "modules\\stateManager.js",
+          "line": 334,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "importState": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "InputManager.importState",
+          "file": "modules\\inputManager.js",
+          "line": 264,
+          "class": "InputManager"
+        },
+        {
+          "key": "StateManager.importState",
+          "file": "modules\\stateManager.js",
+          "line": 342,
+          "class": "StateManager"
+        }
+      ]
+    },
+    "getAvailableChordsForType": {
+      "count": 2,
+      "locations": [
+        {
+          "key": "IntegrationBridge.getAvailableChordsForType",
+          "file": "modules\\integrationBridge.js",
+          "line": 125,
+          "class": "IntegrationBridge"
+        },
+        {
+          "key": "StateManager.getAvailableChordsForType",
+          "file": "modules\\stateManager.js",
+          "line": 179,
+          "class": "StateManager"
+        }
+      ]
+    }
+  }
+}

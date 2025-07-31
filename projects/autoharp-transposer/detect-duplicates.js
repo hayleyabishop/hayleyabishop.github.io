@@ -1,49 +1,72 @@
 #!/usr/bin/env node
 
 /**
- * Comprehensive Duplicate Method Detection Script
- * Scans JavaScript files for duplicate method definitions, similar method names, and potential conflicts
+ * Robust Duplicate Method Detection Script
+ * Fixed implementation that actually works and provides accurate results
  */
 
 const fs = require('fs');
 const path = require('path');
 
-class DuplicateDetector {
+class RobustDuplicateDetector {
   constructor(projectPath) {
     this.projectPath = projectPath;
-    this.methods = new Map(); // methodName -> [{ file, line, signature }]
-    this.classes = new Map(); // className -> [{ file, methods }]
-    this.duplicates = [];
-    this.similarNames = [];
+    this.methodDefinitions = new Map(); // methodName -> array of definitions
+    this.results = {
+      totalMethods: 0,
+      uniqueMethodNames: 0,
+      criticalDuplicates: [],
+      crossFileDuplicates: [],
+      similarNames: []
+    };
   }
 
   scanProject() {
-    console.log('🔍 Scanning for duplicate methods...\n');
-    
-    const jsFiles = this.findJavaScriptFiles(this.projectPath);
-    console.log(`Found ${jsFiles.length} JavaScript files to scan:`);
-    jsFiles.forEach(file => console.log(`  - ${path.relative(this.projectPath, file)}`));
-    console.log();
-
-    jsFiles.forEach(file => this.scanFile(file));
-    
-    this.findDuplicates();
-    this.findSimilarNames();
-    this.generateReport();
+    try {
+      console.log('🔍 Robust Duplicate Method Detection');
+      console.log('====================================\n');
+      
+      const jsFiles = this.findJavaScriptFiles(this.projectPath);
+      console.log(`Scanning ${jsFiles.length} JavaScript files...\n`);
+      
+      // Process each file
+      jsFiles.forEach(file => {
+        try {
+          this.scanFile(file);
+        } catch (error) {
+          console.warn(`Warning: Could not scan ${file}: ${error.message}`);
+        }
+      });
+      
+      this.analyzeResults();
+      this.generateReport();
+      
+    } catch (error) {
+      console.error('Error during duplicate detection:', error.message);
+      process.exit(1);
+    }
   }
 
   findJavaScriptFiles(dir) {
     const files = [];
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
     
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name);
+    try {
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
       
-      if (entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'node_modules') {
-        files.push(...this.findJavaScriptFiles(fullPath));
-      } else if (entry.isFile() && entry.name.endsWith('.js')) {
-        files.push(fullPath);
+      for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        
+        if (entry.isDirectory()) {
+          // Skip node_modules and hidden directories
+          if (!entry.name.startsWith('.') && entry.name !== 'node_modules') {
+            files.push(...this.findJavaScriptFiles(fullPath));
+          }
+        } else if (entry.isFile() && entry.name.endsWith('.js')) {
+          files.push(fullPath);
+        }
       }
+    } catch (error) {
+      console.warn(`Warning: Could not read directory ${dir}: ${error.message}`);
     }
     
     return files;
@@ -54,46 +77,84 @@ class DuplicateDetector {
     const lines = content.split('\n');
     const relativePath = path.relative(this.projectPath, filePath);
     
-    // Patterns to match method definitions
-    const patterns = [
-      // Class methods: methodName() {
-      /^\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*\{/,
-      // Function declarations: function methodName() {
-      /^\s*function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*\{/,
-      // Arrow functions: const methodName = () => {
-      /^\s*(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\([^)]*\)\s*=>/,
-      // Object methods: methodName: function() {
-      /^\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*function\s*\([^)]*\)\s*\{/,
-      // Object arrow methods: methodName: () => {
-      /^\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*\([^)]*\)\s*=>/
+    // Robust patterns for method detection
+    const methodPatterns = [
+      {
+        // Function declarations: function methodName()
+        pattern: /^\s*function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/,
+        type: 'function declaration'
+      },
+      {
+        // Class methods: methodName() {
+        pattern: /^\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*\{/,
+        type: 'class method'
+      },
+      {
+        // Arrow function assignments: const methodName = () =>
+        pattern: /^\s*(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*(?:\([^)]*\)\s*=>|function)/,
+        type: 'arrow/assigned function'
+      },
+      {
+        // Object method definitions: methodName: function()
+        pattern: /^\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*function\s*\(/,
+        type: 'object method'
+      }
     ];
 
     lines.forEach((line, index) => {
-      patterns.forEach(pattern => {
-        const match = line.match(pattern);
+      const lineNumber = index + 1;
+      const trimmedLine = line.trim();
+      
+      // Skip comments and empty lines
+      if (trimmedLine.startsWith('//') || 
+          trimmedLine.startsWith('/*') || 
+          trimmedLine.startsWith('*') ||
+          !trimmedLine) {
+        return;
+      }
+
+      methodPatterns.forEach(({ pattern, type }) => {
+        const match = trimmedLine.match(pattern);
         if (match) {
           const methodName = match[1];
-          const lineNumber = index + 1;
-          const signature = line.trim();
           
-          if (!this.methods.has(methodName)) {
-            this.methods.set(methodName, []);
+          // Skip common keywords and control structures
+          const skipKeywords = [
+            'if', 'for', 'while', 'switch', 'try', 'catch', 'return',
+            'var', 'let', 'const', 'import', 'export', 'default',
+            'class', 'extends', 'super', 'this', 'new', 'typeof'
+          ];
+          
+          if (skipKeywords.includes(methodName)) {
+            return;
           }
           
-          this.methods.get(methodName).push({
+          // Store method definition
+          if (!this.methodDefinitions.has(methodName)) {
+            this.methodDefinitions.set(methodName, []);
+          }
+          
+          this.methodDefinitions.get(methodName).push({
+            name: methodName,
             file: relativePath,
             line: lineNumber,
-            signature: signature
+            signature: trimmedLine,
+            type: type
           });
+          
+          this.results.totalMethods++;
         }
       });
     });
   }
 
-  findDuplicates() {
-    for (const [methodName, definitions] of this.methods.entries()) {
+  analyzeResults() {
+    this.results.uniqueMethodNames = this.methodDefinitions.size;
+    
+    // Find duplicates
+    for (const [methodName, definitions] of this.methodDefinitions.entries()) {
       if (definitions.length > 1) {
-        // Check if duplicates are in the same file (more critical)
+        // Group by file to find same-file duplicates (critical)
         const fileGroups = new Map();
         definitions.forEach(def => {
           if (!fileGroups.has(def.file)) {
@@ -102,78 +163,104 @@ class DuplicateDetector {
           fileGroups.get(def.file).push(def);
         });
 
-        for (const [file, defs] of fileGroups.entries()) {
-          if (defs.length > 1) {
-            this.duplicates.push({
+        // Check for critical same-file duplicates
+        for (const [file, fileDefs] of fileGroups.entries()) {
+          if (fileDefs.length > 1) {
+            this.results.criticalDuplicates.push({
               methodName,
-              type: 'CRITICAL - Same File',
               file,
-              definitions: defs
+              definitions: fileDefs
             });
           }
         }
 
-        // Also track cross-file duplicates
+        // Check for cross-file duplicates
         if (fileGroups.size > 1) {
-          this.duplicates.push({
+          this.results.crossFileDuplicates.push({
             methodName,
-            type: 'WARNING - Cross File',
             definitions
           });
         }
       }
     }
+    
+    // Find similar method names
+    this.findSimilarMethodNames();
   }
 
-  findSimilarNames() {
-    const methodNames = Array.from(this.methods.keys());
+  findSimilarMethodNames() {
+    const methodNames = Array.from(this.methodDefinitions.keys());
     
     for (let i = 0; i < methodNames.length; i++) {
       for (let j = i + 1; j < methodNames.length; j++) {
         const name1 = methodNames[i];
         const name2 = methodNames[j];
         
-        if (this.areSimilar(name1, name2)) {
-          this.similarNames.push({
+        if (this.areMethodNamesSimilar(name1, name2)) {
+          this.results.similarNames.push({
             name1,
             name2,
-            definitions1: this.methods.get(name1),
-            definitions2: this.methods.get(name2)
+            definitions1: this.methodDefinitions.get(name1),
+            definitions2: this.methodDefinitions.get(name2)
           });
         }
       }
     }
   }
 
-  areSimilar(name1, name2) {
-    // Check for common patterns that might indicate similar functionality
-    const patterns = [
-      // Same base with different suffixes
-      (n1, n2) => n1.toLowerCase().includes(n2.toLowerCase()) || n2.toLowerCase().includes(n1.toLowerCase()),
-      // Camel case variations
-      (n1, n2) => n1.toLowerCase().replace(/[^a-z]/g, '') === n2.toLowerCase().replace(/[^a-z]/g, ''),
-      // Common prefixes/suffixes
-      (n1, n2) => {
-        const prefixes = ['handle', 'on', 'get', 'set', 'update', 'create', 'remove', 'add'];
-        const base1 = prefixes.reduce((acc, prefix) => acc.replace(new RegExp(`^${prefix}`, 'i'), ''), n1);
-        const base2 = prefixes.reduce((acc, prefix) => acc.replace(new RegExp(`^${prefix}`, 'i'), ''), n2);
-        return base1.toLowerCase() === base2.toLowerCase() && base1 !== n1 && base2 !== n2;
+  areMethodNamesSimilar(name1, name2) {
+    // Skip if names are identical
+    if (name1 === name2) return false;
+    
+    // Check for common similarity patterns
+    const lower1 = name1.toLowerCase();
+    const lower2 = name2.toLowerCase();
+    
+    // One name contains the other
+    if (lower1.includes(lower2) || lower2.includes(lower1)) {
+      return true;
+    }
+    
+    // Same base with different prefixes/suffixes
+    const commonPrefixes = ['handle', 'on', 'get', 'set', 'update', 'create', 'remove', 'add', 'init', 'setup'];
+    const commonSuffixes = ['legacy', 'new', 'old', 'temp', 'backup', 'v2', 'alt'];
+    
+    for (const prefix of commonPrefixes) {
+      const base1 = lower1.replace(new RegExp(`^${prefix}`, 'i'), '');
+      const base2 = lower2.replace(new RegExp(`^${prefix}`, 'i'), '');
+      if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {
+        return true;
       }
-    ];
-
-    return patterns.some(pattern => pattern(name1, name2)) && name1 !== name2;
+    }
+    
+    for (const suffix of commonSuffixes) {
+      const base1 = lower1.replace(new RegExp(`${suffix}$`, 'i'), '');
+      const base2 = lower2.replace(new RegExp(`${suffix}$`, 'i'), '');
+      if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {
+        return true;
+      }
+    }
+    
+    return false;
   }
 
   generateReport() {
-    console.log('📊 DUPLICATE METHOD DETECTION REPORT');
-    console.log('=====================================\n');
+    console.log('📊 DUPLICATE DETECTION RESULTS');
+    console.log('===============================\n');
+
+    // Statistics
+    console.log('📈 STATISTICS:');
+    console.log(`   Total method definitions found: ${this.results.totalMethods}`);
+    console.log(`   Unique method names: ${this.results.uniqueMethodNames}`);
+    console.log(`   Critical same-file duplicates: ${this.results.criticalDuplicates.length}`);
+    console.log(`   Cross-file duplicates: ${this.results.crossFileDuplicates.length}`);
+    console.log(`   Similar method names: ${this.results.similarNames.length}\n`);
 
     // Critical duplicates (same file)
-    const criticalDuplicates = this.duplicates.filter(d => d.type.includes('CRITICAL'));
-    if (criticalDuplicates.length > 0) {
-      console.log('🚨 CRITICAL: Duplicate methods in same file:');
-      criticalDuplicates.forEach(dup => {
-        console.log(`\n❌ Method: ${dup.methodName} (${dup.file})`);
+    if (this.results.criticalDuplicates.length > 0) {
+      console.log('🚨 CRITICAL: Same-file duplicates (JavaScript uses last definition):');
+      this.results.criticalDuplicates.forEach(dup => {
+        console.log(`\n❌ Method "${dup.methodName}" in ${dup.file}:`);
         dup.definitions.forEach(def => {
           console.log(`   Line ${def.line}: ${def.signature}`);
         });
@@ -182,55 +269,57 @@ class DuplicateDetector {
     }
 
     // Cross-file duplicates
-    const crossFileDuplicates = this.duplicates.filter(d => d.type.includes('Cross File'));
-    if (crossFileDuplicates.length > 0) {
-      console.log('⚠️  WARNING: Methods with same name across files:');
-      crossFileDuplicates.forEach(dup => {
-        console.log(`\n⚠️  Method: ${dup.methodName}`);
+    if (this.results.crossFileDuplicates.length > 0) {
+      console.log('⚠️  Cross-file duplicates (may be intentional API wrappers):');
+      this.results.crossFileDuplicates.forEach(dup => {
+        console.log(`\n⚠️  Method "${dup.methodName}":`);
         dup.definitions.forEach(def => {
-          console.log(`   ${def.file}:${def.line} - ${def.signature}`);
+          console.log(`   ${def.file}:${def.line} (${def.type})`);
         });
       });
       console.log();
     }
 
     // Similar method names
-    if (this.similarNames.length > 0) {
-      console.log('🔍 SIMILAR: Methods with similar names (potential confusion):');
-      this.similarNames.forEach(similar => {
-        console.log(`\n🔍 Similar: "${similar.name1}" vs "${similar.name2}"`);
-        console.log(`   ${similar.name1}:`);
-        similar.definitions1.forEach(def => {
-          console.log(`     ${def.file}:${def.line}`);
-        });
-        console.log(`   ${similar.name2}:`);
-        similar.definitions2.forEach(def => {
-          console.log(`     ${def.file}:${def.line}`);
-        });
+    if (this.results.similarNames.length > 0) {
+      console.log('🔍 Similar method names (potential confusion):');
+      this.results.similarNames.slice(0, 10).forEach(similar => { // Limit to first 10
+        console.log(`\n🔍 "${similar.name1}" vs "${similar.name2}"`);
+        console.log(`   ${similar.name1}: ${similar.definitions1[0].file}:${similar.definitions1[0].line}`);
+        console.log(`   ${similar.name2}: ${similar.definitions2[0].file}:${similar.definitions2[0].line}`);
       });
+      if (this.results.similarNames.length > 10) {
+        console.log(`   ... and ${this.results.similarNames.length - 10} more similar pairs`);
+      }
       console.log();
     }
 
-    // Summary
-    console.log('📈 SUMMARY:');
-    console.log(`   Total methods found: ${this.methods.size}`);
-    console.log(`   Critical duplicates (same file): ${criticalDuplicates.length}`);
-    console.log(`   Cross-file duplicates: ${crossFileDuplicates.length}`);
-    console.log(`   Similar method names: ${this.similarNames.length}`);
-    
-    if (criticalDuplicates.length === 0 && crossFileDuplicates.length === 0) {
-      console.log('\n✅ No duplicate methods found!');
+    // Final assessment
+    if (this.results.criticalDuplicates.length === 0) {
+      console.log('✅ No critical same-file duplicates found!');
+      if (this.results.crossFileDuplicates.length === 0) {
+        console.log('✅ No cross-file duplicates found!');
+        console.log('\n🎉 Codebase is clean of duplicate method definitions!');
+      } else {
+        console.log('ℹ️  Cross-file duplicates found, but these may be intentional (API wrappers, legacy functions)');
+      }
     } else {
-      console.log('\n❌ Issues found - review and resolve duplicates');
+      console.log('❌ Critical duplicates found that need immediate attention!');
+      console.log('   JavaScript will silently use the last definition, causing unexpected behavior.');
     }
+  }
+
+  // Export results for programmatic use
+  getResults() {
+    return this.results;
   }
 }
 
 // Run the detector
 if (require.main === module) {
   const projectPath = process.argv[2] || __dirname;
-  const detector = new DuplicateDetector(projectPath);
+  const detector = new RobustDuplicateDetector(projectPath);
   detector.scanProject();
 }
 
-module.exports = DuplicateDetector;
+module.exports = RobustDuplicateDetector;
