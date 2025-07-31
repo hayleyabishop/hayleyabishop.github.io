@@ -1,12 +1,23 @@
 // =============================================================================
 // CHORD PARSER
 // Handles fuzzy matching, validation, and chord parsing
+// Enhanced with autoharp-specific transposition and validation
 // =============================================================================
+
+import { AutoharpTypes } from './autoharpTypes.js';
+import { ChordTransposition } from './chordTransposition.js';
 
 class ChordParser {
   constructor(availableChords = []) {
     this.availableChords = availableChords;
     this.chordHistory = this.loadChordHistory();
+    
+    // Initialize autoharp integration modules
+    this.autoharpTypes = new AutoharpTypes();
+    this.transposition = new ChordTransposition();
+    
+    // Current autoharp type (can be changed via setAutoharpType)
+    this.currentAutoharpType = '21-chord';
     
     // Comprehensive list of all valid Western music chords for normalization
     // This is separate from availableChords (which varies by autoharp type)
@@ -660,6 +671,159 @@ class ChordParser {
       default:
         return chordName;
     }
+  }
+  
+  // =============================================================================
+  // AUTOHARP-SPECIFIC INTERFACE METHODS
+  // Required methods for Agent #1 - Chord Logic Specialist
+  // =============================================================================
+  
+  /**
+   * Set the current autoharp type for validation and transposition
+   * @param {string} autoharpType - Autoharp type ('12-chord', '15-chord', '21-chord', 'chromatic')
+   */
+  setAutoharpType(autoharpType) {
+    if (this.autoharpTypes.getType(autoharpType)) {
+      this.currentAutoharpType = autoharpType;
+      // Update available chords to match the new autoharp type
+      this.updateAvailableChords(this.autoharpTypes.getAllChords(autoharpType));
+    }
+  }
+  
+  /**
+   * Get the current autoharp type
+   * @returns {string} Current autoharp type
+   */
+  getCurrentAutoharpType() {
+    return this.currentAutoharpType;
+  }
+  
+  /**
+   * REQUIRED INTERFACE: Transpose a chord progression between keys for a specific autoharp type
+   * @param {Array<string>} chords - Array of chord names to transpose
+   * @param {string} fromKey - Original key
+   * @param {string} toKey - Target key
+   * @param {string} autoharpType - Target autoharp type (optional, uses current if not specified)
+   * @returns {Object} Transposition result with success status and chord mappings
+   */
+  transposeProgression(chords, fromKey, toKey, autoharpType = null) {
+    const targetType = autoharpType || this.currentAutoharpType;
+    return this.transposition.transposeProgression(chords, fromKey, toKey, targetType);
+  }
+  
+  /**
+   * REQUIRED INTERFACE: Validate if a chord is available on a specific autoharp type
+   * @param {string} chord - Chord name to validate
+   * @param {string} autoharpType - Autoharp type to check against (optional, uses current if not specified)
+   * @returns {boolean} True if chord is available on the specified autoharp type
+   */
+  validateChordForAutoharp(chord, autoharpType = null) {
+    const targetType = autoharpType || this.currentAutoharpType;
+    return this.autoharpTypes.isChordAvailable(chord, targetType);
+  }
+  
+  /**
+   * REQUIRED INTERFACE: Get all compatible chords for a specific autoharp type
+   * @param {string} autoharpType - Autoharp type (optional, uses current if not specified)
+   * @returns {Array<string>} Array of all chords available on the specified autoharp type
+   */
+  getCompatibleChords(autoharpType = null) {
+    const targetType = autoharpType || this.currentAutoharpType;
+    return this.autoharpTypes.getAllChords(targetType);
+  }
+  
+  /**
+   * Get autoharp type information and statistics
+   * @param {string} autoharpType - Autoharp type (optional, uses current if not specified)
+   * @returns {Object} Autoharp type information including name, description, and chord count
+   */
+  getAutoharpTypeInfo(autoharpType = null) {
+    const targetType = autoharpType || this.currentAutoharpType;
+    return this.autoharpTypes.getTypeInfo(targetType);
+  }
+  
+  /**
+   * Find the best autoharp type for a given set of chords
+   * @param {Array<string>} chords - Array of chord names
+   * @returns {Object} Best match info with type, coverage, and missing chords
+   */
+  findBestAutoharpType(chords) {
+    return this.autoharpTypes.findBestAutoharpType(chords);
+  }
+  
+  /**
+   * Find optimal keys for a chord progression on the current autoharp type
+   * @param {Array<string>} chords - Original chord progression
+   * @param {string} autoharpType - Autoharp type (optional, uses current if not specified)
+   * @returns {Array<Object>} Array of key options sorted by coverage
+   */
+  findOptimalKeys(chords, autoharpType = null) {
+    const targetType = autoharpType || this.currentAutoharpType;
+    return this.transposition.findOptimalKeys(chords, targetType);
+  }
+  
+  /**
+   * Simulate capo effect for autoharp playing
+   * @param {Array<string>} chords - Original chord progression
+   * @param {number} capoFret - Capo position (1-12)
+   * @param {string} autoharpType - Autoharp type (optional, uses current if not specified)
+   * @returns {Object} Capo simulation result
+   */
+  simulateCapo(chords, capoFret, autoharpType = null) {
+    const targetType = autoharpType || this.currentAutoharpType;
+    return this.transposition.simulateCapo(chords, capoFret, targetType);
+  }
+  
+  /**
+   * Get comprehensive compatibility matrix for multiple chords across autoharp types
+   * @param {Array<string>} chords - Array of chord names to check
+   * @returns {Object} Compatibility matrix showing chord availability by autoharp type
+   */
+  getCompatibilityMatrix(chords) {
+    return this.autoharpTypes.getCompatibilityMatrix(chords);
+  }
+  
+  /**
+   * Analyze a chord progression for music theory insights
+   * @param {Array<string>} chords - Chord progression to analyze
+   * @returns {Object} Analysis including key suggestions and complexity assessment
+   */
+  analyzeProgression(chords) {
+    return this.transposition.analyzeProgression(chords);
+  }
+  
+  /**
+   * Enhanced chord parsing with autoharp-specific validation and suggestions
+   * @param {string} input - Chord input to parse
+   * @param {string} autoharpType - Autoharp type for validation (optional, uses current if not specified)
+   * @returns {Object} Enhanced parsing result with autoharp compatibility info
+   */
+  parseChordWithAutoharpInfo(input, autoharpType = null) {
+    const targetType = autoharpType || this.currentAutoharpType;
+    const parsedChord = this.parseChord(input);
+    
+    if (!parsedChord) {
+      return {
+        success: false,
+        input: input,
+        chord: null,
+        autoharpCompatible: false,
+        autoharpType: targetType,
+        alternatives: []
+      };
+    }
+    
+    const isCompatible = this.validateChordForAutoharp(parsedChord, targetType);
+    const alternatives = isCompatible ? [] : this.transposition.findAlternativeChords(parsedChord, targetType);
+    
+    return {
+      success: true,
+      input: input,
+      chord: parsedChord,
+      autoharpCompatible: isCompatible,
+      autoharpType: targetType,
+      alternatives: alternatives
+    };
   }
 }
 
