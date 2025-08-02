@@ -2,11 +2,11 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 312
-   Unique method names: 262
+   Total method definitions found: 319
+   Unique method names: 269
    Critical same-file duplicates: 3
    Cross-file duplicates: 30
-   Similar method names: 163
+   Similar method names: 167
 
 CRITICAL: Same-file duplicates (JavaScript uses last definition):
 
@@ -202,7 +202,7 @@ Similar method names (potential confusion):
 "updateSelectedChordsUI" vs "updateSelectedChords"
    updateSelectedChordsUI: modules\appIntegration.js:213
    updateSelectedChords: modules\stateManager.js:127
-   ... and 153 more similar pairs
+   ... and 157 more similar pairs
 
 ERROR: Critical duplicates found that need immediate attention!
 JavaScript will silently use the last definition, causing unexpected behavior.
