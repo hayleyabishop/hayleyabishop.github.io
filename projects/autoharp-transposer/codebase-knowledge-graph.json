@@ -1,12 +1,12 @@
 {
-  "generated": "2025-08-02T06:49:09.060Z",
+  "generated": "2025-08-02T07:03:58.046Z",
   "project": "autoharp-transposer",
   "statistics": {
-    "files": 29,
-    "classes": 14,
+    "files": 32,
+    "classes": 16,
     "functions": 66,
-    "methods": 288,
-    "eventHandlers": 43
+    "methods": 316,
+    "eventHandlers": 44
   },
   "graph": {
     "files": {
@@ -2294,7 +2294,7 @@
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
                 "line": 43,
-                "signature": "playChord(chordName) {",
+                "signature": "playChord(chord, autoharpType = null) {",
                 "calls": []
               },
               {
@@ -2302,14 +2302,54 @@
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
                 "line": 44,
-                "signature": "if (!this.soundEnabled || !this.audioContext || !chordName) {",
+                "signature": "if (!this.soundEnabled || !this.audioContext || !chord) {",
                 "calls": []
               },
               {
                 "name": "if",
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
-                "line": 80,
+                "line": 81,
+                "signature": "if (index > -1) {",
+                "calls": []
+              },
+              {
+                "name": "playProgression",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 91,
+                "signature": "playProgression(progression, tempo = 120) {",
+                "calls": []
+              },
+              {
+                "name": "previewTransposition",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 121,
+                "signature": "previewTransposition(originalChords, transposedChords) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 122,
+                "signature": "if (!this.soundEnabled || !this.audioContext || !originalChords || !transposedChords) {",
+                "calls": []
+              },
+              {
+                "name": "playChordAtTime",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 139,
+                "signature": "playChordAtTime(chord, startTime, duration) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 168,
                 "signature": "if (index > -1) {",
                 "calls": []
               },
@@ -2317,7 +2357,7 @@
                 "name": "stopAllSounds",
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
-                "line": 90,
+                "line": 178,
                 "signature": "stopAllSounds() {",
                 "calls": []
               },
@@ -2325,31 +2365,79 @@
                 "name": "getChordFrequencies",
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
-                "line": 101,
-                "signature": "getChordFrequencies(chordName) {",
-                "calls": []
-              },
-              {
-                "name": "switch",
-                "class": "ChordAudioManager",
-                "file": "modules\\chordAudio.js",
-                "line": 120,
-                "signature": "switch (parsed.type) {",
+                "line": 189,
+                "signature": "getChordFrequencies(chordName, autoharpType = null) {",
                 "calls": []
               },
               {
                 "name": "parseChordName",
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
-                "line": 140,
+                "line": 212,
                 "signature": "parseChordName(chordName) {",
+                "calls": []
+              },
+              {
+                "name": "getBaseChordFrequencies",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 231,
+                "signature": "getBaseChordFrequencies(rootFreq, chordType) {",
+                "calls": []
+              },
+              {
+                "name": "switch",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 233,
+                "signature": "switch (chordType) {",
+                "calls": []
+              },
+              {
+                "name": "applyAutoharpCharacteristics",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 253,
+                "signature": "applyAutoharpCharacteristics(frequencies, autoharpType) {",
+                "calls": []
+              },
+              {
+                "name": "switch",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 257,
+                "signature": "switch (autoharpType.id || autoharpType) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 272,
+                "signature": "if (freq * 2 < 2000) { // Avoid too high frequencies",
+                "calls": []
+              },
+              {
+                "name": "getOscillatorType",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 283,
+                "signature": "getOscillatorType(autoharpType) {",
+                "calls": []
+              },
+              {
+                "name": "switch",
+                "class": "ChordAudioManager",
+                "file": "modules\\chordAudio.js",
+                "line": 287,
+                "signature": "switch (autoharpType.id || autoharpType) {",
                 "calls": []
               },
               {
                 "name": "destroy",
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
-                "line": 160,
+                "line": 304,
                 "signature": "destroy() {",
                 "calls": []
               },
@@ -2357,7 +2445,7 @@
                 "name": "if",
                 "class": "ChordAudioManager",
                 "file": "modules\\chordAudio.js",
-                "line": 162,
+                "line": 306,
                 "signature": "if (this.audioContext) {",
                 "calls": []
               }
@@ -2415,7 +2503,7 @@
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
             "line": 43,
-            "signature": "playChord(chordName) {",
+            "signature": "playChord(chord, autoharpType = null) {",
             "calls": []
           },
           {
@@ -2423,14 +2511,54 @@
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
             "line": 44,
-            "signature": "if (!this.soundEnabled || !this.audioContext || !chordName) {",
+            "signature": "if (!this.soundEnabled || !this.audioContext || !chord) {",
             "calls": []
           },
           {
             "name": "if",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 80,
+            "line": 81,
+            "signature": "if (index > -1) {",
+            "calls": []
+          },
+          {
+            "name": "playProgression",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 91,
+            "signature": "playProgression(progression, tempo = 120) {",
+            "calls": []
+          },
+          {
+            "name": "previewTransposition",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 121,
+            "signature": "previewTransposition(originalChords, transposedChords) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 122,
+            "signature": "if (!this.soundEnabled || !this.audioContext || !originalChords || !transposedChords) {",
+            "calls": []
+          },
+          {
+            "name": "playChordAtTime",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 139,
+            "signature": "playChordAtTime(chord, startTime, duration) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 168,
             "signature": "if (index > -1) {",
             "calls": []
           },
@@ -2438,7 +2566,7 @@
             "name": "stopAllSounds",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 90,
+            "line": 178,
             "signature": "stopAllSounds() {",
             "calls": []
           },
@@ -2446,31 +2574,79 @@
             "name": "getChordFrequencies",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 101,
-            "signature": "getChordFrequencies(chordName) {",
-            "calls": []
-          },
-          {
-            "name": "switch",
-            "class": "ChordAudioManager",
-            "file": "modules\\chordAudio.js",
-            "line": 120,
-            "signature": "switch (parsed.type) {",
+            "line": 189,
+            "signature": "getChordFrequencies(chordName, autoharpType = null) {",
             "calls": []
           },
           {
             "name": "parseChordName",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 140,
+            "line": 212,
             "signature": "parseChordName(chordName) {",
+            "calls": []
+          },
+          {
+            "name": "getBaseChordFrequencies",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 231,
+            "signature": "getBaseChordFrequencies(rootFreq, chordType) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 233,
+            "signature": "switch (chordType) {",
+            "calls": []
+          },
+          {
+            "name": "applyAutoharpCharacteristics",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 253,
+            "signature": "applyAutoharpCharacteristics(frequencies, autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 257,
+            "signature": "switch (autoharpType.id || autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 272,
+            "signature": "if (freq * 2 < 2000) { // Avoid too high frequencies",
+            "calls": []
+          },
+          {
+            "name": "getOscillatorType",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 283,
+            "signature": "getOscillatorType(autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 287,
+            "signature": "switch (autoharpType.id || autoharpType) {",
             "calls": []
           },
           {
             "name": "destroy",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 160,
+            "line": 304,
             "signature": "destroy() {",
             "calls": []
           },
@@ -2478,7 +2654,7 @@
             "name": "if",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 162,
+            "line": 306,
             "signature": "if (this.audioContext) {",
             "calls": []
           }
@@ -2487,7 +2663,7 @@
         "imports": [],
         "exports": [],
         "dependencies": [],
-        "lineCount": 169
+        "lineCount": 313
       },
       "modules\\chordParser.js": {
         "path": "modules\\chordParser.js",
@@ -8726,6 +8902,447 @@
         "dependencies": [],
         "lineCount": 542
       },
+      "modules\\visualFeedback.js": {
+        "path": "modules\\visualFeedback.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\modules\\visualFeedback.js",
+        "classes": [
+          {
+            "name": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 6,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 7,
+                "signature": "constructor() {",
+                "calls": []
+              },
+              {
+                "name": "initializeFeedbackElements",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 13,
+                "signature": "initializeFeedbackElements() {",
+                "calls": []
+              },
+              {
+                "name": "ensureFeedbackContainer",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 20,
+                "signature": "ensureFeedbackContainer() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 22,
+                "signature": "if (!container) {",
+                "calls": []
+              },
+              {
+                "name": "ensureProgressIndicator",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 37,
+                "signature": "ensureProgressIndicator() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 39,
+                "signature": "if (!indicator) {",
+                "calls": []
+              },
+              {
+                "name": "ensureChordHighlighter",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 57,
+                "signature": "ensureChordHighlighter() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 60,
+                "signature": "if (!highlighter) {",
+                "calls": []
+              },
+              {
+                "name": "showChordPlayback",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 79,
+                "signature": "showChordPlayback(chordName, autoharpType = null) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 82,
+                "signature": "if (chordElement) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 90,
+                "signature": "if (autoharpType) {",
+                "calls": []
+              },
+              {
+                "name": "showProgressionPlayback",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 97,
+                "signature": "showProgressionPlayback(progression, tempo = 120) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 111,
+                "signature": "if (chordElement) {",
+                "calls": []
+              },
+              {
+                "name": "showTranspositionPreview",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 126,
+                "signature": "showTranspositionPreview(originalChords, transposedChords) {",
+                "calls": []
+              },
+              {
+                "name": "highlightElement",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 153,
+                "signature": "highlightElement(element, duration = 1000) {",
+                "calls": []
+              },
+              {
+                "name": "showTemporaryMessage",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 179,
+                "signature": "showTemporaryMessage(message, duration = 2000, additionalStyles = '') {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 199,
+                "signature": "if (messageEl.parentNode) {",
+                "calls": []
+              },
+              {
+                "name": "ensureFadeAnimation",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 205,
+                "signature": "ensureFadeAnimation() {",
+                "calls": []
+              },
+              {
+                "name": "findChordElement",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 222,
+                "signature": "findChordElement(chordName) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 233,
+                "signature": "for (const selector of selectors) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 244,
+                "signature": "for (const element of allElements) {",
+                "calls": []
+              },
+              {
+                "name": "showAudioLoading",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 254,
+                "signature": "showAudioLoading(message = 'Loading audio...') {",
+                "calls": []
+              },
+              {
+                "name": "hideAudioLoading",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 289,
+                "signature": "hideAudioLoading() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 291,
+                "signature": "if (loadingEl && loadingEl.parentNode) {",
+                "calls": []
+              },
+              {
+                "name": "destroy",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 297,
+                "signature": "destroy() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "VisualFeedbackManager",
+                "file": "modules\\visualFeedback.js",
+                "line": 306,
+                "signature": "if (element && element.parentNode) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 7,
+              "signature": "constructor() {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 7,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "initializeFeedbackElements",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 13,
+            "signature": "initializeFeedbackElements() {",
+            "calls": []
+          },
+          {
+            "name": "ensureFeedbackContainer",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 20,
+            "signature": "ensureFeedbackContainer() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 22,
+            "signature": "if (!container) {",
+            "calls": []
+          },
+          {
+            "name": "ensureProgressIndicator",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 37,
+            "signature": "ensureProgressIndicator() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 39,
+            "signature": "if (!indicator) {",
+            "calls": []
+          },
+          {
+            "name": "ensureChordHighlighter",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 57,
+            "signature": "ensureChordHighlighter() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 60,
+            "signature": "if (!highlighter) {",
+            "calls": []
+          },
+          {
+            "name": "showChordPlayback",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 79,
+            "signature": "showChordPlayback(chordName, autoharpType = null) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 82,
+            "signature": "if (chordElement) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 90,
+            "signature": "if (autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "showProgressionPlayback",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 97,
+            "signature": "showProgressionPlayback(progression, tempo = 120) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 111,
+            "signature": "if (chordElement) {",
+            "calls": []
+          },
+          {
+            "name": "showTranspositionPreview",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 126,
+            "signature": "showTranspositionPreview(originalChords, transposedChords) {",
+            "calls": []
+          },
+          {
+            "name": "highlightElement",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 153,
+            "signature": "highlightElement(element, duration = 1000) {",
+            "calls": []
+          },
+          {
+            "name": "showTemporaryMessage",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 179,
+            "signature": "showTemporaryMessage(message, duration = 2000, additionalStyles = '') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 199,
+            "signature": "if (messageEl.parentNode) {",
+            "calls": []
+          },
+          {
+            "name": "ensureFadeAnimation",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 205,
+            "signature": "ensureFadeAnimation() {",
+            "calls": []
+          },
+          {
+            "name": "findChordElement",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 222,
+            "signature": "findChordElement(chordName) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 233,
+            "signature": "for (const selector of selectors) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 244,
+            "signature": "for (const element of allElements) {",
+            "calls": []
+          },
+          {
+            "name": "showAudioLoading",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 254,
+            "signature": "showAudioLoading(message = 'Loading audio...') {",
+            "calls": []
+          },
+          {
+            "name": "hideAudioLoading",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 289,
+            "signature": "hideAudioLoading() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 291,
+            "signature": "if (loadingEl && loadingEl.parentNode) {",
+            "calls": []
+          },
+          {
+            "name": "destroy",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 297,
+            "signature": "destroy() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 306,
+            "signature": "if (element && element.parentNode) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [],
+        "exports": [],
+        "dependencies": [],
+        "lineCount": 315
+      },
       "simple-duplicate-check.js": {
         "path": "simple-duplicate-check.js",
         "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\simple-duplicate-check.js",
@@ -8765,6 +9382,199 @@
           "path"
         ],
         "lineCount": 186
+      },
+      "tests\\test-audio-visual-feedback.js": {
+        "path": "tests\\test-audio-visual-feedback.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tests\\test-audio-visual-feedback.js",
+        "classes": [
+          {
+            "name": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 20,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 21,
+                "signature": "constructor() {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 58,
+                "signature": "for (let i = 0; i < tests.length; i++) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 81,
+                "signature": "for (const chord of TEST_CONFIG.testChords) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 94,
+                "signature": "for (const autoharpType of TEST_CONFIG.autoharpTypes) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 202,
+                "signature": "for (let i = 0; i < 10; i++) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 213,
+                "signature": "if (duration < 5000) {",
+                "calls": []
+              },
+              {
+                "name": "generateTestReport",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 220,
+                "signature": "generateTestReport() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 233,
+                "signature": "if (failed > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 261,
+                "signature": "if (passed === this.testResults.length) {",
+                "calls": []
+              },
+              {
+                "name": "wait",
+                "class": "AudioVisualFeedbackTester",
+                "file": "tests\\test-audio-visual-feedback.js",
+                "line": 268,
+                "signature": "wait(ms) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 21,
+              "signature": "constructor() {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 21,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 58,
+            "signature": "for (let i = 0; i < tests.length; i++) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 81,
+            "signature": "for (const chord of TEST_CONFIG.testChords) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 94,
+            "signature": "for (const autoharpType of TEST_CONFIG.autoharpTypes) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 202,
+            "signature": "for (let i = 0; i < 10; i++) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 213,
+            "signature": "if (duration < 5000) {",
+            "calls": []
+          },
+          {
+            "name": "generateTestReport",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 220,
+            "signature": "generateTestReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 233,
+            "signature": "if (failed > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 261,
+            "signature": "if (passed === this.testResults.length) {",
+            "calls": []
+          },
+          {
+            "name": "wait",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 268,
+            "signature": "wait(ms) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [
+          {
+            "event": "load",
+            "handler": "async (",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 274,
+            "signature": "window.addEventListener('load', async () => {"
+          }
+        ],
+        "imports": [],
+        "exports": [],
+        "dependencies": [],
+        "lineCount": 310
       },
       "tests\\test-chord-logic-specialist.js": {
         "path": "tests\\test-chord-logic-specialist.js",
@@ -9217,6 +10027,26 @@
         "exports": [],
         "dependencies": [],
         "lineCount": 218
+      },
+      "tests\\test-state-data-specialist.js": {
+        "path": "tests\\test-state-data-specialist.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tests\\test-state-data-specialist.js",
+        "classes": [],
+        "functions": [],
+        "methods": [],
+        "eventHandlers": [],
+        "imports": [
+          "../modules/stateManager.js",
+          "../modules/storageManager.js",
+          "../modules/dataSchemas.js"
+        ],
+        "exports": [],
+        "dependencies": [
+          "../modules/stateManager.js",
+          "../modules/storageManager.js",
+          "../modules/dataSchemas.js"
+        ],
+        "lineCount": 200
       },
       "tests\\test-suggestion-panel-fix.js": {
         "path": "tests\\test-suggestion-panel-fix.js",
@@ -10690,7 +11520,7 @@
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
             "line": 43,
-            "signature": "playChord(chordName) {",
+            "signature": "playChord(chord, autoharpType = null) {",
             "calls": []
           },
           {
@@ -10698,14 +11528,54 @@
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
             "line": 44,
-            "signature": "if (!this.soundEnabled || !this.audioContext || !chordName) {",
+            "signature": "if (!this.soundEnabled || !this.audioContext || !chord) {",
             "calls": []
           },
           {
             "name": "if",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 80,
+            "line": 81,
+            "signature": "if (index > -1) {",
+            "calls": []
+          },
+          {
+            "name": "playProgression",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 91,
+            "signature": "playProgression(progression, tempo = 120) {",
+            "calls": []
+          },
+          {
+            "name": "previewTransposition",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 121,
+            "signature": "previewTransposition(originalChords, transposedChords) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 122,
+            "signature": "if (!this.soundEnabled || !this.audioContext || !originalChords || !transposedChords) {",
+            "calls": []
+          },
+          {
+            "name": "playChordAtTime",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 139,
+            "signature": "playChordAtTime(chord, startTime, duration) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 168,
             "signature": "if (index > -1) {",
             "calls": []
           },
@@ -10713,7 +11583,7 @@
             "name": "stopAllSounds",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 90,
+            "line": 178,
             "signature": "stopAllSounds() {",
             "calls": []
           },
@@ -10721,31 +11591,79 @@
             "name": "getChordFrequencies",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 101,
-            "signature": "getChordFrequencies(chordName) {",
-            "calls": []
-          },
-          {
-            "name": "switch",
-            "class": "ChordAudioManager",
-            "file": "modules\\chordAudio.js",
-            "line": 120,
-            "signature": "switch (parsed.type) {",
+            "line": 189,
+            "signature": "getChordFrequencies(chordName, autoharpType = null) {",
             "calls": []
           },
           {
             "name": "parseChordName",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 140,
+            "line": 212,
             "signature": "parseChordName(chordName) {",
+            "calls": []
+          },
+          {
+            "name": "getBaseChordFrequencies",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 231,
+            "signature": "getBaseChordFrequencies(rootFreq, chordType) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 233,
+            "signature": "switch (chordType) {",
+            "calls": []
+          },
+          {
+            "name": "applyAutoharpCharacteristics",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 253,
+            "signature": "applyAutoharpCharacteristics(frequencies, autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 257,
+            "signature": "switch (autoharpType.id || autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 272,
+            "signature": "if (freq * 2 < 2000) { // Avoid too high frequencies",
+            "calls": []
+          },
+          {
+            "name": "getOscillatorType",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 283,
+            "signature": "getOscillatorType(autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "ChordAudioManager",
+            "file": "modules\\chordAudio.js",
+            "line": 287,
+            "signature": "switch (autoharpType.id || autoharpType) {",
             "calls": []
           },
           {
             "name": "destroy",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 160,
+            "line": 304,
             "signature": "destroy() {",
             "calls": []
           },
@@ -10753,7 +11671,7 @@
             "name": "if",
             "class": "ChordAudioManager",
             "file": "modules\\chordAudio.js",
-            "line": 162,
+            "line": 306,
             "signature": "if (this.audioContext) {",
             "calls": []
           }
@@ -13802,6 +14720,316 @@
           "line": 7,
           "signature": "constructor() {"
         }
+      },
+      "VisualFeedbackManager": {
+        "name": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 6,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 7,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "initializeFeedbackElements",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 13,
+            "signature": "initializeFeedbackElements() {",
+            "calls": []
+          },
+          {
+            "name": "ensureFeedbackContainer",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 20,
+            "signature": "ensureFeedbackContainer() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 22,
+            "signature": "if (!container) {",
+            "calls": []
+          },
+          {
+            "name": "ensureProgressIndicator",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 37,
+            "signature": "ensureProgressIndicator() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 39,
+            "signature": "if (!indicator) {",
+            "calls": []
+          },
+          {
+            "name": "ensureChordHighlighter",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 57,
+            "signature": "ensureChordHighlighter() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 60,
+            "signature": "if (!highlighter) {",
+            "calls": []
+          },
+          {
+            "name": "showChordPlayback",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 79,
+            "signature": "showChordPlayback(chordName, autoharpType = null) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 82,
+            "signature": "if (chordElement) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 90,
+            "signature": "if (autoharpType) {",
+            "calls": []
+          },
+          {
+            "name": "showProgressionPlayback",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 97,
+            "signature": "showProgressionPlayback(progression, tempo = 120) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 111,
+            "signature": "if (chordElement) {",
+            "calls": []
+          },
+          {
+            "name": "showTranspositionPreview",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 126,
+            "signature": "showTranspositionPreview(originalChords, transposedChords) {",
+            "calls": []
+          },
+          {
+            "name": "highlightElement",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 153,
+            "signature": "highlightElement(element, duration = 1000) {",
+            "calls": []
+          },
+          {
+            "name": "showTemporaryMessage",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 179,
+            "signature": "showTemporaryMessage(message, duration = 2000, additionalStyles = '') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 199,
+            "signature": "if (messageEl.parentNode) {",
+            "calls": []
+          },
+          {
+            "name": "ensureFadeAnimation",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 205,
+            "signature": "ensureFadeAnimation() {",
+            "calls": []
+          },
+          {
+            "name": "findChordElement",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 222,
+            "signature": "findChordElement(chordName) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 233,
+            "signature": "for (const selector of selectors) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 244,
+            "signature": "for (const element of allElements) {",
+            "calls": []
+          },
+          {
+            "name": "showAudioLoading",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 254,
+            "signature": "showAudioLoading(message = 'Loading audio...') {",
+            "calls": []
+          },
+          {
+            "name": "hideAudioLoading",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 289,
+            "signature": "hideAudioLoading() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 291,
+            "signature": "if (loadingEl && loadingEl.parentNode) {",
+            "calls": []
+          },
+          {
+            "name": "destroy",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 297,
+            "signature": "destroy() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "VisualFeedbackManager",
+            "file": "modules\\visualFeedback.js",
+            "line": 306,
+            "signature": "if (element && element.parentNode) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 7,
+          "signature": "constructor() {"
+        }
+      },
+      "AudioVisualFeedbackTester": {
+        "name": "AudioVisualFeedbackTester",
+        "file": "tests\\test-audio-visual-feedback.js",
+        "line": 20,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 21,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 58,
+            "signature": "for (let i = 0; i < tests.length; i++) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 81,
+            "signature": "for (const chord of TEST_CONFIG.testChords) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 94,
+            "signature": "for (const autoharpType of TEST_CONFIG.autoharpTypes) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 202,
+            "signature": "for (let i = 0; i < 10; i++) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 213,
+            "signature": "if (duration < 5000) {",
+            "calls": []
+          },
+          {
+            "name": "generateTestReport",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 220,
+            "signature": "generateTestReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 233,
+            "signature": "if (failed > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 261,
+            "signature": "if (passed === this.testResults.length) {",
+            "calls": []
+          },
+          {
+            "name": "wait",
+            "class": "AudioVisualFeedbackTester",
+            "file": "tests\\test-audio-visual-feedback.js",
+            "line": 268,
+            "signature": "wait(ms) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 21,
+          "signature": "constructor() {"
+        }
       }
     },
     "functions": {
@@ -14842,7 +16070,7 @@
         "name": "if",
         "class": "ChordAudioManager",
         "file": "modules\\chordAudio.js",
-        "line": 162,
+        "line": 306,
         "signature": "if (this.audioContext) {",
         "calls": []
       },
@@ -14851,14 +16079,38 @@
         "class": "ChordAudioManager",
         "file": "modules\\chordAudio.js",
         "line": 43,
-        "signature": "playChord(chordName) {",
+        "signature": "playChord(chord, autoharpType = null) {",
+        "calls": []
+      },
+      "ChordAudioManager.playProgression": {
+        "name": "playProgression",
+        "class": "ChordAudioManager",
+        "file": "modules\\chordAudio.js",
+        "line": 91,
+        "signature": "playProgression(progression, tempo = 120) {",
+        "calls": []
+      },
+      "ChordAudioManager.previewTransposition": {
+        "name": "previewTransposition",
+        "class": "ChordAudioManager",
+        "file": "modules\\chordAudio.js",
+        "line": 121,
+        "signature": "previewTransposition(originalChords, transposedChords) {",
+        "calls": []
+      },
+      "ChordAudioManager.playChordAtTime": {
+        "name": "playChordAtTime",
+        "class": "ChordAudioManager",
+        "file": "modules\\chordAudio.js",
+        "line": 139,
+        "signature": "playChordAtTime(chord, startTime, duration) {",
         "calls": []
       },
       "ChordAudioManager.stopAllSounds": {
         "name": "stopAllSounds",
         "class": "ChordAudioManager",
         "file": "modules\\chordAudio.js",
-        "line": 90,
+        "line": 178,
         "signature": "stopAllSounds() {",
         "calls": []
       },
@@ -14866,31 +16118,55 @@
         "name": "getChordFrequencies",
         "class": "ChordAudioManager",
         "file": "modules\\chordAudio.js",
-        "line": 101,
-        "signature": "getChordFrequencies(chordName) {",
-        "calls": []
-      },
-      "ChordAudioManager.switch": {
-        "name": "switch",
-        "class": "ChordAudioManager",
-        "file": "modules\\chordAudio.js",
-        "line": 120,
-        "signature": "switch (parsed.type) {",
+        "line": 189,
+        "signature": "getChordFrequencies(chordName, autoharpType = null) {",
         "calls": []
       },
       "ChordAudioManager.parseChordName": {
         "name": "parseChordName",
         "class": "ChordAudioManager",
         "file": "modules\\chordAudio.js",
-        "line": 140,
+        "line": 212,
         "signature": "parseChordName(chordName) {",
+        "calls": []
+      },
+      "ChordAudioManager.getBaseChordFrequencies": {
+        "name": "getBaseChordFrequencies",
+        "class": "ChordAudioManager",
+        "file": "modules\\chordAudio.js",
+        "line": 231,
+        "signature": "getBaseChordFrequencies(rootFreq, chordType) {",
+        "calls": []
+      },
+      "ChordAudioManager.switch": {
+        "name": "switch",
+        "class": "ChordAudioManager",
+        "file": "modules\\chordAudio.js",
+        "line": 287,
+        "signature": "switch (autoharpType.id || autoharpType) {",
+        "calls": []
+      },
+      "ChordAudioManager.applyAutoharpCharacteristics": {
+        "name": "applyAutoharpCharacteristics",
+        "class": "ChordAudioManager",
+        "file": "modules\\chordAudio.js",
+        "line": 253,
+        "signature": "applyAutoharpCharacteristics(frequencies, autoharpType) {",
+        "calls": []
+      },
+      "ChordAudioManager.getOscillatorType": {
+        "name": "getOscillatorType",
+        "class": "ChordAudioManager",
+        "file": "modules\\chordAudio.js",
+        "line": 283,
+        "signature": "getOscillatorType(autoharpType) {",
         "calls": []
       },
       "ChordAudioManager.destroy": {
         "name": "destroy",
         "class": "ChordAudioManager",
         "file": "modules\\chordAudio.js",
-        "line": 160,
+        "line": 304,
         "signature": "destroy() {",
         "calls": []
       },
@@ -16573,6 +17849,182 @@
         "line": 530,
         "signature": "migrateFromOldVersion(oldData) {",
         "calls": []
+      },
+      "VisualFeedbackManager.constructor": {
+        "name": "constructor",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 7,
+        "signature": "constructor() {",
+        "calls": []
+      },
+      "VisualFeedbackManager.initializeFeedbackElements": {
+        "name": "initializeFeedbackElements",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 13,
+        "signature": "initializeFeedbackElements() {",
+        "calls": []
+      },
+      "VisualFeedbackManager.ensureFeedbackContainer": {
+        "name": "ensureFeedbackContainer",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 20,
+        "signature": "ensureFeedbackContainer() {",
+        "calls": []
+      },
+      "VisualFeedbackManager.if": {
+        "name": "if",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 306,
+        "signature": "if (element && element.parentNode) {",
+        "calls": []
+      },
+      "VisualFeedbackManager.ensureProgressIndicator": {
+        "name": "ensureProgressIndicator",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 37,
+        "signature": "ensureProgressIndicator() {",
+        "calls": []
+      },
+      "VisualFeedbackManager.ensureChordHighlighter": {
+        "name": "ensureChordHighlighter",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 57,
+        "signature": "ensureChordHighlighter() {",
+        "calls": []
+      },
+      "VisualFeedbackManager.showChordPlayback": {
+        "name": "showChordPlayback",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 79,
+        "signature": "showChordPlayback(chordName, autoharpType = null) {",
+        "calls": []
+      },
+      "VisualFeedbackManager.showProgressionPlayback": {
+        "name": "showProgressionPlayback",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 97,
+        "signature": "showProgressionPlayback(progression, tempo = 120) {",
+        "calls": []
+      },
+      "VisualFeedbackManager.showTranspositionPreview": {
+        "name": "showTranspositionPreview",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 126,
+        "signature": "showTranspositionPreview(originalChords, transposedChords) {",
+        "calls": []
+      },
+      "VisualFeedbackManager.highlightElement": {
+        "name": "highlightElement",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 153,
+        "signature": "highlightElement(element, duration = 1000) {",
+        "calls": []
+      },
+      "VisualFeedbackManager.showTemporaryMessage": {
+        "name": "showTemporaryMessage",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 179,
+        "signature": "showTemporaryMessage(message, duration = 2000, additionalStyles = '') {",
+        "calls": []
+      },
+      "VisualFeedbackManager.ensureFadeAnimation": {
+        "name": "ensureFadeAnimation",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 205,
+        "signature": "ensureFadeAnimation() {",
+        "calls": []
+      },
+      "VisualFeedbackManager.findChordElement": {
+        "name": "findChordElement",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 222,
+        "signature": "findChordElement(chordName) {",
+        "calls": []
+      },
+      "VisualFeedbackManager.for": {
+        "name": "for",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 244,
+        "signature": "for (const element of allElements) {",
+        "calls": []
+      },
+      "VisualFeedbackManager.showAudioLoading": {
+        "name": "showAudioLoading",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 254,
+        "signature": "showAudioLoading(message = 'Loading audio...') {",
+        "calls": []
+      },
+      "VisualFeedbackManager.hideAudioLoading": {
+        "name": "hideAudioLoading",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 289,
+        "signature": "hideAudioLoading() {",
+        "calls": []
+      },
+      "VisualFeedbackManager.destroy": {
+        "name": "destroy",
+        "class": "VisualFeedbackManager",
+        "file": "modules\\visualFeedback.js",
+        "line": 297,
+        "signature": "destroy() {",
+        "calls": []
+      },
+      "AudioVisualFeedbackTester.constructor": {
+        "name": "constructor",
+        "class": "AudioVisualFeedbackTester",
+        "file": "tests\\test-audio-visual-feedback.js",
+        "line": 21,
+        "signature": "constructor() {",
+        "calls": []
+      },
+      "AudioVisualFeedbackTester.for": {
+        "name": "for",
+        "class": "AudioVisualFeedbackTester",
+        "file": "tests\\test-audio-visual-feedback.js",
+        "line": 202,
+        "signature": "for (let i = 0; i < 10; i++) {",
+        "calls": []
+      },
+      "AudioVisualFeedbackTester.if": {
+        "name": "if",
+        "class": "AudioVisualFeedbackTester",
+        "file": "tests\\test-audio-visual-feedback.js",
+        "line": 261,
+        "signature": "if (passed === this.testResults.length) {",
+        "calls": []
+      },
+      "AudioVisualFeedbackTester.generateTestReport": {
+        "name": "generateTestReport",
+        "class": "AudioVisualFeedbackTester",
+        "file": "tests\\test-audio-visual-feedback.js",
+        "line": 220,
+        "signature": "generateTestReport() {",
+        "calls": []
+      },
+      "AudioVisualFeedbackTester.wait": {
+        "name": "wait",
+        "class": "AudioVisualFeedbackTester",
+        "file": "tests\\test-audio-visual-feedback.js",
+        "line": 268,
+        "signature": "wait(ms) {",
+        "calls": []
       }
     },
     "eventHandlers": {
@@ -16701,6 +18153,13 @@
         "file": "modules\\inputManager.js",
         "line": 351,
         "signature": "newChord.addEventListener(\"animationend\", () => {"
+      },
+      "tests\\test-audio-visual-feedback.js:274": {
+        "event": "load",
+        "handler": "async (",
+        "file": "tests\\test-audio-visual-feedback.js",
+        "line": 274,
+        "signature": "window.addEventListener('load', async () => {"
       },
       "tests\\test-duplicate-chord-addition.js:76": {
         "event": "DOMContentLoaded",
@@ -17015,6 +18474,14 @@
           "StorageManager"
         ]
       },
+      "visualFeedback": {
+        "file": "modules\\visualFeedback.js",
+        "exports": [],
+        "dependencies": [],
+        "provides": [
+          "VisualFeedbackManager"
+        ]
+      },
       "simple-duplicate-check": {
         "file": "simple-duplicate-check.js",
         "exports": [],
@@ -17026,6 +18493,14 @@
           "findJavaScriptFiles",
           "extractMethods",
           "checkForDuplicates"
+        ]
+      },
+      "test-audio-visual-feedback": {
+        "file": "tests\\test-audio-visual-feedback.js",
+        "exports": [],
+        "dependencies": [],
+        "provides": [
+          "AudioVisualFeedbackTester"
         ]
       },
       "test-chord-logic-specialist": {
@@ -17128,6 +18603,16 @@
           "testSpecificInput",
           "runNormalizationTestWhenReady"
         ]
+      },
+      "test-state-data-specialist": {
+        "file": "tests\\test-state-data-specialist.js",
+        "exports": [],
+        "dependencies": [
+          "../modules/stateManager.js",
+          "../modules/storageManager.js",
+          "../modules/dataSchemas.js"
+        ],
+        "provides": []
       },
       "test-suggestion-panel-fix": {
         "file": "tests\\test-suggestion-panel-fix.js",
@@ -20446,242 +21931,547 @@
         {
           "caller": "modules\\chordAudio.js",
           "callee": "this.getChordFrequencies",
-          "line": 52
+          "line": 53
         },
         {
           "caller": "modules\\chordAudio.js",
           "callee": "frequencies.forEach",
-          "line": 56
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "this.audioContext.createOscillator",
           "line": 57
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "this.audioContext.createGain",
+          "callee": "this.audioContext.createOscillator",
           "line": 58
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "oscillator.connect",
-          "line": 60
+          "callee": "this.audioContext.createGain",
+          "line": 59
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "noteGain.connect",
+          "callee": "oscillator.connect",
           "line": 61
         },
         {
           "caller": "modules\\chordAudio.js",
+          "callee": "noteGain.connect",
+          "line": 62
+        },
+        {
+          "caller": "modules\\chordAudio.js",
           "callee": "oscillator.frequency.setValueAtTime",
-          "line": 63
+          "line": 64
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.getOscillatorType",
+          "line": 65
         },
         {
           "caller": "modules\\chordAudio.js",
           "callee": "noteGain.gain.setValueAtTime",
-          "line": 67
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "noteGain.gain.linearRampToValueAtTime",
           "line": 68
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "noteGain.gain.setValueAtTime",
+          "callee": "noteGain.gain.linearRampToValueAtTime",
           "line": 69
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "noteGain.gain.exponentialRampToValueAtTime",
+          "callee": "noteGain.gain.setValueAtTime",
           "line": 70
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "oscillator.start",
-          "line": 72
+          "callee": "noteGain.gain.exponentialRampToValueAtTime",
+          "line": 71
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "oscillator.stop",
+          "callee": "oscillator.start",
           "line": 73
         },
         {
           "caller": "modules\\chordAudio.js",
+          "callee": "oscillator.stop",
+          "line": 74
+        },
+        {
+          "caller": "modules\\chordAudio.js",
           "callee": "this.oscillators.push",
-          "line": 75
+          "line": 76
         },
         {
           "caller": "modules\\chordAudio.js",
           "callee": "this.oscillators.indexOf",
-          "line": 79
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "if ",
           "line": 80
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "this.oscillators.splice",
+          "callee": "if ",
           "line": 81
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "catch ",
-          "line": 85
+          "callee": "this.oscillators.splice",
+          "line": 82
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "console.warn",
+          "callee": "catch ",
           "line": 86
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "stopAllSounds",
-          "line": 90
+          "callee": "console.warn",
+          "line": 87
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "this.oscillators.forEach",
+          "callee": "playProgression",
           "line": 91
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "oscillator.stop",
+          "callee": "if ",
+          "line": 92
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "Array.isArray",
+          "line": 92
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "Promise.resolve",
           "line": 93
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "catch ",
-          "line": 94
+          "callee": "Promise",
+          "line": 96
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "getChordFrequencies",
+          "callee": "progression.forEach",
           "line": 101
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "this.parseChordName",
-          "line": 113
+          "callee": "Promise",
+          "line": 102
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "if ",
+          "callee": "setTimeout",
+          "line": 103
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.playChordAtTime",
+          "line": 104
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "chordResolve",
+          "line": 105
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "playbackPromises.push",
+          "line": 109
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "Promise.all",
           "line": 114
         },
         {
           "caller": "modules\\chordAudio.js",
+          "callee": "then",
+          "line": 114
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "setTimeout",
+          "line": 116
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "previewTransposition",
+          "line": 121
+        },
+        {
+          "caller": "modules\\chordAudio.js",
           "callee": "if ",
-          "line": 117
+          "line": 122
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "switch ",
-          "line": 120
+          "callee": "Promise.resolve",
+          "line": 123
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "parseChordName",
-          "line": 140
+          "callee": "Promise",
+          "line": 126
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "chordName.match",
+          "callee": "console.log",
+          "line": 128
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.playProgression",
+          "line": 129
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "then",
+          "line": 129
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "setTimeout",
+          "line": 131
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "console.log",
+          "line": 132
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.playProgression",
+          "line": 133
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "then",
+          "line": 133
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "playChordAtTime",
+          "line": 139
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.getChordFrequencies",
           "line": 142
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "if ",
-          "line": 143
+          "callee": "frequencies.forEach",
+          "line": 144
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "toLowerCase",
+          "callee": "this.audioContext.createOscillator",
+          "line": 145
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.audioContext.createGain",
           "line": 146
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "if ",
+          "callee": "oscillator.connect",
+          "line": 148
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "noteGain.connect",
           "line": 149
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "suffix.includes",
-          "line": 149
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "if ",
-          "line": 150
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "suffix.includes",
-          "line": 150
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "if ",
+          "callee": "oscillator.frequency.setValueAtTime",
           "line": 151
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "suffix.includes",
-          "line": 151
+          "callee": "noteGain.gain.setValueAtTime",
+          "line": 155
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "if ",
-          "line": 152
+          "callee": "noteGain.gain.linearRampToValueAtTime",
+          "line": 156
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "suffix.includes",
-          "line": 152
+          "callee": "noteGain.gain.setValueAtTime",
+          "line": 157
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "if ",
-          "line": 153
+          "callee": "noteGain.gain.exponentialRampToValueAtTime",
+          "line": 158
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "suffix.includes",
-          "line": 153
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "if ",
-          "line": 154
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "suffix.includes",
-          "line": 154
-        },
-        {
-          "caller": "modules\\chordAudio.js",
-          "callee": "destroy",
+          "callee": "oscillator.start",
           "line": 160
         },
         {
           "caller": "modules\\chordAudio.js",
-          "callee": "this.stopAllSounds",
+          "callee": "oscillator.stop",
           "line": 161
         },
         {
           "caller": "modules\\chordAudio.js",
+          "callee": "this.oscillators.push",
+          "line": 163
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.oscillators.indexOf",
+          "line": 167
+        },
+        {
+          "caller": "modules\\chordAudio.js",
           "callee": "if ",
-          "line": 162
+          "line": 168
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.oscillators.splice",
+          "line": 169
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "catch ",
+          "line": 173
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "console.warn",
+          "line": 174
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "stopAllSounds",
+          "line": 178
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.oscillators.forEach",
+          "line": 179
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "oscillator.stop",
+          "line": 181
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "catch ",
+          "line": 182
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "getChordFrequencies",
+          "line": 189
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.parseChordName",
+          "line": 201
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 202
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 205
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.getBaseChordFrequencies",
+          "line": 208
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.applyAutoharpCharacteristics",
+          "line": 209
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "parseChordName",
+          "line": 212
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "chordName.match",
+          "line": 214
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 215
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "toLowerCase",
+          "line": 218
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 221
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "suffix.includes",
+          "line": 221
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 222
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "suffix.includes",
+          "line": 222
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 223
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "suffix.includes",
+          "line": 223
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 224
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "suffix.includes",
+          "line": 224
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 225
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "suffix.includes",
+          "line": 225
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 226
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "suffix.includes",
+          "line": 226
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "getBaseChordFrequencies",
+          "line": 231
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "switch ",
+          "line": 233
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "applyAutoharpCharacteristics",
+          "line": 253
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 254
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "switch ",
+          "line": 257
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "frequencies.map",
+          "line": 261
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "frequencies.map",
+          "line": 265
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "frequencies.slice",
+          "line": 269
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "frequencies.forEach",
+          "line": 271
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 272
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "harmonics.push",
+          "line": 273
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "getOscillatorType",
+          "line": 283
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 284
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "switch ",
+          "line": 287
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "destroy",
+          "line": 304
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "this.stopAllSounds",
+          "line": 305
+        },
+        {
+          "caller": "modules\\chordAudio.js",
+          "callee": "if ",
+          "line": 306
         },
         {
           "caller": "modules\\chordAudio.js",
           "callee": "this.audioContext.close",
-          "line": 163
+          "line": 307
         }
       ],
       "modules\\chordParser.js": [
@@ -27690,6 +29480,588 @@
           "line": 539
         }
       ],
+      "modules\\visualFeedback.js": [
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "constructor",
+          "line": 7
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "Map",
+          "line": 8
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "Map",
+          "line": 9
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.initializeFeedbackElements",
+          "line": 10
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "initializeFeedbackElements",
+          "line": 13
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.ensureFeedbackContainer",
+          "line": 15
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.ensureProgressIndicator",
+          "line": 16
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.ensureChordHighlighter",
+          "line": 17
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "ensureFeedbackContainer",
+          "line": 20
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.getElementById",
+          "line": 21
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 22
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.createElement",
+          "line": 23
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.body.appendChild",
+          "line": 32
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.set",
+          "line": 34
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "ensureProgressIndicator",
+          "line": 37
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.getElementById",
+          "line": 38
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 39
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.createElement",
+          "line": 40
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 43
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 50
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.get",
+          "line": 52
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "appendChild",
+          "line": 52
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.set",
+          "line": 54
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "ensureChordHighlighter",
+          "line": 57
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.getElementById",
+          "line": 59
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 60
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.createElement",
+          "line": 61
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 67
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.body.appendChild",
+          "line": 73
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.set",
+          "line": 75
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "showChordPlayback",
+          "line": 79
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.findChordElement",
+          "line": 81
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 82
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.highlightElement",
+          "line": 83
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.showTemporaryMessage",
+          "line": 87
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 90
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.showTemporaryMessage",
+          "line": 92
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "showProgressionPlayback",
+          "line": 97
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.get",
+          "line": 98
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "Progression ",
+          "line": 102
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "progression.forEach",
+          "line": 105
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "setTimeout",
+          "line": 106
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.findChordElement",
+          "line": 110
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 111
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.highlightElement",
+          "line": 112
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "setTimeout",
+          "line": 118
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "showTranspositionPreview",
+          "line": 126
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.get",
+          "line": 127
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 132
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.showProgressionPlayback",
+          "line": 134
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "setTimeout",
+          "line": 137
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 139
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.showProgressionPlayback",
+          "line": 141
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "setTimeout",
+          "line": 144
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 145
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "highlightElement",
+          "line": 153
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.get",
+          "line": 154
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "element.getBoundingClientRect",
+          "line": 155
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "scale",
+          "line": 167
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "setTimeout",
+          "line": 169
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "scale",
+          "line": 171
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "setTimeout",
+          "line": 172
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "showTemporaryMessage",
+          "line": 179
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.createElement",
+          "line": 180
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 182
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.ensureFadeAnimation",
+          "line": 194
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.get",
+          "line": 196
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "appendChild",
+          "line": 196
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "setTimeout",
+          "line": 198
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 199
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "messageEl.parentNode.removeChild",
+          "line": 200
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "ensureFadeAnimation",
+          "line": 205
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 206
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.getElementById",
+          "line": 206
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.createElement",
+          "line": 207
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "translateY",
+          "line": 211
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "translateY",
+          "line": 212
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "translateY",
+          "line": 213
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "translateY",
+          "line": 214
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.head.appendChild",
+          "line": 217
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "findChordElement",
+          "line": 222
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "contains",
+          "line": 227
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "contains",
+          "line": 228
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "contains",
+          "line": 229
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "contains",
+          "line": 230
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "for ",
+          "line": 233
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.querySelector",
+          "line": 235
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 236
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "catch ",
+          "line": 237
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.querySelectorAll",
+          "line": 243
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "for ",
+          "line": 244
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 245
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "element.textContent.trim",
+          "line": 245
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "showAudioLoading",
+          "line": 254
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.createElement",
+          "line": 255
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rgba",
+          "line": 258
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 273
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.getElementById",
+          "line": 273
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.createElement",
+          "line": 274
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rotate",
+          "line": 278
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "rotate",
+          "line": 279
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.head.appendChild",
+          "line": 282
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.get",
+          "line": 285
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "appendChild",
+          "line": 285
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "hideAudioLoading",
+          "line": 289
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "document.getElementById",
+          "line": 290
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 291
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "loadingEl.parentNode.removeChild",
+          "line": 292
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "destroy",
+          "line": 297
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.activeAnimations.forEach",
+          "line": 299
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "clearTimeout",
+          "line": 300
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.activeAnimations.clear",
+          "line": 302
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.forEach",
+          "line": 305
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "if ",
+          "line": 306
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "element.parentNode.removeChild",
+          "line": 307
+        },
+        {
+          "caller": "modules\\visualFeedback.js",
+          "callee": "this.feedbackElements.clear",
+          "line": 310
+        }
+      ],
       "simple-duplicate-check.js": [
         {
           "caller": "simple-duplicate-check.js",
@@ -28130,6 +30502,798 @@
           "caller": "simple-duplicate-check.js",
           "callee": "checkForDuplicates",
           "line": 185
+        }
+      ],
+      "tests\\test-audio-visual-feedback.js": [
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 6
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "constructor",
+          "line": 21
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "initialize",
+          "line": 28
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "import",
+          "line": 31
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "import",
+          "line": 32
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "ChordAudioManager",
+          "line": 34
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "VisualFeedbackManager",
+          "line": 35
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 37
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "catch ",
+          "line": 39
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.error",
+          "line": 40
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "runAllTests",
+          "line": 45
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 46
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testBasicChordPlayback",
+          "line": 49
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testAutoharpSpecificPlayback",
+          "line": 50
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testProgressionPlayback",
+          "line": 51
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testTranspositionPreview",
+          "line": 52
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testVisualFeedback",
+          "line": 53
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testErrorHandling",
+          "line": 54
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testPerformance",
+          "line": 55
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "for ",
+          "line": 58
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 60
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testResults.push",
+          "line": 64
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "catch ",
+          "line": 65
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.error",
+          "line": 66
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testResults.push",
+          "line": 67
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 71
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.generateTestReport",
+          "line": 74
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "testBasicChordPlayback",
+          "line": 77
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 78
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "for ",
+          "line": 81
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 82
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playChord",
+          "line": 83
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showChordPlayback",
+          "line": 84
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 85
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 88
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "testAutoharpSpecificPlayback",
+          "line": 91
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 92
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "for ",
+          "line": 94
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 95
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playChord",
+          "line": 98
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showChordPlayback",
+          "line": 99
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 100
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playChord",
+          "line": 103
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showChordPlayback",
+          "line": 104
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 105
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 108
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "testProgressionPlayback",
+          "line": 111
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 112
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 115
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playProgression",
+          "line": 116
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showProgressionPlayback",
+          "line": 117
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 120
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 123
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playProgression",
+          "line": 124
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showProgressionPlayback",
+          "line": 125
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 128
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "testTranspositionPreview",
+          "line": 131
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 132
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 134
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.previewTransposition",
+          "line": 135
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showTranspositionPreview",
+          "line": 139
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 145
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "testVisualFeedback",
+          "line": 148
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 149
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showTemporaryMessage",
+          "line": 152
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 153
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.showAudioLoading",
+          "line": 156
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 157
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.hideAudioLoading",
+          "line": 158
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "document.createElement",
+          "line": 161
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "document.body.appendChild",
+          "line": 164
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.visualManager.highlightElement",
+          "line": 166
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 167
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "document.body.removeChild",
+          "line": 169
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 171
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "testErrorHandling",
+          "line": 174
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 175
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 178
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playChord",
+          "line": 179
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playChord",
+          "line": 180
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playChord",
+          "line": 181
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 183
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playProgression",
+          "line": 184
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playProgression",
+          "line": 185
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playProgression",
+          "line": 186
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 188
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.previewTransposition",
+          "line": 189
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.previewTransposition",
+          "line": 190
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 192
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "testPerformance",
+          "line": 195
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 196
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "performance.now",
+          "line": 198
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 201
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "for ",
+          "line": 202
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.audioManager.playChord",
+          "line": 204
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.wait",
+          "line": 205
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "performance.now",
+          "line": 208
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 211
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "duration.toFixed",
+          "line": 211
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "if ",
+          "line": 213
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 214
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 216
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "generateTestReport",
+          "line": 220
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 221
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "repeat",
+          "line": 221
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 222
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 223
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "repeat",
+          "line": 223
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testResults.filter",
+          "line": 225
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "this.testResults.filter",
+          "line": 226
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 228
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 229
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 230
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 231
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "toFixed",
+          "line": 231
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "if ",
+          "line": 233
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 234
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "filter",
+          "line": 236
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "forEach",
+          "line": 237
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 238
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 242
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 243
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "ChordAudioManager.playChord",
+          "line": 243
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 244
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "ChordAudioManager.playProgression",
+          "line": 244
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 245
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "ChordAudioManager.previewTransposition",
+          "line": 245
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 247
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 248
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 249
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 250
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 251
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 252
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 254
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 255
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 256
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 257
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 259
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "repeat",
+          "line": 259
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "if ",
+          "line": 261
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 262
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 264
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "wait",
+          "line": 268
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "Promise",
+          "line": 269
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "setTimeout",
+          "line": 269
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "window.addEventListener",
+          "line": 274
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "async ",
+          "line": 274
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 275
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "AudioVisualFeedbackTester",
+          "line": 277
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "if ",
+          "line": 279
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "tester.initialize",
+          "line": 279
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "document.createElement",
+          "line": 281
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "tester.runAllTests",
+          "line": 296
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "document.body.appendChild",
+          "line": 297
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 299
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.log",
+          "line": 300
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "tester.runAllTests",
+          "line": 300
+        },
+        {
+          "caller": "tests\\test-audio-visual-feedback.js",
+          "callee": "console.error",
+          "line": 305
         }
       ],
       "tests\\test-chord-logic-specialist.js": [
@@ -32455,6 +35619,483 @@
           "caller": "tests\\test-normalization-fix.js",
           "callee": "testSpecificInput",
           "line": 217
+        }
+      ],
+      "tests\\test-state-data-specialist.js": [
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 6
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 17
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "DataSchemas.validateChord",
+          "line": 27
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 28
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "if ",
+          "line": 29
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 30
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "DataSchemas.validateProgression",
+          "line": 43
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 44
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "if ",
+          "line": 45
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 46
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "DataSchemas.createDefaultProject",
+          "line": 50
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "DataSchemas.validateProject",
+          "line": 51
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 52
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "if ",
+          "line": 53
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 54
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 57
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 63
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "StateManager",
+          "line": 65
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 68
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.setAutoharpType",
+          "line": 69
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 70
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 71
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.get",
+          "line": 71
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 72
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.get",
+          "line": 72
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 75
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.updateProgression",
+          "line": 76
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 77
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 78
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.get",
+          "line": 78
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 80
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 86
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "StorageManager",
+          "line": 88
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 91
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.saveProject",
+          "line": 92
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 93
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 96
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.loadProject",
+          "line": 97
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 98
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "if ",
+          "line": 99
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 100
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 101
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 105
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.getAllProjects",
+          "line": 106
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 107
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 108
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 110
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 116
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 119
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.get",
+          "line": 130
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.updateProgression",
+          "line": 135
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 136
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.saveProgressionToProject",
+          "line": 139
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 140
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.loadProject",
+          "line": 143
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "updatedProject.progressions.some",
+          "line": 144
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 145
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 147
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 153
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 156
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.setAutoharpType",
+          "line": 159
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 160
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.updateProgression",
+          "line": 163
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 164
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.saveProject",
+          "line": 167
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 168
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.loadProject",
+          "line": 171
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 172
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 174
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 180
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 181
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "repeat",
+          "line": 181
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 182
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 183
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "setAutoharpType",
+          "line": 183
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "updateProgression",
+          "line": 183
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 184
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "saveProject",
+          "line": 184
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "loadProject",
+          "line": 184
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 185
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 186
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 187
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 188
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 189
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 190
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "dataSchemas.js ",
+          "line": 190
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 191
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "stateManager.js ",
+          "line": 191
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 192
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.js ",
+          "line": 192
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 193
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 194
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 197
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "storageManager.deleteProject",
+          "line": 198
+        },
+        {
+          "caller": "tests\\test-state-data-specialist.js",
+          "callee": "console.log",
+          "line": 199
         }
       ],
       "tests\\test-suggestion-panel-fix.js": [

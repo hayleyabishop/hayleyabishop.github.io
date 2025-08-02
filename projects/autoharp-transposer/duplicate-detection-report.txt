@@ -2,11 +2,11 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 328
-   Unique method names: 277
+   Total method definitions found: 352
+   Unique method names: 298
    Critical same-file duplicates: 2
    Cross-file duplicates: 30
-   Similar method names: 179
+   Similar method names: 191
 
 CRITICAL: Same-file duplicates (JavaScript uses last definition):
 
@@ -35,6 +35,8 @@ Method "constructor":
    modules\integrationBridge.js:7 (class method)
    modules\stateManager.js:7 (class method)
    modules\storageManager.js:7 (class method)
+   modules\visualFeedback.js:7 (class method)
+   tests\test-audio-visual-feedback.js:21 (class method)
 
 Method "findJavaScriptFiles":
    codebase-mapper.js:47 (class method)
@@ -89,7 +91,8 @@ Method "getDebugInfo":
 
 Method "destroy":
    modules\appIntegration.js:361 (class method)
-   modules\chordAudio.js:160 (class method)
+   modules\chordAudio.js:304 (class method)
+   modules\visualFeedback.js:297 (class method)
 
 Method "isChordAvailable":
    modules\autoharpTypes.js:144 (class method)
@@ -200,7 +203,7 @@ Similar method names (potential confusion):
 "updateSelectedChordsUI" vs "updateSelectedChords"
    updateSelectedChordsUI: modules\appIntegration.js:213
    updateSelectedChords: modules\stateManager.js:127
-   ... and 169 more similar pairs
+   ... and 181 more similar pairs
 
 ERROR: Critical duplicates found that need immediate attention!
 JavaScript will silently use the last definition, causing unexpected behavior.
