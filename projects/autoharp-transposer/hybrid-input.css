@@ -43,6 +43,37 @@
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
+/* Input validation states */
+#chordTextInput.input-valid {
+    border-color: #28a745;
+    background-color: #f8fff9;
+}
+
+#chordTextInput.input-valid:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+#chordTextInput.input-partial {
+    border-color: #ffc107;
+    background-color: #fffdf5;
+}
+
+#chordTextInput.input-partial:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+#chordTextInput.input-invalid {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+#chordTextInput.input-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
 #chordTextInput::placeholder {
     color: #999;
     font-style: italic;
@@ -101,7 +132,7 @@
     border: 1px solid #ddd;
     border-top: none;
     border-radius: 0 0 6px 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     max-height: 200px;
     overflow-y: auto;
@@ -112,6 +143,7 @@
     cursor: pointer;
     border-bottom: 1px solid #f0f0f0;
     transition: background-color 0.15s ease;
+    font-size: 0.95rem;
 }
 
 .suggestion-item:last-child {
@@ -126,6 +158,15 @@
 .suggestion-item.selected {
     background: #e3f2fd;
     color: #1976d2;
+    border-left: 3px solid #2196f3;
+}
+
+.suggestion-highlight {
+    color: #2196f3;
+    font-weight: 600;
+    background-color: rgba(33, 150, 243, 0.1);
+    padding: 0 2px;
+    border-radius: 2px;
 }
 
 /* Quick Actions */

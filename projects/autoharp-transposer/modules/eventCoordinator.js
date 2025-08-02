@@ -350,6 +350,52 @@ class EventCoordinator {
     this.clearTextInput();
   }
 
+  /**
+   * Handle real-time text input for chord suggestions and validation
+   * Provides immediate feedback and suggestions as user types
+   * @param {string} inputValue - Current value of the text input
+   */
+  handleTextInput(inputValue) {
+    const textInput = document.getElementById('chordTextInput');
+    if (!textInput) return;
+    
+    // Clear any previous validation styling
+    textInput.classList.remove('input-valid', 'input-invalid', 'input-partial');
+    
+    // If input is empty, hide suggestions and reset styling
+    if (!inputValue || !inputValue.trim()) {
+      this.clearSuggestions();
+      return;
+    }
+    
+    const trimmedInput = inputValue.trim();
+    
+    // Get suggestions from InputManager
+    const suggestions = this.inputManager.getSuggestions(trimmedInput, 8);
+    
+    // Validate the current input
+    const validationResult = this.inputManager.chordParser.parseChord(trimmedInput);
+    
+    // Apply visual feedback based on validation
+    if (validationResult) {
+      // Input is a valid chord
+      textInput.classList.add('input-valid');
+    } else if (suggestions.length > 0) {
+      // Input is partial but has suggestions
+      textInput.classList.add('input-partial');
+    } else {
+      // Input doesn't match any known chords
+      textInput.classList.add('input-invalid');
+    }
+    
+    // Show suggestions if available
+    if (suggestions.length > 0) {
+      this.showSuggestions(suggestions, trimmedInput);
+    } else {
+      this.clearSuggestions();
+    }
+  }
+
   handleTextInputSubmit(inputValue) {
     // Set flag to prevent suggestions from showing after submission
     this.justSubmitted = true;
@@ -388,7 +434,96 @@ class EventCoordinator {
     const textInput = document.getElementById('chordTextInput');
     if (textInput) {
       textInput.value = '';
+      // Also clear validation styling
+      textInput.classList.remove('input-valid', 'input-invalid', 'input-partial');
     }
+  }
+
+  /**
+   * Display chord suggestions in the suggestions container
+   * @param {Array} suggestions - Array of suggestion objects
+   * @param {string} inputValue - Current input value for highlighting
+   */
+  showSuggestions(suggestions, inputValue) {
+    const container = document.getElementById('chordSuggestions');
+    if (!container) return;
+    
+    // Clear existing suggestions
+    container.innerHTML = '';
+    
+    if (suggestions.length === 0) {
+      container.style.display = 'none';
+      return;
+    }
+    
+    // Create suggestion items
+    suggestions.forEach((suggestion, index) => {
+      const item = document.createElement('div');
+      item.className = 'suggestion-item';
+      item.dataset.chord = suggestion;
+      
+      // Highlight matching part of the suggestion
+      const highlightedText = this.highlightMatch(suggestion, inputValue);
+      item.innerHTML = highlightedText;
+      
+      // Add click handler
+      item.addEventListener('click', () => {
+        this.inputManager.addChord(suggestion, 'suggestion');
+        this.clearTextInput();
+        this.clearSuggestions();
+      });
+      
+      // Select first item by default
+      if (index === 0) {
+        item.classList.add('selected');
+      }
+      
+      container.appendChild(item);
+    });
+    
+    // Show the container
+    container.style.display = 'block';
+  }
+
+  /**
+   * Clear and hide the suggestions container
+   */
+  clearSuggestions() {
+    const container = document.getElementById('chordSuggestions');
+    if (container) {
+      container.innerHTML = '';
+      container.style.display = 'none';
+    }
+  }
+
+  /**
+   * Highlight matching characters in suggestion text
+   * @param {string} suggestion - The suggestion text
+   * @param {string} input - The user input to highlight
+   * @returns {string} HTML with highlighted matches
+   */
+  highlightMatch(suggestion, input) {
+    if (!input || input.length === 0) {
+      return suggestion;
+    }
+    
+    const inputLower = input.toLowerCase();
+    const suggestionLower = suggestion.toLowerCase();
+    
+    // Find the start of the match
+    const matchIndex = suggestionLower.indexOf(inputLower);
+    
+    if (matchIndex === -1) {
+      // No direct match, return as-is
+      return suggestion;
+    }
+    
+    // Highlight the matching part
+    const before = suggestion.substring(0, matchIndex);
+    const match = suggestion.substring(matchIndex, matchIndex + input.length);
+    const after = suggestion.substring(matchIndex + input.length);
+    
+    return `${before}<strong class="suggestion-highlight">${match}</strong>${after}`;
   }
 
   handleSuggestionNavigation(key) {

@@ -1,12 +1,12 @@
 {
-  "generated": "2025-07-31T02:10:23.387Z",
+  "generated": "2025-08-02T05:56:29.977Z",
   "project": "autoharp-transposer",
   "statistics": {
     "files": 27,
     "classes": 13,
     "functions": 59,
-    "methods": 274,
-    "eventHandlers": 41
+    "methods": 275,
+    "eventHandlers": 42
   },
   "graph": {
     "files": {
@@ -4160,10 +4160,34 @@
                 "calls": []
               },
               {
+                "name": "handleTextInput",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 358,
+                "signature": "handleTextInput(inputValue) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 380,
+                "signature": "if (validationResult) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 392,
+                "signature": "if (suggestions.length > 0) {",
+                "calls": []
+              },
+              {
                 "name": "handleTextInputSubmit",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 353,
+                "line": 399,
                 "signature": "handleTextInputSubmit(inputValue) {",
                 "calls": []
               },
@@ -4171,7 +4195,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 362,
+                "line": 408,
                 "signature": "if (selectedSuggestion) {",
                 "calls": []
               },
@@ -4179,7 +4203,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 372,
+                "line": 418,
                 "signature": "if (result.success) {",
                 "calls": []
               },
@@ -4187,7 +4211,7 @@
                 "name": "clearTextInput",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 387,
+                "line": 433,
                 "signature": "clearTextInput() {",
                 "calls": []
               },
@@ -4195,103 +4219,31 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 389,
+                "line": 435,
                 "signature": "if (textInput) {",
-                "calls": []
-              },
-              {
-                "name": "handleSuggestionNavigation",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 394,
-                "signature": "handleSuggestionNavigation(key) {",
-                "calls": []
-              },
-              {
-                "name": "if",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 401,
-                "signature": "if (currentSelected) {",
-                "calls": []
-              },
-              {
-                "name": "handleSoundToggle",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 412,
-                "signature": "handleSoundToggle() {",
-                "calls": []
-              },
-              {
-                "name": "handleClearAll",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 418,
-                "signature": "handleClearAll() {",
-                "calls": []
-              },
-              {
-                "name": "updateUI",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 424,
-                "signature": "updateUI() {",
-                "calls": []
-              },
-              {
-                "name": "updateSelectedChordsDisplay",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 430,
-                "signature": "updateSelectedChordsDisplay() {",
-                "calls": []
-              },
-              {
-                "name": "updateChordButtons",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 446,
-                "signature": "updateChordButtons() {",
-                "calls": []
-              },
-              {
-                "name": "updateAvailableChordButtons",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 456,
-                "signature": "updateAvailableChordButtons() {",
-                "calls": []
-              },
-              {
-                "name": "updateSuggestions",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 466,
-                "signature": "updateSuggestions(input) {",
-                "calls": []
-              },
-              {
-                "name": "if",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 467,
-                "signature": "if (!input || input.length < 1) {",
                 "calls": []
               },
               {
                 "name": "showSuggestions",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 480,
-                "signature": "showSuggestions(suggestions) {",
+                "line": 447,
+                "signature": "showSuggestions(suggestions, inputValue) {",
                 "calls": []
               },
               {
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 492,
+                "line": 454,
+                "signature": "if (suggestions.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 477,
                 "signature": "if (index === 0) {",
                 "calls": []
               },
@@ -4299,7 +4251,7 @@
                 "name": "clearSuggestions",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 502,
+                "line": 491,
                 "signature": "clearSuggestions() {",
                 "calls": []
               },
@@ -4307,7 +4259,143 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 504,
+                "line": 493,
+                "signature": "if (container) {",
+                "calls": []
+              },
+              {
+                "name": "highlightMatch",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 505,
+                "signature": "highlightMatch(suggestion, input) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 506,
+                "signature": "if (!input || input.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 516,
+                "signature": "if (matchIndex === -1) {",
+                "calls": []
+              },
+              {
+                "name": "handleSuggestionNavigation",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 529,
+                "signature": "handleSuggestionNavigation(key) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 536,
+                "signature": "if (currentSelected) {",
+                "calls": []
+              },
+              {
+                "name": "handleSoundToggle",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 547,
+                "signature": "handleSoundToggle() {",
+                "calls": []
+              },
+              {
+                "name": "handleClearAll",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 553,
+                "signature": "handleClearAll() {",
+                "calls": []
+              },
+              {
+                "name": "updateUI",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 559,
+                "signature": "updateUI() {",
+                "calls": []
+              },
+              {
+                "name": "updateSelectedChordsDisplay",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 565,
+                "signature": "updateSelectedChordsDisplay() {",
+                "calls": []
+              },
+              {
+                "name": "updateChordButtons",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 581,
+                "signature": "updateChordButtons() {",
+                "calls": []
+              },
+              {
+                "name": "updateAvailableChordButtons",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 591,
+                "signature": "updateAvailableChordButtons() {",
+                "calls": []
+              },
+              {
+                "name": "updateSuggestions",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 601,
+                "signature": "updateSuggestions(input) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 602,
+                "signature": "if (!input || input.length < 1) {",
+                "calls": []
+              },
+              {
+                "name": "showSuggestions",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 615,
+                "signature": "showSuggestions(suggestions) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 627,
+                "signature": "if (index === 0) {",
+                "calls": []
+              },
+              {
+                "name": "clearSuggestions",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 637,
+                "signature": "clearSuggestions() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "EventCoordinator",
+                "file": "modules\\eventCoordinator.js",
+                "line": 639,
                 "signature": "if (container) {",
                 "calls": []
               },
@@ -4315,7 +4403,7 @@
                 "name": "updateProgressions",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 510,
+                "line": 645,
                 "signature": "updateProgressions() {",
                 "calls": []
               },
@@ -4323,7 +4411,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 514,
+                "line": 649,
                 "signature": "if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {",
                 "calls": []
               },
@@ -4331,7 +4419,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 519,
+                "line": 654,
                 "signature": "if (typeof window.onInputChordsChanged === 'function' && window.chordGroup) {",
                 "calls": []
               },
@@ -4339,7 +4427,7 @@
                 "name": "createChordElement",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 530,
+                "line": 665,
                 "signature": "createChordElement(chord, index) {",
                 "calls": []
               },
@@ -4347,7 +4435,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 541,
+                "line": 676,
                 "signature": "if (removeBtn) {",
                 "calls": []
               },
@@ -4355,7 +4443,7 @@
                 "name": "formatChordNameLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 552,
+                "line": 687,
                 "signature": "formatChordNameLegacy(chordName, chordType) {",
                 "calls": []
               },
@@ -4363,7 +4451,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 554,
+                "line": 689,
                 "signature": "if (typeof window.formatChordName === 'function') {",
                 "calls": []
               },
@@ -4371,7 +4459,7 @@
                 "name": "focusTextInput",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 563,
+                "line": 698,
                 "signature": "focusTextInput() {",
                 "calls": []
               },
@@ -4379,7 +4467,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 565,
+                "line": 700,
                 "signature": "if (input) {",
                 "calls": []
               },
@@ -4387,7 +4475,7 @@
                 "name": "clearTextInput",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 570,
+                "line": 705,
                 "signature": "clearTextInput() {",
                 "calls": []
               },
@@ -4395,7 +4483,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 572,
+                "line": 707,
                 "signature": "if (textInput) {",
                 "calls": []
               },
@@ -4403,7 +4491,7 @@
                 "name": "showMessage",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 579,
+                "line": 714,
                 "signature": "showMessage(message, type = 'info') {",
                 "calls": []
               },
@@ -4411,7 +4499,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 581,
+                "line": 716,
                 "signature": "if (!messageContainer) {",
                 "calls": []
               },
@@ -4419,7 +4507,7 @@
                 "name": "removeLastChord",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 596,
+                "line": 731,
                 "signature": "removeLastChord() {",
                 "calls": []
               },
@@ -4427,7 +4515,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 598,
+                "line": 733,
                 "signature": "if (selectedChords.length > 0) {",
                 "calls": []
               },
@@ -4435,7 +4523,7 @@
                 "name": "showMessage",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 604,
+                "line": 739,
                 "signature": "showMessage(message, type = 'info') {",
                 "calls": []
               },
@@ -4443,7 +4531,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 607,
+                "line": 742,
                 "signature": "if (!messageEl) {",
                 "calls": []
               },
@@ -4451,7 +4539,7 @@
                 "name": "getDebugInfo",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 625,
+                "line": 760,
                 "signature": "getDebugInfo() {",
                 "calls": []
               },
@@ -4459,7 +4547,7 @@
                 "name": "selectChordNameLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 644,
+                "line": 779,
                 "signature": "selectChordNameLegacy(chordName) {",
                 "calls": []
               },
@@ -4467,7 +4555,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 657,
+                "line": 792,
                 "signature": "if (btn !== selectedButton) {",
                 "calls": []
               },
@@ -4475,7 +4563,7 @@
                 "name": "selectChordTypeLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 672,
+                "line": 807,
                 "signature": "selectChordTypeLegacy(chordType) {",
                 "calls": []
               },
@@ -4483,7 +4571,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 685,
+                "line": 820,
                 "signature": "if (btn !== selectedButton) {",
                 "calls": []
               },
@@ -4491,7 +4579,7 @@
                 "name": "tryAddChordLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 699,
+                "line": 834,
                 "signature": "tryAddChordLegacy() {",
                 "calls": []
               },
@@ -4499,7 +4587,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 700,
+                "line": 835,
                 "signature": "if (window.selectedChordName && window.selectedChordType) {",
                 "calls": []
               },
@@ -4507,7 +4595,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 702,
+                "line": 837,
                 "signature": "if (typeof window.appendChord === 'function') {",
                 "calls": []
               },
@@ -4515,7 +4603,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 705,
+                "line": 840,
                 "signature": "if (typeof window.onInputChordsChanged === 'function') {",
                 "calls": []
               },
@@ -4523,7 +4611,7 @@
                 "name": "resetChordSelectionLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 716,
+                "line": 851,
                 "signature": "resetChordSelectionLegacy() {",
                 "calls": []
               },
@@ -4531,7 +4619,7 @@
                 "name": "initializeChordInputListenerLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 730,
+                "line": 865,
                 "signature": "initializeChordInputListenerLegacy() {",
                 "calls": []
               }
@@ -4857,10 +4945,34 @@
             "calls": []
           },
           {
+            "name": "handleTextInput",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 358,
+            "signature": "handleTextInput(inputValue) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 380,
+            "signature": "if (validationResult) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 392,
+            "signature": "if (suggestions.length > 0) {",
+            "calls": []
+          },
+          {
             "name": "handleTextInputSubmit",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 353,
+            "line": 399,
             "signature": "handleTextInputSubmit(inputValue) {",
             "calls": []
           },
@@ -4868,7 +4980,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 362,
+            "line": 408,
             "signature": "if (selectedSuggestion) {",
             "calls": []
           },
@@ -4876,7 +4988,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 372,
+            "line": 418,
             "signature": "if (result.success) {",
             "calls": []
           },
@@ -4884,7 +4996,7 @@
             "name": "clearTextInput",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 387,
+            "line": 433,
             "signature": "clearTextInput() {",
             "calls": []
           },
@@ -4892,103 +5004,31 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 389,
+            "line": 435,
             "signature": "if (textInput) {",
-            "calls": []
-          },
-          {
-            "name": "handleSuggestionNavigation",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 394,
-            "signature": "handleSuggestionNavigation(key) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 401,
-            "signature": "if (currentSelected) {",
-            "calls": []
-          },
-          {
-            "name": "handleSoundToggle",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 412,
-            "signature": "handleSoundToggle() {",
-            "calls": []
-          },
-          {
-            "name": "handleClearAll",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 418,
-            "signature": "handleClearAll() {",
-            "calls": []
-          },
-          {
-            "name": "updateUI",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 424,
-            "signature": "updateUI() {",
-            "calls": []
-          },
-          {
-            "name": "updateSelectedChordsDisplay",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 430,
-            "signature": "updateSelectedChordsDisplay() {",
-            "calls": []
-          },
-          {
-            "name": "updateChordButtons",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 446,
-            "signature": "updateChordButtons() {",
-            "calls": []
-          },
-          {
-            "name": "updateAvailableChordButtons",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 456,
-            "signature": "updateAvailableChordButtons() {",
-            "calls": []
-          },
-          {
-            "name": "updateSuggestions",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 466,
-            "signature": "updateSuggestions(input) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 467,
-            "signature": "if (!input || input.length < 1) {",
             "calls": []
           },
           {
             "name": "showSuggestions",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 480,
-            "signature": "showSuggestions(suggestions) {",
+            "line": 447,
+            "signature": "showSuggestions(suggestions, inputValue) {",
             "calls": []
           },
           {
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 492,
+            "line": 454,
+            "signature": "if (suggestions.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 477,
             "signature": "if (index === 0) {",
             "calls": []
           },
@@ -4996,7 +5036,7 @@
             "name": "clearSuggestions",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 502,
+            "line": 491,
             "signature": "clearSuggestions() {",
             "calls": []
           },
@@ -5004,7 +5044,143 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 504,
+            "line": 493,
+            "signature": "if (container) {",
+            "calls": []
+          },
+          {
+            "name": "highlightMatch",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 505,
+            "signature": "highlightMatch(suggestion, input) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 506,
+            "signature": "if (!input || input.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 516,
+            "signature": "if (matchIndex === -1) {",
+            "calls": []
+          },
+          {
+            "name": "handleSuggestionNavigation",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 529,
+            "signature": "handleSuggestionNavigation(key) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 536,
+            "signature": "if (currentSelected) {",
+            "calls": []
+          },
+          {
+            "name": "handleSoundToggle",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 547,
+            "signature": "handleSoundToggle() {",
+            "calls": []
+          },
+          {
+            "name": "handleClearAll",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 553,
+            "signature": "handleClearAll() {",
+            "calls": []
+          },
+          {
+            "name": "updateUI",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 559,
+            "signature": "updateUI() {",
+            "calls": []
+          },
+          {
+            "name": "updateSelectedChordsDisplay",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 565,
+            "signature": "updateSelectedChordsDisplay() {",
+            "calls": []
+          },
+          {
+            "name": "updateChordButtons",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 581,
+            "signature": "updateChordButtons() {",
+            "calls": []
+          },
+          {
+            "name": "updateAvailableChordButtons",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 591,
+            "signature": "updateAvailableChordButtons() {",
+            "calls": []
+          },
+          {
+            "name": "updateSuggestions",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 601,
+            "signature": "updateSuggestions(input) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 602,
+            "signature": "if (!input || input.length < 1) {",
+            "calls": []
+          },
+          {
+            "name": "showSuggestions",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 615,
+            "signature": "showSuggestions(suggestions) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 627,
+            "signature": "if (index === 0) {",
+            "calls": []
+          },
+          {
+            "name": "clearSuggestions",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 637,
+            "signature": "clearSuggestions() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 639,
             "signature": "if (container) {",
             "calls": []
           },
@@ -5012,7 +5188,7 @@
             "name": "updateProgressions",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 510,
+            "line": 645,
             "signature": "updateProgressions() {",
             "calls": []
           },
@@ -5020,7 +5196,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 514,
+            "line": 649,
             "signature": "if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {",
             "calls": []
           },
@@ -5028,7 +5204,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 519,
+            "line": 654,
             "signature": "if (typeof window.onInputChordsChanged === 'function' && window.chordGroup) {",
             "calls": []
           },
@@ -5036,7 +5212,7 @@
             "name": "createChordElement",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 530,
+            "line": 665,
             "signature": "createChordElement(chord, index) {",
             "calls": []
           },
@@ -5044,7 +5220,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 541,
+            "line": 676,
             "signature": "if (removeBtn) {",
             "calls": []
           },
@@ -5052,7 +5228,7 @@
             "name": "formatChordNameLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 552,
+            "line": 687,
             "signature": "formatChordNameLegacy(chordName, chordType) {",
             "calls": []
           },
@@ -5060,7 +5236,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 554,
+            "line": 689,
             "signature": "if (typeof window.formatChordName === 'function') {",
             "calls": []
           },
@@ -5068,7 +5244,7 @@
             "name": "focusTextInput",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 563,
+            "line": 698,
             "signature": "focusTextInput() {",
             "calls": []
           },
@@ -5076,7 +5252,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 565,
+            "line": 700,
             "signature": "if (input) {",
             "calls": []
           },
@@ -5084,7 +5260,7 @@
             "name": "clearTextInput",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 570,
+            "line": 705,
             "signature": "clearTextInput() {",
             "calls": []
           },
@@ -5092,7 +5268,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 572,
+            "line": 707,
             "signature": "if (textInput) {",
             "calls": []
           },
@@ -5100,7 +5276,7 @@
             "name": "showMessage",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 579,
+            "line": 714,
             "signature": "showMessage(message, type = 'info') {",
             "calls": []
           },
@@ -5108,7 +5284,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 581,
+            "line": 716,
             "signature": "if (!messageContainer) {",
             "calls": []
           },
@@ -5116,7 +5292,7 @@
             "name": "removeLastChord",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 596,
+            "line": 731,
             "signature": "removeLastChord() {",
             "calls": []
           },
@@ -5124,7 +5300,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 598,
+            "line": 733,
             "signature": "if (selectedChords.length > 0) {",
             "calls": []
           },
@@ -5132,7 +5308,7 @@
             "name": "showMessage",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 604,
+            "line": 739,
             "signature": "showMessage(message, type = 'info') {",
             "calls": []
           },
@@ -5140,7 +5316,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 607,
+            "line": 742,
             "signature": "if (!messageEl) {",
             "calls": []
           },
@@ -5148,7 +5324,7 @@
             "name": "getDebugInfo",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 625,
+            "line": 760,
             "signature": "getDebugInfo() {",
             "calls": []
           },
@@ -5156,7 +5332,7 @@
             "name": "selectChordNameLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 644,
+            "line": 779,
             "signature": "selectChordNameLegacy(chordName) {",
             "calls": []
           },
@@ -5164,7 +5340,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 657,
+            "line": 792,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -5172,7 +5348,7 @@
             "name": "selectChordTypeLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 672,
+            "line": 807,
             "signature": "selectChordTypeLegacy(chordType) {",
             "calls": []
           },
@@ -5180,7 +5356,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 685,
+            "line": 820,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -5188,7 +5364,7 @@
             "name": "tryAddChordLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 699,
+            "line": 834,
             "signature": "tryAddChordLegacy() {",
             "calls": []
           },
@@ -5196,7 +5372,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 700,
+            "line": 835,
             "signature": "if (window.selectedChordName && window.selectedChordType) {",
             "calls": []
           },
@@ -5204,7 +5380,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 702,
+            "line": 837,
             "signature": "if (typeof window.appendChord === 'function') {",
             "calls": []
           },
@@ -5212,7 +5388,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 705,
+            "line": 840,
             "signature": "if (typeof window.onInputChordsChanged === 'function') {",
             "calls": []
           },
@@ -5220,7 +5396,7 @@
             "name": "resetChordSelectionLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 716,
+            "line": 851,
             "signature": "resetChordSelectionLegacy() {",
             "calls": []
           },
@@ -5228,7 +5404,7 @@
             "name": "initializeChordInputListenerLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 730,
+            "line": 865,
             "signature": "initializeChordInputListenerLegacy() {",
             "calls": []
           }
@@ -5327,16 +5503,23 @@
           },
           {
             "event": "click",
+            "handler": "(",
+            "file": "modules\\eventCoordinator.js",
+            "line": 470,
+            "signature": "item.addEventListener('click', () => {"
+          },
+          {
+            "event": "click",
             "handler": "(e",
             "file": "modules\\eventCoordinator.js",
-            "line": 542,
+            "line": 677,
             "signature": "removeBtn.addEventListener('click', (e) => {"
           }
         ],
         "imports": [],
         "exports": [],
         "dependencies": [],
-        "lineCount": 738
+        "lineCount": 873
       },
       "modules\\inputManager.js": {
         "path": "modules\\inputManager.js",
@@ -10889,10 +11072,34 @@
             "calls": []
           },
           {
+            "name": "handleTextInput",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 358,
+            "signature": "handleTextInput(inputValue) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 380,
+            "signature": "if (validationResult) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 392,
+            "signature": "if (suggestions.length > 0) {",
+            "calls": []
+          },
+          {
             "name": "handleTextInputSubmit",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 353,
+            "line": 399,
             "signature": "handleTextInputSubmit(inputValue) {",
             "calls": []
           },
@@ -10900,7 +11107,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 362,
+            "line": 408,
             "signature": "if (selectedSuggestion) {",
             "calls": []
           },
@@ -10908,7 +11115,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 372,
+            "line": 418,
             "signature": "if (result.success) {",
             "calls": []
           },
@@ -10916,7 +11123,7 @@
             "name": "clearTextInput",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 387,
+            "line": 433,
             "signature": "clearTextInput() {",
             "calls": []
           },
@@ -10924,103 +11131,31 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 389,
+            "line": 435,
             "signature": "if (textInput) {",
-            "calls": []
-          },
-          {
-            "name": "handleSuggestionNavigation",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 394,
-            "signature": "handleSuggestionNavigation(key) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 401,
-            "signature": "if (currentSelected) {",
-            "calls": []
-          },
-          {
-            "name": "handleSoundToggle",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 412,
-            "signature": "handleSoundToggle() {",
-            "calls": []
-          },
-          {
-            "name": "handleClearAll",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 418,
-            "signature": "handleClearAll() {",
-            "calls": []
-          },
-          {
-            "name": "updateUI",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 424,
-            "signature": "updateUI() {",
-            "calls": []
-          },
-          {
-            "name": "updateSelectedChordsDisplay",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 430,
-            "signature": "updateSelectedChordsDisplay() {",
-            "calls": []
-          },
-          {
-            "name": "updateChordButtons",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 446,
-            "signature": "updateChordButtons() {",
-            "calls": []
-          },
-          {
-            "name": "updateAvailableChordButtons",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 456,
-            "signature": "updateAvailableChordButtons() {",
-            "calls": []
-          },
-          {
-            "name": "updateSuggestions",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 466,
-            "signature": "updateSuggestions(input) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 467,
-            "signature": "if (!input || input.length < 1) {",
             "calls": []
           },
           {
             "name": "showSuggestions",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 480,
-            "signature": "showSuggestions(suggestions) {",
+            "line": 447,
+            "signature": "showSuggestions(suggestions, inputValue) {",
             "calls": []
           },
           {
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 492,
+            "line": 454,
+            "signature": "if (suggestions.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 477,
             "signature": "if (index === 0) {",
             "calls": []
           },
@@ -11028,7 +11163,7 @@
             "name": "clearSuggestions",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 502,
+            "line": 491,
             "signature": "clearSuggestions() {",
             "calls": []
           },
@@ -11036,7 +11171,143 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 504,
+            "line": 493,
+            "signature": "if (container) {",
+            "calls": []
+          },
+          {
+            "name": "highlightMatch",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 505,
+            "signature": "highlightMatch(suggestion, input) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 506,
+            "signature": "if (!input || input.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 516,
+            "signature": "if (matchIndex === -1) {",
+            "calls": []
+          },
+          {
+            "name": "handleSuggestionNavigation",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 529,
+            "signature": "handleSuggestionNavigation(key) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 536,
+            "signature": "if (currentSelected) {",
+            "calls": []
+          },
+          {
+            "name": "handleSoundToggle",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 547,
+            "signature": "handleSoundToggle() {",
+            "calls": []
+          },
+          {
+            "name": "handleClearAll",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 553,
+            "signature": "handleClearAll() {",
+            "calls": []
+          },
+          {
+            "name": "updateUI",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 559,
+            "signature": "updateUI() {",
+            "calls": []
+          },
+          {
+            "name": "updateSelectedChordsDisplay",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 565,
+            "signature": "updateSelectedChordsDisplay() {",
+            "calls": []
+          },
+          {
+            "name": "updateChordButtons",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 581,
+            "signature": "updateChordButtons() {",
+            "calls": []
+          },
+          {
+            "name": "updateAvailableChordButtons",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 591,
+            "signature": "updateAvailableChordButtons() {",
+            "calls": []
+          },
+          {
+            "name": "updateSuggestions",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 601,
+            "signature": "updateSuggestions(input) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 602,
+            "signature": "if (!input || input.length < 1) {",
+            "calls": []
+          },
+          {
+            "name": "showSuggestions",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 615,
+            "signature": "showSuggestions(suggestions) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 627,
+            "signature": "if (index === 0) {",
+            "calls": []
+          },
+          {
+            "name": "clearSuggestions",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 637,
+            "signature": "clearSuggestions() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "EventCoordinator",
+            "file": "modules\\eventCoordinator.js",
+            "line": 639,
             "signature": "if (container) {",
             "calls": []
           },
@@ -11044,7 +11315,7 @@
             "name": "updateProgressions",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 510,
+            "line": 645,
             "signature": "updateProgressions() {",
             "calls": []
           },
@@ -11052,7 +11323,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 514,
+            "line": 649,
             "signature": "if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {",
             "calls": []
           },
@@ -11060,7 +11331,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 519,
+            "line": 654,
             "signature": "if (typeof window.onInputChordsChanged === 'function' && window.chordGroup) {",
             "calls": []
           },
@@ -11068,7 +11339,7 @@
             "name": "createChordElement",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 530,
+            "line": 665,
             "signature": "createChordElement(chord, index) {",
             "calls": []
           },
@@ -11076,7 +11347,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 541,
+            "line": 676,
             "signature": "if (removeBtn) {",
             "calls": []
           },
@@ -11084,7 +11355,7 @@
             "name": "formatChordNameLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 552,
+            "line": 687,
             "signature": "formatChordNameLegacy(chordName, chordType) {",
             "calls": []
           },
@@ -11092,7 +11363,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 554,
+            "line": 689,
             "signature": "if (typeof window.formatChordName === 'function') {",
             "calls": []
           },
@@ -11100,7 +11371,7 @@
             "name": "focusTextInput",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 563,
+            "line": 698,
             "signature": "focusTextInput() {",
             "calls": []
           },
@@ -11108,7 +11379,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 565,
+            "line": 700,
             "signature": "if (input) {",
             "calls": []
           },
@@ -11116,7 +11387,7 @@
             "name": "clearTextInput",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 570,
+            "line": 705,
             "signature": "clearTextInput() {",
             "calls": []
           },
@@ -11124,7 +11395,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 572,
+            "line": 707,
             "signature": "if (textInput) {",
             "calls": []
           },
@@ -11132,7 +11403,7 @@
             "name": "showMessage",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 579,
+            "line": 714,
             "signature": "showMessage(message, type = 'info') {",
             "calls": []
           },
@@ -11140,7 +11411,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 581,
+            "line": 716,
             "signature": "if (!messageContainer) {",
             "calls": []
           },
@@ -11148,7 +11419,7 @@
             "name": "removeLastChord",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 596,
+            "line": 731,
             "signature": "removeLastChord() {",
             "calls": []
           },
@@ -11156,7 +11427,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 598,
+            "line": 733,
             "signature": "if (selectedChords.length > 0) {",
             "calls": []
           },
@@ -11164,7 +11435,7 @@
             "name": "showMessage",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 604,
+            "line": 739,
             "signature": "showMessage(message, type = 'info') {",
             "calls": []
           },
@@ -11172,7 +11443,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 607,
+            "line": 742,
             "signature": "if (!messageEl) {",
             "calls": []
           },
@@ -11180,7 +11451,7 @@
             "name": "getDebugInfo",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 625,
+            "line": 760,
             "signature": "getDebugInfo() {",
             "calls": []
           },
@@ -11188,7 +11459,7 @@
             "name": "selectChordNameLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 644,
+            "line": 779,
             "signature": "selectChordNameLegacy(chordName) {",
             "calls": []
           },
@@ -11196,7 +11467,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 657,
+            "line": 792,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -11204,7 +11475,7 @@
             "name": "selectChordTypeLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 672,
+            "line": 807,
             "signature": "selectChordTypeLegacy(chordType) {",
             "calls": []
           },
@@ -11212,7 +11483,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 685,
+            "line": 820,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -11220,7 +11491,7 @@
             "name": "tryAddChordLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 699,
+            "line": 834,
             "signature": "tryAddChordLegacy() {",
             "calls": []
           },
@@ -11228,7 +11499,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 700,
+            "line": 835,
             "signature": "if (window.selectedChordName && window.selectedChordType) {",
             "calls": []
           },
@@ -11236,7 +11507,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 702,
+            "line": 837,
             "signature": "if (typeof window.appendChord === 'function') {",
             "calls": []
           },
@@ -11244,7 +11515,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 705,
+            "line": 840,
             "signature": "if (typeof window.onInputChordsChanged === 'function') {",
             "calls": []
           },
@@ -11252,7 +11523,7 @@
             "name": "resetChordSelectionLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 716,
+            "line": 851,
             "signature": "resetChordSelectionLegacy() {",
             "calls": []
           },
@@ -11260,7 +11531,7 @@
             "name": "initializeChordInputListenerLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 730,
+            "line": 865,
             "signature": "initializeChordInputListenerLegacy() {",
             "calls": []
           }
@@ -13992,7 +14263,7 @@
         "name": "if",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 705,
+        "line": 840,
         "signature": "if (typeof window.onInputChordsChanged === 'function') {",
         "calls": []
       },
@@ -14120,8 +14391,8 @@
         "name": "handleTextInput",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 328,
-        "signature": "handleTextInput(value) {",
+        "line": 358,
+        "signature": "handleTextInput(inputValue) {",
         "calls": []
       },
       "EventCoordinator.handleTextInputFocus": {
@@ -14144,7 +14415,7 @@
         "name": "handleTextInputSubmit",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 353,
+        "line": 399,
         "signature": "handleTextInputSubmit(inputValue) {",
         "calls": []
       },
@@ -14152,79 +14423,15 @@
         "name": "clearTextInput",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 570,
+        "line": 705,
         "signature": "clearTextInput() {",
-        "calls": []
-      },
-      "EventCoordinator.handleSuggestionNavigation": {
-        "name": "handleSuggestionNavigation",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 394,
-        "signature": "handleSuggestionNavigation(key) {",
-        "calls": []
-      },
-      "EventCoordinator.handleSoundToggle": {
-        "name": "handleSoundToggle",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 412,
-        "signature": "handleSoundToggle() {",
-        "calls": []
-      },
-      "EventCoordinator.handleClearAll": {
-        "name": "handleClearAll",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 418,
-        "signature": "handleClearAll() {",
-        "calls": []
-      },
-      "EventCoordinator.updateUI": {
-        "name": "updateUI",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 424,
-        "signature": "updateUI() {",
-        "calls": []
-      },
-      "EventCoordinator.updateSelectedChordsDisplay": {
-        "name": "updateSelectedChordsDisplay",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 430,
-        "signature": "updateSelectedChordsDisplay() {",
-        "calls": []
-      },
-      "EventCoordinator.updateChordButtons": {
-        "name": "updateChordButtons",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 446,
-        "signature": "updateChordButtons() {",
-        "calls": []
-      },
-      "EventCoordinator.updateAvailableChordButtons": {
-        "name": "updateAvailableChordButtons",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 456,
-        "signature": "updateAvailableChordButtons() {",
-        "calls": []
-      },
-      "EventCoordinator.updateSuggestions": {
-        "name": "updateSuggestions",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 466,
-        "signature": "updateSuggestions(input) {",
         "calls": []
       },
       "EventCoordinator.showSuggestions": {
         "name": "showSuggestions",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 480,
+        "line": 615,
         "signature": "showSuggestions(suggestions) {",
         "calls": []
       },
@@ -14232,15 +14439,87 @@
         "name": "clearSuggestions",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 502,
+        "line": 637,
         "signature": "clearSuggestions() {",
+        "calls": []
+      },
+      "EventCoordinator.highlightMatch": {
+        "name": "highlightMatch",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 505,
+        "signature": "highlightMatch(suggestion, input) {",
+        "calls": []
+      },
+      "EventCoordinator.handleSuggestionNavigation": {
+        "name": "handleSuggestionNavigation",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 529,
+        "signature": "handleSuggestionNavigation(key) {",
+        "calls": []
+      },
+      "EventCoordinator.handleSoundToggle": {
+        "name": "handleSoundToggle",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 547,
+        "signature": "handleSoundToggle() {",
+        "calls": []
+      },
+      "EventCoordinator.handleClearAll": {
+        "name": "handleClearAll",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 553,
+        "signature": "handleClearAll() {",
+        "calls": []
+      },
+      "EventCoordinator.updateUI": {
+        "name": "updateUI",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 559,
+        "signature": "updateUI() {",
+        "calls": []
+      },
+      "EventCoordinator.updateSelectedChordsDisplay": {
+        "name": "updateSelectedChordsDisplay",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 565,
+        "signature": "updateSelectedChordsDisplay() {",
+        "calls": []
+      },
+      "EventCoordinator.updateChordButtons": {
+        "name": "updateChordButtons",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 581,
+        "signature": "updateChordButtons() {",
+        "calls": []
+      },
+      "EventCoordinator.updateAvailableChordButtons": {
+        "name": "updateAvailableChordButtons",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 591,
+        "signature": "updateAvailableChordButtons() {",
+        "calls": []
+      },
+      "EventCoordinator.updateSuggestions": {
+        "name": "updateSuggestions",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 601,
+        "signature": "updateSuggestions(input) {",
         "calls": []
       },
       "EventCoordinator.updateProgressions": {
         "name": "updateProgressions",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 510,
+        "line": 645,
         "signature": "updateProgressions() {",
         "calls": []
       },
@@ -14248,7 +14527,7 @@
         "name": "createChordElement",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 530,
+        "line": 665,
         "signature": "createChordElement(chord, index) {",
         "calls": []
       },
@@ -14256,7 +14535,7 @@
         "name": "formatChordNameLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 552,
+        "line": 687,
         "signature": "formatChordNameLegacy(chordName, chordType) {",
         "calls": []
       },
@@ -14264,7 +14543,7 @@
         "name": "focusTextInput",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 563,
+        "line": 698,
         "signature": "focusTextInput() {",
         "calls": []
       },
@@ -14272,7 +14551,7 @@
         "name": "showMessage",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 604,
+        "line": 739,
         "signature": "showMessage(message, type = 'info') {",
         "calls": []
       },
@@ -14280,7 +14559,7 @@
         "name": "removeLastChord",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 596,
+        "line": 731,
         "signature": "removeLastChord() {",
         "calls": []
       },
@@ -14288,7 +14567,7 @@
         "name": "getDebugInfo",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 625,
+        "line": 760,
         "signature": "getDebugInfo() {",
         "calls": []
       },
@@ -14296,7 +14575,7 @@
         "name": "selectChordNameLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 644,
+        "line": 779,
         "signature": "selectChordNameLegacy(chordName) {",
         "calls": []
       },
@@ -14304,7 +14583,7 @@
         "name": "selectChordTypeLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 672,
+        "line": 807,
         "signature": "selectChordTypeLegacy(chordType) {",
         "calls": []
       },
@@ -14312,7 +14591,7 @@
         "name": "tryAddChordLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 699,
+        "line": 834,
         "signature": "tryAddChordLegacy() {",
         "calls": []
       },
@@ -14320,7 +14599,7 @@
         "name": "resetChordSelectionLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 716,
+        "line": 851,
         "signature": "resetChordSelectionLegacy() {",
         "calls": []
       },
@@ -14328,7 +14607,7 @@
         "name": "initializeChordInputListenerLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 730,
+        "line": 865,
         "signature": "initializeChordInputListenerLegacy() {",
         "calls": []
       },
@@ -15279,11 +15558,18 @@
         "line": 167,
         "signature": "document.addEventListener('keydown', (e) => {"
       },
-      "modules\\eventCoordinator.js:542": {
+      "modules\\eventCoordinator.js:470": {
+        "event": "click",
+        "handler": "(",
+        "file": "modules\\eventCoordinator.js",
+        "line": 470,
+        "signature": "item.addEventListener('click', () => {"
+      },
+      "modules\\eventCoordinator.js:677": {
         "event": "click",
         "handler": "(e",
         "file": "modules\\eventCoordinator.js",
-        "line": 542,
+        "line": 677,
         "signature": "removeBtn.addEventListener('click', (e) => {"
       },
       "modules\\inputManager.js:351": {
@@ -21798,48 +22084,38 @@
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "handleTextInputSubmit",
-          "line": 353
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.clearSuggestions",
+          "callee": "handleTextInput",
           "line": 358
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelector",
-          "line": 361
+          "callee": "document.getElementById",
+          "line": 359
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 362
+          "line": 360
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.addChord",
-          "line": 364
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.clearTextInput",
-          "line": 365
+          "callee": "textInput.classList.remove",
+          "line": 363
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 370
+          "line": 366
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "inputValue.trim",
-          "line": 370
+          "line": 366
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.processTextInput",
-          "line": 371
+          "callee": "this.clearSuggestions",
+          "line": 367
         },
         {
           "caller": "modules\\eventCoordinator.js",
@@ -21848,633 +22124,618 @@
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 372
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.addChord",
+          "callee": "this.inputManager.getSuggestions",
           "line": 374
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "this.clearTextInput",
-          "line": 375
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.showMessage",
+          "callee": "this.inputManager.chordParser.parseChord",
           "line": 377
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "setTimeout",
+          "callee": "if ",
+          "line": 380
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "textInput.classList.add",
           "line": 382
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "clearTextInput",
-          "line": 387
+          "callee": "if ",
+          "line": 383
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
+          "callee": "textInput.classList.add",
+          "line": 385
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "textInput.classList.add",
           "line": 388
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 389
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "handleSuggestionNavigation",
-          "line": 394
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelectorAll",
-          "line": 395
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 396
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelector",
-          "line": 398
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 401
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "Array.from",
-          "line": 402
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "indexOf",
-          "line": 402
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "Math.min",
-          "line": 404
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "Math.max",
-          "line": 405
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "currentSelected.classList.remove",
-          "line": 406
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "classList.add",
-          "line": 409
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "handleSoundToggle",
-          "line": 412
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.audioManager.toggleSound",
-          "line": 413
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.set",
-          "line": 414
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.showMessage",
-          "line": 415
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "handleClearAll",
-          "line": 418
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.clearAll",
-          "line": 419
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.showMessage",
-          "line": 420
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "updateUI",
-          "line": 424
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.updateSelectedChordsDisplay",
-          "line": 425
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.updateChordButtons",
-          "line": 426
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.updateProgressions",
-          "line": 427
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "updateSelectedChordsDisplay",
-          "line": 430
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
-          "line": 431
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 432
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.get",
-          "line": 434
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedChords.forEach",
-          "line": 440
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.createChordElement",
-          "line": 441
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "container.appendChild",
-          "line": 442
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "updateChordButtons",
-          "line": 446
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.get",
-          "line": 447
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelectorAll",
-          "line": 450
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "forEach",
-          "line": 450
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "button.classList.toggle",
-          "line": 452
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedChords.includes",
-          "line": 452
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "updateAvailableChordButtons",
-          "line": 456
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.get",
-          "line": 457
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelectorAll",
-          "line": 460
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "forEach",
-          "line": 460
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "availableChords.includes",
-          "line": 462
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "updateSuggestions",
-          "line": 466
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 467
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.clearSuggestions",
-          "line": 468
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.chordParser.normalizeChordInput",
-          "line": 473
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.getSuggestions",
-          "line": 476
+          "line": 392
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "this.showSuggestions",
-          "line": 477
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "showSuggestions",
-          "line": 480
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
-          "line": 481
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 482
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "suggestions.forEach",
-          "line": 486
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.createElement",
-          "line": 487
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 492
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "item.classList.add",
-          "line": 493
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "container.appendChild",
-          "line": 496
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "clearSuggestions",
-          "line": 502
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
-          "line": 503
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 504
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "updateProgressions",
-          "line": 510
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.get",
-          "line": 511
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 514
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "window.initializeDOMReferences",
-          "line": 515
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 519
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "window.onInputChordsChanged",
-          "line": 521
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "catch ",
-          "line": 522
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "console.warn",
-          "line": 523
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "createChordElement",
-          "line": 530
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.createElement",
-          "line": 531
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "element.querySelector",
-          "line": 540
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 541
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "removeBtn.addEventListener",
-          "line": 542
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "e.stopPropagation",
-          "line": 543
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.removeSelectedChord",
-          "line": 544
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "formatChordNameLegacy",
-          "line": 552
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 554
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "window.formatChordName",
-          "line": 555
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 559
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "focusTextInput",
-          "line": 563
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
-          "line": 564
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 565
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "input.focus",
-          "line": 566
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "clearTextInput",
-          "line": 570
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
-          "line": 571
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 572
+          "line": 393
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "this.clearSuggestions",
-          "line": 575
+          "line": 395
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "showMessage",
-          "line": 579
+          "callee": "handleTextInputSubmit",
+          "line": 399
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
-          "line": 580
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 581
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "console.log",
-          "line": 582
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "type.toUpperCase",
-          "line": 582
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "setTimeout",
-          "line": 591
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "removeLastChord",
-          "line": 596
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.get",
-          "line": 597
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 598
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.removeChord",
-          "line": 600
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "showMessage",
-          "line": 604
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
-          "line": 606
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 607
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.createElement",
-          "line": 608
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.body.appendChild",
-          "line": 611
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "setTimeout",
-          "line": 619
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "getDebugInfo",
-          "line": 625
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.inputManager.getDebugInfo",
-          "line": 627
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.getDebugInfo",
-          "line": 628
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "selectChordNameLegacy",
-          "line": 644
+          "callee": "this.clearSuggestions",
+          "line": 404
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.querySelector",
-          "line": 645
+          "line": 407
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
+          "line": 408
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.addChord",
+          "line": 410
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.clearTextInput",
+          "line": 411
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 416
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "inputValue.trim",
+          "line": 416
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.processTextInput",
+          "line": 417
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "inputValue.trim",
+          "line": 417
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 418
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.addChord",
+          "line": 420
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.clearTextInput",
+          "line": 421
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.showMessage",
+          "line": 423
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "setTimeout",
+          "line": 428
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "clearTextInput",
+          "line": 433
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 434
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 435
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "textInput.classList.remove",
+          "line": 438
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "showSuggestions",
+          "line": 447
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 448
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 449
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 454
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "suggestions.forEach",
+          "line": 460
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.createElement",
+          "line": 461
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.highlightMatch",
+          "line": 466
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "item.addEventListener",
+          "line": 470
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.addChord",
+          "line": 471
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.clearTextInput",
+          "line": 472
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.clearSuggestions",
+          "line": 473
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 477
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "item.classList.add",
+          "line": 478
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "container.appendChild",
+          "line": 481
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "clearSuggestions",
+          "line": 491
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 492
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 493
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "highlightMatch",
+          "line": 505
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 506
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "input.toLowerCase",
+          "line": 510
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "suggestion.toLowerCase",
+          "line": 511
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "suggestionLower.indexOf",
+          "line": 514
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 516
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "suggestion.substring",
+          "line": 522
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "suggestion.substring",
+          "line": 523
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "suggestion.substring",
+          "line": 524
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "handleSuggestionNavigation",
+          "line": 529
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelectorAll",
+          "line": 530
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 531
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelector",
+          "line": 533
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 536
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "Array.from",
+          "line": 537
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "indexOf",
+          "line": 537
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "Math.min",
+          "line": 539
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "Math.max",
+          "line": 540
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "currentSelected.classList.remove",
+          "line": 541
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "classList.add",
+          "line": 544
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "handleSoundToggle",
+          "line": 547
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.audioManager.toggleSound",
+          "line": 548
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.stateManager.set",
+          "line": 549
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.showMessage",
+          "line": 550
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "handleClearAll",
+          "line": 553
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.clearAll",
+          "line": 554
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.showMessage",
+          "line": 555
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "updateUI",
+          "line": 559
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.updateSelectedChordsDisplay",
+          "line": 560
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.updateChordButtons",
+          "line": 561
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.updateProgressions",
+          "line": 562
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "updateSelectedChordsDisplay",
+          "line": 565
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 566
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 567
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.stateManager.get",
+          "line": 569
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectedChords.forEach",
+          "line": 575
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.createChordElement",
+          "line": 576
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "container.appendChild",
+          "line": 577
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "updateChordButtons",
+          "line": 581
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.stateManager.get",
+          "line": 582
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelectorAll",
+          "line": 585
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "forEach",
+          "line": 585
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "button.classList.toggle",
+          "line": 587
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectedChords.includes",
+          "line": 587
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "updateAvailableChordButtons",
+          "line": 591
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.stateManager.get",
+          "line": 592
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelectorAll",
+          "line": 595
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "forEach",
+          "line": 595
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "availableChords.includes",
+          "line": 597
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "updateSuggestions",
+          "line": 601
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 602
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.clearSuggestions",
+          "line": 603
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.chordParser.normalizeChordInput",
+          "line": 608
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.getSuggestions",
+          "line": 611
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.showSuggestions",
+          "line": 612
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "showSuggestions",
+          "line": 615
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 616
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 617
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "suggestions.forEach",
+          "line": 621
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.createElement",
+          "line": 622
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 627
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "item.classList.add",
+          "line": 628
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "container.appendChild",
+          "line": 631
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "clearSuggestions",
+          "line": 637
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 638
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 639
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "updateProgressions",
+          "line": 645
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.stateManager.get",
           "line": 646
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 648
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedButton.classList.contains",
-          "line": 648
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedButton.classList.remove",
           "line": 649
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelectorAll",
-          "line": 655
+          "callee": "window.initializeDOMReferences",
+          "line": 650
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "chordNameButtons.forEach",
+          "callee": "if ",
+          "line": 654
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "window.onInputChordsChanged",
           "line": 656
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
+          "callee": "catch ",
           "line": 657
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "btn.classList.remove",
+          "callee": "console.warn",
           "line": 658
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedButton.classList.add",
-          "line": 662
+          "callee": "createChordElement",
+          "line": 665
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "console.log",
-          "line": 664
+          "callee": "document.createElement",
+          "line": 666
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "selectChordTypeLegacy",
-          "line": 672
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelector",
-          "line": 673
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 674
+          "callee": "element.querySelector",
+          "line": 675
         },
         {
           "caller": "modules\\eventCoordinator.js",
@@ -22483,47 +22744,47 @@
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedButton.classList.contains",
-          "line": 676
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedButton.classList.remove",
+          "callee": "removeBtn.addEventListener",
           "line": 677
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelectorAll",
-          "line": 683
+          "callee": "e.stopPropagation",
+          "line": 678
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "chordTypeButtons.forEach",
-          "line": 684
+          "callee": "this.stateManager.removeSelectedChord",
+          "line": 679
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "formatChordNameLegacy",
+          "line": 687
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 685
+          "line": 689
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "btn.classList.remove",
-          "line": 686
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "selectedButton.classList.add",
+          "callee": "window.formatChordName",
           "line": 690
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "console.log",
-          "line": 692
+          "callee": "if ",
+          "line": 694
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "tryAddChordLegacy",
+          "callee": "focusTextInput",
+          "line": 698
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
           "line": 699
         },
         {
@@ -22533,63 +22794,313 @@
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "this.formatChordNameLegacy",
+          "callee": "input.focus",
           "line": 701
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 702
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "window.appendChord",
-          "line": 703
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
+          "callee": "clearTextInput",
           "line": 705
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "window.onInputChordsChanged",
+          "callee": "document.getElementById",
           "line": 706
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "this.resetChordSelectionLegacy",
-          "line": 708
+          "callee": "if ",
+          "line": 707
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "resetChordSelectionLegacy",
+          "callee": "this.clearSuggestions",
+          "line": 710
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "showMessage",
+          "line": 714
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 715
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
           "line": 716
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "document.querySelectorAll",
-          "line": 718
+          "callee": "console.log",
+          "line": 717
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "allButtons.forEach",
-          "line": 719
+          "callee": "type.toUpperCase",
+          "line": 717
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "setTimeout",
+          "line": 726
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "removeLastChord",
+          "line": 731
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.stateManager.get",
+          "line": 732
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 733
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.removeChord",
+          "line": 735
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "showMessage",
+          "line": 739
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.getElementById",
+          "line": 741
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 742
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.createElement",
+          "line": 743
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.body.appendChild",
+          "line": 746
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "setTimeout",
+          "line": 754
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "getDebugInfo",
+          "line": 760
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.inputManager.getDebugInfo",
+          "line": 762
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.stateManager.getDebugInfo",
+          "line": 763
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectChordNameLegacy",
+          "line": 779
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelector",
+          "line": 780
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 781
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 783
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectedButton.classList.contains",
+          "line": 783
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectedButton.classList.remove",
+          "line": 784
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelectorAll",
+          "line": 790
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "chordNameButtons.forEach",
+          "line": 791
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 792
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "btn.classList.remove",
-          "line": 719
+          "line": 793
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "initializeChordInputListenerLegacy",
-          "line": 730
+          "callee": "selectedButton.classList.add",
+          "line": 797
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "console.log",
-          "line": 733
+          "line": 799
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectChordTypeLegacy",
+          "line": 807
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelector",
+          "line": 808
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 809
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 811
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectedButton.classList.contains",
+          "line": 811
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectedButton.classList.remove",
+          "line": 812
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelectorAll",
+          "line": 818
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "chordTypeButtons.forEach",
+          "line": 819
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 820
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "btn.classList.remove",
+          "line": 821
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "selectedButton.classList.add",
+          "line": 825
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "console.log",
+          "line": 827
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "tryAddChordLegacy",
+          "line": 834
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 835
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.formatChordNameLegacy",
+          "line": 836
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 837
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "window.appendChord",
+          "line": 838
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "if ",
+          "line": 840
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "window.onInputChordsChanged",
+          "line": 841
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "this.resetChordSelectionLegacy",
+          "line": 843
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "resetChordSelectionLegacy",
+          "line": 851
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "document.querySelectorAll",
+          "line": 853
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "allButtons.forEach",
+          "line": 854
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "btn.classList.remove",
+          "line": 854
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "initializeChordInputListenerLegacy",
+          "line": 865
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "console.log",
+          "line": 868
         }
       ],
       "modules\\inputManager.js": [
