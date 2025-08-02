@@ -2,10 +2,10 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 338
-   Unique method names: 266
+   Total method definitions found: 316
+   Unique method names: 262
    Critical same-file duplicates: 7
-   Cross-file duplicates: 38
+   Cross-file duplicates: 30
    Similar method names: 163
 
 CRITICAL: Same-file duplicates (JavaScript uses last definition):
@@ -42,8 +42,6 @@ Cross-file duplicates (may be intentional API wrappers):
 
 Method "constructor":
    codebase-mapper.js:12 (class method)
-   detect-duplicates-file-mode.js:12 (class method)
-   detect-duplicates-fixed.js:12 (class method)
    detect-duplicates.js:12 (class method)
    improved-codebase-mapper.js:12 (class method)
    modules\appIntegration.js:15 (class method)
@@ -59,53 +57,13 @@ Method "constructor":
 
 Method "findJavaScriptFiles":
    codebase-mapper.js:47 (class method)
-   detect-duplicates-file-mode.js:63 (class method)
-   detect-duplicates-fixed.js:54 (class method)
    detect-duplicates.js:50 (class method)
    improved-codebase-mapper.js:60 (class method)
    simple-duplicate-check.js:11 (function declaration)
 
 Method "generateReport":
    codebase-mapper.js:217 (class method)
-   detect-duplicates-file-mode.js:247 (class method)
-   detect-duplicates-fixed.js:174 (class method)
    detect-duplicates.js:247 (class method)
-
-Method "scanProject":
-   detect-duplicates-file-mode.js:30 (class method)
-   detect-duplicates-fixed.js:24 (class method)
-   detect-duplicates.js:24 (class method)
-
-Method "scanFile":
-   detect-duplicates-file-mode.js:87 (class method)
-   detect-duplicates-fixed.js:78 (class method)
-   detect-duplicates.js:75 (class method)
-
-Method "isValidMethodName":
-   detect-duplicates-file-mode.js:144 (class method)
-   detect-duplicates-fixed.js:131 (class method)
-
-Method "analyzeResults":
-   detect-duplicates-file-mode.js:150 (class method)
-   detect-duplicates-fixed.js:137 (class method)
-   detect-duplicates.js:151 (class method)
-
-Method "findSimilarMethodNames":
-   detect-duplicates-file-mode.js:190 (class method)
-   detect-duplicates.js:191 (class method)
-
-Method "areMethodNamesSimilar":
-   detect-duplicates-file-mode.js:210 (class method)
-   detect-duplicates.js:211 (class method)
-
-Method "getResults":
-   detect-duplicates-file-mode.js:338 (class method)
-   detect-duplicates-fixed.js:257 (class method)
-   detect-duplicates.js:344 (class method)
-
-Method "outputReport":
-   detect-duplicates-fixed.js:234 (class method)
-   detect-duplicates.js:324 (class method)
 
 Method "addChord":
    modules\appIntegration.js:267 (class method)
@@ -230,7 +188,7 @@ Similar method names (potential confusion):
    on: modules\appIntegration.js:309
 
 "getResults" vs "get"
-   getResults: detect-duplicates-file-mode.js:338
+   getResults: detect-duplicates.js:344
    get: modules\stateManager.js:80
 
 "extractFunctions" vs "on"
