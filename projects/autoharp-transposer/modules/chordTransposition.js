@@ -1,6 +1,6 @@
 // =============================================================================
 // CHORD TRANSPOSITION
-// Handles key changes, capo simulation, and chord progression transposition
+// Handles key changes and chord progression transposition
 // Core music theory logic for autoharp chord transposition
 // =============================================================================
 
@@ -193,50 +193,7 @@ class ChordTransposition {
     return [...new Set(alternatives)];
   }
   
-  /**
-   * Simulate capo effect by transposing chords down
-   * @param {Array<string>} chords - Original chord progression
-   * @param {number} capoFret - Capo position (1-12)
-   * @param {string} autoharpType - Autoharp type for validation
-   * @returns {Object} Capo simulation result
-   */
-  simulateCapo(chords, capoFret, autoharpType = '21-chord') {
-    if (capoFret < 1 || capoFret > 12) {
-      return { success: false, error: 'Capo fret must be between 1 and 12' };
-    }
-    
-    // Capo effectively transposes everything down by the capo fret amount
-    const result = {
-      success: false,
-      capoFret: capoFret,
-      autoharpType: autoharpType,
-      chordMappings: [],
-      playableChords: [],
-      unplayableChords: []
-    };
-    
-    for (const chord of chords) {
-      const transposedChord = this.transposeChord(chord, -capoFret);
-      const isPlayable = transposedChord && this.autoharpTypes.isChordAvailable(transposedChord, autoharpType);
-      
-      const mapping = {
-        original: chord,
-        withCapo: transposedChord,
-        playable: isPlayable
-      };
-      
-      result.chordMappings.push(mapping);
-      
-      if (isPlayable) {
-        result.playableChords.push(transposedChord);
-      } else {
-        result.unplayableChords.push(chord);
-      }
-    }
-    
-    result.success = result.playableChords.length > 0;
-    return result;
-  }
+
   
   /**
    * Find optimal keys for a chord progression on a specific autoharp type

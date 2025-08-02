@@ -5,7 +5,7 @@ SUMMARY STATISTICS:
    Files analyzed: 32
    Classes found: 16
    Functions found: 66
-   Methods found: 317
+   Methods found: 315
    Event handlers: 44
 
 CLASSES AND METHODS:
@@ -239,11 +239,10 @@ Class: ChordParser (modules\chordParser.js:10)
    getAutoharpTypeInfo() (line 740)
    findBestAutoharpType() (line 750)
    findOptimalKeys() (line 760)
-   simulateCapo() (line 772)
-   getCompatibilityMatrix() (line 782)
-   analyzeProgression() (line 791)
-   parseChordWithAutoharpInfo() (line 801)
-   if() (line 805)
+   getCompatibilityMatrix() (line 772)
+   analyzeProgression() (line 781)
+   parseChordWithAutoharpInfo() (line 791)
+   if() (line 795)
 
 Class: ChordTransposition (modules\chordTransposition.js:12)
    constructor (line 13)
@@ -259,15 +258,11 @@ Class: ChordTransposition (modules\chordTransposition.js:12)
    findAlternativeChords() (line 151)
    for() (line 162)
    if() (line 185)
-   simulateCapo() (line 203)
-   if() (line 204)
-   for() (line 218)
-   if() (line 230)
-   findOptimalKeys() (line 247)
-   for() (line 251)
-   if() (line 267)
-   analyzeProgression() (line 279)
-   if() (line 311)
+   findOptimalKeys() (line 204)
+   for() (line 208)
+   if() (line 224)
+   analyzeProgression() (line 236)
+   if() (line 268)
 
 Class: DataSchemas (modules\dataSchemas.js:6)
    constructor (line 7)

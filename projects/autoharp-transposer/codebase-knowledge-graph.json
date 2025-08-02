@@ -1,11 +1,11 @@
 {
-  "generated": "2025-08-02T08:28:06.811Z",
+  "generated": "2025-08-02T08:38:23.915Z",
   "project": "autoharp-transposer",
   "statistics": {
     "files": 32,
     "classes": 16,
     "functions": 66,
-    "methods": 317,
+    "methods": 315,
     "eventHandlers": 44
   },
   "graph": {
@@ -3131,18 +3131,10 @@
                 "calls": []
               },
               {
-                "name": "simulateCapo",
-                "class": "ChordParser",
-                "file": "modules\\chordParser.js",
-                "line": 772,
-                "signature": "simulateCapo(chords, capoFret, autoharpType = null) {",
-                "calls": []
-              },
-              {
                 "name": "getCompatibilityMatrix",
                 "class": "ChordParser",
                 "file": "modules\\chordParser.js",
-                "line": 782,
+                "line": 772,
                 "signature": "getCompatibilityMatrix(chords) {",
                 "calls": []
               },
@@ -3150,7 +3142,7 @@
                 "name": "analyzeProgression",
                 "class": "ChordParser",
                 "file": "modules\\chordParser.js",
-                "line": 791,
+                "line": 781,
                 "signature": "analyzeProgression(chords) {",
                 "calls": []
               },
@@ -3158,7 +3150,7 @@
                 "name": "parseChordWithAutoharpInfo",
                 "class": "ChordParser",
                 "file": "modules\\chordParser.js",
-                "line": 801,
+                "line": 791,
                 "signature": "parseChordWithAutoharpInfo(input, autoharpType = null) {",
                 "calls": []
               },
@@ -3166,7 +3158,7 @@
                 "name": "if",
                 "class": "ChordParser",
                 "file": "modules\\chordParser.js",
-                "line": 805,
+                "line": 795,
                 "signature": "if (!parsedChord) {",
                 "calls": []
               }
@@ -3629,18 +3621,10 @@
             "calls": []
           },
           {
-            "name": "simulateCapo",
-            "class": "ChordParser",
-            "file": "modules\\chordParser.js",
-            "line": 772,
-            "signature": "simulateCapo(chords, capoFret, autoharpType = null) {",
-            "calls": []
-          },
-          {
             "name": "getCompatibilityMatrix",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 782,
+            "line": 772,
             "signature": "getCompatibilityMatrix(chords) {",
             "calls": []
           },
@@ -3648,7 +3632,7 @@
             "name": "analyzeProgression",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 791,
+            "line": 781,
             "signature": "analyzeProgression(chords) {",
             "calls": []
           },
@@ -3656,7 +3640,7 @@
             "name": "parseChordWithAutoharpInfo",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 801,
+            "line": 791,
             "signature": "parseChordWithAutoharpInfo(input, autoharpType = null) {",
             "calls": []
           },
@@ -3664,7 +3648,7 @@
             "name": "if",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 805,
+            "line": 795,
             "signature": "if (!parsedChord) {",
             "calls": []
           }
@@ -3679,7 +3663,7 @@
           "./autoharpTypes.js",
           "./chordTransposition.js"
         ],
-        "lineCount": 831
+        "lineCount": 821
       },
       "modules\\chordTransposition.js": {
         "path": "modules\\chordTransposition.js",
@@ -3787,42 +3771,10 @@
                 "calls": []
               },
               {
-                "name": "simulateCapo",
-                "class": "ChordTransposition",
-                "file": "modules\\chordTransposition.js",
-                "line": 203,
-                "signature": "simulateCapo(chords, capoFret, autoharpType = '21-chord') {",
-                "calls": []
-              },
-              {
-                "name": "if",
-                "class": "ChordTransposition",
-                "file": "modules\\chordTransposition.js",
-                "line": 204,
-                "signature": "if (capoFret < 1 || capoFret > 12) {",
-                "calls": []
-              },
-              {
-                "name": "for",
-                "class": "ChordTransposition",
-                "file": "modules\\chordTransposition.js",
-                "line": 218,
-                "signature": "for (const chord of chords) {",
-                "calls": []
-              },
-              {
-                "name": "if",
-                "class": "ChordTransposition",
-                "file": "modules\\chordTransposition.js",
-                "line": 230,
-                "signature": "if (isPlayable) {",
-                "calls": []
-              },
-              {
                 "name": "findOptimalKeys",
                 "class": "ChordTransposition",
                 "file": "modules\\chordTransposition.js",
-                "line": 247,
+                "line": 204,
                 "signature": "findOptimalKeys(chords, autoharpType = '21-chord') {",
                 "calls": []
               },
@@ -3830,7 +3782,7 @@
                 "name": "for",
                 "class": "ChordTransposition",
                 "file": "modules\\chordTransposition.js",
-                "line": 251,
+                "line": 208,
                 "signature": "for (let semitones = 0; semitones < 12; semitones++) {",
                 "calls": []
               },
@@ -3838,7 +3790,7 @@
                 "name": "if",
                 "class": "ChordTransposition",
                 "file": "modules\\chordTransposition.js",
-                "line": 267,
+                "line": 224,
                 "signature": "if (b.coverage !== a.coverage) {",
                 "calls": []
               },
@@ -3846,7 +3798,7 @@
                 "name": "analyzeProgression",
                 "class": "ChordTransposition",
                 "file": "modules\\chordTransposition.js",
-                "line": 279,
+                "line": 236,
                 "signature": "analyzeProgression(chords) {",
                 "calls": []
               },
@@ -3854,7 +3806,7 @@
                 "name": "if",
                 "class": "ChordTransposition",
                 "file": "modules\\chordTransposition.js",
-                "line": 311,
+                "line": 268,
                 "signature": "if (uniqueChordTypes.size > 3) {",
                 "calls": []
               }
@@ -3964,42 +3916,10 @@
             "calls": []
           },
           {
-            "name": "simulateCapo",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 203,
-            "signature": "simulateCapo(chords, capoFret, autoharpType = '21-chord') {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 204,
-            "signature": "if (capoFret < 1 || capoFret > 12) {",
-            "calls": []
-          },
-          {
-            "name": "for",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 218,
-            "signature": "for (const chord of chords) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 230,
-            "signature": "if (isPlayable) {",
-            "calls": []
-          },
-          {
             "name": "findOptimalKeys",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 247,
+            "line": 204,
             "signature": "findOptimalKeys(chords, autoharpType = '21-chord') {",
             "calls": []
           },
@@ -4007,7 +3927,7 @@
             "name": "for",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 251,
+            "line": 208,
             "signature": "for (let semitones = 0; semitones < 12; semitones++) {",
             "calls": []
           },
@@ -4015,7 +3935,7 @@
             "name": "if",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 267,
+            "line": 224,
             "signature": "if (b.coverage !== a.coverage) {",
             "calls": []
           },
@@ -4023,7 +3943,7 @@
             "name": "analyzeProgression",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 279,
+            "line": 236,
             "signature": "analyzeProgression(chords) {",
             "calls": []
           },
@@ -4031,7 +3951,7 @@
             "name": "if",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 311,
+            "line": 268,
             "signature": "if (uniqueChordTypes.size > 3) {",
             "calls": []
           }
@@ -4044,7 +3964,7 @@
         "dependencies": [
           "./autoharpTypes.js"
         ],
-        "lineCount": 322
+        "lineCount": 279
       },
       "modules\\dataSchemas.js": {
         "path": "modules\\dataSchemas.js",
@@ -12087,18 +12007,10 @@
             "calls": []
           },
           {
-            "name": "simulateCapo",
-            "class": "ChordParser",
-            "file": "modules\\chordParser.js",
-            "line": 772,
-            "signature": "simulateCapo(chords, capoFret, autoharpType = null) {",
-            "calls": []
-          },
-          {
             "name": "getCompatibilityMatrix",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 782,
+            "line": 772,
             "signature": "getCompatibilityMatrix(chords) {",
             "calls": []
           },
@@ -12106,7 +12018,7 @@
             "name": "analyzeProgression",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 791,
+            "line": 781,
             "signature": "analyzeProgression(chords) {",
             "calls": []
           },
@@ -12114,7 +12026,7 @@
             "name": "parseChordWithAutoharpInfo",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 801,
+            "line": 791,
             "signature": "parseChordWithAutoharpInfo(input, autoharpType = null) {",
             "calls": []
           },
@@ -12122,7 +12034,7 @@
             "name": "if",
             "class": "ChordParser",
             "file": "modules\\chordParser.js",
-            "line": 805,
+            "line": 795,
             "signature": "if (!parsedChord) {",
             "calls": []
           }
@@ -12234,42 +12146,10 @@
             "calls": []
           },
           {
-            "name": "simulateCapo",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 203,
-            "signature": "simulateCapo(chords, capoFret, autoharpType = '21-chord') {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 204,
-            "signature": "if (capoFret < 1 || capoFret > 12) {",
-            "calls": []
-          },
-          {
-            "name": "for",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 218,
-            "signature": "for (const chord of chords) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "ChordTransposition",
-            "file": "modules\\chordTransposition.js",
-            "line": 230,
-            "signature": "if (isPlayable) {",
-            "calls": []
-          },
-          {
             "name": "findOptimalKeys",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 247,
+            "line": 204,
             "signature": "findOptimalKeys(chords, autoharpType = '21-chord') {",
             "calls": []
           },
@@ -12277,7 +12157,7 @@
             "name": "for",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 251,
+            "line": 208,
             "signature": "for (let semitones = 0; semitones < 12; semitones++) {",
             "calls": []
           },
@@ -12285,7 +12165,7 @@
             "name": "if",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 267,
+            "line": 224,
             "signature": "if (b.coverage !== a.coverage) {",
             "calls": []
           },
@@ -12293,7 +12173,7 @@
             "name": "analyzeProgression",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 279,
+            "line": 236,
             "signature": "analyzeProgression(chords) {",
             "calls": []
           },
@@ -12301,7 +12181,7 @@
             "name": "if",
             "class": "ChordTransposition",
             "file": "modules\\chordTransposition.js",
-            "line": 311,
+            "line": 268,
             "signature": "if (uniqueChordTypes.size > 3) {",
             "calls": []
           }
@@ -16150,7 +16030,7 @@
         "name": "if",
         "class": "ChordParser",
         "file": "modules\\chordParser.js",
-        "line": 805,
+        "line": 795,
         "signature": "if (!parsedChord) {",
         "calls": []
       },
@@ -16370,19 +16250,11 @@
         "signature": "findOptimalKeys(chords, autoharpType = null) {",
         "calls": []
       },
-      "ChordParser.simulateCapo": {
-        "name": "simulateCapo",
-        "class": "ChordParser",
-        "file": "modules\\chordParser.js",
-        "line": 772,
-        "signature": "simulateCapo(chords, capoFret, autoharpType = null) {",
-        "calls": []
-      },
       "ChordParser.getCompatibilityMatrix": {
         "name": "getCompatibilityMatrix",
         "class": "ChordParser",
         "file": "modules\\chordParser.js",
-        "line": 782,
+        "line": 772,
         "signature": "getCompatibilityMatrix(chords) {",
         "calls": []
       },
@@ -16390,7 +16262,7 @@
         "name": "analyzeProgression",
         "class": "ChordParser",
         "file": "modules\\chordParser.js",
-        "line": 791,
+        "line": 781,
         "signature": "analyzeProgression(chords) {",
         "calls": []
       },
@@ -16398,7 +16270,7 @@
         "name": "parseChordWithAutoharpInfo",
         "class": "ChordParser",
         "file": "modules\\chordParser.js",
-        "line": 801,
+        "line": 791,
         "signature": "parseChordWithAutoharpInfo(input, autoharpType = null) {",
         "calls": []
       },
@@ -16422,7 +16294,7 @@
         "name": "if",
         "class": "ChordTransposition",
         "file": "modules\\chordTransposition.js",
-        "line": 311,
+        "line": 268,
         "signature": "if (uniqueChordTypes.size > 3) {",
         "calls": []
       },
@@ -16446,7 +16318,7 @@
         "name": "for",
         "class": "ChordTransposition",
         "file": "modules\\chordTransposition.js",
-        "line": 251,
+        "line": 208,
         "signature": "for (let semitones = 0; semitones < 12; semitones++) {",
         "calls": []
       },
@@ -16458,19 +16330,11 @@
         "signature": "findAlternativeChords(targetChord, autoharpType) {",
         "calls": []
       },
-      "ChordTransposition.simulateCapo": {
-        "name": "simulateCapo",
-        "class": "ChordTransposition",
-        "file": "modules\\chordTransposition.js",
-        "line": 203,
-        "signature": "simulateCapo(chords, capoFret, autoharpType = '21-chord') {",
-        "calls": []
-      },
       "ChordTransposition.findOptimalKeys": {
         "name": "findOptimalKeys",
         "class": "ChordTransposition",
         "file": "modules\\chordTransposition.js",
-        "line": 247,
+        "line": 204,
         "signature": "findOptimalKeys(chords, autoharpType = '21-chord') {",
         "calls": []
       },
@@ -16478,7 +16342,7 @@
         "name": "analyzeProgression",
         "class": "ChordTransposition",
         "file": "modules\\chordTransposition.js",
-        "line": 279,
+        "line": 236,
         "signature": "analyzeProgression(chords) {",
         "calls": []
       },
@@ -23708,73 +23572,53 @@
         },
         {
           "caller": "modules\\chordParser.js",
-          "callee": "position ",
-          "line": 768
-        },
-        {
-          "caller": "modules\\chordParser.js",
-          "callee": "type ",
-          "line": 769
-        },
-        {
-          "caller": "modules\\chordParser.js",
-          "callee": "simulateCapo",
+          "callee": "getCompatibilityMatrix",
           "line": 772
         },
         {
           "caller": "modules\\chordParser.js",
-          "callee": "this.transposition.simulateCapo",
-          "line": 774
-        },
-        {
-          "caller": "modules\\chordParser.js",
-          "callee": "getCompatibilityMatrix",
-          "line": 782
-        },
-        {
-          "caller": "modules\\chordParser.js",
           "callee": "this.autoharpTypes.getCompatibilityMatrix",
-          "line": 783
+          "line": 773
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "analyzeProgression",
-          "line": 791
+          "line": 781
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "this.transposition.analyzeProgression",
-          "line": 792
+          "line": 782
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "validation ",
-          "line": 798
+          "line": 788
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "parseChordWithAutoharpInfo",
-          "line": 801
+          "line": 791
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "this.parseChord",
-          "line": 803
+          "line": 793
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "if ",
-          "line": 805
+          "line": 795
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "this.validateChordForAutoharp",
-          "line": 816
+          "line": 806
         },
         {
           "caller": "modules\\chordParser.js",
           "callee": "this.transposition.findAlternativeChords",
-          "line": 817
+          "line": 807
         }
       ],
       "modules\\chordTransposition.js": [
@@ -24110,153 +23954,103 @@
         },
         {
           "caller": "modules\\chordTransposition.js",
-          "callee": "position ",
-          "line": 199
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "simulateCapo",
-          "line": 203
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "if ",
+          "callee": "findOptimalKeys",
           "line": 204
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "for ",
-          "line": 218
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "this.transposeChord",
-          "line": 219
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "this.autoharpTypes.isChordAvailable",
-          "line": 220
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "result.chordMappings.push",
-          "line": 228
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "if ",
-          "line": 230
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "result.playableChords.push",
-          "line": 231
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "result.unplayableChords.push",
-          "line": 233
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "findOptimalKeys",
-          "line": 247
-        },
-        {
-          "caller": "modules\\chordTransposition.js",
-          "callee": "for ",
-          "line": 251
+          "line": 208
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "this.transposeProgression",
-          "line": 253
+          "line": 210
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "keyOptions.push",
-          "line": 255
+          "line": 212
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "keyOptions.sort",
-          "line": 266
+          "line": 223
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "if ",
-          "line": 267
+          "line": 224
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "analyzeProgression",
-          "line": 279
+          "line": 236
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "chords.map",
-          "line": 288
+          "line": 245
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "chord.match",
-          "line": 289
+          "line": 246
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "filter",
-          "line": 291
+          "line": 248
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "rootNotes.forEach",
-          "line": 295
+          "line": 252
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "Object.entries",
-          "line": 300
+          "line": 257
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "sort",
-          "line": 301
+          "line": 258
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "map",
-          "line": 302
+          "line": 259
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "slice",
-          "line": 303
+          "line": 260
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "Set",
-          "line": 306
+          "line": 263
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "chords.map",
-          "line": 306
+          "line": 263
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "chord.match",
-          "line": 307
+          "line": 264
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "if ",
-          "line": 311
+          "line": 268
         },
         {
           "caller": "modules\\chordTransposition.js",
           "callee": "if ",
-          "line": 313
+          "line": 270
         }
       ],
       "modules\\dataSchemas.js": [
@@ -31470,7 +31264,7 @@
         },
         {
           "caller": "tests\\test-chord-logic-specialist.js",
-          "callee": "capoTests.forEach",
+          "callee": "keyOptimizationTests.forEach",
           "line": 151
         },
         {

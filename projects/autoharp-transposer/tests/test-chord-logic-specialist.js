@@ -141,15 +141,15 @@ try {
   console.log(`  4. Autoharp type: ${testWorkflow.autoharpType}`);
   console.log('  5. Expected: Parse → Validate → Transpose → Check Compatibility');
   
-  // Test capo simulation
-  const capoTests = [
-    { chords: ['G', 'C', 'D'], capoFret: 2, description: 'Capo 2nd fret simulation' },
-    { chords: ['E', 'A', 'B'], capoFret: 4, description: 'Capo 4th fret simulation' }
+  // Test key optimization instead of capo simulation (more relevant for autoharps)
+  const keyOptimizationTests = [
+    { chords: ['G', 'C', 'D'], description: 'Find optimal keys for G-C-D progression' },
+    { chords: ['E', 'A', 'B'], description: 'Find optimal keys for E-A-B progression' }
   ];
   
-  console.log('✓ Capo simulation tests:');
-  capoTests.forEach(test => {
-    console.log(`  - ${test.description}: ${test.chords.join(', ')} with capo on fret ${test.capoFret}`);
+  console.log('✓ Key optimization tests:');
+  keyOptimizationTests.forEach(test => {
+    console.log(`  - ${test.description}: ${test.chords.join(', ')}`);
   });
   
 } catch (error) {

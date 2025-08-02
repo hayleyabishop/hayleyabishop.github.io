@@ -2,10 +2,10 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 351
-   Unique method names: 299
+   Total method definitions found: 349
+   Unique method names: 298
    Critical same-file duplicates: 0
-   Cross-file duplicates: 30
+   Cross-file duplicates: 29
    Similar method names: 191
 
 Cross-file duplicates (may be intentional API wrappers):
@@ -90,7 +90,7 @@ Method "isChordAvailable":
 
 Method "getCompatibilityMatrix":
    modules\autoharpTypes.js:172 (class method)
-   modules\chordParser.js:782 (class method)
+   modules\chordParser.js:772 (class method)
 
 Method "findBestAutoharpType":
    modules\autoharpTypes.js:191 (class method)
@@ -122,15 +122,11 @@ Method "transposeProgression":
 
 Method "findOptimalKeys":
    modules\chordParser.js:760 (class method)
-   modules\chordTransposition.js:247 (class method)
-
-Method "simulateCapo":
-   modules\chordParser.js:772 (class method)
-   modules\chordTransposition.js:203 (class method)
+   modules\chordTransposition.js:204 (class method)
 
 Method "analyzeProgression":
-   modules\chordParser.js:791 (class method)
-   modules\chordTransposition.js:279 (class method)
+   modules\chordParser.js:781 (class method)
+   modules\chordTransposition.js:236 (class method)
 
 Method "updateSuggestions":
    modules\eventCoordinator.js:594 (class method)

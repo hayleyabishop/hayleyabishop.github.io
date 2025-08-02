@@ -762,17 +762,7 @@ class ChordParser {
     return this.transposition.findOptimalKeys(chords, targetType);
   }
   
-  /**
-   * Simulate capo effect for autoharp playing
-   * @param {Array<string>} chords - Original chord progression
-   * @param {number} capoFret - Capo position (1-12)
-   * @param {string} autoharpType - Autoharp type (optional, uses current if not specified)
-   * @returns {Object} Capo simulation result
-   */
-  simulateCapo(chords, capoFret, autoharpType = null) {
-    const targetType = autoharpType || this.currentAutoharpType;
-    return this.transposition.simulateCapo(chords, capoFret, targetType);
-  }
+
   
   /**
    * Get comprehensive compatibility matrix for multiple chords across autoharp types
