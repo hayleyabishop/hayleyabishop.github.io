@@ -371,6 +371,161 @@ class StorageManager {
     };
   }
 
+  // =============================================================================
+  // PROJECT MANAGEMENT (Interface Methods)
+  // =============================================================================
+  
+  saveProject(projectData) {
+    if (!projectData || !projectData.id) {
+      console.warn('Cannot save project: missing project data or ID');
+      return false;
+    }
+    
+    // Import DataSchemas for validation
+    import('./dataSchemas.js').then(({ DataSchemas }) => {
+      const validation = DataSchemas.validateProject(projectData);
+      if (!validation.isValid) {
+        console.warn('Project validation failed:', validation.errors);
+        // Continue saving but log warnings
+      }
+      if (validation.warnings.length > 0) {
+        console.info('Project validation warnings:', validation.warnings);
+      }
+    }).catch(err => {
+      console.warn('Could not validate project data:', err);
+    });
+    
+    // Update modification timestamp
+    const projectToSave = {
+      ...projectData,
+      metadata: {
+        ...projectData.metadata,
+        modifiedAt: new Date(),
+        version: projectData.metadata?.version || '1.0'
+      }
+    };
+    
+    // Save individual project
+    const projectSaved = this.save(`project_${projectData.id}`, projectToSave);
+    
+    if (projectSaved) {
+      // Update project index
+      const projectIndex = this.loadProjectIndex();
+      projectIndex[projectData.id] = {
+        id: projectData.id,
+        name: projectData.name,
+        autoharpType: projectData.autoharpType,
+        modifiedAt: projectToSave.metadata.modifiedAt,
+        createdAt: projectData.metadata?.createdAt || projectToSave.metadata.modifiedAt
+      };
+      
+      this.save('project_index', projectIndex);
+      console.log(`Project '${projectData.name}' saved successfully`);
+    }
+    
+    return projectSaved;
+  }
+  
+  loadProject(projectId) {
+    if (!projectId) {
+      console.warn('Cannot load project: missing project ID');
+      return null;
+    }
+    
+    const projectData = this.load(`project_${projectId}`, null);
+    
+    if (projectData) {
+      // Import DataSchemas for validation
+      import('./dataSchemas.js').then(({ DataSchemas }) => {
+        const validation = DataSchemas.validateProject(projectData);
+        if (!validation.isValid) {
+          console.warn(`Loaded project '${projectId}' has validation errors:`, validation.errors);
+        }
+      }).catch(err => {
+        console.warn('Could not validate loaded project data:', err);
+      });
+      
+      console.log(`Project '${projectData.name}' loaded successfully`);
+    } else {
+      console.warn(`Project '${projectId}' not found`);
+    }
+    
+    return projectData;
+  }
+  
+  loadProjectIndex() {
+    return this.load('project_index', {});
+  }
+  
+  getAllProjects() {
+    const projectIndex = this.loadProjectIndex();
+    return Object.values(projectIndex).sort((a, b) => 
+      new Date(b.modifiedAt) - new Date(a.modifiedAt)
+    );
+  }
+  
+  deleteProject(projectId) {
+    if (!projectId) {
+      console.warn('Cannot delete project: missing project ID');
+      return false;
+    }
+    
+    // Remove from project index
+    const projectIndex = this.loadProjectIndex();
+    const projectInfo = projectIndex[projectId];
+    delete projectIndex[projectId];
+    this.save('project_index', projectIndex);
+    
+    // Remove project data
+    this.remove(`project_${projectId}`);
+    
+    if (projectInfo) {
+      console.log(`Project '${projectInfo.name}' deleted successfully`);
+    }
+    
+    return true;
+  }
+  
+  // =============================================================================
+  // ENHANCED PROGRESSION MANAGEMENT
+  // =============================================================================
+  
+  saveProgressionToProject(projectId, progression) {
+    const project = this.loadProject(projectId);
+    if (!project) {
+      console.warn('Cannot save progression: project not found');
+      return false;
+    }
+    
+    // Add or update progression in project
+    const progressionIndex = project.progressions.findIndex(p => p.id === progression.id);
+    if (progressionIndex >= 0) {
+      project.progressions[progressionIndex] = {
+        ...progression,
+        modifiedAt: new Date()
+      };
+    } else {
+      project.progressions.push({
+        ...progression,
+        createdAt: new Date(),
+        modifiedAt: new Date()
+      });
+    }
+    
+    return this.saveProject(project);
+  }
+  
+  removeProgressionFromProject(projectId, progressionId) {
+    const project = this.loadProject(projectId);
+    if (!project) {
+      console.warn('Cannot remove progression: project not found');
+      return false;
+    }
+    
+    project.progressions = project.progressions.filter(p => p.id !== progressionId);
+    return this.saveProject(project);
+  }
+
   // Migration helpers
   migrateFromOldVersion(oldData) {
     // Handle migration from previous versions
