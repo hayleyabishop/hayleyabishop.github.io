@@ -2,17 +2,13 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 319
+   Total method definitions found: 318
    Unique method names: 269
-   Critical same-file duplicates: 3
+   Critical same-file duplicates: 2
    Cross-file duplicates: 30
    Similar method names: 167
 
 CRITICAL: Same-file duplicates (JavaScript uses last definition):
-
-Method "showMessage" in modules\eventCoordinator.js:
-   Line 673: showMessage(message, type = 'info') {
-   Line 698: showMessage(message, type = 'info') {
 
 Method "checkReadiness" in modules\integrationBridge.js:
    Line 49: checkReadiness() {
@@ -85,7 +81,7 @@ Method "emit":
 
 Method "getDebugInfo":
    modules\appIntegration.js:349 (class method)
-   modules\eventCoordinator.js:719 (class method)
+   modules\eventCoordinator.js:703 (class method)
    modules\inputManager.js:288 (class method)
    modules\stateManager.js:321 (class method)
 
