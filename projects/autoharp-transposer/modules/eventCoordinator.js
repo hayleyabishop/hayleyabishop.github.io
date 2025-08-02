@@ -325,17 +325,7 @@ class EventCoordinator {
       });
   }
 
-  handleTextInput(value) {
-    // Clear previous timeout
-    if (this.textInputTimeout) {
-      clearTimeout(this.textInputTimeout);
-    }
-    
-    // Debounce suggestions
-    this.textInputTimeout = setTimeout(() => {
-      this.updateSuggestions(value);
-    }, 150);
-  }
+
 
   handleTextInputFocus() {
     const input = document.getElementById('chordTextInput');
@@ -356,6 +346,7 @@ class EventCoordinator {
    * @param {string} inputValue - Current value of the text input
    */
   handleTextInput(inputValue) {
+    console.log(`[DEBUG] EventCoordinator.handleTextInput called with: "${inputValue}"`);
     const textInput = document.getElementById('chordTextInput');
     if (!textInput) return;
     
@@ -431,6 +422,7 @@ class EventCoordinator {
   }
 
   clearTextInput() {
+    console.log(`[DEBUG] EventCoordinator.clearTextInput called`);
     const textInput = document.getElementById('chordTextInput');
     if (textInput) {
       textInput.value = '';
@@ -445,6 +437,7 @@ class EventCoordinator {
    * @param {string} inputValue - Current input value for highlighting
    */
   showSuggestions(suggestions, inputValue) {
+    console.log(`[DEBUG] EventCoordinator.showSuggestions called with ${suggestions.length} suggestions`);
     const container = document.getElementById('chordSuggestions');
     if (!container) return;
     
@@ -612,35 +605,7 @@ class EventCoordinator {
     this.showSuggestions(suggestions);
   }
 
-  showSuggestions(suggestions) {
-    const container = document.getElementById('chordSuggestions');
-    if (!container) return;
-    
-    container.innerHTML = '';
-    
-    suggestions.forEach((chord, index) => {
-      const item = document.createElement('div');
-      item.className = 'suggestion-item';
-      item.dataset.chord = chord;
-      item.textContent = chord;
-      
-      if (index === 0) {
-        item.classList.add('selected');
-      }
-      
-      container.appendChild(item);
-    });
-    
-    container.style.display = suggestions.length > 0 ? 'block' : 'none';
-  }
 
-  clearSuggestions() {
-    const container = document.getElementById('chordSuggestions');
-    if (container) {
-      container.innerHTML = '';
-      container.style.display = 'none';
-    }
-  }
 
   updateProgressions() {
     const selectedChords = this.stateManager.get('selectedChords');
@@ -702,13 +667,7 @@ class EventCoordinator {
     }
   }
 
-  clearTextInput() {
-    const textInput = document.getElementById('chordTextInput');
-    if (textInput) {
-      textInput.value = '';
-    }
-    this.clearSuggestions();
-  }
+
   
   // Show message to user
   showMessage(message, type = 'info') {

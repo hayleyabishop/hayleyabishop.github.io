@@ -2,33 +2,17 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 316
+   Total method definitions found: 312
    Unique method names: 262
-   Critical same-file duplicates: 7
+   Critical same-file duplicates: 3
    Cross-file duplicates: 30
    Similar method names: 163
 
 CRITICAL: Same-file duplicates (JavaScript uses last definition):
 
-Method "handleTextInput" in modules\eventCoordinator.js:
-   Line 328: handleTextInput(value) {
-   Line 358: handleTextInput(inputValue) {
-
-Method "clearTextInput" in modules\eventCoordinator.js:
-   Line 433: clearTextInput() {
-   Line 705: clearTextInput() {
-
-Method "showSuggestions" in modules\eventCoordinator.js:
-   Line 447: showSuggestions(suggestions, inputValue) {
-   Line 615: showSuggestions(suggestions) {
-
-Method "clearSuggestions" in modules\eventCoordinator.js:
-   Line 491: clearSuggestions() {
-   Line 637: clearSuggestions() {
-
 Method "showMessage" in modules\eventCoordinator.js:
-   Line 714: showMessage(message, type = 'info') {
-   Line 739: showMessage(message, type = 'info') {
+   Line 673: showMessage(message, type = 'info') {
+   Line 698: showMessage(message, type = 'info') {
 
 Method "checkReadiness" in modules\integrationBridge.js:
    Line 49: checkReadiness() {
@@ -101,7 +85,7 @@ Method "emit":
 
 Method "getDebugInfo":
    modules\appIntegration.js:349 (class method)
-   modules\eventCoordinator.js:760 (class method)
+   modules\eventCoordinator.js:719 (class method)
    modules\inputManager.js:288 (class method)
    modules\stateManager.js:321 (class method)
 
@@ -158,11 +142,11 @@ Method "analyzeProgression":
    modules\chordTransposition.js:279 (class method)
 
 Method "updateSuggestions":
-   modules\eventCoordinator.js:601 (class method)
+   modules\eventCoordinator.js:594 (class method)
    modules\stateManager.js:156 (class method)
 
 Method "updateProgressions":
-   modules\eventCoordinator.js:645 (class method)
+   modules\eventCoordinator.js:610 (class method)
    modules\stateManager.js:152 (class method)
 
 Method "exportState":
