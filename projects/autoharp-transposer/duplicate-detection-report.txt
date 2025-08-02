@@ -2,11 +2,11 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 318
-   Unique method names: 269
+   Total method definitions found: 328
+   Unique method names: 277
    Critical same-file duplicates: 2
    Cross-file duplicates: 30
-   Similar method names: 167
+   Similar method names: 179
 
 CRITICAL: Same-file duplicates (JavaScript uses last definition):
 
@@ -29,6 +29,7 @@ Method "constructor":
    modules\chordAudio.js:7 (class method)
    modules\chordParser.js:11 (class method)
    modules\chordTransposition.js:13 (class method)
+   modules\dataSchemas.js:7 (class method)
    modules\eventCoordinator.js:7 (class method)
    modules\inputManager.js:7 (class method)
    modules\integrationBridge.js:7 (class method)
@@ -61,6 +62,7 @@ Method "getSelectedChords":
 Method "setAutoharpType":
    modules\appIntegration.js:296 (class method)
    modules\chordParser.js:685 (class method)
+   modules\stateManager.js:175 (class method)
 
 Method "toggleAudio":
    modules\appIntegration.js:300 (class method)
@@ -83,7 +85,7 @@ Method "getDebugInfo":
    modules\appIntegration.js:349 (class method)
    modules\eventCoordinator.js:703 (class method)
    modules\inputManager.js:288 (class method)
-   modules\stateManager.js:321 (class method)
+   modules\stateManager.js:408 (class method)
 
 Method "destroy":
    modules\appIntegration.js:361 (class method)
@@ -91,7 +93,7 @@ Method "destroy":
 
 Method "isChordAvailable":
    modules\autoharpTypes.js:144 (class method)
-   modules\stateManager.js:214 (class method)
+   modules\stateManager.js:301 (class method)
 
 Method "getCompatibilityMatrix":
    modules\autoharpTypes.js:172 (class method)
@@ -147,15 +149,15 @@ Method "updateProgressions":
 
 Method "exportState":
    modules\inputManager.js:257 (class method)
-   modules\stateManager.js:334 (class method)
+   modules\stateManager.js:421 (class method)
 
 Method "importState":
    modules\inputManager.js:264 (class method)
-   modules\stateManager.js:342 (class method)
+   modules\stateManager.js:429 (class method)
 
 Method "getAvailableChordsForType":
    modules\integrationBridge.js:125 (class method)
-   modules\stateManager.js:179 (class method)
+   modules\stateManager.js:266 (class method)
 
 Similar method names (potential confusion):
 
@@ -198,7 +200,7 @@ Similar method names (potential confusion):
 "updateSelectedChordsUI" vs "updateSelectedChords"
    updateSelectedChordsUI: modules\appIntegration.js:213
    updateSelectedChords: modules\stateManager.js:127
-   ... and 157 more similar pairs
+   ... and 169 more similar pairs
 
 ERROR: Critical duplicates found that need immediate attention!
 JavaScript will silently use the last definition, causing unexpected behavior.

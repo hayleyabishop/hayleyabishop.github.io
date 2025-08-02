@@ -1,11 +1,11 @@
 {
-  "generated": "2025-08-02T06:37:48.091Z",
+  "generated": "2025-08-02T06:49:09.060Z",
   "project": "autoharp-transposer",
   "statistics": {
-    "files": 28,
-    "classes": 13,
+    "files": 29,
+    "classes": 14,
     "functions": 66,
-    "methods": 276,
+    "methods": 288,
     "eventHandlers": 43
   },
   "graph": {
@@ -3854,6 +3854,319 @@
         ],
         "lineCount": 322
       },
+      "modules\\dataSchemas.js": {
+        "path": "modules\\dataSchemas.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\modules\\dataSchemas.js",
+        "classes": [
+          {
+            "name": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 6,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 7,
+                "signature": "constructor() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 154,
+                "signature": "if (!data || typeof data !== 'object') {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 168,
+                "signature": "if (!schema[fieldName]) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 190,
+                "signature": "if (value === undefined || value === null) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 195,
+                "signature": "if (fieldSchema.type) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 203,
+                "signature": "if (fieldSchema.pattern && typeof value === 'string') {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 215,
+                "signature": "if (fieldSchema.type === 'number') {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 216,
+                "signature": "if (fieldSchema.min !== undefined && value < fieldSchema.min) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 219,
+                "signature": "if (fieldSchema.max !== undefined && value > fieldSchema.max) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 225,
+                "signature": "if (fieldSchema.type === 'array') {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 226,
+                "signature": "if (fieldSchema.minLength !== undefined && value.length < fieldSchema.minLength) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 229,
+                "signature": "if (fieldSchema.maxLength !== undefined && value.length > fieldSchema.maxLength) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 234,
+                "signature": "if (fieldSchema.itemType) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 242,
+                "signature": "if (fieldSchema.itemSchema) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 245,
+                "signature": "if (!itemValidation.isValid) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 253,
+                "signature": "if (fieldSchema.type === 'object' && fieldSchema.schema) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 255,
+                "signature": "if (!objectValidation.isValid) {",
+                "calls": []
+              },
+              {
+                "name": "switch",
+                "class": "DataSchemas",
+                "file": "modules\\dataSchemas.js",
+                "line": 264,
+                "signature": "switch (expectedType) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 7,
+              "signature": "constructor() {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 7,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 154,
+            "signature": "if (!data || typeof data !== 'object') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 168,
+            "signature": "if (!schema[fieldName]) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 190,
+            "signature": "if (value === undefined || value === null) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 195,
+            "signature": "if (fieldSchema.type) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 203,
+            "signature": "if (fieldSchema.pattern && typeof value === 'string') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 215,
+            "signature": "if (fieldSchema.type === 'number') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 216,
+            "signature": "if (fieldSchema.min !== undefined && value < fieldSchema.min) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 219,
+            "signature": "if (fieldSchema.max !== undefined && value > fieldSchema.max) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 225,
+            "signature": "if (fieldSchema.type === 'array') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 226,
+            "signature": "if (fieldSchema.minLength !== undefined && value.length < fieldSchema.minLength) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 229,
+            "signature": "if (fieldSchema.maxLength !== undefined && value.length > fieldSchema.maxLength) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 234,
+            "signature": "if (fieldSchema.itemType) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 242,
+            "signature": "if (fieldSchema.itemSchema) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 245,
+            "signature": "if (!itemValidation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 253,
+            "signature": "if (fieldSchema.type === 'object' && fieldSchema.schema) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 255,
+            "signature": "if (!objectValidation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 264,
+            "signature": "switch (expectedType) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [],
+        "exports": [],
+        "dependencies": [],
+        "lineCount": 339
+      },
       "modules\\eventCoordinator.js": {
         "path": "modules\\eventCoordinator.js",
         "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\modules\\eventCoordinator.js",
@@ -6757,10 +7070,74 @@
                 "calls": []
               },
               {
+                "name": "setAutoharpType",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 175,
+                "signature": "setAutoharpType(type) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 176,
+                "signature": "if (!type || typeof type !== 'string') {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 183,
+                "signature": "if (!availableChords || availableChords.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "updateProgression",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 209,
+                "signature": "updateProgression(progression) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 210,
+                "signature": "if (!progression) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 218,
+                "signature": "if (!validation.isValid) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 222,
+                "signature": "if (validation.warnings.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StateManager",
+                "file": "modules\\stateManager.js",
+                "line": 243,
+                "signature": "if (existingIndex >= 0) {",
+                "calls": []
+              },
+              {
                 "name": "updateCurrentChord",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 171,
+                "line": 258,
                 "signature": "updateCurrentChord(chordName, chordType) {",
                 "calls": []
               },
@@ -6768,7 +7145,7 @@
                 "name": "getAvailableChordsForType",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 179,
+                "line": 266,
                 "signature": "getAvailableChordsForType(type) {",
                 "calls": []
               },
@@ -6776,7 +7153,7 @@
                 "name": "if",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 181,
+                "line": 268,
                 "signature": "if (window.integrationBridge) {",
                 "calls": []
               },
@@ -6784,7 +7161,7 @@
                 "name": "switch",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 188,
+                "line": 275,
                 "signature": "switch (type) {",
                 "calls": []
               },
@@ -6792,7 +7169,7 @@
                 "name": "isChordAvailable",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 214,
+                "line": 301,
                 "signature": "isChordAvailable(chord) {",
                 "calls": []
               },
@@ -6800,7 +7177,7 @@
                 "name": "isChordSelected",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 218,
+                "line": 305,
                 "signature": "isChordSelected(chord) {",
                 "calls": []
               },
@@ -6808,7 +7185,7 @@
                 "name": "getSelectedChordCount",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 222,
+                "line": 309,
                 "signature": "getSelectedChordCount() {",
                 "calls": []
               },
@@ -6816,7 +7193,7 @@
                 "name": "saveToStorage",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 227,
+                "line": 314,
                 "signature": "saveToStorage() {",
                 "calls": []
               },
@@ -6824,7 +7201,7 @@
                 "name": "loadFromStorage",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 241,
+                "line": 328,
                 "signature": "loadFromStorage() {",
                 "calls": []
               },
@@ -6832,7 +7209,7 @@
                 "name": "if",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 244,
+                "line": 331,
                 "signature": "if (stored) {",
                 "calls": []
               },
@@ -6840,7 +7217,7 @@
                 "name": "clearStorage",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 261,
+                "line": 348,
                 "signature": "clearStorage() {",
                 "calls": []
               },
@@ -6848,7 +7225,7 @@
                 "name": "validateState",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 270,
+                "line": 357,
                 "signature": "validateState() {",
                 "calls": []
               },
@@ -6856,7 +7233,7 @@
                 "name": "if",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 273,
+                "line": 360,
                 "signature": "if (!this.state.autoharpType) {",
                 "calls": []
               },
@@ -6864,7 +7241,7 @@
                 "name": "if",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 290,
+                "line": 377,
                 "signature": "if (invalidChords.length > 0) {",
                 "calls": []
               },
@@ -6872,7 +7249,7 @@
                 "name": "reset",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 301,
+                "line": 388,
                 "signature": "reset() {",
                 "calls": []
               },
@@ -6880,7 +7257,7 @@
                 "name": "getDebugInfo",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 321,
+                "line": 408,
                 "signature": "getDebugInfo() {",
                 "calls": []
               },
@@ -6888,7 +7265,7 @@
                 "name": "exportState",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 334,
+                "line": 421,
                 "signature": "exportState() {",
                 "calls": []
               },
@@ -6896,7 +7273,7 @@
                 "name": "importState",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 342,
+                "line": 429,
                 "signature": "importState(exportedState) {",
                 "calls": []
               },
@@ -6904,7 +7281,7 @@
                 "name": "if",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 343,
+                "line": 430,
                 "signature": "if (!exportedState || typeof exportedState !== 'object') {",
                 "calls": []
               },
@@ -6912,7 +7289,7 @@
                 "name": "if",
                 "class": "StateManager",
                 "file": "modules\\stateManager.js",
-                "line": 348,
+                "line": 435,
                 "signature": "if (!exportedState.autoharpType) {",
                 "calls": []
               }
@@ -7102,10 +7479,74 @@
             "calls": []
           },
           {
+            "name": "setAutoharpType",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 175,
+            "signature": "setAutoharpType(type) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 176,
+            "signature": "if (!type || typeof type !== 'string') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 183,
+            "signature": "if (!availableChords || availableChords.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "updateProgression",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 209,
+            "signature": "updateProgression(progression) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 210,
+            "signature": "if (!progression) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 218,
+            "signature": "if (!validation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 222,
+            "signature": "if (validation.warnings.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 243,
+            "signature": "if (existingIndex >= 0) {",
+            "calls": []
+          },
+          {
             "name": "updateCurrentChord",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 171,
+            "line": 258,
             "signature": "updateCurrentChord(chordName, chordType) {",
             "calls": []
           },
@@ -7113,7 +7554,7 @@
             "name": "getAvailableChordsForType",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 179,
+            "line": 266,
             "signature": "getAvailableChordsForType(type) {",
             "calls": []
           },
@@ -7121,7 +7562,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 181,
+            "line": 268,
             "signature": "if (window.integrationBridge) {",
             "calls": []
           },
@@ -7129,7 +7570,7 @@
             "name": "switch",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 188,
+            "line": 275,
             "signature": "switch (type) {",
             "calls": []
           },
@@ -7137,7 +7578,7 @@
             "name": "isChordAvailable",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 214,
+            "line": 301,
             "signature": "isChordAvailable(chord) {",
             "calls": []
           },
@@ -7145,7 +7586,7 @@
             "name": "isChordSelected",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 218,
+            "line": 305,
             "signature": "isChordSelected(chord) {",
             "calls": []
           },
@@ -7153,7 +7594,7 @@
             "name": "getSelectedChordCount",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 222,
+            "line": 309,
             "signature": "getSelectedChordCount() {",
             "calls": []
           },
@@ -7161,7 +7602,7 @@
             "name": "saveToStorage",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 227,
+            "line": 314,
             "signature": "saveToStorage() {",
             "calls": []
           },
@@ -7169,7 +7610,7 @@
             "name": "loadFromStorage",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 241,
+            "line": 328,
             "signature": "loadFromStorage() {",
             "calls": []
           },
@@ -7177,7 +7618,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 244,
+            "line": 331,
             "signature": "if (stored) {",
             "calls": []
           },
@@ -7185,7 +7626,7 @@
             "name": "clearStorage",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 261,
+            "line": 348,
             "signature": "clearStorage() {",
             "calls": []
           },
@@ -7193,7 +7634,7 @@
             "name": "validateState",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 270,
+            "line": 357,
             "signature": "validateState() {",
             "calls": []
           },
@@ -7201,7 +7642,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 273,
+            "line": 360,
             "signature": "if (!this.state.autoharpType) {",
             "calls": []
           },
@@ -7209,7 +7650,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 290,
+            "line": 377,
             "signature": "if (invalidChords.length > 0) {",
             "calls": []
           },
@@ -7217,7 +7658,7 @@
             "name": "reset",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 301,
+            "line": 388,
             "signature": "reset() {",
             "calls": []
           },
@@ -7225,7 +7666,7 @@
             "name": "getDebugInfo",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 321,
+            "line": 408,
             "signature": "getDebugInfo() {",
             "calls": []
           },
@@ -7233,7 +7674,7 @@
             "name": "exportState",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 334,
+            "line": 421,
             "signature": "exportState() {",
             "calls": []
           },
@@ -7241,7 +7682,7 @@
             "name": "importState",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 342,
+            "line": 429,
             "signature": "importState(exportedState) {",
             "calls": []
           },
@@ -7249,7 +7690,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 343,
+            "line": 430,
             "signature": "if (!exportedState || typeof exportedState !== 'object') {",
             "calls": []
           },
@@ -7257,7 +7698,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 348,
+            "line": 435,
             "signature": "if (!exportedState.autoharpType) {",
             "calls": []
           }
@@ -7266,7 +7707,7 @@
         "imports": [],
         "exports": [],
         "dependencies": [],
-        "lineCount": 372
+        "lineCount": 459
       },
       "modules\\storageManager.js": {
         "path": "modules\\storageManager.js",
@@ -7614,10 +8055,162 @@
                 "calls": []
               },
               {
+                "name": "saveProject",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 378,
+                "signature": "saveProject(projectData) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 379,
+                "signature": "if (!projectData || !projectData.id) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 387,
+                "signature": "if (!validation.isValid) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 391,
+                "signature": "if (validation.warnings.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 411,
+                "signature": "if (projectSaved) {",
+                "calls": []
+              },
+              {
+                "name": "loadProject",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 429,
+                "signature": "loadProject(projectId) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 430,
+                "signature": "if (!projectId) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 437,
+                "signature": "if (projectData) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 441,
+                "signature": "if (!validation.isValid) {",
+                "calls": []
+              },
+              {
+                "name": "loadProjectIndex",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 456,
+                "signature": "loadProjectIndex() {",
+                "calls": []
+              },
+              {
+                "name": "getAllProjects",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 460,
+                "signature": "getAllProjects() {",
+                "calls": []
+              },
+              {
+                "name": "deleteProject",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 467,
+                "signature": "deleteProject(projectId) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 468,
+                "signature": "if (!projectId) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 482,
+                "signature": "if (projectInfo) {",
+                "calls": []
+              },
+              {
+                "name": "saveProgressionToProject",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 493,
+                "signature": "saveProgressionToProject(projectId, progression) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 495,
+                "signature": "if (!project) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 502,
+                "signature": "if (progressionIndex >= 0) {",
+                "calls": []
+              },
+              {
+                "name": "removeProgressionFromProject",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 518,
+                "signature": "removeProgressionFromProject(projectId, progressionId) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "StorageManager",
+                "file": "modules\\storageManager.js",
+                "line": 520,
+                "signature": "if (!project) {",
+                "calls": []
+              },
+              {
                 "name": "migrateFromOldVersion",
                 "class": "StorageManager",
                 "file": "modules\\storageManager.js",
-                "line": 375,
+                "line": 530,
                 "signature": "migrateFromOldVersion(oldData) {",
                 "calls": []
               }
@@ -7967,10 +8560,162 @@
             "calls": []
           },
           {
+            "name": "saveProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 378,
+            "signature": "saveProject(projectData) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 379,
+            "signature": "if (!projectData || !projectData.id) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 387,
+            "signature": "if (!validation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 391,
+            "signature": "if (validation.warnings.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 411,
+            "signature": "if (projectSaved) {",
+            "calls": []
+          },
+          {
+            "name": "loadProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 429,
+            "signature": "loadProject(projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 430,
+            "signature": "if (!projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 437,
+            "signature": "if (projectData) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 441,
+            "signature": "if (!validation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "loadProjectIndex",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 456,
+            "signature": "loadProjectIndex() {",
+            "calls": []
+          },
+          {
+            "name": "getAllProjects",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 460,
+            "signature": "getAllProjects() {",
+            "calls": []
+          },
+          {
+            "name": "deleteProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 467,
+            "signature": "deleteProject(projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 468,
+            "signature": "if (!projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 482,
+            "signature": "if (projectInfo) {",
+            "calls": []
+          },
+          {
+            "name": "saveProgressionToProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 493,
+            "signature": "saveProgressionToProject(projectId, progression) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 495,
+            "signature": "if (!project) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 502,
+            "signature": "if (progressionIndex >= 0) {",
+            "calls": []
+          },
+          {
+            "name": "removeProgressionFromProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 518,
+            "signature": "removeProgressionFromProject(projectId, progressionId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 520,
+            "signature": "if (!project) {",
+            "calls": []
+          },
+          {
             "name": "migrateFromOldVersion",
             "class": "StorageManager",
             "file": "modules\\storageManager.js",
-            "line": 375,
+            "line": 530,
             "signature": "migrateFromOldVersion(oldData) {",
             "calls": []
           }
@@ -7979,7 +8724,7 @@
         "imports": [],
         "exports": [],
         "dependencies": [],
-        "lineCount": 387
+        "lineCount": 542
       },
       "simple-duplicate-check.js": {
         "path": "simple-duplicate-check.js",
@@ -10688,6 +11433,161 @@
           "signature": "constructor() {"
         }
       },
+      "DataSchemas": {
+        "name": "DataSchemas",
+        "file": "modules\\dataSchemas.js",
+        "line": 6,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 7,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 154,
+            "signature": "if (!data || typeof data !== 'object') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 168,
+            "signature": "if (!schema[fieldName]) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 190,
+            "signature": "if (value === undefined || value === null) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 195,
+            "signature": "if (fieldSchema.type) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 203,
+            "signature": "if (fieldSchema.pattern && typeof value === 'string') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 215,
+            "signature": "if (fieldSchema.type === 'number') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 216,
+            "signature": "if (fieldSchema.min !== undefined && value < fieldSchema.min) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 219,
+            "signature": "if (fieldSchema.max !== undefined && value > fieldSchema.max) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 225,
+            "signature": "if (fieldSchema.type === 'array') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 226,
+            "signature": "if (fieldSchema.minLength !== undefined && value.length < fieldSchema.minLength) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 229,
+            "signature": "if (fieldSchema.maxLength !== undefined && value.length > fieldSchema.maxLength) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 234,
+            "signature": "if (fieldSchema.itemType) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 242,
+            "signature": "if (fieldSchema.itemSchema) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 245,
+            "signature": "if (!itemValidation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 253,
+            "signature": "if (fieldSchema.type === 'object' && fieldSchema.schema) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 255,
+            "signature": "if (!objectValidation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "switch",
+            "class": "DataSchemas",
+            "file": "modules\\dataSchemas.js",
+            "line": 264,
+            "signature": "switch (expectedType) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 7,
+          "signature": "constructor() {"
+        }
+      },
       "EventCoordinator": {
         "name": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
@@ -12167,10 +13067,74 @@
             "calls": []
           },
           {
+            "name": "setAutoharpType",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 175,
+            "signature": "setAutoharpType(type) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 176,
+            "signature": "if (!type || typeof type !== 'string') {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 183,
+            "signature": "if (!availableChords || availableChords.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "updateProgression",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 209,
+            "signature": "updateProgression(progression) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 210,
+            "signature": "if (!progression) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 218,
+            "signature": "if (!validation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 222,
+            "signature": "if (validation.warnings.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StateManager",
+            "file": "modules\\stateManager.js",
+            "line": 243,
+            "signature": "if (existingIndex >= 0) {",
+            "calls": []
+          },
+          {
             "name": "updateCurrentChord",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 171,
+            "line": 258,
             "signature": "updateCurrentChord(chordName, chordType) {",
             "calls": []
           },
@@ -12178,7 +13142,7 @@
             "name": "getAvailableChordsForType",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 179,
+            "line": 266,
             "signature": "getAvailableChordsForType(type) {",
             "calls": []
           },
@@ -12186,7 +13150,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 181,
+            "line": 268,
             "signature": "if (window.integrationBridge) {",
             "calls": []
           },
@@ -12194,7 +13158,7 @@
             "name": "switch",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 188,
+            "line": 275,
             "signature": "switch (type) {",
             "calls": []
           },
@@ -12202,7 +13166,7 @@
             "name": "isChordAvailable",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 214,
+            "line": 301,
             "signature": "isChordAvailable(chord) {",
             "calls": []
           },
@@ -12210,7 +13174,7 @@
             "name": "isChordSelected",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 218,
+            "line": 305,
             "signature": "isChordSelected(chord) {",
             "calls": []
           },
@@ -12218,7 +13182,7 @@
             "name": "getSelectedChordCount",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 222,
+            "line": 309,
             "signature": "getSelectedChordCount() {",
             "calls": []
           },
@@ -12226,7 +13190,7 @@
             "name": "saveToStorage",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 227,
+            "line": 314,
             "signature": "saveToStorage() {",
             "calls": []
           },
@@ -12234,7 +13198,7 @@
             "name": "loadFromStorage",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 241,
+            "line": 328,
             "signature": "loadFromStorage() {",
             "calls": []
           },
@@ -12242,7 +13206,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 244,
+            "line": 331,
             "signature": "if (stored) {",
             "calls": []
           },
@@ -12250,7 +13214,7 @@
             "name": "clearStorage",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 261,
+            "line": 348,
             "signature": "clearStorage() {",
             "calls": []
           },
@@ -12258,7 +13222,7 @@
             "name": "validateState",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 270,
+            "line": 357,
             "signature": "validateState() {",
             "calls": []
           },
@@ -12266,7 +13230,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 273,
+            "line": 360,
             "signature": "if (!this.state.autoharpType) {",
             "calls": []
           },
@@ -12274,7 +13238,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 290,
+            "line": 377,
             "signature": "if (invalidChords.length > 0) {",
             "calls": []
           },
@@ -12282,7 +13246,7 @@
             "name": "reset",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 301,
+            "line": 388,
             "signature": "reset() {",
             "calls": []
           },
@@ -12290,7 +13254,7 @@
             "name": "getDebugInfo",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 321,
+            "line": 408,
             "signature": "getDebugInfo() {",
             "calls": []
           },
@@ -12298,7 +13262,7 @@
             "name": "exportState",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 334,
+            "line": 421,
             "signature": "exportState() {",
             "calls": []
           },
@@ -12306,7 +13270,7 @@
             "name": "importState",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 342,
+            "line": 429,
             "signature": "importState(exportedState) {",
             "calls": []
           },
@@ -12314,7 +13278,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 343,
+            "line": 430,
             "signature": "if (!exportedState || typeof exportedState !== 'object') {",
             "calls": []
           },
@@ -12322,7 +13286,7 @@
             "name": "if",
             "class": "StateManager",
             "file": "modules\\stateManager.js",
-            "line": 348,
+            "line": 435,
             "signature": "if (!exportedState.autoharpType) {",
             "calls": []
           }
@@ -12674,10 +13638,162 @@
             "calls": []
           },
           {
+            "name": "saveProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 378,
+            "signature": "saveProject(projectData) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 379,
+            "signature": "if (!projectData || !projectData.id) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 387,
+            "signature": "if (!validation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 391,
+            "signature": "if (validation.warnings.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 411,
+            "signature": "if (projectSaved) {",
+            "calls": []
+          },
+          {
+            "name": "loadProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 429,
+            "signature": "loadProject(projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 430,
+            "signature": "if (!projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 437,
+            "signature": "if (projectData) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 441,
+            "signature": "if (!validation.isValid) {",
+            "calls": []
+          },
+          {
+            "name": "loadProjectIndex",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 456,
+            "signature": "loadProjectIndex() {",
+            "calls": []
+          },
+          {
+            "name": "getAllProjects",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 460,
+            "signature": "getAllProjects() {",
+            "calls": []
+          },
+          {
+            "name": "deleteProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 467,
+            "signature": "deleteProject(projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 468,
+            "signature": "if (!projectId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 482,
+            "signature": "if (projectInfo) {",
+            "calls": []
+          },
+          {
+            "name": "saveProgressionToProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 493,
+            "signature": "saveProgressionToProject(projectId, progression) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 495,
+            "signature": "if (!project) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 502,
+            "signature": "if (progressionIndex >= 0) {",
+            "calls": []
+          },
+          {
+            "name": "removeProgressionFromProject",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 518,
+            "signature": "removeProgressionFromProject(projectId, progressionId) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "StorageManager",
+            "file": "modules\\storageManager.js",
+            "line": 520,
+            "signature": "if (!project) {",
+            "calls": []
+          },
+          {
             "name": "migrateFromOldVersion",
             "class": "StorageManager",
             "file": "modules\\storageManager.js",
-            "line": 375,
+            "line": 530,
             "signature": "migrateFromOldVersion(oldData) {",
             "calls": []
           }
@@ -14154,6 +15270,30 @@
         "signature": "analyzeProgression(chords) {",
         "calls": []
       },
+      "DataSchemas.constructor": {
+        "name": "constructor",
+        "class": "DataSchemas",
+        "file": "modules\\dataSchemas.js",
+        "line": 7,
+        "signature": "constructor() {",
+        "calls": []
+      },
+      "DataSchemas.if": {
+        "name": "if",
+        "class": "DataSchemas",
+        "file": "modules\\dataSchemas.js",
+        "line": 255,
+        "signature": "if (!objectValidation.isValid) {",
+        "calls": []
+      },
+      "DataSchemas.switch": {
+        "name": "switch",
+        "class": "DataSchemas",
+        "file": "modules\\dataSchemas.js",
+        "line": 264,
+        "signature": "switch (expectedType) {",
+        "calls": []
+      },
       "EventCoordinator.constructor": {
         "name": "constructor",
         "class": "EventCoordinator",
@@ -14878,7 +16018,7 @@
         "name": "if",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 348,
+        "line": 435,
         "signature": "if (!exportedState.autoharpType) {",
         "calls": []
       },
@@ -15002,11 +16142,27 @@
         "signature": "setInputMode(mode) {",
         "calls": []
       },
+      "StateManager.setAutoharpType": {
+        "name": "setAutoharpType",
+        "class": "StateManager",
+        "file": "modules\\stateManager.js",
+        "line": 175,
+        "signature": "setAutoharpType(type) {",
+        "calls": []
+      },
+      "StateManager.updateProgression": {
+        "name": "updateProgression",
+        "class": "StateManager",
+        "file": "modules\\stateManager.js",
+        "line": 209,
+        "signature": "updateProgression(progression) {",
+        "calls": []
+      },
       "StateManager.updateCurrentChord": {
         "name": "updateCurrentChord",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 171,
+        "line": 258,
         "signature": "updateCurrentChord(chordName, chordType) {",
         "calls": []
       },
@@ -15014,7 +16170,7 @@
         "name": "getAvailableChordsForType",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 179,
+        "line": 266,
         "signature": "getAvailableChordsForType(type) {",
         "calls": []
       },
@@ -15022,7 +16178,7 @@
         "name": "switch",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 188,
+        "line": 275,
         "signature": "switch (type) {",
         "calls": []
       },
@@ -15030,7 +16186,7 @@
         "name": "isChordAvailable",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 214,
+        "line": 301,
         "signature": "isChordAvailable(chord) {",
         "calls": []
       },
@@ -15038,7 +16194,7 @@
         "name": "isChordSelected",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 218,
+        "line": 305,
         "signature": "isChordSelected(chord) {",
         "calls": []
       },
@@ -15046,7 +16202,7 @@
         "name": "getSelectedChordCount",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 222,
+        "line": 309,
         "signature": "getSelectedChordCount() {",
         "calls": []
       },
@@ -15054,7 +16210,7 @@
         "name": "saveToStorage",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 227,
+        "line": 314,
         "signature": "saveToStorage() {",
         "calls": []
       },
@@ -15062,7 +16218,7 @@
         "name": "loadFromStorage",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 241,
+        "line": 328,
         "signature": "loadFromStorage() {",
         "calls": []
       },
@@ -15070,7 +16226,7 @@
         "name": "clearStorage",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 261,
+        "line": 348,
         "signature": "clearStorage() {",
         "calls": []
       },
@@ -15078,7 +16234,7 @@
         "name": "validateState",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 270,
+        "line": 357,
         "signature": "validateState() {",
         "calls": []
       },
@@ -15086,7 +16242,7 @@
         "name": "reset",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 301,
+        "line": 388,
         "signature": "reset() {",
         "calls": []
       },
@@ -15094,7 +16250,7 @@
         "name": "getDebugInfo",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 321,
+        "line": 408,
         "signature": "getDebugInfo() {",
         "calls": []
       },
@@ -15102,7 +16258,7 @@
         "name": "exportState",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 334,
+        "line": 421,
         "signature": "exportState() {",
         "calls": []
       },
@@ -15110,7 +16266,7 @@
         "name": "importState",
         "class": "StateManager",
         "file": "modules\\stateManager.js",
-        "line": 342,
+        "line": 429,
         "signature": "importState(exportedState) {",
         "calls": []
       },
@@ -15142,8 +16298,8 @@
         "name": "if",
         "class": "StorageManager",
         "file": "modules\\storageManager.js",
-        "line": 364,
-        "signature": "if (history.length > 50) {",
+        "line": 520,
+        "signature": "if (!project) {",
         "calls": []
       },
       "StorageManager.remove": {
@@ -15354,11 +16510,67 @@
         "signature": "cleanupOldData() {",
         "calls": []
       },
+      "StorageManager.saveProject": {
+        "name": "saveProject",
+        "class": "StorageManager",
+        "file": "modules\\storageManager.js",
+        "line": 378,
+        "signature": "saveProject(projectData) {",
+        "calls": []
+      },
+      "StorageManager.loadProject": {
+        "name": "loadProject",
+        "class": "StorageManager",
+        "file": "modules\\storageManager.js",
+        "line": 429,
+        "signature": "loadProject(projectId) {",
+        "calls": []
+      },
+      "StorageManager.loadProjectIndex": {
+        "name": "loadProjectIndex",
+        "class": "StorageManager",
+        "file": "modules\\storageManager.js",
+        "line": 456,
+        "signature": "loadProjectIndex() {",
+        "calls": []
+      },
+      "StorageManager.getAllProjects": {
+        "name": "getAllProjects",
+        "class": "StorageManager",
+        "file": "modules\\storageManager.js",
+        "line": 460,
+        "signature": "getAllProjects() {",
+        "calls": []
+      },
+      "StorageManager.deleteProject": {
+        "name": "deleteProject",
+        "class": "StorageManager",
+        "file": "modules\\storageManager.js",
+        "line": 467,
+        "signature": "deleteProject(projectId) {",
+        "calls": []
+      },
+      "StorageManager.saveProgressionToProject": {
+        "name": "saveProgressionToProject",
+        "class": "StorageManager",
+        "file": "modules\\storageManager.js",
+        "line": 493,
+        "signature": "saveProgressionToProject(projectId, progression) {",
+        "calls": []
+      },
+      "StorageManager.removeProgressionFromProject": {
+        "name": "removeProgressionFromProject",
+        "class": "StorageManager",
+        "file": "modules\\storageManager.js",
+        "line": 518,
+        "signature": "removeProgressionFromProject(projectId, progressionId) {",
+        "calls": []
+      },
       "StorageManager.migrateFromOldVersion": {
         "name": "migrateFromOldVersion",
         "class": "StorageManager",
         "file": "modules\\storageManager.js",
-        "line": 375,
+        "line": 530,
         "signature": "migrateFromOldVersion(oldData) {",
         "calls": []
       }
@@ -15753,6 +16965,14 @@
         ],
         "provides": [
           "ChordTransposition"
+        ]
+      },
+      "dataSchemas": {
+        "file": "modules\\dataSchemas.js",
+        "exports": [],
+        "dependencies": [],
+        "provides": [
+          "DataSchemas"
         ]
       },
       "eventCoordinator": {
@@ -21233,6 +22453,528 @@
           "line": 313
         }
       ],
+      "modules\\dataSchemas.js": [
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "constructor",
+          "line": 7
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "getAutoharpTypeSchema",
+          "line": 15
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateAutoharpType",
+          "line": 26
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getAutoharpTypeSchema",
+          "line": 27
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateObject",
+          "line": 28
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "getChordSchema",
+          "line": 35
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateChord",
+          "line": 46
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getChordSchema",
+          "line": 47
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateObject",
+          "line": 48
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "getProgressionSchema",
+          "line": 55
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getChordSchema",
+          "line": 59
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateProgression",
+          "line": 71
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getProgressionSchema",
+          "line": 72
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateObject",
+          "line": 73
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "getProjectSchema",
+          "line": 80
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getProgressionSchema",
+          "line": 86
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateProject",
+          "line": 110
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getProjectSchema",
+          "line": 111
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateObject",
+          "line": 112
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "getApplicationStateSchema",
+          "line": 119
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getChordSchema",
+          "line": 123
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getProgressionSchema",
+          "line": 129
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateApplicationState",
+          "line": 141
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.getApplicationStateSchema",
+          "line": 142
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateObject",
+          "line": 143
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateObject",
+          "line": 150
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 154
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 155
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "for ",
+          "line": 160
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Object.entries",
+          "line": 160
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateField",
+          "line": 162
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 163
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "for ",
+          "line": 167
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Object.keys",
+          "line": 167
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 168
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "warnings.push",
+          "line": 169
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateField",
+          "line": 180
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 184
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 185
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 190
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 195
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 196
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateType",
+          "line": 196
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 197
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 203
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 204
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "fieldSchema.pattern.test",
+          "line": 204
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 205
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 210
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "fieldSchema.enum.includes",
+          "line": 210
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 211
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "fieldSchema.enum.join",
+          "line": 211
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 215
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 216
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 217
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 219
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 220
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 225
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 226
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 227
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 229
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 230
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 234
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "value.forEach",
+          "line": 235
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 236
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateType",
+          "line": 236
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 237
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 242
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "value.forEach",
+          "line": 243
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateObject",
+          "line": 244
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 245
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 246
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "itemValidation.errors.map",
+          "line": 246
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 253
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.validateObject",
+          "line": 254
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 255
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "errors.push",
+          "line": 256
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "objectValidation.errors.map",
+          "line": 256
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "validateType",
+          "line": 263
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "switch ",
+          "line": 264
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "isNaN",
+          "line": 268
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Array.isArray",
+          "line": 272
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Array.isArray",
+          "line": 274
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "isNaN",
+          "line": 276
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Date.parse",
+          "line": 276
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "createDefaultProject",
+          "line": 286
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.generateId",
+          "line": 288
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Date",
+          "line": 301
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Date",
+          "line": 302
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "createDefaultProgression",
+          "line": 308
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "this.generateId",
+          "line": 310
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Date",
+          "line": 317
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Date",
+          "line": 318
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "generateId",
+          "line": 322
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Math.random",
+          "line": 323
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "toString",
+          "line": 323
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "substr",
+          "line": 323
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "Date.now",
+          "line": 323
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "sanitizeChordName",
+          "line": 326
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "if ",
+          "line": 327
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "chordName.trim",
+          "line": 330
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "replace",
+          "line": 331
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "replace",
+          "line": 332
+        },
+        {
+          "caller": "modules\\dataSchemas.js",
+          "callee": "replace",
+          "line": 333
+        }
+      ],
       "modules\\eventCoordinator.js": [
         {
           "caller": "modules\\eventCoordinator.js",
@@ -24472,333 +26214,493 @@
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "updateCurrentChord",
-          "line": 171
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "this.setState",
-          "line": 172
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "getAvailableChordsForType",
-          "line": 179
+          "callee": "setAutoharpType",
+          "line": 175
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "if ",
-          "line": 181
+          "line": 176
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "window.integrationBridge.getAvailableChordsForType",
+          "callee": "console.warn",
+          "line": 177
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.getAvailableChordsForType",
           "line": 182
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "switch ",
-          "line": 188
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "isChordAvailable",
-          "line": 214
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "this.state.availableChords.includes",
-          "line": 215
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "isChordSelected",
-          "line": 218
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "this.state.selectedChords.includes",
-          "line": 219
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "getSelectedChordCount",
-          "line": 222
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "saveToStorage",
-          "line": 227
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "localStorage.setItem",
-          "line": 235
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "JSON.stringify",
-          "line": 235
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "catch ",
-          "line": 236
+          "callee": "if ",
+          "line": 183
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "console.warn",
-          "line": 237
+          "line": 184
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "loadFromStorage",
-          "line": 241
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "localStorage.getItem",
-          "line": 243
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 244
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "JSON.parse",
-          "line": 245
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "this.getAvailableChordsForType",
-          "line": 254
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "catch ",
-          "line": 256
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "console.warn",
-          "line": 257
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "clearStorage",
-          "line": 261
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "localStorage.removeItem",
-          "line": 263
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "catch ",
-          "line": 264
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "console.warn",
-          "line": 265
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "validateState",
-          "line": 270
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 273
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "issues.push",
-          "line": 274
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 277
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "Array.isArray",
-          "line": 277
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "issues.push",
-          "line": 278
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 281
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "Array.isArray",
-          "line": 281
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "issues.push",
-          "line": 282
+          "callee": "this.setState",
+          "line": 189
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "this.state.selectedChords.filter",
-          "line": 286
+          "line": 193
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "this.state.availableChords.includes",
-          "line": 287
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 290
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "issues.push",
-          "line": 291
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "invalidChords.join",
-          "line": 291
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "reset",
-          "line": 301
+          "callee": "availableChords.includes",
+          "line": 194
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "this.emit",
-          "line": 316
+          "line": 199
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "this.getState",
-          "line": 316
+          "callee": "console.log",
+          "line": 205
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "this.saveToStorage",
-          "line": 317
+          "callee": "updateProgression",
+          "line": 209
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "getDebugInfo",
-          "line": 321
+          "callee": "if ",
+          "line": 210
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "this.validateState",
-          "line": 322
+          "callee": "console.warn",
+          "line": 211
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "this.getState",
-          "line": 324
+          "callee": "import",
+          "line": 216
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "Object.keys",
-          "line": 326
+          "callee": "then",
+          "line": 216
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "map",
-          "line": 326
+          "callee": "DataSchemas.validateProgression",
+          "line": 217
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "exportState",
-          "line": 334
+          "callee": "if ",
+          "line": 218
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "this.getState",
-          "line": 336
+          "callee": "console.warn",
+          "line": 219
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 222
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "console.info",
+          "line": 223
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "catch",
+          "line": 225
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "console.warn",
+          "line": 226
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "Date.now",
-          "line": 337
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "importState",
-          "line": 342
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 343
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "Error",
-          "line": 344
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 348
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "Error",
-          "line": 349
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "this.getAvailableChordsForType",
-          "line": 356
-        },
-        {
-          "caller": "modules\\stateManager.js",
-          "callee": "if ",
-          "line": 359
+          "line": 231
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "Array.isArray",
-          "line": 359
+          "line": 233
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "stateToImport.selectedChords.filter",
-          "line": 360
+          "callee": "Date",
+          "line": 236
         },
         {
           "caller": "modules\\stateManager.js",
-          "callee": "stateToImport.availableChords.includes",
-          "line": 361
+          "callee": "currentProgressions.findIndex",
+          "line": 241
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 243
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "currentProgressions.push",
+          "line": 246
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.setState",
+          "line": 249
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "this.emit",
-          "line": 366
+          "line": 252
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "console.log",
+          "line": 254
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "updateCurrentChord",
+          "line": 258
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.setState",
+          "line": 259
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "getAvailableChordsForType",
+          "line": 266
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 268
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "window.integrationBridge.getAvailableChordsForType",
+          "line": 269
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "switch ",
+          "line": 275
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "isChordAvailable",
+          "line": 301
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.state.availableChords.includes",
+          "line": 302
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "isChordSelected",
+          "line": 305
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.state.selectedChords.includes",
+          "line": 306
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "getSelectedChordCount",
+          "line": 309
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "saveToStorage",
+          "line": 314
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "localStorage.setItem",
+          "line": 322
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "JSON.stringify",
+          "line": 322
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "catch ",
+          "line": 323
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "console.warn",
+          "line": 324
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "loadFromStorage",
+          "line": 328
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "localStorage.getItem",
+          "line": 330
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 331
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "JSON.parse",
+          "line": 332
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.getAvailableChordsForType",
+          "line": 341
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "catch ",
+          "line": 343
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "console.warn",
+          "line": 344
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "clearStorage",
+          "line": 348
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "localStorage.removeItem",
+          "line": 350
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "catch ",
+          "line": 351
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "console.warn",
+          "line": 352
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "validateState",
+          "line": 357
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 360
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "issues.push",
+          "line": 361
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 364
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "Array.isArray",
+          "line": 364
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "issues.push",
+          "line": 365
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 368
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "Array.isArray",
+          "line": 368
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "issues.push",
+          "line": 369
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.state.selectedChords.filter",
+          "line": 373
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.state.availableChords.includes",
+          "line": 374
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 377
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "issues.push",
+          "line": 378
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "invalidChords.join",
+          "line": 378
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "reset",
+          "line": 388
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.emit",
+          "line": 403
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "this.getState",
-          "line": 366
+          "line": 403
         },
         {
           "caller": "modules\\stateManager.js",
           "callee": "this.saveToStorage",
-          "line": 367
+          "line": 404
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "getDebugInfo",
+          "line": 408
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.validateState",
+          "line": 409
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.getState",
+          "line": 411
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "Object.keys",
+          "line": 413
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "map",
+          "line": 413
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "exportState",
+          "line": 421
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.getState",
+          "line": 423
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "Date.now",
+          "line": 424
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "importState",
+          "line": 429
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 430
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "Error",
+          "line": 431
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 435
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "Error",
+          "line": 436
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.getAvailableChordsForType",
+          "line": 443
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "if ",
+          "line": 446
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "Array.isArray",
+          "line": 446
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "stateToImport.selectedChords.filter",
+          "line": 447
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "stateToImport.availableChords.includes",
+          "line": 448
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.emit",
+          "line": 453
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.getState",
+          "line": 453
+        },
+        {
+          "caller": "modules\\stateManager.js",
+          "callee": "this.saveToStorage",
+          "line": 454
         }
       ],
       "modules\\storageManager.js": [
@@ -25449,18 +27351,343 @@
         },
         {
           "caller": "modules\\storageManager.js",
-          "callee": "migrateFromOldVersion",
-          "line": 375
-        },
-        {
-          "caller": "modules\\storageManager.js",
-          "callee": "console.log",
+          "callee": "saveProject",
           "line": 378
         },
         {
           "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 379
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 380
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "import",
+          "line": 385
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "then",
+          "line": 385
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "DataSchemas.validateProject",
+          "line": 386
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 387
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 388
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 391
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.info",
+          "line": 392
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "catch",
+          "line": 394
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 395
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "Date",
+          "line": 403
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.save",
+          "line": 409
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 411
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.loadProjectIndex",
+          "line": 413
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.save",
+          "line": 422
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.log",
+          "line": 423
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "loadProject",
+          "line": 429
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 430
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 431
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.load",
+          "line": 435
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 437
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "import",
+          "line": 439
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "then",
+          "line": 439
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "DataSchemas.validateProject",
+          "line": 440
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 441
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 442
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "catch",
+          "line": 444
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 445
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.log",
+          "line": 448
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 450
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "loadProjectIndex",
+          "line": 456
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.load",
+          "line": 457
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "getAllProjects",
+          "line": 460
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.loadProjectIndex",
+          "line": 461
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "Object.values",
+          "line": 462
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "sort",
+          "line": 462
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "Date",
+          "line": 463
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "Date",
+          "line": 463
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "deleteProject",
+          "line": 467
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 468
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 469
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.loadProjectIndex",
+          "line": 474
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.save",
+          "line": 477
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.remove",
+          "line": 480
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 482
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.log",
+          "line": 483
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "saveProgressionToProject",
+          "line": 493
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.loadProject",
+          "line": 494
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 495
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 496
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "project.progressions.findIndex",
+          "line": 501
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 502
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "Date",
+          "line": 505
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "project.progressions.push",
+          "line": 508
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "Date",
+          "line": 510
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "Date",
+          "line": 511
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.saveProject",
+          "line": 515
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "removeProgressionFromProject",
+          "line": 518
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.loadProject",
+          "line": 519
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "if ",
+          "line": 520
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.warn",
+          "line": 521
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "project.progressions.filter",
+          "line": 525
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "this.saveProject",
+          "line": 526
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "migrateFromOldVersion",
+          "line": 530
+        },
+        {
+          "caller": "modules\\storageManager.js",
+          "callee": "console.log",
+          "line": 533
+        },
+        {
+          "caller": "modules\\storageManager.js",
           "callee": "StorageManager",
-          "line": 384
+          "line": 539
         }
       ],
       "simple-duplicate-check.js": [
