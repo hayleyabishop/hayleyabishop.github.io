@@ -668,24 +668,7 @@ class EventCoordinator {
   }
 
 
-  
-  // Show message to user
-  showMessage(message, type = 'info') {
-    const messageContainer = document.getElementById('app-message');
-    if (!messageContainer) {
-      console.log(`[${type.toUpperCase()}] ${message}`);
-      return;
-    }
-    
-    messageContainer.textContent = message;
-    messageContainer.className = `app-message ${type}`;
-    messageContainer.style.display = 'block';
-    
-    // Auto-hide after 3 seconds
-    setTimeout(() => {
-      messageContainer.style.display = 'none';
-    }, 3000);
-  }
+
   
   removeLastChord() {
     const selectedChords = this.stateManager.get('selectedChords');
@@ -696,6 +679,7 @@ class EventCoordinator {
   }
 
   showMessage(message, type = 'info') {
+    console.log(`[DEBUG] EventCoordinator.showMessage called: "${message}" (${type})`);
     // Create or update message display
     let messageEl = document.getElementById('app-message');
     if (!messageEl) {

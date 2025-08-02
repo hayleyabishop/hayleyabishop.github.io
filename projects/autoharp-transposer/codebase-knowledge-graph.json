@@ -1,12 +1,12 @@
 {
-  "generated": "2025-08-02T06:23:45.115Z",
+  "generated": "2025-08-02T06:37:48.091Z",
   "project": "autoharp-transposer",
   "statistics": {
-    "files": 27,
+    "files": 28,
     "classes": 13,
-    "functions": 59,
+    "functions": 66,
     "methods": 276,
-    "eventHandlers": 42
+    "eventHandlers": 43
   },
   "graph": {
     "files": {
@@ -4440,26 +4440,10 @@
                 "calls": []
               },
               {
-                "name": "showMessage",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 673,
-                "signature": "showMessage(message, type = 'info') {",
-                "calls": []
-              },
-              {
-                "name": "if",
-                "class": "EventCoordinator",
-                "file": "modules\\eventCoordinator.js",
-                "line": 675,
-                "signature": "if (!messageContainer) {",
-                "calls": []
-              },
-              {
                 "name": "removeLastChord",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 690,
+                "line": 673,
                 "signature": "removeLastChord() {",
                 "calls": []
               },
@@ -4467,7 +4451,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 692,
+                "line": 675,
                 "signature": "if (selectedChords.length > 0) {",
                 "calls": []
               },
@@ -4475,7 +4459,7 @@
                 "name": "showMessage",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 698,
+                "line": 681,
                 "signature": "showMessage(message, type = 'info') {",
                 "calls": []
               },
@@ -4483,7 +4467,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 701,
+                "line": 685,
                 "signature": "if (!messageEl) {",
                 "calls": []
               },
@@ -4491,7 +4475,7 @@
                 "name": "getDebugInfo",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 719,
+                "line": 703,
                 "signature": "getDebugInfo() {",
                 "calls": []
               },
@@ -4499,7 +4483,7 @@
                 "name": "selectChordNameLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 738,
+                "line": 722,
                 "signature": "selectChordNameLegacy(chordName) {",
                 "calls": []
               },
@@ -4507,7 +4491,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 751,
+                "line": 735,
                 "signature": "if (btn !== selectedButton) {",
                 "calls": []
               },
@@ -4515,7 +4499,7 @@
                 "name": "selectChordTypeLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 766,
+                "line": 750,
                 "signature": "selectChordTypeLegacy(chordType) {",
                 "calls": []
               },
@@ -4523,7 +4507,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 779,
+                "line": 763,
                 "signature": "if (btn !== selectedButton) {",
                 "calls": []
               },
@@ -4531,7 +4515,7 @@
                 "name": "tryAddChordLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 793,
+                "line": 777,
                 "signature": "tryAddChordLegacy() {",
                 "calls": []
               },
@@ -4539,7 +4523,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 794,
+                "line": 778,
                 "signature": "if (window.selectedChordName && window.selectedChordType) {",
                 "calls": []
               },
@@ -4547,7 +4531,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 796,
+                "line": 780,
                 "signature": "if (typeof window.appendChord === 'function') {",
                 "calls": []
               },
@@ -4555,7 +4539,7 @@
                 "name": "if",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 799,
+                "line": 783,
                 "signature": "if (typeof window.onInputChordsChanged === 'function') {",
                 "calls": []
               },
@@ -4563,7 +4547,7 @@
                 "name": "resetChordSelectionLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 810,
+                "line": 794,
                 "signature": "resetChordSelectionLegacy() {",
                 "calls": []
               },
@@ -4571,7 +4555,7 @@
                 "name": "initializeChordInputListenerLegacy",
                 "class": "EventCoordinator",
                 "file": "modules\\eventCoordinator.js",
-                "line": 824,
+                "line": 808,
                 "signature": "initializeChordInputListenerLegacy() {",
                 "calls": []
               }
@@ -5161,26 +5145,10 @@
             "calls": []
           },
           {
-            "name": "showMessage",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 673,
-            "signature": "showMessage(message, type = 'info') {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 675,
-            "signature": "if (!messageContainer) {",
-            "calls": []
-          },
-          {
             "name": "removeLastChord",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 690,
+            "line": 673,
             "signature": "removeLastChord() {",
             "calls": []
           },
@@ -5188,7 +5156,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 692,
+            "line": 675,
             "signature": "if (selectedChords.length > 0) {",
             "calls": []
           },
@@ -5196,7 +5164,7 @@
             "name": "showMessage",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 698,
+            "line": 681,
             "signature": "showMessage(message, type = 'info') {",
             "calls": []
           },
@@ -5204,7 +5172,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 701,
+            "line": 685,
             "signature": "if (!messageEl) {",
             "calls": []
           },
@@ -5212,7 +5180,7 @@
             "name": "getDebugInfo",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 719,
+            "line": 703,
             "signature": "getDebugInfo() {",
             "calls": []
           },
@@ -5220,7 +5188,7 @@
             "name": "selectChordNameLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 738,
+            "line": 722,
             "signature": "selectChordNameLegacy(chordName) {",
             "calls": []
           },
@@ -5228,7 +5196,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 751,
+            "line": 735,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -5236,7 +5204,7 @@
             "name": "selectChordTypeLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 766,
+            "line": 750,
             "signature": "selectChordTypeLegacy(chordType) {",
             "calls": []
           },
@@ -5244,7 +5212,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 779,
+            "line": 763,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -5252,7 +5220,7 @@
             "name": "tryAddChordLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 793,
+            "line": 777,
             "signature": "tryAddChordLegacy() {",
             "calls": []
           },
@@ -5260,7 +5228,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 794,
+            "line": 778,
             "signature": "if (window.selectedChordName && window.selectedChordType) {",
             "calls": []
           },
@@ -5268,7 +5236,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 796,
+            "line": 780,
             "signature": "if (typeof window.appendChord === 'function') {",
             "calls": []
           },
@@ -5276,7 +5244,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 799,
+            "line": 783,
             "signature": "if (typeof window.onInputChordsChanged === 'function') {",
             "calls": []
           },
@@ -5284,7 +5252,7 @@
             "name": "resetChordSelectionLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 810,
+            "line": 794,
             "signature": "resetChordSelectionLegacy() {",
             "calls": []
           },
@@ -5292,7 +5260,7 @@
             "name": "initializeChordInputListenerLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 824,
+            "line": 808,
             "signature": "initializeChordInputListenerLegacy() {",
             "calls": []
           }
@@ -5407,7 +5375,7 @@
         "imports": [],
         "exports": [],
         "dependencies": [],
-        "lineCount": 832
+        "lineCount": 816
       },
       "modules\\inputManager.js": {
         "path": "modules\\inputManager.js",
@@ -8358,6 +8326,76 @@
         "dependencies": [],
         "lineCount": 138
       },
+      "tests\\test-input-ui-specialist-fixes.js": {
+        "path": "tests\\test-input-ui-specialist-fixes.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tests\\test-input-ui-specialist-fixes.js",
+        "classes": [],
+        "functions": [
+          {
+            "name": "logTest",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 21,
+            "signature": "function logTest(testName, passed, details = '') {",
+            "calls": []
+          },
+          {
+            "name": "waitForApp",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 32,
+            "signature": "function waitForApp() {",
+            "calls": []
+          },
+          {
+            "name": "testNoDuplicateMethods",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 43,
+            "signature": "function testNoDuplicateMethods() {",
+            "calls": []
+          },
+          {
+            "name": "testRealTimeValidation",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 70,
+            "signature": "function testRealTimeValidation() {",
+            "calls": []
+          },
+          {
+            "name": "testSuggestionSystem",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 101,
+            "signature": "function testSuggestionSystem() {",
+            "calls": []
+          },
+          {
+            "name": "testMethodExecution",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 133,
+            "signature": "function testMethodExecution() {",
+            "calls": []
+          },
+          {
+            "name": "testChordAdditionWorkflow",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 171,
+            "signature": "function testChordAdditionWorkflow() {",
+            "calls": []
+          }
+        ],
+        "methods": [],
+        "eventHandlers": [
+          {
+            "event": "DOMContentLoaded",
+            "handler": "runAllTests",
+            "file": "tests\\test-input-ui-specialist-fixes.js",
+            "line": 238,
+            "signature": "document.addEventListener('DOMContentLoaded', runAllTests);"
+          }
+        ],
+        "imports": [],
+        "exports": [],
+        "dependencies": [],
+        "lineCount": 255
+      },
       "tests\\test-integration.js": {
         "path": "tests\\test-integration.js",
         "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tests\\test-integration.js",
@@ -11232,26 +11270,10 @@
             "calls": []
           },
           {
-            "name": "showMessage",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 673,
-            "signature": "showMessage(message, type = 'info') {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "EventCoordinator",
-            "file": "modules\\eventCoordinator.js",
-            "line": 675,
-            "signature": "if (!messageContainer) {",
-            "calls": []
-          },
-          {
             "name": "removeLastChord",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 690,
+            "line": 673,
             "signature": "removeLastChord() {",
             "calls": []
           },
@@ -11259,7 +11281,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 692,
+            "line": 675,
             "signature": "if (selectedChords.length > 0) {",
             "calls": []
           },
@@ -11267,7 +11289,7 @@
             "name": "showMessage",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 698,
+            "line": 681,
             "signature": "showMessage(message, type = 'info') {",
             "calls": []
           },
@@ -11275,7 +11297,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 701,
+            "line": 685,
             "signature": "if (!messageEl) {",
             "calls": []
           },
@@ -11283,7 +11305,7 @@
             "name": "getDebugInfo",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 719,
+            "line": 703,
             "signature": "getDebugInfo() {",
             "calls": []
           },
@@ -11291,7 +11313,7 @@
             "name": "selectChordNameLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 738,
+            "line": 722,
             "signature": "selectChordNameLegacy(chordName) {",
             "calls": []
           },
@@ -11299,7 +11321,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 751,
+            "line": 735,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -11307,7 +11329,7 @@
             "name": "selectChordTypeLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 766,
+            "line": 750,
             "signature": "selectChordTypeLegacy(chordType) {",
             "calls": []
           },
@@ -11315,7 +11337,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 779,
+            "line": 763,
             "signature": "if (btn !== selectedButton) {",
             "calls": []
           },
@@ -11323,7 +11345,7 @@
             "name": "tryAddChordLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 793,
+            "line": 777,
             "signature": "tryAddChordLegacy() {",
             "calls": []
           },
@@ -11331,7 +11353,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 794,
+            "line": 778,
             "signature": "if (window.selectedChordName && window.selectedChordType) {",
             "calls": []
           },
@@ -11339,7 +11361,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 796,
+            "line": 780,
             "signature": "if (typeof window.appendChord === 'function') {",
             "calls": []
           },
@@ -11347,7 +11369,7 @@
             "name": "if",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 799,
+            "line": 783,
             "signature": "if (typeof window.onInputChordsChanged === 'function') {",
             "calls": []
           },
@@ -11355,7 +11377,7 @@
             "name": "resetChordSelectionLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 810,
+            "line": 794,
             "signature": "resetChordSelectionLegacy() {",
             "calls": []
           },
@@ -11363,7 +11385,7 @@
             "name": "initializeChordInputListenerLegacy",
             "class": "EventCoordinator",
             "file": "modules\\eventCoordinator.js",
-            "line": 824,
+            "line": 808,
             "signature": "initializeChordInputListenerLegacy() {",
             "calls": []
           }
@@ -12843,6 +12865,55 @@
         "signature": "function addInputFlowDebugging() {",
         "calls": []
       },
+      "logTest": {
+        "name": "logTest",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 21,
+        "signature": "function logTest(testName, passed, details = '') {",
+        "calls": []
+      },
+      "waitForApp": {
+        "name": "waitForApp",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 32,
+        "signature": "function waitForApp() {",
+        "calls": []
+      },
+      "testNoDuplicateMethods": {
+        "name": "testNoDuplicateMethods",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 43,
+        "signature": "function testNoDuplicateMethods() {",
+        "calls": []
+      },
+      "testRealTimeValidation": {
+        "name": "testRealTimeValidation",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 70,
+        "signature": "function testRealTimeValidation() {",
+        "calls": []
+      },
+      "testSuggestionSystem": {
+        "name": "testSuggestionSystem",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 101,
+        "signature": "function testSuggestionSystem() {",
+        "calls": []
+      },
+      "testMethodExecution": {
+        "name": "testMethodExecution",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 133,
+        "signature": "function testMethodExecution() {",
+        "calls": []
+      },
+      "testChordAdditionWorkflow": {
+        "name": "testChordAdditionWorkflow",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 171,
+        "signature": "function testChordAdditionWorkflow() {",
+        "calls": []
+      },
       "testIntegration": {
         "name": "testIntegration",
         "file": "tests\\test-integration.js",
@@ -14103,7 +14174,7 @@
         "name": "if",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 799,
+        "line": 783,
         "signature": "if (typeof window.onInputChordsChanged === 'function') {",
         "calls": []
       },
@@ -14387,27 +14458,27 @@
         "signature": "focusTextInput() {",
         "calls": []
       },
-      "EventCoordinator.showMessage": {
-        "name": "showMessage",
-        "class": "EventCoordinator",
-        "file": "modules\\eventCoordinator.js",
-        "line": 698,
-        "signature": "showMessage(message, type = 'info') {",
-        "calls": []
-      },
       "EventCoordinator.removeLastChord": {
         "name": "removeLastChord",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 690,
+        "line": 673,
         "signature": "removeLastChord() {",
+        "calls": []
+      },
+      "EventCoordinator.showMessage": {
+        "name": "showMessage",
+        "class": "EventCoordinator",
+        "file": "modules\\eventCoordinator.js",
+        "line": 681,
+        "signature": "showMessage(message, type = 'info') {",
         "calls": []
       },
       "EventCoordinator.getDebugInfo": {
         "name": "getDebugInfo",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 719,
+        "line": 703,
         "signature": "getDebugInfo() {",
         "calls": []
       },
@@ -14415,7 +14486,7 @@
         "name": "selectChordNameLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 738,
+        "line": 722,
         "signature": "selectChordNameLegacy(chordName) {",
         "calls": []
       },
@@ -14423,7 +14494,7 @@
         "name": "selectChordTypeLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 766,
+        "line": 750,
         "signature": "selectChordTypeLegacy(chordType) {",
         "calls": []
       },
@@ -14431,7 +14502,7 @@
         "name": "tryAddChordLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 793,
+        "line": 777,
         "signature": "tryAddChordLegacy() {",
         "calls": []
       },
@@ -14439,7 +14510,7 @@
         "name": "resetChordSelectionLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 810,
+        "line": 794,
         "signature": "resetChordSelectionLegacy() {",
         "calls": []
       },
@@ -14447,7 +14518,7 @@
         "name": "initializeChordInputListenerLegacy",
         "class": "EventCoordinator",
         "file": "modules\\eventCoordinator.js",
-        "line": 824,
+        "line": 808,
         "signature": "initializeChordInputListenerLegacy() {",
         "calls": []
       },
@@ -15489,6 +15560,13 @@
         "line": 132,
         "signature": "document.addEventListener('DOMContentLoaded', () => {"
       },
+      "tests\\test-input-ui-specialist-fixes.js:238": {
+        "event": "DOMContentLoaded",
+        "handler": "runAllTests",
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "line": 238,
+        "signature": "document.addEventListener('DOMContentLoaded', runAllTests);"
+      },
       "tests\\test-integration.js:117": {
         "event": "DOMContentLoaded",
         "handler": "(",
@@ -15796,6 +15874,20 @@
         "dependencies": [],
         "provides": [
           "addInputFlowDebugging"
+        ]
+      },
+      "test-input-ui-specialist-fixes": {
+        "file": "tests\\test-input-ui-specialist-fixes.js",
+        "exports": [],
+        "dependencies": [],
+        "provides": [
+          "logTest",
+          "waitForApp",
+          "testNoDuplicateMethods",
+          "testRealTimeValidation",
+          "testSuggestionSystem",
+          "testMethodExecution",
+          "testChordAdditionWorkflow"
         ]
       },
       "test-integration": {
@@ -22654,12 +22746,12 @@
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "showMessage",
+          "callee": "removeLastChord",
           "line": 673
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "document.getElementById",
+          "callee": "this.stateManager.get",
           "line": 674
         },
         {
@@ -22669,273 +22761,248 @@
         },
         {
           "caller": "modules\\eventCoordinator.js",
-          "callee": "console.log",
-          "line": 676
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "type.toUpperCase",
-          "line": 676
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "setTimeout",
-          "line": 685
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "removeLastChord",
-          "line": 690
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "this.stateManager.get",
-          "line": 691
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
-          "callee": "if ",
-          "line": 692
-        },
-        {
-          "caller": "modules\\eventCoordinator.js",
           "callee": "this.inputManager.removeChord",
-          "line": 694
+          "line": 677
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "showMessage",
-          "line": 698
+          "line": 681
+        },
+        {
+          "caller": "modules\\eventCoordinator.js",
+          "callee": "console.log",
+          "line": 682
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.getElementById",
-          "line": 700
+          "line": 684
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 701
+          "line": 685
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.createElement",
-          "line": 702
+          "line": 686
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.body.appendChild",
-          "line": 705
+          "line": 689
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "setTimeout",
-          "line": 713
+          "line": 697
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "getDebugInfo",
-          "line": 719
+          "line": 703
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "this.inputManager.getDebugInfo",
-          "line": 721
+          "line": 705
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "this.stateManager.getDebugInfo",
-          "line": 722
+          "line": 706
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectChordNameLegacy",
-          "line": 738
+          "line": 722
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.querySelector",
-          "line": 739
+          "line": 723
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 740
+          "line": 724
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 742
+          "line": 726
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectedButton.classList.contains",
-          "line": 742
+          "line": 726
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectedButton.classList.remove",
-          "line": 743
+          "line": 727
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.querySelectorAll",
-          "line": 749
+          "line": 733
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "chordNameButtons.forEach",
-          "line": 750
+          "line": 734
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 751
+          "line": 735
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "btn.classList.remove",
-          "line": 752
+          "line": 736
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectedButton.classList.add",
-          "line": 756
+          "line": 740
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "console.log",
-          "line": 758
+          "line": 742
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectChordTypeLegacy",
-          "line": 766
+          "line": 750
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.querySelector",
-          "line": 767
+          "line": 751
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 768
+          "line": 752
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 770
+          "line": 754
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectedButton.classList.contains",
-          "line": 770
+          "line": 754
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectedButton.classList.remove",
-          "line": 771
+          "line": 755
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.querySelectorAll",
-          "line": 777
+          "line": 761
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "chordTypeButtons.forEach",
-          "line": 778
+          "line": 762
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 779
+          "line": 763
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "btn.classList.remove",
-          "line": 780
+          "line": 764
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "selectedButton.classList.add",
-          "line": 784
+          "line": 768
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "console.log",
-          "line": 786
+          "line": 770
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "tryAddChordLegacy",
-          "line": 793
+          "line": 777
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 794
+          "line": 778
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "this.formatChordNameLegacy",
-          "line": 795
+          "line": 779
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 796
+          "line": 780
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "window.appendChord",
-          "line": 797
+          "line": 781
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "if ",
-          "line": 799
+          "line": 783
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "window.onInputChordsChanged",
-          "line": 800
+          "line": 784
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "this.resetChordSelectionLegacy",
-          "line": 802
+          "line": 786
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "resetChordSelectionLegacy",
-          "line": 810
+          "line": 794
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "document.querySelectorAll",
-          "line": 812
+          "line": 796
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "allButtons.forEach",
-          "line": 813
+          "line": 797
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "btn.classList.remove",
-          "line": 813
+          "line": 797
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "initializeChordInputListenerLegacy",
-          "line": 824
+          "line": 808
         },
         {
           "caller": "modules\\eventCoordinator.js",
           "callee": "console.log",
-          "line": 827
+          "line": 811
         }
       ],
       "modules\\inputManager.js": [
@@ -28795,6 +28862,553 @@
           "caller": "tests\\test-input-flow-debug.js",
           "callee": "setTimeout",
           "line": 136
+        }
+      ],
+      "tests\\test-input-ui-specialist-fixes.js": [
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 6
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 21
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 24
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testResults.tests.push",
+          "line": 26
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 27
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "waitForApp",
+          "line": 32
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "Promise",
+          "line": 33
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 34
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "resolve",
+          "line": 35
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "setTimeout",
+          "line": 37
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "waitForApp",
+          "line": 37
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "then",
+          "line": 37
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testNoDuplicateMethods",
+          "line": 43
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 44
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 47
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 48
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "methodsToTest.forEach",
+          "line": 61
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 64
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testRealTimeValidation",
+          "line": 70
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 71
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "document.getElementById",
+          "line": 73
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 74
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 75
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "TEST_CONFIG.testChords.forEach",
+          "line": 80
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "textInput.classList.remove",
+          "line": 82
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "Event",
+          "line": 86
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "textInput.dispatchEvent",
+          "line": 87
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "textInput.classList.contains",
+          "line": 90
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "textInput.classList.contains",
+          "line": 91
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "textInput.classList.contains",
+          "line": 92
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 95
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testSuggestionSystem",
+          "line": 101
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 102
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "document.getElementById",
+          "line": 104
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "document.getElementById",
+          "line": 105
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 107
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 108
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "partialInputs.forEach",
+          "line": 115
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "Event",
+          "line": 118
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "textInput.dispatchEvent",
+          "line": 119
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "setTimeout",
+          "line": 122
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 126
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testMethodExecution",
+          "line": 133
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 134
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "Execution ",
+          "line": 134
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 137
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 138
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 143
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "eventCoordinator.handleTextInput",
+          "line": 145
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 146
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "catch ",
+          "line": 147
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 148
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 152
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "eventCoordinator.clearTextInput",
+          "line": 154
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 155
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "catch ",
+          "line": 156
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 157
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 161
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "eventCoordinator.showSuggestions",
+          "line": 163
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 164
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "catch ",
+          "line": 165
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 166
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testChordAdditionWorkflow",
+          "line": 171
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 172
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "document.getElementById",
+          "line": 174
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "document.getElementById",
+          "line": 175
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 177
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 178
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "addButton.click",
+          "line": 185
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 186
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "catch ",
+          "line": 187
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 188
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "runAllTests",
+          "line": 193
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 194
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 195
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "repeat",
+          "line": 195
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "waitForApp",
+          "line": 198
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 199
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testNoDuplicateMethods",
+          "line": 202
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testRealTimeValidation",
+          "line": 203
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testSuggestionSystem",
+          "line": 204
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testMethodExecution",
+          "line": 205
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "testChordAdditionWorkflow",
+          "line": 206
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "setTimeout",
+          "line": 209
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 210
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "repeat",
+          "line": 210
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 211
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 212
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "repeat",
+          "line": 212
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 213
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 214
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 215
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "toFixed",
+          "line": 215
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 217
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 218
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 220
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 223
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 224
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 225
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 226
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 227
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "catch ",
+          "line": 230
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.error",
+          "line": 231
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "logTest",
+          "line": 232
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "if ",
+          "line": 237
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "document.addEventListener",
+          "line": 238
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "runAllTests",
+          "line": 240
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "console.log",
+          "line": 254
+        },
+        {
+          "caller": "tests\\test-input-ui-specialist-fixes.js",
+          "callee": "window.InputUISpecialistTests.runAllTests",
+          "line": 254
         }
       ],
       "tests\\test-integration.js": [
