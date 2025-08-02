@@ -168,6 +168,93 @@ class StateManager {
     }
   }
 
+  // =============================================================================
+  // INTERFACE METHODS (Required by Agent Rules)
+  // =============================================================================
+  
+  setAutoharpType(type) {
+    if (!type || typeof type !== 'string') {
+      console.warn('Invalid autoharp type provided:', type);
+      return false;
+    }
+    
+    // Get available chords for the new type
+    const availableChords = this.getAvailableChordsForType(type);
+    if (!availableChords || availableChords.length === 0) {
+      console.warn(`No chords available for autoharp type: ${type}`);
+      return false;
+    }
+    
+    // Update state with new type and available chords
+    this.setState({
+      autoharpType: type,
+      availableChords: availableChords,
+      // Clear selected chords that may not be available on new type
+      selectedChords: this.state.selectedChords.filter(chord => 
+        availableChords.includes(chord.name || chord)
+      )
+    });
+    
+    // Notify listeners
+    this.emit('autoharpTypeChanged', { 
+      oldType: this.state.autoharpType, 
+      newType: type,
+      availableChords 
+    });
+    
+    console.log(`Autoharp type changed to: ${type} (${availableChords.length} chords available)`);
+    return true;
+  }
+  
+  updateProgression(progression) {
+    if (!progression) {
+      console.warn('Cannot update progression: no progression provided');
+      return false;
+    }
+    
+    // Import DataSchemas for validation (async)
+    import('./dataSchemas.js').then(({ DataSchemas }) => {
+      const validation = DataSchemas.validateProgression(progression);
+      if (!validation.isValid) {
+        console.warn('Progression validation failed:', validation.errors);
+        // Continue but log warnings
+      }
+      if (validation.warnings.length > 0) {
+        console.info('Progression validation warnings:', validation.warnings);
+      }
+    }).catch(err => {
+      console.warn('Could not validate progression data:', err);
+    });
+    
+    // Ensure progression has required fields
+    const normalizedProgression = {
+      id: progression.id || `prog_${Date.now()}`,
+      name: progression.name || 'Untitled Progression',
+      chords: Array.isArray(progression.chords) ? progression.chords : [],
+      autoharpType: progression.autoharpType || this.state.autoharpType,
+      ...progression,
+      modifiedAt: new Date()
+    };
+    
+    // Update progressions in state
+    const currentProgressions = [...this.state.progressions];
+    const existingIndex = currentProgressions.findIndex(p => p.id === normalizedProgression.id);
+    
+    if (existingIndex >= 0) {
+      currentProgressions[existingIndex] = normalizedProgression;
+    } else {
+      currentProgressions.push(normalizedProgression);
+    }
+    
+    this.setState({ progressions: currentProgressions });
+    
+    // Notify listeners
+    this.emit('progressionUpdated', normalizedProgression);
+    
+    console.log(`Progression '${normalizedProgression.name}' updated successfully`);
+    return true;
+  }
+
   updateCurrentChord(chordName, chordType) {
     this.setState({
       currentChordName: chordName,
