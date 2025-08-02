@@ -46,31 +46,7 @@ class IntegrationBridge {
   }
   
   // Check if integration bridge is ready and call callbacks
-  checkReadiness() {
-    if (this.legacyDataReady) {
-      console.log('Integration bridge ready - checking for callbacks');
-      if (this.readyCallbacks && this.readyCallbacks.length > 0) {
-        console.log(`Calling ${this.readyCallbacks.length} ready callbacks`);
-        this.readyCallbacks.forEach(callback => {
-          try {
-            callback();
-          } catch (error) {
-            console.error('Error in ready callback:', error);
-          }
-        });
-        this.readyCallbacks = []; // Clear callbacks after calling
-      } else {
-        console.log('No callbacks registered yet, but bridge is ready');
-      }
-    }
-  }
-
-  
-  // Mark module system as ready
-  setModuleSystemReady() {
-    this.moduleSystemReady = true;
-    console.log('Module system marked as ready');
-  }
+  // (Duplicate removed - using the complete version below)
 
   useFallbackChordData() {
     // Fallback chord data if the legacy system isn't available

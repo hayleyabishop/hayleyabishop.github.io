@@ -1,11 +1,11 @@
 {
-  "generated": "2025-08-02T07:03:58.046Z",
+  "generated": "2025-08-02T08:28:06.811Z",
   "project": "autoharp-transposer",
   "statistics": {
     "files": 32,
     "classes": 16,
     "functions": 66,
-    "methods": 316,
+    "methods": 317,
     "eventHandlers": 44
   },
   "graph": {
@@ -127,7 +127,7 @@
                 "name": "if",
                 "class": "CodebaseMapper",
                 "file": "codebase-mapper.js",
-                "line": 230,
+                "line": 235,
                 "signature": "if (this.knowledgeGraph.classes.size > 0) {",
                 "calls": []
               },
@@ -135,7 +135,7 @@
                 "name": "if",
                 "class": "CodebaseMapper",
                 "file": "codebase-mapper.js",
-                "line": 234,
+                "line": 240,
                 "signature": "if (classInfo.constructor) {",
                 "calls": []
               },
@@ -143,7 +143,7 @@
                 "name": "if",
                 "class": "CodebaseMapper",
                 "file": "codebase-mapper.js",
-                "line": 244,
+                "line": 251,
                 "signature": "if (this.knowledgeGraph.functions.size > 0) {",
                 "calls": []
               },
@@ -151,7 +151,7 @@
                 "name": "if",
                 "class": "CodebaseMapper",
                 "file": "codebase-mapper.js",
-                "line": 253,
+                "line": 261,
                 "signature": "if (this.knowledgeGraph.eventHandlers.size > 0) {",
                 "calls": []
               },
@@ -159,15 +159,23 @@
                 "name": "if",
                 "class": "CodebaseMapper",
                 "file": "codebase-mapper.js",
-                "line": 263,
+                "line": 272,
                 "signature": "if (moduleInfo.dependencies.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "writeReport",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 284,
+                "signature": "writeReport(reportLines) {",
                 "calls": []
               },
               {
                 "name": "exportKnowledgeGraph",
                 "class": "CodebaseMapper",
                 "file": "codebase-mapper.js",
-                "line": 272,
+                "line": 299,
                 "signature": "exportKnowledgeGraph() {",
                 "calls": []
               },
@@ -175,7 +183,7 @@
                 "name": "if",
                 "class": "CodebaseMapper",
                 "file": "codebase-mapper.js",
-                "line": 307,
+                "line": 334,
                 "signature": "if (require.main === module) {",
                 "calls": []
               }
@@ -296,7 +304,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 230,
+            "line": 235,
             "signature": "if (this.knowledgeGraph.classes.size > 0) {",
             "calls": []
           },
@@ -304,7 +312,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 234,
+            "line": 240,
             "signature": "if (classInfo.constructor) {",
             "calls": []
           },
@@ -312,7 +320,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 244,
+            "line": 251,
             "signature": "if (this.knowledgeGraph.functions.size > 0) {",
             "calls": []
           },
@@ -320,7 +328,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 253,
+            "line": 261,
             "signature": "if (this.knowledgeGraph.eventHandlers.size > 0) {",
             "calls": []
           },
@@ -328,15 +336,23 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 263,
+            "line": 272,
             "signature": "if (moduleInfo.dependencies.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "writeReport",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 284,
+            "signature": "writeReport(reportLines) {",
             "calls": []
           },
           {
             "name": "exportKnowledgeGraph",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 272,
+            "line": 299,
             "signature": "exportKnowledgeGraph() {",
             "calls": []
           },
@@ -344,7 +360,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 307,
+            "line": 334,
             "signature": "if (require.main === module) {",
             "calls": []
           }
@@ -359,7 +375,7 @@
           "fs",
           "path"
         ],
-        "lineCount": 314
+        "lineCount": 341
       },
       "detect-duplicates.js": {
         "path": "detect-duplicates.js",
@@ -6549,42 +6565,10 @@
                 "calls": []
               },
               {
-                "name": "checkReadiness",
-                "class": "IntegrationBridge",
-                "file": "modules\\integrationBridge.js",
-                "line": 49,
-                "signature": "checkReadiness() {",
-                "calls": []
-              },
-              {
-                "name": "if",
-                "class": "IntegrationBridge",
-                "file": "modules\\integrationBridge.js",
-                "line": 50,
-                "signature": "if (this.legacyDataReady) {",
-                "calls": []
-              },
-              {
-                "name": "if",
-                "class": "IntegrationBridge",
-                "file": "modules\\integrationBridge.js",
-                "line": 52,
-                "signature": "if (this.readyCallbacks && this.readyCallbacks.length > 0) {",
-                "calls": []
-              },
-              {
-                "name": "setModuleSystemReady",
-                "class": "IntegrationBridge",
-                "file": "modules\\integrationBridge.js",
-                "line": 70,
-                "signature": "setModuleSystemReady() {",
-                "calls": []
-              },
-              {
                 "name": "useFallbackChordData",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 75,
+                "line": 51,
                 "signature": "useFallbackChordData() {",
                 "calls": []
               },
@@ -6592,7 +6576,7 @@
                 "name": "setModuleSystemReady",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 95,
+                "line": 71,
                 "signature": "setModuleSystemReady() {",
                 "calls": []
               },
@@ -6600,7 +6584,7 @@
                 "name": "checkReadiness",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 100,
+                "line": 76,
                 "signature": "checkReadiness() {",
                 "calls": []
               },
@@ -6608,7 +6592,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 101,
+                "line": 77,
                 "signature": "if (this.legacyDataReady && this.moduleSystemReady) {",
                 "calls": []
               },
@@ -6616,7 +6600,7 @@
                 "name": "onReady",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 106,
+                "line": 82,
                 "signature": "onReady(callback) {",
                 "calls": []
               },
@@ -6624,7 +6608,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 107,
+                "line": 83,
                 "signature": "if (this.legacyDataReady && this.moduleSystemReady) {",
                 "calls": []
               },
@@ -6632,7 +6616,7 @@
                 "name": "executePendingCallbacks",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 114,
+                "line": 90,
                 "signature": "executePendingCallbacks() {",
                 "calls": []
               },
@@ -6640,7 +6624,7 @@
                 "name": "getAvailableChordsForType",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 125,
+                "line": 101,
                 "signature": "getAvailableChordsForType(type) {",
                 "calls": []
               },
@@ -6648,7 +6632,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 126,
+                "line": 102,
                 "signature": "if (!this.chordLists) {",
                 "calls": []
               },
@@ -6656,7 +6640,7 @@
                 "name": "switch",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 131,
+                "line": 107,
                 "signature": "switch (type) {",
                 "calls": []
               },
@@ -6664,7 +6648,7 @@
                 "name": "bridgeLegacyFunctions",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 158,
+                "line": 134,
                 "signature": "bridgeLegacyFunctions(app) {",
                 "calls": []
               },
@@ -6672,7 +6656,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 162,
+                "line": 138,
                 "signature": "if (window.selectChordName) {",
                 "calls": []
               },
@@ -6680,7 +6664,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 174,
+                "line": 150,
                 "signature": "if (window.selectChordType) {",
                 "calls": []
               },
@@ -6688,7 +6672,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 187,
+                "line": 163,
                 "signature": "if (window.onChordTypeChanged) {",
                 "calls": []
               },
@@ -6696,7 +6680,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 193,
+                "line": 169,
                 "signature": "if (selectedType) {",
                 "calls": []
               },
@@ -6704,7 +6688,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 200,
+                "line": 176,
                 "signature": "if (window.onInputChordsChanged) {",
                 "calls": []
               },
@@ -6712,7 +6696,7 @@
                 "name": "getCurrentAutoharpType",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 212,
+                "line": 188,
                 "signature": "getCurrentAutoharpType() {",
                 "calls": []
               },
@@ -6720,7 +6704,7 @@
                 "name": "getCurrentSelectedChords",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 218,
+                "line": 194,
                 "signature": "getCurrentSelectedChords() {",
                 "calls": []
               },
@@ -6728,7 +6712,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 220,
+                "line": 196,
                 "signature": "if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {",
                 "calls": []
               },
@@ -6736,7 +6720,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 225,
+                "line": 201,
                 "signature": "if (window.getInputChords && typeof window.getInputChords === 'function' && window.chordGroup) {",
                 "calls": []
               },
@@ -6744,7 +6728,7 @@
                 "name": "syncLegacyToNewSystem",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 242,
+                "line": 218,
                 "signature": "syncLegacyToNewSystem(app) {",
                 "calls": []
               },
@@ -6752,7 +6736,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 252,
+                "line": 228,
                 "signature": "if (currentChords.length > 0) {",
                 "calls": []
               },
@@ -6760,7 +6744,7 @@
                 "name": "syncNewSystemToLegacy",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 263,
+                "line": 239,
                 "signature": "syncNewSystemToLegacy(app) {",
                 "calls": []
               },
@@ -6768,7 +6752,7 @@
                 "name": "if",
                 "class": "IntegrationBridge",
                 "file": "modules\\integrationBridge.js",
-                "line": 270,
+                "line": 246,
                 "signature": "if (window.renderInputChords && typeof window.renderInputChords === 'function') {",
                 "calls": []
               }
@@ -6830,42 +6814,10 @@
             "calls": []
           },
           {
-            "name": "checkReadiness",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 49,
-            "signature": "checkReadiness() {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 50,
-            "signature": "if (this.legacyDataReady) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 52,
-            "signature": "if (this.readyCallbacks && this.readyCallbacks.length > 0) {",
-            "calls": []
-          },
-          {
-            "name": "setModuleSystemReady",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 70,
-            "signature": "setModuleSystemReady() {",
-            "calls": []
-          },
-          {
             "name": "useFallbackChordData",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 75,
+            "line": 51,
             "signature": "useFallbackChordData() {",
             "calls": []
           },
@@ -6873,7 +6825,7 @@
             "name": "setModuleSystemReady",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 95,
+            "line": 71,
             "signature": "setModuleSystemReady() {",
             "calls": []
           },
@@ -6881,7 +6833,7 @@
             "name": "checkReadiness",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 100,
+            "line": 76,
             "signature": "checkReadiness() {",
             "calls": []
           },
@@ -6889,7 +6841,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 101,
+            "line": 77,
             "signature": "if (this.legacyDataReady && this.moduleSystemReady) {",
             "calls": []
           },
@@ -6897,7 +6849,7 @@
             "name": "onReady",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 106,
+            "line": 82,
             "signature": "onReady(callback) {",
             "calls": []
           },
@@ -6905,7 +6857,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 107,
+            "line": 83,
             "signature": "if (this.legacyDataReady && this.moduleSystemReady) {",
             "calls": []
           },
@@ -6913,7 +6865,7 @@
             "name": "executePendingCallbacks",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 114,
+            "line": 90,
             "signature": "executePendingCallbacks() {",
             "calls": []
           },
@@ -6921,7 +6873,7 @@
             "name": "getAvailableChordsForType",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 125,
+            "line": 101,
             "signature": "getAvailableChordsForType(type) {",
             "calls": []
           },
@@ -6929,7 +6881,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 126,
+            "line": 102,
             "signature": "if (!this.chordLists) {",
             "calls": []
           },
@@ -6937,7 +6889,7 @@
             "name": "switch",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 131,
+            "line": 107,
             "signature": "switch (type) {",
             "calls": []
           },
@@ -6945,7 +6897,7 @@
             "name": "bridgeLegacyFunctions",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 158,
+            "line": 134,
             "signature": "bridgeLegacyFunctions(app) {",
             "calls": []
           },
@@ -6953,7 +6905,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 162,
+            "line": 138,
             "signature": "if (window.selectChordName) {",
             "calls": []
           },
@@ -6961,7 +6913,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 174,
+            "line": 150,
             "signature": "if (window.selectChordType) {",
             "calls": []
           },
@@ -6969,7 +6921,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 187,
+            "line": 163,
             "signature": "if (window.onChordTypeChanged) {",
             "calls": []
           },
@@ -6977,7 +6929,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 193,
+            "line": 169,
             "signature": "if (selectedType) {",
             "calls": []
           },
@@ -6985,7 +6937,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 200,
+            "line": 176,
             "signature": "if (window.onInputChordsChanged) {",
             "calls": []
           },
@@ -6993,7 +6945,7 @@
             "name": "getCurrentAutoharpType",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 212,
+            "line": 188,
             "signature": "getCurrentAutoharpType() {",
             "calls": []
           },
@@ -7001,7 +6953,7 @@
             "name": "getCurrentSelectedChords",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 218,
+            "line": 194,
             "signature": "getCurrentSelectedChords() {",
             "calls": []
           },
@@ -7009,7 +6961,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 220,
+            "line": 196,
             "signature": "if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {",
             "calls": []
           },
@@ -7017,7 +6969,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 225,
+            "line": 201,
             "signature": "if (window.getInputChords && typeof window.getInputChords === 'function' && window.chordGroup) {",
             "calls": []
           },
@@ -7025,7 +6977,7 @@
             "name": "syncLegacyToNewSystem",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 242,
+            "line": 218,
             "signature": "syncLegacyToNewSystem(app) {",
             "calls": []
           },
@@ -7033,7 +6985,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 252,
+            "line": 228,
             "signature": "if (currentChords.length > 0) {",
             "calls": []
           },
@@ -7041,7 +6993,7 @@
             "name": "syncNewSystemToLegacy",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 263,
+            "line": 239,
             "signature": "syncNewSystemToLegacy(app) {",
             "calls": []
           },
@@ -7049,7 +7001,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 270,
+            "line": 246,
             "signature": "if (window.renderInputChords && typeof window.renderInputChords === 'function') {",
             "calls": []
           }
@@ -7058,7 +7010,7 @@
         "imports": [],
         "exports": [],
         "dependencies": [],
-        "lineCount": 285
+        "lineCount": 261
       },
       "modules\\stateManager.js": {
         "path": "modules\\stateManager.js",
@@ -10504,7 +10456,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 230,
+            "line": 235,
             "signature": "if (this.knowledgeGraph.classes.size > 0) {",
             "calls": []
           },
@@ -10512,7 +10464,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 234,
+            "line": 240,
             "signature": "if (classInfo.constructor) {",
             "calls": []
           },
@@ -10520,7 +10472,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 244,
+            "line": 251,
             "signature": "if (this.knowledgeGraph.functions.size > 0) {",
             "calls": []
           },
@@ -10528,7 +10480,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 253,
+            "line": 261,
             "signature": "if (this.knowledgeGraph.eventHandlers.size > 0) {",
             "calls": []
           },
@@ -10536,15 +10488,23 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 263,
+            "line": 272,
             "signature": "if (moduleInfo.dependencies.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "writeReport",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 284,
+            "signature": "writeReport(reportLines) {",
             "calls": []
           },
           {
             "name": "exportKnowledgeGraph",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 272,
+            "line": 299,
             "signature": "exportKnowledgeGraph() {",
             "calls": []
           },
@@ -10552,7 +10512,7 @@
             "name": "if",
             "class": "CodebaseMapper",
             "file": "codebase-mapper.js",
-            "line": 307,
+            "line": 334,
             "signature": "if (require.main === module) {",
             "calls": []
           }
@@ -13574,42 +13534,10 @@
             "calls": []
           },
           {
-            "name": "checkReadiness",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 49,
-            "signature": "checkReadiness() {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 50,
-            "signature": "if (this.legacyDataReady) {",
-            "calls": []
-          },
-          {
-            "name": "if",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 52,
-            "signature": "if (this.readyCallbacks && this.readyCallbacks.length > 0) {",
-            "calls": []
-          },
-          {
-            "name": "setModuleSystemReady",
-            "class": "IntegrationBridge",
-            "file": "modules\\integrationBridge.js",
-            "line": 70,
-            "signature": "setModuleSystemReady() {",
-            "calls": []
-          },
-          {
             "name": "useFallbackChordData",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 75,
+            "line": 51,
             "signature": "useFallbackChordData() {",
             "calls": []
           },
@@ -13617,7 +13545,7 @@
             "name": "setModuleSystemReady",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 95,
+            "line": 71,
             "signature": "setModuleSystemReady() {",
             "calls": []
           },
@@ -13625,7 +13553,7 @@
             "name": "checkReadiness",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 100,
+            "line": 76,
             "signature": "checkReadiness() {",
             "calls": []
           },
@@ -13633,7 +13561,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 101,
+            "line": 77,
             "signature": "if (this.legacyDataReady && this.moduleSystemReady) {",
             "calls": []
           },
@@ -13641,7 +13569,7 @@
             "name": "onReady",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 106,
+            "line": 82,
             "signature": "onReady(callback) {",
             "calls": []
           },
@@ -13649,7 +13577,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 107,
+            "line": 83,
             "signature": "if (this.legacyDataReady && this.moduleSystemReady) {",
             "calls": []
           },
@@ -13657,7 +13585,7 @@
             "name": "executePendingCallbacks",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 114,
+            "line": 90,
             "signature": "executePendingCallbacks() {",
             "calls": []
           },
@@ -13665,7 +13593,7 @@
             "name": "getAvailableChordsForType",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 125,
+            "line": 101,
             "signature": "getAvailableChordsForType(type) {",
             "calls": []
           },
@@ -13673,7 +13601,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 126,
+            "line": 102,
             "signature": "if (!this.chordLists) {",
             "calls": []
           },
@@ -13681,7 +13609,7 @@
             "name": "switch",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 131,
+            "line": 107,
             "signature": "switch (type) {",
             "calls": []
           },
@@ -13689,7 +13617,7 @@
             "name": "bridgeLegacyFunctions",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 158,
+            "line": 134,
             "signature": "bridgeLegacyFunctions(app) {",
             "calls": []
           },
@@ -13697,7 +13625,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 162,
+            "line": 138,
             "signature": "if (window.selectChordName) {",
             "calls": []
           },
@@ -13705,7 +13633,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 174,
+            "line": 150,
             "signature": "if (window.selectChordType) {",
             "calls": []
           },
@@ -13713,7 +13641,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 187,
+            "line": 163,
             "signature": "if (window.onChordTypeChanged) {",
             "calls": []
           },
@@ -13721,7 +13649,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 193,
+            "line": 169,
             "signature": "if (selectedType) {",
             "calls": []
           },
@@ -13729,7 +13657,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 200,
+            "line": 176,
             "signature": "if (window.onInputChordsChanged) {",
             "calls": []
           },
@@ -13737,7 +13665,7 @@
             "name": "getCurrentAutoharpType",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 212,
+            "line": 188,
             "signature": "getCurrentAutoharpType() {",
             "calls": []
           },
@@ -13745,7 +13673,7 @@
             "name": "getCurrentSelectedChords",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 218,
+            "line": 194,
             "signature": "getCurrentSelectedChords() {",
             "calls": []
           },
@@ -13753,7 +13681,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 220,
+            "line": 196,
             "signature": "if (window.initializeDOMReferences && typeof window.initializeDOMReferences === 'function') {",
             "calls": []
           },
@@ -13761,7 +13689,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 225,
+            "line": 201,
             "signature": "if (window.getInputChords && typeof window.getInputChords === 'function' && window.chordGroup) {",
             "calls": []
           },
@@ -13769,7 +13697,7 @@
             "name": "syncLegacyToNewSystem",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 242,
+            "line": 218,
             "signature": "syncLegacyToNewSystem(app) {",
             "calls": []
           },
@@ -13777,7 +13705,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 252,
+            "line": 228,
             "signature": "if (currentChords.length > 0) {",
             "calls": []
           },
@@ -13785,7 +13713,7 @@
             "name": "syncNewSystemToLegacy",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 263,
+            "line": 239,
             "signature": "syncNewSystemToLegacy(app) {",
             "calls": []
           },
@@ -13793,7 +13721,7 @@
             "name": "if",
             "class": "IntegrationBridge",
             "file": "modules\\integrationBridge.js",
-            "line": 270,
+            "line": 246,
             "signature": "if (window.renderInputChords && typeof window.renderInputChords === 'function') {",
             "calls": []
           }
@@ -15526,7 +15454,7 @@
         "name": "if",
         "class": "CodebaseMapper",
         "file": "codebase-mapper.js",
-        "line": 307,
+        "line": 334,
         "signature": "if (require.main === module) {",
         "calls": []
       },
@@ -15546,11 +15474,19 @@
         "signature": "generateReport() {",
         "calls": []
       },
+      "CodebaseMapper.writeReport": {
+        "name": "writeReport",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 284,
+        "signature": "writeReport(reportLines) {",
+        "calls": []
+      },
       "CodebaseMapper.exportKnowledgeGraph": {
         "name": "exportKnowledgeGraph",
         "class": "CodebaseMapper",
         "file": "codebase-mapper.js",
-        "line": 272,
+        "line": 299,
         "signature": "exportKnowledgeGraph() {",
         "calls": []
       },
@@ -17166,7 +17102,7 @@
         "name": "if",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 270,
+        "line": 246,
         "signature": "if (window.renderInputChords && typeof window.renderInputChords === 'function') {",
         "calls": []
       },
@@ -17178,35 +17114,35 @@
         "signature": "onLegacyDataReady() {",
         "calls": []
       },
-      "IntegrationBridge.checkReadiness": {
-        "name": "checkReadiness",
+      "IntegrationBridge.useFallbackChordData": {
+        "name": "useFallbackChordData",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 100,
-        "signature": "checkReadiness() {",
+        "line": 51,
+        "signature": "useFallbackChordData() {",
         "calls": []
       },
       "IntegrationBridge.setModuleSystemReady": {
         "name": "setModuleSystemReady",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 95,
+        "line": 71,
         "signature": "setModuleSystemReady() {",
         "calls": []
       },
-      "IntegrationBridge.useFallbackChordData": {
-        "name": "useFallbackChordData",
+      "IntegrationBridge.checkReadiness": {
+        "name": "checkReadiness",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 75,
-        "signature": "useFallbackChordData() {",
+        "line": 76,
+        "signature": "checkReadiness() {",
         "calls": []
       },
       "IntegrationBridge.onReady": {
         "name": "onReady",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 106,
+        "line": 82,
         "signature": "onReady(callback) {",
         "calls": []
       },
@@ -17214,7 +17150,7 @@
         "name": "executePendingCallbacks",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 114,
+        "line": 90,
         "signature": "executePendingCallbacks() {",
         "calls": []
       },
@@ -17222,7 +17158,7 @@
         "name": "getAvailableChordsForType",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 125,
+        "line": 101,
         "signature": "getAvailableChordsForType(type) {",
         "calls": []
       },
@@ -17230,7 +17166,7 @@
         "name": "switch",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 131,
+        "line": 107,
         "signature": "switch (type) {",
         "calls": []
       },
@@ -17238,7 +17174,7 @@
         "name": "bridgeLegacyFunctions",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 158,
+        "line": 134,
         "signature": "bridgeLegacyFunctions(app) {",
         "calls": []
       },
@@ -17246,7 +17182,7 @@
         "name": "getCurrentAutoharpType",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 212,
+        "line": 188,
         "signature": "getCurrentAutoharpType() {",
         "calls": []
       },
@@ -17254,7 +17190,7 @@
         "name": "getCurrentSelectedChords",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 218,
+        "line": 194,
         "signature": "getCurrentSelectedChords() {",
         "calls": []
       },
@@ -17262,7 +17198,7 @@
         "name": "syncLegacyToNewSystem",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 242,
+        "line": 218,
         "signature": "syncLegacyToNewSystem(app) {",
         "calls": []
       },
@@ -17270,7 +17206,7 @@
         "name": "syncNewSystemToLegacy",
         "class": "IntegrationBridge",
         "file": "modules\\integrationBridge.js",
-        "line": 263,
+        "line": 239,
         "signature": "syncNewSystemToLegacy(app) {",
         "calls": []
       },
@@ -19120,303 +19056,383 @@
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 218
+          "callee": "reportLines.push",
+          "line": 221
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 219
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 222
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 223
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 224
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 225
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 226
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 227
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "if ",
+          "callee": "reportLines.push",
+          "line": 228
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 229
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
           "line": 230
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 231
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "for ",
+          "callee": "reportLines.push",
           "line": 232
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "this.knowledgeGraph.classes.entries",
-          "line": 232
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 233
         },
         {
           "caller": "codebase-mapper.js",
           "callee": "if ",
-          "line": 234
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
           "line": 235
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "constructor ",
-          "line": 235
+          "callee": "reportLines.push",
+          "line": 236
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "classInfo.methods.forEach",
+          "callee": "for ",
           "line": 237
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "this.knowledgeGraph.classes.entries",
+          "line": 237
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
           "line": 238
         },
         {
           "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 239
+        },
+        {
+          "caller": "codebase-mapper.js",
           "callee": "if ",
+          "line": 240
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 241
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "constructor ",
+          "line": 241
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "classInfo.methods.forEach",
+          "line": 243
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
           "line": 244
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 245
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "for ",
-          "line": 246
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "this.knowledgeGraph.functions.entries",
-          "line": 246
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 248
+          "callee": "reportLines.push",
+          "line": 247
         },
         {
           "caller": "codebase-mapper.js",
           "callee": "if ",
+          "line": 251
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 252
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
           "line": 253
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 254
+          "callee": "this.knowledgeGraph.functions.entries",
+          "line": 253
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "for ",
+          "callee": "reportLines.push",
           "line": 255
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "this.knowledgeGraph.eventHandlers.entries",
-          "line": 255
+          "callee": "reportLines.push",
+          "line": 257
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 256
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "if ",
           "line": 261
         },
         {
           "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 262
+        },
+        {
+          "caller": "codebase-mapper.js",
           "callee": "for ",
-          "line": 262
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "this.knowledgeGraph.modules.entries",
-          "line": 262
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "if ",
           "line": 263
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "this.knowledgeGraph.eventHandlers.entries",
+          "line": 263
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
           "line": 264
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "moduleInfo.dependencies.forEach",
-          "line": 265
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 266
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "exportKnowledgeGraph",
-          "line": 272
+          "callee": "reportLines.push",
+          "line": 270
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "Date",
-          "line": 274
+          "callee": "for ",
+          "line": 271
         },
         {
           "caller": "codebase-mapper.js",
-          "callee": "toISOString",
-          "line": 274
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "path.basename",
-          "line": 275
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "Object.fromEntries",
-          "line": 284
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "Object.fromEntries",
-          "line": 285
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "Object.fromEntries",
-          "line": 286
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "Object.fromEntries",
-          "line": 287
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "Object.fromEntries",
-          "line": 288
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "Object.fromEntries",
-          "line": 289
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "Object.fromEntries",
-          "line": 290
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "path.join",
-          "line": 294
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "fs.writeFileSync",
-          "line": 295
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "JSON.stringify",
-          "line": 295
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 297
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "path.basename",
-          "line": 297
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 298
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 299
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 300
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 301
-        },
-        {
-          "caller": "codebase-mapper.js",
-          "callee": "console.log",
-          "line": 302
+          "callee": "this.knowledgeGraph.modules.entries",
+          "line": 271
         },
         {
           "caller": "codebase-mapper.js",
           "callee": "if ",
-          "line": 307
+          "line": 272
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 273
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "moduleInfo.dependencies.forEach",
+          "line": 274
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 275
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.writeReport",
+          "line": 281
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "writeReport",
+          "line": 284
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.join",
+          "line": 285
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fs.writeFileSync",
+          "line": 288
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.join",
+          "line": 288
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 289
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "catch ",
+          "line": 290
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.error",
+          "line": 291
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.forEach",
+          "line": 293
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 294
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "exportKnowledgeGraph",
+          "line": 299
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Date",
+          "line": 301
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "toISOString",
+          "line": 301
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.basename",
+          "line": 302
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 311
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 312
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 313
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 314
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 315
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 316
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 317
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.join",
+          "line": 321
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fs.writeFileSync",
+          "line": 322
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "JSON.stringify",
+          "line": 322
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 324
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.basename",
+          "line": 324
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 325
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 326
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 327
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 328
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 329
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 334
         },
         {
           "caller": "codebase-mapper.js",
           "callee": "CodebaseMapper",
-          "line": 309
+          "line": 336
         },
         {
           "caller": "codebase-mapper.js",
           "callee": "mapper.generateMap",
-          "line": 310
+          "line": 337
         },
         {
           "caller": "codebase-mapper.js",
           "callee": "catch",
-          "line": 310
+          "line": 337
         }
       ],
       "detect-duplicates.js": [
@@ -27272,433 +27288,373 @@
         },
         {
           "caller": "modules\\integrationBridge.js",
-          "callee": "checkReadiness",
-          "line": 49
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "if ",
-          "line": 50
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "console.log",
+          "callee": "useFallbackChordData",
           "line": 51
         },
         {
           "caller": "modules\\integrationBridge.js",
-          "callee": "if ",
-          "line": 52
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
           "callee": "console.log",
-          "line": 53
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "this.readyCallbacks.forEach",
-          "line": 54
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "callback",
-          "line": 56
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "catch ",
-          "line": 57
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "console.error",
-          "line": 58
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "console.log",
-          "line": 63
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "setModuleSystemReady",
-          "line": 70
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "console.log",
-          "line": 72
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "useFallbackChordData",
-          "line": 75
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "console.log",
-          "line": 91
+          "line": 67
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "this.checkReadiness",
-          "line": 92
+          "line": 68
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "setModuleSystemReady",
-          "line": 95
+          "line": 71
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "this.checkReadiness",
-          "line": 97
+          "line": 73
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "checkReadiness",
-          "line": 100
+          "line": 76
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 101
+          "line": 77
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "this.executePendingCallbacks",
-          "line": 102
+          "line": 78
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "onReady",
-          "line": 106
+          "line": 82
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 107
+          "line": 83
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "callback",
-          "line": 108
+          "line": 84
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "this.pendingCallbacks.push",
-          "line": 110
+          "line": 86
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "executePendingCallbacks",
-          "line": 114
+          "line": 90
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "this.pendingCallbacks.forEach",
-          "line": 115
+          "line": 91
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "callback",
-          "line": 117
+          "line": 93
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "catch ",
-          "line": 118
+          "line": 94
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "console.error",
-          "line": 119
+          "line": 95
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "getAvailableChordsForType",
-          "line": 125
+          "line": 101
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 126
+          "line": 102
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "console.warn",
-          "line": 127
+          "line": 103
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "switch ",
-          "line": 131
+          "line": 107
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "bridgeLegacyFunctions",
-          "line": 158
+          "line": 134
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 159
+          "line": 135
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 162
+          "line": 138
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "originalSelectChordName",
-          "line": 165
+          "line": 141
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.stateManager.updateCurrentChord",
-          "line": 167
+          "line": 143
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.stateManager.get",
-          "line": 169
+          "line": 145
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 174
+          "line": 150
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "originalSelectChordType",
-          "line": 177
+          "line": 153
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.stateManager.updateCurrentChord",
-          "line": 179
+          "line": 155
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.stateManager.get",
-          "line": 180
+          "line": 156
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 187
+          "line": 163
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "originalOnChordTypeChanged",
-          "line": 190
+          "line": 166
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "document.querySelector",
-          "line": 192
+          "line": 168
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 193
+          "line": 169
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.stateManager.updateAutoharpType",
+          "line": 170
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "if ",
+          "line": 176
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "originalOnInputChordsChanged",
+          "line": 179
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "console.log",
+          "line": 184
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "getCurrentAutoharpType",
+          "line": 188
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "document.querySelector",
+          "line": 189
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "getCurrentSelectedChords",
           "line": 194
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 200
+          "line": 196
         },
         {
           "caller": "modules\\integrationBridge.js",
-          "callee": "originalOnInputChordsChanged",
+          "callee": "window.initializeDOMReferences",
+          "line": 197
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "if ",
+          "line": 201
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "window.getInputChords",
           "line": 203
         },
         {
           "caller": "modules\\integrationBridge.js",
-          "callee": "console.log",
-          "line": 208
+          "callee": "catch ",
+          "line": 204
         },
         {
           "caller": "modules\\integrationBridge.js",
-          "callee": "getCurrentAutoharpType",
+          "callee": "console.warn",
+          "line": 205
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "document.querySelectorAll",
+          "line": 210
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "Array.from",
+          "line": 211
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "map",
+          "line": 211
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "el.querySelector",
           "line": 212
         },
         {
           "caller": "modules\\integrationBridge.js",
-          "callee": "document.querySelector",
+          "callee": "span.textContent.trim",
           "line": 213
         },
         {
           "caller": "modules\\integrationBridge.js",
-          "callee": "getCurrentSelectedChords",
+          "callee": "el.textContent.trim",
+          "line": 213
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "filter",
+          "line": 214
+        },
+        {
+          "caller": "modules\\integrationBridge.js",
+          "callee": "syncLegacyToNewSystem",
           "line": 218
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 220
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "window.initializeDOMReferences",
-          "line": 221
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "if ",
-          "line": 225
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "window.getInputChords",
-          "line": 227
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "catch ",
-          "line": 228
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "console.warn",
-          "line": 229
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "document.querySelectorAll",
-          "line": 234
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "Array.from",
-          "line": 235
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "map",
-          "line": 235
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "el.querySelector",
-          "line": 236
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "span.textContent.trim",
-          "line": 237
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "el.textContent.trim",
-          "line": 237
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "filter",
-          "line": 238
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "syncLegacyToNewSystem",
-          "line": 242
-        },
-        {
-          "caller": "modules\\integrationBridge.js",
-          "callee": "if ",
-          "line": 243
+          "line": 219
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "this.getCurrentAutoharpType",
-          "line": 247
+          "line": 223
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.stateManager.updateAutoharpType",
-          "line": 248
+          "line": 224
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "this.getCurrentSelectedChords",
-          "line": 251
+          "line": 227
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 252
+          "line": 228
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.inputManager.replaceChords",
-          "line": 253
+          "line": 229
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "console.log",
-          "line": 256
+          "line": 232
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "catch ",
-          "line": 257
+          "line": 233
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "console.error",
-          "line": 258
+          "line": 234
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "syncNewSystemToLegacy",
-          "line": 263
+          "line": 239
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 264
+          "line": 240
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "app.modules.stateManager.get",
-          "line": 267
+          "line": 243
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "if ",
-          "line": 270
+          "line": 246
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "window.renderInputChords",
-          "line": 271
+          "line": 247
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "console.log",
-          "line": 274
+          "line": 250
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "catch ",
-          "line": 275
+          "line": 251
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "console.error",
-          "line": 276
+          "line": 252
         },
         {
           "caller": "modules\\integrationBridge.js",
           "callee": "IntegrationBridge",
-          "line": 282
+          "line": 258
         }
       ],
       "modules\\stateManager.js": [

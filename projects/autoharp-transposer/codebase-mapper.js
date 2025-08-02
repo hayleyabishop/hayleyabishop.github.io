@@ -215,57 +215,84 @@ class CodebaseMapper {
   }
 
   generateReport() {
-    console.log('\n📊 CODEBASE KNOWLEDGE GRAPH REPORT');
-    console.log('=====================================');
+    // Build report as string array to avoid console encoding issues
+    const reportLines = [];
+    
+    reportLines.push('CODEBASE KNOWLEDGE GRAPH REPORT');
+    reportLines.push('=====================================');
+    reportLines.push('');
 
     // Summary statistics
-    console.log('\n📈 SUMMARY STATISTICS:');
-    console.log(`   Files analyzed: ${this.knowledgeGraph.files.size}`);
-    console.log(`   Classes found: ${this.knowledgeGraph.classes.size}`);
-    console.log(`   Functions found: ${this.knowledgeGraph.functions.size}`);
-    console.log(`   Methods found: ${this.knowledgeGraph.methods.size}`);
-    console.log(`   Event handlers: ${this.knowledgeGraph.eventHandlers.size}`);
+    reportLines.push('SUMMARY STATISTICS:');
+    reportLines.push(`   Files analyzed: ${this.knowledgeGraph.files.size}`);
+    reportLines.push(`   Classes found: ${this.knowledgeGraph.classes.size}`);
+    reportLines.push(`   Functions found: ${this.knowledgeGraph.functions.size}`);
+    reportLines.push(`   Methods found: ${this.knowledgeGraph.methods.size}`);
+    reportLines.push(`   Event handlers: ${this.knowledgeGraph.eventHandlers.size}`);
+    reportLines.push('');
 
     // Classes and their methods
     if (this.knowledgeGraph.classes.size > 0) {
-      console.log('\n🏗️  CLASSES AND METHODS:');
+      reportLines.push('CLASSES AND METHODS:');
       for (const [className, classInfo] of this.knowledgeGraph.classes.entries()) {
-        console.log(`\n   📦 Class: ${className} (${classInfo.file}:${classInfo.line})`);
+        reportLines.push('');
+        reportLines.push(`Class: ${className} (${classInfo.file}:${classInfo.line})`);
         if (classInfo.constructor) {
-          console.log(`      🔧 constructor (line ${classInfo.constructor.line})`);
+          reportLines.push(`   constructor (line ${classInfo.constructor.line})`);
         }
         classInfo.methods.forEach(method => {
-          console.log(`      ⚙️  ${method.name}() (line ${method.line})`);
+          reportLines.push(`   ${method.name}() (line ${method.line})`);
         });
       }
+      reportLines.push('');
     }
 
     // Standalone functions
     if (this.knowledgeGraph.functions.size > 0) {
-      console.log('\n🔧 STANDALONE FUNCTIONS:');
+      reportLines.push('STANDALONE FUNCTIONS:');
       for (const [funcName, funcInfo] of this.knowledgeGraph.functions.entries()) {
         const type = funcInfo.type ? ` [${funcInfo.type}]` : '';
-        console.log(`   ⚙️  ${funcName}()${type} (${funcInfo.file}:${funcInfo.line})`);
+        reportLines.push(`   ${funcName}()${type} (${funcInfo.file}:${funcInfo.line})`);
       }
+      reportLines.push('');
     }
 
     // Event handlers
     if (this.knowledgeGraph.eventHandlers.size > 0) {
-      console.log('\n🎯 EVENT HANDLERS:');
+      reportLines.push('EVENT HANDLERS:');
       for (const [key, handler] of this.knowledgeGraph.eventHandlers.entries()) {
-        console.log(`   👂 ${handler.event} → ${handler.handler} (${handler.file}:${handler.line})`);
+        reportLines.push(`   ${handler.event} -> ${handler.handler} (${handler.file}:${handler.line})`);
       }
+      reportLines.push('');
     }
 
     // Module dependencies
-    console.log('\n🔗 MODULE DEPENDENCIES:');
+    reportLines.push('MODULE DEPENDENCIES:');
     for (const [moduleName, moduleInfo] of this.knowledgeGraph.modules.entries()) {
       if (moduleInfo.dependencies.length > 0) {
-        console.log(`   📦 ${moduleName} depends on:`);
+        reportLines.push(`   ${moduleName} depends on:`);
         moduleInfo.dependencies.forEach(dep => {
-          console.log(`      ← ${dep}`);
+          reportLines.push(`      <- ${dep}`);
         });
       }
+    }
+    
+    // Write report to file
+    this.writeReport(reportLines);
+  }
+
+  writeReport(reportLines) {
+    const reportPath = path.join(this.projectPath, 'codebase-knowledge-report.txt');
+    
+    try {
+      fs.writeFileSync(reportPath, reportLines.join('\n'), 'utf8');
+      console.log('Knowledge graph analysis completed. Check codebase-knowledge-report.txt for results.');
+    } catch (error) {
+      console.error('Error writing report file:', error.message);
+      // Fallback to console output if file write fails
+      reportLines.forEach(line => {
+        console.log(line);
+      });
     }
   }
 

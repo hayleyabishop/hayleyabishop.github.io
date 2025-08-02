@@ -2,21 +2,11 @@ DUPLICATE DETECTION RESULTS
 ===============================
 
 STATISTICS:
-   Total method definitions found: 352
-   Unique method names: 298
-   Critical same-file duplicates: 2
+   Total method definitions found: 351
+   Unique method names: 299
+   Critical same-file duplicates: 0
    Cross-file duplicates: 30
    Similar method names: 191
-
-CRITICAL: Same-file duplicates (JavaScript uses last definition):
-
-Method "checkReadiness" in modules\integrationBridge.js:
-   Line 49: checkReadiness() {
-   Line 100: checkReadiness() {
-
-Method "setModuleSystemReady" in modules\integrationBridge.js:
-   Line 70: setModuleSystemReady() {
-   Line 95: setModuleSystemReady() {
 
 Cross-file duplicates (may be intentional API wrappers):
 
@@ -124,7 +114,7 @@ Method "saveChordHistory":
 
 Method "getCurrentAutoharpType":
    modules\chordParser.js:697 (class method)
-   modules\integrationBridge.js:212 (class method)
+   modules\integrationBridge.js:188 (class method)
 
 Method "transposeProgression":
    modules\chordParser.js:709 (class method)
@@ -159,7 +149,7 @@ Method "importState":
    modules\stateManager.js:429 (class method)
 
 Method "getAvailableChordsForType":
-   modules\integrationBridge.js:125 (class method)
+   modules\integrationBridge.js:101 (class method)
    modules\stateManager.js:266 (class method)
 
 Similar method names (potential confusion):
@@ -205,5 +195,5 @@ Similar method names (potential confusion):
    updateSelectedChords: modules\stateManager.js:127
    ... and 181 more similar pairs
 
-ERROR: Critical duplicates found that need immediate attention!
-JavaScript will silently use the last definition, causing unexpected behavior.
+SUCCESS: No critical same-file duplicates found!
+INFO: Cross-file duplicates found, but these may be intentional (API wrappers, legacy functions)
