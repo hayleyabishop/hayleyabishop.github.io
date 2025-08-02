@@ -1,0 +1,266 @@
+DUPLICATE DETECTION RESULTS
+===============================
+
+STATISTICS:
+   Total method definitions found: 338
+   Unique method names: 266
+   Critical same-file duplicates: 7
+   Cross-file duplicates: 38
+   Similar method names: 163
+
+CRITICAL: Same-file duplicates (JavaScript uses last definition):
+
+Method "handleTextInput" in modules\eventCoordinator.js:
+   Line 328: handleTextInput(value) {
+   Line 358: handleTextInput(inputValue) {
+
+Method "clearTextInput" in modules\eventCoordinator.js:
+   Line 433: clearTextInput() {
+   Line 705: clearTextInput() {
+
+Method "showSuggestions" in modules\eventCoordinator.js:
+   Line 447: showSuggestions(suggestions, inputValue) {
+   Line 615: showSuggestions(suggestions) {
+
+Method "clearSuggestions" in modules\eventCoordinator.js:
+   Line 491: clearSuggestions() {
+   Line 637: clearSuggestions() {
+
+Method "showMessage" in modules\eventCoordinator.js:
+   Line 714: showMessage(message, type = 'info') {
+   Line 739: showMessage(message, type = 'info') {
+
+Method "checkReadiness" in modules\integrationBridge.js:
+   Line 49: checkReadiness() {
+   Line 100: checkReadiness() {
+
+Method "setModuleSystemReady" in modules\integrationBridge.js:
+   Line 70: setModuleSystemReady() {
+   Line 95: setModuleSystemReady() {
+
+Cross-file duplicates (may be intentional API wrappers):
+
+Method "constructor":
+   codebase-mapper.js:12 (class method)
+   detect-duplicates-file-mode.js:12 (class method)
+   detect-duplicates-fixed.js:12 (class method)
+   detect-duplicates.js:12 (class method)
+   improved-codebase-mapper.js:12 (class method)
+   modules\appIntegration.js:15 (class method)
+   modules\autoharpTypes.js:12 (class method)
+   modules\chordAudio.js:7 (class method)
+   modules\chordParser.js:11 (class method)
+   modules\chordTransposition.js:13 (class method)
+   modules\eventCoordinator.js:7 (class method)
+   modules\inputManager.js:7 (class method)
+   modules\integrationBridge.js:7 (class method)
+   modules\stateManager.js:7 (class method)
+   modules\storageManager.js:7 (class method)
+
+Method "findJavaScriptFiles":
+   codebase-mapper.js:47 (class method)
+   detect-duplicates-file-mode.js:63 (class method)
+   detect-duplicates-fixed.js:54 (class method)
+   detect-duplicates.js:50 (class method)
+   improved-codebase-mapper.js:60 (class method)
+   simple-duplicate-check.js:11 (function declaration)
+
+Method "generateReport":
+   codebase-mapper.js:217 (class method)
+   detect-duplicates-file-mode.js:247 (class method)
+   detect-duplicates-fixed.js:174 (class method)
+   detect-duplicates.js:247 (class method)
+
+Method "scanProject":
+   detect-duplicates-file-mode.js:30 (class method)
+   detect-duplicates-fixed.js:24 (class method)
+   detect-duplicates.js:24 (class method)
+
+Method "scanFile":
+   detect-duplicates-file-mode.js:87 (class method)
+   detect-duplicates-fixed.js:78 (class method)
+   detect-duplicates.js:75 (class method)
+
+Method "isValidMethodName":
+   detect-duplicates-file-mode.js:144 (class method)
+   detect-duplicates-fixed.js:131 (class method)
+
+Method "analyzeResults":
+   detect-duplicates-file-mode.js:150 (class method)
+   detect-duplicates-fixed.js:137 (class method)
+   detect-duplicates.js:151 (class method)
+
+Method "findSimilarMethodNames":
+   detect-duplicates-file-mode.js:190 (class method)
+   detect-duplicates.js:191 (class method)
+
+Method "areMethodNamesSimilar":
+   detect-duplicates-file-mode.js:210 (class method)
+   detect-duplicates.js:211 (class method)
+
+Method "getResults":
+   detect-duplicates-file-mode.js:338 (class method)
+   detect-duplicates-fixed.js:257 (class method)
+   detect-duplicates.js:344 (class method)
+
+Method "outputReport":
+   detect-duplicates-fixed.js:234 (class method)
+   detect-duplicates.js:324 (class method)
+
+Method "addChord":
+   modules\appIntegration.js:267 (class method)
+   modules\inputManager.js:38 (class method)
+
+Method "removeChord":
+   modules\appIntegration.js:276 (class method)
+   modules\inputManager.js:94 (class method)
+   webapp.js:309 (function declaration)
+
+Method "getSelectedChords":
+   modules\appIntegration.js:292 (class method)
+   modules\inputManager.js:131 (class method)
+
+Method "setAutoharpType":
+   modules\appIntegration.js:296 (class method)
+   modules\chordParser.js:685 (class method)
+
+Method "toggleAudio":
+   modules\appIntegration.js:300 (class method)
+   modules\stateManager.js:160 (class method)
+
+Method "getState":
+   modules\appIntegration.js:304 (class method)
+   modules\stateManager.js:76 (class method)
+
+Method "on":
+   modules\appIntegration.js:309 (class method)
+   modules\inputManager.js:19 (class method)
+
+Method "emit":
+   modules\appIntegration.js:319 (class method)
+   modules\inputManager.js:25 (class method)
+   modules\stateManager.js:63 (class method)
+
+Method "getDebugInfo":
+   modules\appIntegration.js:349 (class method)
+   modules\eventCoordinator.js:760 (class method)
+   modules\inputManager.js:288 (class method)
+   modules\stateManager.js:321 (class method)
+
+Method "destroy":
+   modules\appIntegration.js:361 (class method)
+   modules\chordAudio.js:160 (class method)
+
+Method "isChordAvailable":
+   modules\autoharpTypes.js:144 (class method)
+   modules\stateManager.js:214 (class method)
+
+Method "getCompatibilityMatrix":
+   modules\autoharpTypes.js:172 (class method)
+   modules\chordParser.js:782 (class method)
+
+Method "findBestAutoharpType":
+   modules\autoharpTypes.js:191 (class method)
+   modules\chordParser.js:750 (class method)
+
+Method "updateAvailableChords":
+   modules\chordParser.js:71 (class method)
+   modules\inputManager.js:213 (class method)
+
+Method "getSuggestions":
+   modules\chordParser.js:308 (class method)
+   modules\inputManager.js:188 (class method)
+
+Method "loadChordHistory":
+   modules\chordParser.js:531 (class method)
+   modules\storageManager.js:90 (class method)
+
+Method "saveChordHistory":
+   modules\chordParser.js:541 (class method)
+   modules\storageManager.js:84 (class method)
+
+Method "getCurrentAutoharpType":
+   modules\chordParser.js:697 (class method)
+   modules\integrationBridge.js:212 (class method)
+
+Method "transposeProgression":
+   modules\chordParser.js:709 (class method)
+   modules\chordTransposition.js:95 (class method)
+
+Method "findOptimalKeys":
+   modules\chordParser.js:760 (class method)
+   modules\chordTransposition.js:247 (class method)
+
+Method "simulateCapo":
+   modules\chordParser.js:772 (class method)
+   modules\chordTransposition.js:203 (class method)
+
+Method "analyzeProgression":
+   modules\chordParser.js:791 (class method)
+   modules\chordTransposition.js:279 (class method)
+
+Method "updateSuggestions":
+   modules\eventCoordinator.js:601 (class method)
+   modules\stateManager.js:156 (class method)
+
+Method "updateProgressions":
+   modules\eventCoordinator.js:645 (class method)
+   modules\stateManager.js:152 (class method)
+
+Method "exportState":
+   modules\inputManager.js:257 (class method)
+   modules\stateManager.js:334 (class method)
+
+Method "importState":
+   modules\inputManager.js:264 (class method)
+   modules\stateManager.js:342 (class method)
+
+Method "getAvailableChordsForType":
+   modules\integrationBridge.js:125 (class method)
+   modules\stateManager.js:179 (class method)
+
+Similar method names (potential confusion):
+
+"constructor" vs "on"
+   constructor: codebase-mapper.js:12
+   on: modules\appIntegration.js:309
+
+"buildRelationships" vs "on"
+   buildRelationships: codebase-mapper.js:199
+   on: modules\appIntegration.js:309
+
+"getResults" vs "get"
+   getResults: detect-duplicates-file-mode.js:338
+   get: modules\stateManager.js:80
+
+"extractFunctions" vs "on"
+   extractFunctions: improved-codebase-mapper.js:146
+   on: modules\appIntegration.js:309
+
+"saveResults" vs "save"
+   saveResults: improved-codebase-mapper.js:222
+   save: modules\storageManager.js:13
+
+"connectModules" vs "on"
+   connectModules: modules\appIntegration.js:113
+   on: modules\appIntegration.js:309
+
+"loadSavedState" vs "save"
+   loadSavedState: modules\appIntegration.js:142
+   save: modules\storageManager.js:13
+
+"loadSavedState" vs "load"
+   loadSavedState: modules\appIntegration.js:142
+   load: modules\storageManager.js:28
+
+"updateAutoharpTypeUI" vs "updateAutoharpType"
+   updateAutoharpTypeUI: modules\appIntegration.js:193
+   updateAutoharpType: modules\stateManager.js:114
+
+"updateSelectedChordsUI" vs "updateSelectedChords"
+   updateSelectedChordsUI: modules\appIntegration.js:213
+   updateSelectedChords: modules\stateManager.js:127
+   ... and 153 more similar pairs
+
+ERROR: Critical duplicates found that need immediate attention!
+JavaScript will silently use the last definition, causing unexpected behavior.

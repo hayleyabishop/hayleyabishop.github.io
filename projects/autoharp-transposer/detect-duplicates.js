@@ -245,67 +245,98 @@ class RobustDuplicateDetector {
   }
 
   generateReport() {
-    console.log('📊 DUPLICATE DETECTION RESULTS');
-    console.log('===============================\n');
+    // Build report as string array to avoid console encoding issues
+    const reportLines = [];
+    
+    reportLines.push('DUPLICATE DETECTION RESULTS');
+    reportLines.push('===============================');
+    reportLines.push('');
 
     // Statistics
-    console.log('📈 STATISTICS:');
-    console.log(`   Total method definitions found: ${this.results.totalMethods}`);
-    console.log(`   Unique method names: ${this.results.uniqueMethodNames}`);
-    console.log(`   Critical same-file duplicates: ${this.results.criticalDuplicates.length}`);
-    console.log(`   Cross-file duplicates: ${this.results.crossFileDuplicates.length}`);
-    console.log(`   Similar method names: ${this.results.similarNames.length}\n`);
+    reportLines.push('STATISTICS:');
+    reportLines.push(`   Total method definitions found: ${this.results.totalMethods}`);
+    reportLines.push(`   Unique method names: ${this.results.uniqueMethodNames}`);
+    reportLines.push(`   Critical same-file duplicates: ${this.results.criticalDuplicates.length}`);
+    reportLines.push(`   Cross-file duplicates: ${this.results.crossFileDuplicates.length}`);
+    reportLines.push(`   Similar method names: ${this.results.similarNames.length}`);
+    reportLines.push('');
 
     // Critical duplicates (same file)
     if (this.results.criticalDuplicates.length > 0) {
-      console.log('🚨 CRITICAL: Same-file duplicates (JavaScript uses last definition):');
+      reportLines.push('CRITICAL: Same-file duplicates (JavaScript uses last definition):');
       this.results.criticalDuplicates.forEach(dup => {
-        console.log(`\n❌ Method "${dup.methodName}" in ${dup.file}:`);
+        reportLines.push('');
+        reportLines.push(`Method "${dup.methodName}" in ${dup.file}:`);
         dup.definitions.forEach(def => {
-          console.log(`   Line ${def.line}: ${def.signature}`);
+          reportLines.push(`   Line ${def.line}: ${def.signature}`);
         });
       });
-      console.log();
+      reportLines.push('');
     }
 
     // Cross-file duplicates
     if (this.results.crossFileDuplicates.length > 0) {
-      console.log('⚠️  Cross-file duplicates (may be intentional API wrappers):');
+      reportLines.push('Cross-file duplicates (may be intentional API wrappers):');
       this.results.crossFileDuplicates.forEach(dup => {
-        console.log(`\n⚠️  Method "${dup.methodName}":`);
+        reportLines.push('');
+        reportLines.push(`Method "${dup.methodName}":`);
         dup.definitions.forEach(def => {
-          console.log(`   ${def.file}:${def.line} (${def.type})`);
+          reportLines.push(`   ${def.file}:${def.line} (${def.type})`);
         });
       });
-      console.log();
+      reportLines.push('');
     }
 
     // Similar method names
     if (this.results.similarNames.length > 0) {
-      console.log('🔍 Similar method names (potential confusion):');
+      reportLines.push('Similar method names (potential confusion):');
       this.results.similarNames.slice(0, 10).forEach(similar => { // Limit to first 10
-        console.log(`\n🔍 "${similar.name1}" vs "${similar.name2}"`);
-        console.log(`   ${similar.name1}: ${similar.definitions1[0].file}:${similar.definitions1[0].line}`);
-        console.log(`   ${similar.name2}: ${similar.definitions2[0].file}:${similar.definitions2[0].line}`);
+        reportLines.push('');
+        reportLines.push(`"${similar.name1}" vs "${similar.name2}"`);
+        reportLines.push(`   ${similar.name1}: ${similar.definitions1[0].file}:${similar.definitions1[0].line}`);
+        reportLines.push(`   ${similar.name2}: ${similar.definitions2[0].file}:${similar.definitions2[0].line}`);
       });
       if (this.results.similarNames.length > 10) {
-        console.log(`   ... and ${this.results.similarNames.length - 10} more similar pairs`);
+        reportLines.push(`   ... and ${this.results.similarNames.length - 10} more similar pairs`);
       }
-      console.log();
+      reportLines.push('');
     }
 
     // Final assessment
     if (this.results.criticalDuplicates.length === 0) {
-      console.log('✅ No critical same-file duplicates found!');
+      reportLines.push('SUCCESS: No critical same-file duplicates found!');
       if (this.results.crossFileDuplicates.length === 0) {
-        console.log('✅ No cross-file duplicates found!');
-        console.log('\n🎉 Codebase is clean of duplicate method definitions!');
+        reportLines.push('SUCCESS: No cross-file duplicates found!');
+        reportLines.push('');
+        reportLines.push('Codebase is clean of duplicate method definitions!');
       } else {
-        console.log('ℹ️  Cross-file duplicates found, but these may be intentional (API wrappers, legacy functions)');
+        reportLines.push('INFO: Cross-file duplicates found, but these may be intentional (API wrappers, legacy functions)');
       }
     } else {
-      console.log('❌ Critical duplicates found that need immediate attention!');
-      console.log('   JavaScript will silently use the last definition, causing unexpected behavior.');
+      reportLines.push('ERROR: Critical duplicates found that need immediate attention!');
+      reportLines.push('JavaScript will silently use the last definition, causing unexpected behavior.');
+    }
+
+    // Output report safely
+    this.outputReport(reportLines);
+  }
+
+  outputReport(reportLines) {
+    // Write to file for reliable output (bypasses Windows console encoding issues)
+    const reportPath = path.join(this.projectPath, 'duplicate-detection-report.txt');
+    
+    try {
+      fs.writeFileSync(reportPath, reportLines.join('\n'), 'utf8');
+      
+      // Simple console message to avoid encoding issues
+      console.log('Duplicate detection completed. Check duplicate-detection-report.txt for results.');
+      
+    } catch (error) {
+      console.error('Error: Could not write report file:', error.message);
+      // Fallback to basic console output if file write fails
+      reportLines.forEach(line => {
+        console.log(line);
+      });
     }
   }
 

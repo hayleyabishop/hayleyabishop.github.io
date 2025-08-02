@@ -1,11 +1,11 @@
 {
-  "generated": "2025-08-02T06:01:59.047Z",
+  "generated": "2025-08-02T06:08:47.959Z",
   "project": "autoharp-transposer",
   "statistics": {
-    "files": 27,
-    "classes": 13,
+    "files": 29,
+    "classes": 15,
     "functions": 59,
-    "methods": 275,
+    "methods": 302,
     "eventHandlers": 42
   },
   "graph": {
@@ -361,6 +361,900 @@
         ],
         "lineCount": 314
       },
+      "detect-duplicates-file-mode.js": {
+        "path": "detect-duplicates-file-mode.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\detect-duplicates-file-mode.js",
+        "classes": [
+          {
+            "name": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 11,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 12,
+                "signature": "constructor(projectPath) {",
+                "calls": []
+              },
+              {
+                "name": "log",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 26,
+                "signature": "log(message) {",
+                "calls": []
+              },
+              {
+                "name": "scanProject",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 30,
+                "signature": "scanProject() {",
+                "calls": []
+              },
+              {
+                "name": "findJavaScriptFiles",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 63,
+                "signature": "findJavaScriptFiles(dir) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 69,
+                "signature": "for (const entry of entries) {",
+                "calls": []
+              },
+              {
+                "name": "scanFile",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 87,
+                "signature": "scanFile(filePath) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 114,
+                "signature": "for (const { pattern, type } of methodPatterns) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 116,
+                "signature": "if (match) {",
+                "calls": []
+              },
+              {
+                "name": "isValidMethodName",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 144,
+                "signature": "isValidMethodName(name) {",
+                "calls": []
+              },
+              {
+                "name": "analyzeResults",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 150,
+                "signature": "analyzeResults() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 155,
+                "signature": "if (definitions.length > 1) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 167,
+                "signature": "if (fileDefs.length > 1) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 177,
+                "signature": "if (fileGroups.size > 1) {",
+                "calls": []
+              },
+              {
+                "name": "findSimilarMethodNames",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 190,
+                "signature": "findSimilarMethodNames() {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 193,
+                "signature": "for (let i = 0; i < methodNames.length; i++) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 194,
+                "signature": "for (let j = i + 1; j < methodNames.length; j++) {",
+                "calls": []
+              },
+              {
+                "name": "areMethodNamesSimilar",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 210,
+                "signature": "areMethodNamesSimilar(name1, name2) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 228,
+                "signature": "for (const prefix of commonPrefixes) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 231,
+                "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 236,
+                "signature": "for (const suffix of commonSuffixes) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 239,
+                "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+                "calls": []
+              },
+              {
+                "name": "generateReport",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 247,
+                "signature": "generateReport() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 260,
+                "signature": "if (this.results.criticalDuplicates.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 275,
+                "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 290,
+                "signature": "if (this.results.similarNames.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 302,
+                "signature": "if (this.results.similarNames.length > 10) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 310,
+                "signature": "if (this.results.criticalDuplicates.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 312,
+                "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "writeReportFile",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 330,
+                "signature": "writeReportFile() {",
+                "calls": []
+              },
+              {
+                "name": "getResults",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 338,
+                "signature": "getResults() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FileDuplicateDetector",
+                "file": "detect-duplicates-file-mode.js",
+                "line": 344,
+                "signature": "if (require.main === module) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 12,
+              "signature": "constructor(projectPath) {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "log",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 26,
+            "signature": "log(message) {",
+            "calls": []
+          },
+          {
+            "name": "scanProject",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 30,
+            "signature": "scanProject() {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 63,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 69,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "scanFile",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 87,
+            "signature": "scanFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 114,
+            "signature": "for (const { pattern, type } of methodPatterns) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 116,
+            "signature": "if (match) {",
+            "calls": []
+          },
+          {
+            "name": "isValidMethodName",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 144,
+            "signature": "isValidMethodName(name) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeResults",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 150,
+            "signature": "analyzeResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 155,
+            "signature": "if (definitions.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 167,
+            "signature": "if (fileDefs.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 177,
+            "signature": "if (fileGroups.size > 1) {",
+            "calls": []
+          },
+          {
+            "name": "findSimilarMethodNames",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 190,
+            "signature": "findSimilarMethodNames() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 193,
+            "signature": "for (let i = 0; i < methodNames.length; i++) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 194,
+            "signature": "for (let j = i + 1; j < methodNames.length; j++) {",
+            "calls": []
+          },
+          {
+            "name": "areMethodNamesSimilar",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 210,
+            "signature": "areMethodNamesSimilar(name1, name2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 228,
+            "signature": "for (const prefix of commonPrefixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 231,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 236,
+            "signature": "for (const suffix of commonSuffixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 239,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 247,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 260,
+            "signature": "if (this.results.criticalDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 275,
+            "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 290,
+            "signature": "if (this.results.similarNames.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 302,
+            "signature": "if (this.results.similarNames.length > 10) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 310,
+            "signature": "if (this.results.criticalDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 312,
+            "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "writeReportFile",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 330,
+            "signature": "writeReportFile() {",
+            "calls": []
+          },
+          {
+            "name": "getResults",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 338,
+            "signature": "getResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 344,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [
+          "fs",
+          "path"
+        ],
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "lineCount": 351
+      },
+      "detect-duplicates-fixed.js": {
+        "path": "detect-duplicates-fixed.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\detect-duplicates-fixed.js",
+        "classes": [
+          {
+            "name": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 11,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 12,
+                "signature": "constructor(projectPath) {",
+                "calls": []
+              },
+              {
+                "name": "scanProject",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 24,
+                "signature": "scanProject() {",
+                "calls": []
+              },
+              {
+                "name": "writeOutput",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 49,
+                "signature": "writeOutput(message) {",
+                "calls": []
+              },
+              {
+                "name": "findJavaScriptFiles",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 54,
+                "signature": "findJavaScriptFiles(dir) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 60,
+                "signature": "for (const entry of entries) {",
+                "calls": []
+              },
+              {
+                "name": "scanFile",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 78,
+                "signature": "scanFile(filePath) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 104,
+                "signature": "for (const { pattern, type } of methodPatterns) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 106,
+                "signature": "if (match) {",
+                "calls": []
+              },
+              {
+                "name": "isValidMethodName",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 131,
+                "signature": "isValidMethodName(name) {",
+                "calls": []
+              },
+              {
+                "name": "analyzeResults",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 137,
+                "signature": "analyzeResults() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 142,
+                "signature": "if (definitions.length > 1) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 154,
+                "signature": "if (fileDefs.length > 1) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 164,
+                "signature": "if (fileGroups.size > 1) {",
+                "calls": []
+              },
+              {
+                "name": "generateReport",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 174,
+                "signature": "generateReport() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 187,
+                "signature": "if (this.results.criticalDuplicates.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 202,
+                "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 217,
+                "signature": "if (this.results.criticalDuplicates.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 219,
+                "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "outputReport",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 234,
+                "signature": "outputReport(reportLines) {",
+                "calls": []
+              },
+              {
+                "name": "getResults",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 257,
+                "signature": "getResults() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "FixedDuplicateDetector",
+                "file": "detect-duplicates-fixed.js",
+                "line": 263,
+                "signature": "if (require.main === module) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 12,
+              "signature": "constructor(projectPath) {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "scanProject",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 24,
+            "signature": "scanProject() {",
+            "calls": []
+          },
+          {
+            "name": "writeOutput",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 49,
+            "signature": "writeOutput(message) {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 54,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 60,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "scanFile",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 78,
+            "signature": "scanFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 104,
+            "signature": "for (const { pattern, type } of methodPatterns) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 106,
+            "signature": "if (match) {",
+            "calls": []
+          },
+          {
+            "name": "isValidMethodName",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 131,
+            "signature": "isValidMethodName(name) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeResults",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 137,
+            "signature": "analyzeResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 142,
+            "signature": "if (definitions.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 154,
+            "signature": "if (fileDefs.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 164,
+            "signature": "if (fileGroups.size > 1) {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 174,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 187,
+            "signature": "if (this.results.criticalDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 202,
+            "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 217,
+            "signature": "if (this.results.criticalDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 219,
+            "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "outputReport",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 234,
+            "signature": "outputReport(reportLines) {",
+            "calls": []
+          },
+          {
+            "name": "getResults",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 257,
+            "signature": "getResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 263,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [
+          "fs",
+          "path"
+        ],
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "lineCount": 270
+      },
       "detect-duplicates.js": {
         "path": "detect-duplicates.js",
         "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\detect-duplicates.js",
@@ -526,7 +1420,7 @@
                 "name": "if",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 260,
+                "line": 265,
                 "signature": "if (this.results.criticalDuplicates.length > 0) {",
                 "calls": []
               },
@@ -534,7 +1428,7 @@
                 "name": "if",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 272,
+                "line": 278,
                 "signature": "if (this.results.crossFileDuplicates.length > 0) {",
                 "calls": []
               },
@@ -542,7 +1436,7 @@
                 "name": "if",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 284,
+                "line": 291,
                 "signature": "if (this.results.similarNames.length > 0) {",
                 "calls": []
               },
@@ -550,7 +1444,7 @@
                 "name": "if",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 291,
+                "line": 299,
                 "signature": "if (this.results.similarNames.length > 10) {",
                 "calls": []
               },
@@ -558,7 +1452,7 @@
                 "name": "if",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 298,
+                "line": 306,
                 "signature": "if (this.results.criticalDuplicates.length === 0) {",
                 "calls": []
               },
@@ -566,15 +1460,23 @@
                 "name": "if",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 300,
+                "line": 308,
                 "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "outputReport",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 324,
+                "signature": "outputReport(reportLines) {",
                 "calls": []
               },
               {
                 "name": "getResults",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 313,
+                "line": 349,
                 "signature": "getResults() {",
                 "calls": []
               },
@@ -582,7 +1484,7 @@
                 "name": "if",
                 "class": "RobustDuplicateDetector",
                 "file": "detect-duplicates.js",
-                "line": 319,
+                "line": 355,
                 "signature": "if (require.main === module) {",
                 "calls": []
               }
@@ -751,7 +1653,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 260,
+            "line": 265,
             "signature": "if (this.results.criticalDuplicates.length > 0) {",
             "calls": []
           },
@@ -759,7 +1661,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 272,
+            "line": 278,
             "signature": "if (this.results.crossFileDuplicates.length > 0) {",
             "calls": []
           },
@@ -767,7 +1669,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 284,
+            "line": 291,
             "signature": "if (this.results.similarNames.length > 0) {",
             "calls": []
           },
@@ -775,7 +1677,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 291,
+            "line": 299,
             "signature": "if (this.results.similarNames.length > 10) {",
             "calls": []
           },
@@ -783,7 +1685,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 298,
+            "line": 306,
             "signature": "if (this.results.criticalDuplicates.length === 0) {",
             "calls": []
           },
@@ -791,15 +1693,23 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 300,
+            "line": 308,
             "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "outputReport",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 324,
+            "signature": "outputReport(reportLines) {",
             "calls": []
           },
           {
             "name": "getResults",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 313,
+            "line": 349,
             "signature": "getResults() {",
             "calls": []
           },
@@ -807,7 +1717,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 319,
+            "line": 355,
             "signature": "if (require.main === module) {",
             "calls": []
           }
@@ -822,7 +1732,7 @@
           "fs",
           "path"
         ],
-        "lineCount": 326
+        "lineCount": 362
       },
       "improved-codebase-mapper.js": {
         "path": "improved-codebase-mapper.js",
@@ -9061,6 +9971,444 @@
           "signature": "if (currentClass && trimmedLine.includes('constructor(')) {"
         }
       },
+      "FileDuplicateDetector": {
+        "name": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 11,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "log",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 26,
+            "signature": "log(message) {",
+            "calls": []
+          },
+          {
+            "name": "scanProject",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 30,
+            "signature": "scanProject() {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 63,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 69,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "scanFile",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 87,
+            "signature": "scanFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 114,
+            "signature": "for (const { pattern, type } of methodPatterns) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 116,
+            "signature": "if (match) {",
+            "calls": []
+          },
+          {
+            "name": "isValidMethodName",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 144,
+            "signature": "isValidMethodName(name) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeResults",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 150,
+            "signature": "analyzeResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 155,
+            "signature": "if (definitions.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 167,
+            "signature": "if (fileDefs.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 177,
+            "signature": "if (fileGroups.size > 1) {",
+            "calls": []
+          },
+          {
+            "name": "findSimilarMethodNames",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 190,
+            "signature": "findSimilarMethodNames() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 193,
+            "signature": "for (let i = 0; i < methodNames.length; i++) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 194,
+            "signature": "for (let j = i + 1; j < methodNames.length; j++) {",
+            "calls": []
+          },
+          {
+            "name": "areMethodNamesSimilar",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 210,
+            "signature": "areMethodNamesSimilar(name1, name2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 228,
+            "signature": "for (const prefix of commonPrefixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 231,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 236,
+            "signature": "for (const suffix of commonSuffixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 239,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 247,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 260,
+            "signature": "if (this.results.criticalDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 275,
+            "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 290,
+            "signature": "if (this.results.similarNames.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 302,
+            "signature": "if (this.results.similarNames.length > 10) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 310,
+            "signature": "if (this.results.criticalDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 312,
+            "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "writeReportFile",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 330,
+            "signature": "writeReportFile() {",
+            "calls": []
+          },
+          {
+            "name": "getResults",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 338,
+            "signature": "getResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FileDuplicateDetector",
+            "file": "detect-duplicates-file-mode.js",
+            "line": 344,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 12,
+          "signature": "constructor(projectPath) {"
+        }
+      },
+      "FixedDuplicateDetector": {
+        "name": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 11,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "scanProject",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 24,
+            "signature": "scanProject() {",
+            "calls": []
+          },
+          {
+            "name": "writeOutput",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 49,
+            "signature": "writeOutput(message) {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 54,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 60,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "scanFile",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 78,
+            "signature": "scanFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 104,
+            "signature": "for (const { pattern, type } of methodPatterns) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 106,
+            "signature": "if (match) {",
+            "calls": []
+          },
+          {
+            "name": "isValidMethodName",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 131,
+            "signature": "isValidMethodName(name) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeResults",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 137,
+            "signature": "analyzeResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 142,
+            "signature": "if (definitions.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 154,
+            "signature": "if (fileDefs.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 164,
+            "signature": "if (fileGroups.size > 1) {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 174,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 187,
+            "signature": "if (this.results.criticalDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 202,
+            "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 217,
+            "signature": "if (this.results.criticalDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 219,
+            "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "outputReport",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 234,
+            "signature": "outputReport(reportLines) {",
+            "calls": []
+          },
+          {
+            "name": "getResults",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 257,
+            "signature": "getResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "FixedDuplicateDetector",
+            "file": "detect-duplicates-fixed.js",
+            "line": 263,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 12,
+          "signature": "constructor(projectPath) {"
+        }
+      },
       "RobustDuplicateDetector": {
         "name": "RobustDuplicateDetector",
         "file": "detect-duplicates.js",
@@ -9222,7 +10570,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 260,
+            "line": 265,
             "signature": "if (this.results.criticalDuplicates.length > 0) {",
             "calls": []
           },
@@ -9230,7 +10578,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 272,
+            "line": 278,
             "signature": "if (this.results.crossFileDuplicates.length > 0) {",
             "calls": []
           },
@@ -9238,7 +10586,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 284,
+            "line": 291,
             "signature": "if (this.results.similarNames.length > 0) {",
             "calls": []
           },
@@ -9246,7 +10594,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 291,
+            "line": 299,
             "signature": "if (this.results.similarNames.length > 10) {",
             "calls": []
           },
@@ -9254,7 +10602,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 298,
+            "line": 306,
             "signature": "if (this.results.criticalDuplicates.length === 0) {",
             "calls": []
           },
@@ -9262,15 +10610,23 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 300,
+            "line": 308,
             "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "outputReport",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 324,
+            "signature": "outputReport(reportLines) {",
             "calls": []
           },
           {
             "name": "getResults",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 313,
+            "line": 349,
             "signature": "getResults() {",
             "calls": []
           },
@@ -9278,7 +10634,7 @@
             "name": "if",
             "class": "RobustDuplicateDetector",
             "file": "detect-duplicates.js",
-            "line": 319,
+            "line": 355,
             "signature": "if (require.main === module) {",
             "calls": []
           }
@@ -13307,6 +14663,214 @@
         "signature": "exportKnowledgeGraph() {",
         "calls": []
       },
+      "FileDuplicateDetector.constructor": {
+        "name": "constructor",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 12,
+        "signature": "constructor(projectPath) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.log": {
+        "name": "log",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 26,
+        "signature": "log(message) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.scanProject": {
+        "name": "scanProject",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 30,
+        "signature": "scanProject() {",
+        "calls": []
+      },
+      "FileDuplicateDetector.findJavaScriptFiles": {
+        "name": "findJavaScriptFiles",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 63,
+        "signature": "findJavaScriptFiles(dir) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.for": {
+        "name": "for",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 236,
+        "signature": "for (const suffix of commonSuffixes) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.scanFile": {
+        "name": "scanFile",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 87,
+        "signature": "scanFile(filePath) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.if": {
+        "name": "if",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 344,
+        "signature": "if (require.main === module) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.isValidMethodName": {
+        "name": "isValidMethodName",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 144,
+        "signature": "isValidMethodName(name) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.analyzeResults": {
+        "name": "analyzeResults",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 150,
+        "signature": "analyzeResults() {",
+        "calls": []
+      },
+      "FileDuplicateDetector.findSimilarMethodNames": {
+        "name": "findSimilarMethodNames",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 190,
+        "signature": "findSimilarMethodNames() {",
+        "calls": []
+      },
+      "FileDuplicateDetector.areMethodNamesSimilar": {
+        "name": "areMethodNamesSimilar",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 210,
+        "signature": "areMethodNamesSimilar(name1, name2) {",
+        "calls": []
+      },
+      "FileDuplicateDetector.generateReport": {
+        "name": "generateReport",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 247,
+        "signature": "generateReport() {",
+        "calls": []
+      },
+      "FileDuplicateDetector.writeReportFile": {
+        "name": "writeReportFile",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 330,
+        "signature": "writeReportFile() {",
+        "calls": []
+      },
+      "FileDuplicateDetector.getResults": {
+        "name": "getResults",
+        "class": "FileDuplicateDetector",
+        "file": "detect-duplicates-file-mode.js",
+        "line": 338,
+        "signature": "getResults() {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.constructor": {
+        "name": "constructor",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 12,
+        "signature": "constructor(projectPath) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.scanProject": {
+        "name": "scanProject",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 24,
+        "signature": "scanProject() {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.writeOutput": {
+        "name": "writeOutput",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 49,
+        "signature": "writeOutput(message) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.findJavaScriptFiles": {
+        "name": "findJavaScriptFiles",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 54,
+        "signature": "findJavaScriptFiles(dir) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.for": {
+        "name": "for",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 104,
+        "signature": "for (const { pattern, type } of methodPatterns) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.scanFile": {
+        "name": "scanFile",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 78,
+        "signature": "scanFile(filePath) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.if": {
+        "name": "if",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 263,
+        "signature": "if (require.main === module) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.isValidMethodName": {
+        "name": "isValidMethodName",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 131,
+        "signature": "isValidMethodName(name) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.analyzeResults": {
+        "name": "analyzeResults",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 137,
+        "signature": "analyzeResults() {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.generateReport": {
+        "name": "generateReport",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 174,
+        "signature": "generateReport() {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.outputReport": {
+        "name": "outputReport",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 234,
+        "signature": "outputReport(reportLines) {",
+        "calls": []
+      },
+      "FixedDuplicateDetector.getResults": {
+        "name": "getResults",
+        "class": "FixedDuplicateDetector",
+        "file": "detect-duplicates-fixed.js",
+        "line": 257,
+        "signature": "getResults() {",
+        "calls": []
+      },
       "RobustDuplicateDetector.constructor": {
         "name": "constructor",
         "class": "RobustDuplicateDetector",
@@ -13351,7 +14915,7 @@
         "name": "if",
         "class": "RobustDuplicateDetector",
         "file": "detect-duplicates.js",
-        "line": 319,
+        "line": 355,
         "signature": "if (require.main === module) {",
         "calls": []
       },
@@ -13387,11 +14951,19 @@
         "signature": "generateReport() {",
         "calls": []
       },
+      "RobustDuplicateDetector.outputReport": {
+        "name": "outputReport",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 324,
+        "signature": "outputReport(reportLines) {",
+        "calls": []
+      },
       "RobustDuplicateDetector.getResults": {
         "name": "getResults",
         "class": "RobustDuplicateDetector",
         "file": "detect-duplicates.js",
-        "line": 313,
+        "line": 349,
         "signature": "getResults() {",
         "calls": []
       },
@@ -15760,6 +17332,28 @@
           "CodebaseMapper"
         ]
       },
+      "detect-duplicates-file-mode": {
+        "file": "detect-duplicates-file-mode.js",
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "provides": [
+          "FileDuplicateDetector"
+        ]
+      },
+      "detect-duplicates-fixed": {
+        "file": "detect-duplicates-fixed.js",
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "provides": [
+          "FixedDuplicateDetector"
+        ]
+      },
       "detect-duplicates": {
         "file": "detect-duplicates.js",
         "exports": [],
@@ -16782,6 +18376,1500 @@
           "line": 310
         }
       ],
+      "detect-duplicates-file-mode.js": [
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "require",
+          "line": 8
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "require",
+          "line": 9
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "constructor",
+          "line": 12
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "Map",
+          "line": 14
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "path.join",
+          "line": 22
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "log",
+          "line": 26
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.logLines.push",
+          "line": 27
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "scanProject",
+          "line": 30
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 32
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 33
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "Date",
+          "line": 33
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "toISOString",
+          "line": 33
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 34
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 36
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 37
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 38
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "jsFiles.forEach",
+          "line": 41
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.scanFile",
+          "line": 43
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "catch ",
+          "line": 44
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 45
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.analyzeResults",
+          "line": 49
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.generateReport",
+          "line": 50
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.writeReportFile",
+          "line": 51
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "console.log",
+          "line": 54
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "catch ",
+          "line": 56
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 57
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.writeReportFile",
+          "line": 58
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "console.log",
+          "line": 59
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "findJavaScriptFiles",
+          "line": 63
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "fs.readdirSync",
+          "line": 67
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 69
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "path.join",
+          "line": 70
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 72
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "entry.isDirectory",
+          "line": 72
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 73
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "entry.name.startsWith",
+          "line": 73
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "files.push",
+          "line": 74
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 74
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 76
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "entry.isFile",
+          "line": 76
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "entry.name.endsWith",
+          "line": 76
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "files.push",
+          "line": 77
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "catch ",
+          "line": 80
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 81
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "scanFile",
+          "line": 87
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "fs.readFileSync",
+          "line": 88
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "content.split",
+          "line": 89
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "path.relative",
+          "line": 90
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "lines.forEach",
+          "line": 113
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 114
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "line.match",
+          "line": 115
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 116
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 120
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.isValidMethodName",
+          "line": 120
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "line.trim",
+          "line": 126
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 129
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.methodDefinitions.has",
+          "line": 129
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.methodDefinitions.set",
+          "line": 130
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.methodDefinitions.get",
+          "line": 132
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "push",
+          "line": 132
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 141
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "isValidMethodName",
+          "line": 144
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "invalidNames.includes",
+          "line": 147
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "analyzeResults",
+          "line": 150
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 154
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.methodDefinitions.entries",
+          "line": 154
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 155
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "Map",
+          "line": 157
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "definitions.forEach",
+          "line": 158
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 159
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "fileGroups.has",
+          "line": 159
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "fileGroups.set",
+          "line": 160
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "fileGroups.get",
+          "line": 162
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "push",
+          "line": 162
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 166
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "fileGroups.entries",
+          "line": 166
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 167
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.results.criticalDuplicates.push",
+          "line": 168
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 177
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.results.crossFileDuplicates.push",
+          "line": 178
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.findSimilarMethodNames",
+          "line": 187
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "findSimilarMethodNames",
+          "line": 190
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "Array.from",
+          "line": 191
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.methodDefinitions.keys",
+          "line": 191
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 193
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 194
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 198
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.areMethodNamesSimilar",
+          "line": 198
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.results.similarNames.push",
+          "line": 199
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.methodDefinitions.get",
+          "line": 202
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.methodDefinitions.get",
+          "line": 203
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "areMethodNamesSimilar",
+          "line": 210
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "name1.toLowerCase",
+          "line": 211
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "name2.toLowerCase",
+          "line": 212
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 215
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "Math.abs",
+          "line": 215
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 220
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "lower1.includes",
+          "line": 220
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "lower2.includes",
+          "line": 220
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 228
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "lower1.replace",
+          "line": 229
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "RegExp",
+          "line": 229
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "lower2.replace",
+          "line": 230
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "RegExp",
+          "line": 230
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 231
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "for ",
+          "line": 236
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "lower1.replace",
+          "line": 237
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "RegExp",
+          "line": 237
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "lower2.replace",
+          "line": 238
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "RegExp",
+          "line": 238
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 239
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "generateReport",
+          "line": 247
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 248
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 249
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 250
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 251
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 252
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 253
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 254
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 255
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 256
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 257
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 260
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 261
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 262
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 263
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.results.criticalDuplicates.forEach",
+          "line": 265
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 266
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "dup.definitions.forEach",
+          "line": 267
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 268
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 270
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 275
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 276
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 277
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 278
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.results.crossFileDuplicates.forEach",
+          "line": 280
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 281
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "dup.definitions.forEach",
+          "line": 282
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 283
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 285
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 290
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 291
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 292
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 293
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.results.similarNames.slice",
+          "line": 295
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "forEach",
+          "line": 295
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 296
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 297
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 298
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 299
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 302
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 303
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 304
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 309
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 310
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 311
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 312
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 313
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 314
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 315
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 317
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 318
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 321
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 322
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 323
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 326
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.log",
+          "line": 327
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "writeReportFile",
+          "line": 330
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "fs.writeFileSync",
+          "line": 332
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "this.logLines.join",
+          "line": 332
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "catch ",
+          "line": 333
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "console.log",
+          "line": 334
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "getResults",
+          "line": 338
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "if ",
+          "line": 344
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "FileDuplicateDetector",
+          "line": 346
+        },
+        {
+          "caller": "detect-duplicates-file-mode.js",
+          "callee": "detector.scanProject",
+          "line": 347
+        }
+      ],
+      "detect-duplicates-fixed.js": [
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "require",
+          "line": 8
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "require",
+          "line": 9
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "constructor",
+          "line": 12
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "Map",
+          "line": 14
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "scanProject",
+          "line": 24
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 26
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 28
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 29
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "jsFiles.forEach",
+          "line": 32
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.scanFile",
+          "line": 34
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "catch ",
+          "line": 35
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 36
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.analyzeResults",
+          "line": 40
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.generateReport",
+          "line": 41
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "catch ",
+          "line": 43
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 44
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "process.exit",
+          "line": 45
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "writeOutput",
+          "line": 49
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "process.stdout.write",
+          "line": 51
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "findJavaScriptFiles",
+          "line": 54
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "fs.readdirSync",
+          "line": 58
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "for ",
+          "line": 60
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "path.join",
+          "line": 61
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 63
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "entry.isDirectory",
+          "line": 63
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 64
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "entry.name.startsWith",
+          "line": 64
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "files.push",
+          "line": 65
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 65
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 67
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "entry.isFile",
+          "line": 67
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "entry.name.endsWith",
+          "line": 67
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "files.push",
+          "line": 68
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "catch ",
+          "line": 71
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 72
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "scanFile",
+          "line": 78
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "fs.readFileSync",
+          "line": 79
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "content.split",
+          "line": 80
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "path.relative",
+          "line": 81
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "lines.forEach",
+          "line": 103
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "for ",
+          "line": 104
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "line.match",
+          "line": 105
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 106
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 110
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.isValidMethodName",
+          "line": 110
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "line.trim",
+          "line": 116
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 119
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.methodDefinitions.has",
+          "line": 119
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.methodDefinitions.set",
+          "line": 120
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.methodDefinitions.get",
+          "line": 122
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "push",
+          "line": 122
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "isValidMethodName",
+          "line": 131
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "invalidNames.includes",
+          "line": 134
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "analyzeResults",
+          "line": 137
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "for ",
+          "line": 141
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.methodDefinitions.entries",
+          "line": 141
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 142
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "Map",
+          "line": 144
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "definitions.forEach",
+          "line": 145
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 146
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "fileGroups.has",
+          "line": 146
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "fileGroups.set",
+          "line": 147
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "fileGroups.get",
+          "line": 149
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "push",
+          "line": 149
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "for ",
+          "line": 153
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "fileGroups.entries",
+          "line": 153
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 154
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.results.criticalDuplicates.push",
+          "line": 155
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 164
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.results.crossFileDuplicates.push",
+          "line": 165
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "generateReport",
+          "line": 174
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 177
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 178
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 179
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 180
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 181
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 182
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 183
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 184
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 187
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 188
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 189
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 190
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.results.criticalDuplicates.forEach",
+          "line": 192
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 193
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "dup.definitions.forEach",
+          "line": 194
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 195
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 197
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 202
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 203
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 204
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 205
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.results.crossFileDuplicates.forEach",
+          "line": 207
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 208
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "dup.definitions.forEach",
+          "line": 209
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 210
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 212
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 217
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 218
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 219
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 220
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 221
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 223
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 226
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.push",
+          "line": 227
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.outputReport",
+          "line": 231
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "outputReport",
+          "line": 234
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "path.join",
+          "line": 236
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "fs.writeFileSync",
+          "line": 239
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.join",
+          "line": 239
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.forEach",
+          "line": 242
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 243
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 246
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 247
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "catch ",
+          "line": 249
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 250
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "reportLines.forEach",
+          "line": 251
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "this.writeOutput",
+          "line": 252
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "getResults",
+          "line": 257
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "if ",
+          "line": 263
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "FixedDuplicateDetector",
+          "line": 265
+        },
+        {
+          "caller": "detect-duplicates-fixed.js",
+          "callee": "detector.scanProject",
+          "line": 266
+        }
+      ],
       "detect-duplicates.js": [
         {
           "caller": "detect-duplicates.js",
@@ -17295,163 +20383,143 @@
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 248
+          "callee": "reportLines.push",
+          "line": 251
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 249
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 252
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 253
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 254
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 255
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 256
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 257
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "if ",
+          "callee": "reportLines.push",
+          "line": 258
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 259
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
           "line": 260
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 261
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "duplicates ",
-          "line": 261
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "this.results.criticalDuplicates.forEach",
+          "callee": "reportLines.push",
           "line": 262
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 263
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "dup.definitions.forEach",
-          "line": 264
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "if ",
           "line": 265
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 268
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "if ",
-          "line": 272
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 273
+          "callee": "reportLines.push",
+          "line": 266
         },
         {
           "caller": "detect-duplicates.js",
           "callee": "duplicates ",
-          "line": 273
+          "line": 266
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "this.results.crossFileDuplicates.forEach",
-          "line": 274
+          "callee": "this.results.criticalDuplicates.forEach",
+          "line": 267
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 275
+          "callee": "reportLines.push",
+          "line": 268
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 269
         },
         {
           "caller": "detect-duplicates.js",
           "callee": "dup.definitions.forEach",
-          "line": 276
+          "line": 270
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 277
+          "callee": "reportLines.push",
+          "line": 271
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 280
+          "callee": "reportLines.push",
+          "line": 274
         },
         {
           "caller": "detect-duplicates.js",
           "callee": "if ",
+          "line": 278
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 279
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "duplicates ",
+          "line": 279
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.crossFileDuplicates.forEach",
+          "line": 280
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 281
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 282
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "dup.definitions.forEach",
+          "line": 283
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
           "line": 284
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 285
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "names ",
-          "line": 285
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "this.results.similarNames.slice",
-          "line": 286
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "forEach",
-          "line": 286
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 287
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 288
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 289
         },
         {
           "caller": "detect-duplicates.js",
@@ -17460,78 +20528,188 @@
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 292
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "names ",
+          "line": 292
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.similarNames.slice",
+          "line": 293
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "forEach",
+          "line": 293
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
           "line": 294
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "if ",
-          "line": 298
+          "callee": "reportLines.push",
+          "line": 295
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
+          "line": 296
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 297
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
           "line": 299
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "if ",
+          "callee": "reportLines.push",
           "line": 300
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 301
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 302
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
-          "line": 304
+          "callee": "if ",
+          "line": 306
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "intentional ",
-          "line": 304
-        },
-        {
-          "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "reportLines.push",
           "line": 307
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "console.log",
+          "callee": "if ",
           "line": 308
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "getResults",
+          "callee": "reportLines.push",
+          "line": 309
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 310
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 311
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
           "line": 313
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "if ",
-          "line": 319
+          "callee": "intentional ",
+          "line": 313
         },
         {
           "caller": "detect-duplicates.js",
-          "callee": "RobustDuplicateDetector",
+          "callee": "reportLines.push",
+          "line": 316
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 317
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.outputReport",
           "line": 321
         },
         {
           "caller": "detect-duplicates.js",
+          "callee": "outputReport",
+          "line": 324
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "path.join",
+          "line": 326
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fs.writeFileSync",
+          "line": 329
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.join",
+          "line": 329
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.forEach",
+          "line": 332
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "process.stdout.write",
+          "line": 334
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "process.stdout.write",
+          "line": 337
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "catch ",
+          "line": 339
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.error",
+          "line": 341
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.forEach",
+          "line": 342
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.log",
+          "line": 343
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "getResults",
+          "line": 349
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 355
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "RobustDuplicateDetector",
+          "line": 357
+        },
+        {
+          "caller": "detect-duplicates.js",
           "callee": "detector.scanProject",
-          "line": 322
+          "line": 358
         }
       ],
       "improved-codebase-mapper.js": [
