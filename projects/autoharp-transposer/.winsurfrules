@@ -1,0 +1,135 @@
+# Windsurf Debugging Rules Configuration
+# Version: 1.0
+# Based on: DEBUGGING_RULES.md
+
+# ===================================
+# CARDINAL RULES - ENFORCED
+# ===================================
+
+# Rule 1: Evidence Before Assumptions
+rule.evidence_first = true
+rule.require_error_messages = true
+rule.require_console_output = true
+rule.assumptions_allowed = false
+
+# Rule 2: User Validation
+rule.require_user_validation = true
+rule.test_in_user_environment = true
+rule.theoretical_testing_only = false
+
+# Rule 3: Minimal Changes
+rule.max_changes_per_commit = 1
+rule.require_validation_between_changes = true
+
+# ===================================
+# DEBUGGING WORKFLOW
+# ===================================
+
+[debugging_workflow]
+# Phase 1: Evidence Gathering
+phase1.require_repro_steps = true
+phase1.require_environment_details = true
+phase1.require_error_messages = true
+
+# Phase 2: Hypothesis Formation
+phase2.max_hypotheses = 3
+phase2.require_evidence_linking = true
+
+# Phase 3: Minimal Testing
+phase3.require_minimal_test = true
+phase3.max_debug_statements = 1
+
+# Phase 4: Incremental Fixing
+phase4.require_smallest_fix = true
+phase4.require_user_validation = true
+
+# ===================================
+# DEBUGGING STRATEGIES
+# ===================================
+
+[function_issues]
+check_existence = true
+check_calls = true
+check_scope = true
+
+event_handler_issues:
+    check_bindings = true
+    check_event_flow = true
+    check_conflicts = true
+
+dom_issues:
+    check_element_existence = true
+    check_element_state = true
+    check_visibility = true
+
+# ===================================
+# VALIDATION CHECKS
+# ===================================
+
+[validation]
+pre_fix_checks:
+    - confirm_symptoms
+    - verify_environment
+    - define_success_criteria
+
+post_fix_checks:
+    - user_verification
+    - no_regressions
+    - cleanup_debug_code
+
+# ===================================
+# ANTI-PATTERNS (BLOCKED)
+# ===================================
+
+[blocked_patterns]
+assumption_based_fixes = blocked
+over_engineering = blocked
+multiple_simultaneous_changes = blocked
+theoretical_testing_only = blocked
+
+# ===================================
+# COMMUNICATION PROTOCOLS
+# ===================================
+
+[communication]
+initial_contact:
+    - request_repro_steps
+    - ask_for_errors
+    - gather_environment
+
+fix_proposal:
+    - state_hypothesis
+    - request_validation
+    - propose_test
+
+# ===================================
+# LOGGING AND DOCUMENTATION
+# ===================================
+
+[logging]
+enable_debug_logging = true
+log_level = "debug"
+log_file = "windsurf_debug.log"
+
+[documentation]
+require_comment_changes = true
+comment_format = "JSDoc"
+update_readme_on_changes = true
+
+# ===================================
+# VERSION CONTROL
+# ===================================
+
+[version_control]
+require_commit_messages = true
+enforce_branch_protection = true
+require_pull_requests = true
+
+# ===================================
+# SECURITY
+# ===================================
+
+[security]
+scan_for_secrets = true
+prevent_credentials = true
+require_code_review = true

@@ -2,7 +2,7 @@ CODEBASE KNOWLEDGE GRAPH REPORT
 =====================================
 
 SUMMARY STATISTICS:
-   Files analyzed: 32
+   Files analyzed: 33
    Classes found: 16
    Functions found: 66
    Methods found: 315
@@ -662,19 +662,19 @@ STANDALONE FUNCTIONS:
    addChordFromButton() (webapp.js:283)
    appendChord() (webapp.js:290)
    removeChord() (webapp.js:309)
-   getInputChords() (webapp.js:319)
-   initializeDragAndDrop() (webapp.js:334)
-   addDragListeners() (webapp.js:340)
-   handleDragStart() (webapp.js:353)
-   handleDragOver() (webapp.js:360)
-   handleDrop() (webapp.js:374)
-   handleDragEnd() (webapp.js:378)
-   getDragAfterElement() (webapp.js:387)
-   handleTouchStart() (webapp.js:413)
-   handleTouchMove() (webapp.js:427)
-   handleTouchEnd() (webapp.js:457)
-   calculateResultingChords() (webapp.js:476)
-   onInputChordsChanged() (webapp.js:579)
+   getInputChords() (webapp.js:339)
+   initializeDragAndDrop() (webapp.js:354)
+   addDragListeners() (webapp.js:360)
+   handleDragStart() (webapp.js:385)
+   handleDragOver() (webapp.js:396)
+   handleDrop() (webapp.js:416)
+   handleDragEnd() (webapp.js:423)
+   getDragAfterElement() (webapp.js:433)
+   handleTouchStart() (webapp.js:459)
+   handleTouchMove() (webapp.js:473)
+   handleTouchEnd() (webapp.js:503)
+   calculateResultingChords() (webapp.js:522)
+   onInputChordsChanged() (webapp.js:625)
 
 EVENT HANDLERS:
    beforeunload -> ( (modules\appIntegration.js:240)
@@ -712,15 +712,15 @@ EVENT HANDLERS:
    DOMContentLoaded -> ( (tests\test-transcription-debug.js:131)
    DOMContentLoaded -> ( (tests\test-transcription-end-to-end.js:143)
    change -> onAutoharpTypeChanged (webapp.js:84)
-   animationend -> ( (webapp.js:313)
-   dragstart -> handleDragStart (webapp.js:342)
-   dragover -> handleDragOver (webapp.js:343)
-   drop -> handleDrop (webapp.js:344)
-   dragend -> handleDragEnd (webapp.js:345)
-   touchstart -> handleTouchStart (webapp.js:348)
-   touchmove -> handleTouchMove (webapp.js:349)
-   touchend -> handleTouchEnd (webapp.js:350)
-   DOMContentLoaded -> function ( (webapp.js:640)
+   animationend -> ( (webapp.js:323)
+   dragstart -> handleDragStart (webapp.js:369)
+   dragover -> handleDragOver (webapp.js:370)
+   drop -> handleDrop (webapp.js:371)
+   dragend -> handleDragEnd (webapp.js:372)
+   touchstart -> handleTouchStart (webapp.js:375)
+   touchmove -> handleTouchMove (webapp.js:376)
+   touchend -> handleTouchEnd (webapp.js:377)
+   DOMContentLoaded -> function ( (webapp.js:686)
 
 MODULE DEPENDENCIES:
    codebase-mapper depends on:

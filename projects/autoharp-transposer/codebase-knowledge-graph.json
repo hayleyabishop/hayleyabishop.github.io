@@ -1,8 +1,8 @@
 {
-  "generated": "2025-08-02T08:38:23.915Z",
+  "generated": "2025-08-03T05:20:42.413Z",
   "project": "autoharp-transposer",
   "statistics": {
-    "files": 32,
+    "files": 33,
     "classes": 16,
     "functions": 66,
     "methods": 315,
@@ -9988,6 +9988,18 @@
         "dependencies": [],
         "lineCount": 149
       },
+      "tests\\test-ui-bug-fixes.js": {
+        "path": "tests\\test-ui-bug-fixes.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tests\\test-ui-bug-fixes.js",
+        "classes": [],
+        "functions": [],
+        "methods": [],
+        "eventHandlers": [],
+        "imports": [],
+        "exports": [],
+        "dependencies": [],
+        "lineCount": 181
+      },
       "webapp.js": {
         "path": "webapp.js",
         "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\webapp.js",
@@ -10094,91 +10106,91 @@
           {
             "name": "getInputChords",
             "file": "webapp.js",
-            "line": 319,
+            "line": 339,
             "signature": "function getInputChords() {",
             "calls": []
           },
           {
             "name": "initializeDragAndDrop",
             "file": "webapp.js",
-            "line": 334,
+            "line": 354,
             "signature": "function initializeDragAndDrop() {",
             "calls": []
           },
           {
             "name": "addDragListeners",
             "file": "webapp.js",
-            "line": 340,
+            "line": 360,
             "signature": "function addDragListeners(draggable) {",
             "calls": []
           },
           {
             "name": "handleDragStart",
             "file": "webapp.js",
-            "line": 353,
+            "line": 385,
             "signature": "function handleDragStart(e) {",
             "calls": []
           },
           {
             "name": "handleDragOver",
             "file": "webapp.js",
-            "line": 360,
+            "line": 396,
             "signature": "function handleDragOver(e) {",
             "calls": []
           },
           {
             "name": "handleDrop",
             "file": "webapp.js",
-            "line": 374,
+            "line": 416,
             "signature": "function handleDrop() {",
             "calls": []
           },
           {
             "name": "handleDragEnd",
             "file": "webapp.js",
-            "line": 378,
+            "line": 423,
             "signature": "function handleDragEnd() {",
             "calls": []
           },
           {
             "name": "getDragAfterElement",
             "file": "webapp.js",
-            "line": 387,
+            "line": 433,
             "signature": "function getDragAfterElement(container, x) {",
             "calls": []
           },
           {
             "name": "handleTouchStart",
             "file": "webapp.js",
-            "line": 413,
+            "line": 459,
             "signature": "function handleTouchStart(e) {",
             "calls": []
           },
           {
             "name": "handleTouchMove",
             "file": "webapp.js",
-            "line": 427,
+            "line": 473,
             "signature": "function handleTouchMove(e) {",
             "calls": []
           },
           {
             "name": "handleTouchEnd",
             "file": "webapp.js",
-            "line": 457,
+            "line": 503,
             "signature": "function handleTouchEnd(e) {",
             "calls": []
           },
           {
             "name": "calculateResultingChords",
             "file": "webapp.js",
-            "line": 476,
+            "line": 522,
             "signature": "function calculateResultingChords(inputChords) {",
             "calls": []
           },
           {
             "name": "onInputChordsChanged",
             "file": "webapp.js",
-            "line": 579,
+            "line": 625,
             "signature": "function onInputChordsChanged() {",
             "calls": []
           }
@@ -10196,70 +10208,70 @@
             "event": "animationend",
             "handler": "(",
             "file": "webapp.js",
-            "line": 313,
+            "line": 323,
             "signature": "newChord.addEventListener(\"animationend\", () => {"
           },
           {
             "event": "dragstart",
             "handler": "handleDragStart",
             "file": "webapp.js",
-            "line": 342,
+            "line": 369,
             "signature": "draggable.addEventListener(\"dragstart\", handleDragStart);"
           },
           {
             "event": "dragover",
             "handler": "handleDragOver",
             "file": "webapp.js",
-            "line": 343,
+            "line": 370,
             "signature": "draggable.addEventListener(\"dragover\", handleDragOver);"
           },
           {
             "event": "drop",
             "handler": "handleDrop",
             "file": "webapp.js",
-            "line": 344,
+            "line": 371,
             "signature": "draggable.addEventListener(\"drop\", handleDrop);"
           },
           {
             "event": "dragend",
             "handler": "handleDragEnd",
             "file": "webapp.js",
-            "line": 345,
+            "line": 372,
             "signature": "draggable.addEventListener(\"dragend\", handleDragEnd);"
           },
           {
             "event": "touchstart",
             "handler": "handleTouchStart",
             "file": "webapp.js",
-            "line": 348,
+            "line": 375,
             "signature": "draggable.addEventListener(\"touchstart\", handleTouchStart, { passive: false });"
           },
           {
             "event": "touchmove",
             "handler": "handleTouchMove",
             "file": "webapp.js",
-            "line": 349,
+            "line": 376,
             "signature": "draggable.addEventListener(\"touchmove\", handleTouchMove, { passive: false });"
           },
           {
             "event": "touchend",
             "handler": "handleTouchEnd",
             "file": "webapp.js",
-            "line": 350,
+            "line": 377,
             "signature": "draggable.addEventListener(\"touchend\", handleTouchEnd);"
           },
           {
             "event": "DOMContentLoaded",
             "handler": "function (",
             "file": "webapp.js",
-            "line": 640,
+            "line": 686,
             "signature": "document.addEventListener('DOMContentLoaded', function () {"
           }
         ],
         "imports": [],
         "exports": [],
         "dependencies": [],
-        "lineCount": 665
+        "lineCount": 711
       }
     },
     "classes": {
@@ -15216,91 +15228,91 @@
       "getInputChords": {
         "name": "getInputChords",
         "file": "webapp.js",
-        "line": 319,
+        "line": 339,
         "signature": "function getInputChords() {",
         "calls": []
       },
       "initializeDragAndDrop": {
         "name": "initializeDragAndDrop",
         "file": "webapp.js",
-        "line": 334,
+        "line": 354,
         "signature": "function initializeDragAndDrop() {",
         "calls": []
       },
       "addDragListeners": {
         "name": "addDragListeners",
         "file": "webapp.js",
-        "line": 340,
+        "line": 360,
         "signature": "function addDragListeners(draggable) {",
         "calls": []
       },
       "handleDragStart": {
         "name": "handleDragStart",
         "file": "webapp.js",
-        "line": 353,
+        "line": 385,
         "signature": "function handleDragStart(e) {",
         "calls": []
       },
       "handleDragOver": {
         "name": "handleDragOver",
         "file": "webapp.js",
-        "line": 360,
+        "line": 396,
         "signature": "function handleDragOver(e) {",
         "calls": []
       },
       "handleDrop": {
         "name": "handleDrop",
         "file": "webapp.js",
-        "line": 374,
+        "line": 416,
         "signature": "function handleDrop() {",
         "calls": []
       },
       "handleDragEnd": {
         "name": "handleDragEnd",
         "file": "webapp.js",
-        "line": 378,
+        "line": 423,
         "signature": "function handleDragEnd() {",
         "calls": []
       },
       "getDragAfterElement": {
         "name": "getDragAfterElement",
         "file": "webapp.js",
-        "line": 387,
+        "line": 433,
         "signature": "function getDragAfterElement(container, x) {",
         "calls": []
       },
       "handleTouchStart": {
         "name": "handleTouchStart",
         "file": "webapp.js",
-        "line": 413,
+        "line": 459,
         "signature": "function handleTouchStart(e) {",
         "calls": []
       },
       "handleTouchMove": {
         "name": "handleTouchMove",
         "file": "webapp.js",
-        "line": 427,
+        "line": 473,
         "signature": "function handleTouchMove(e) {",
         "calls": []
       },
       "handleTouchEnd": {
         "name": "handleTouchEnd",
         "file": "webapp.js",
-        "line": 457,
+        "line": 503,
         "signature": "function handleTouchEnd(e) {",
         "calls": []
       },
       "calculateResultingChords": {
         "name": "calculateResultingChords",
         "file": "webapp.js",
-        "line": 476,
+        "line": 522,
         "signature": "function calculateResultingChords(inputChords) {",
         "calls": []
       },
       "onInputChordsChanged": {
         "name": "onInputChordsChanged",
         "file": "webapp.js",
-        "line": 579,
+        "line": 625,
         "signature": "function onInputChordsChanged() {",
         "calls": []
       }
@@ -18073,67 +18085,67 @@
         "line": 84,
         "signature": "inputType.addEventListener(\"change\", onAutoharpTypeChanged);"
       },
-      "webapp.js:313": {
+      "webapp.js:323": {
         "event": "animationend",
         "handler": "(",
         "file": "webapp.js",
-        "line": 313,
+        "line": 323,
         "signature": "newChord.addEventListener(\"animationend\", () => {"
       },
-      "webapp.js:342": {
+      "webapp.js:369": {
         "event": "dragstart",
         "handler": "handleDragStart",
         "file": "webapp.js",
-        "line": 342,
+        "line": 369,
         "signature": "draggable.addEventListener(\"dragstart\", handleDragStart);"
       },
-      "webapp.js:343": {
+      "webapp.js:370": {
         "event": "dragover",
         "handler": "handleDragOver",
         "file": "webapp.js",
-        "line": 343,
+        "line": 370,
         "signature": "draggable.addEventListener(\"dragover\", handleDragOver);"
       },
-      "webapp.js:344": {
+      "webapp.js:371": {
         "event": "drop",
         "handler": "handleDrop",
         "file": "webapp.js",
-        "line": 344,
+        "line": 371,
         "signature": "draggable.addEventListener(\"drop\", handleDrop);"
       },
-      "webapp.js:345": {
+      "webapp.js:372": {
         "event": "dragend",
         "handler": "handleDragEnd",
         "file": "webapp.js",
-        "line": 345,
+        "line": 372,
         "signature": "draggable.addEventListener(\"dragend\", handleDragEnd);"
       },
-      "webapp.js:348": {
+      "webapp.js:375": {
         "event": "touchstart",
         "handler": "handleTouchStart",
         "file": "webapp.js",
-        "line": 348,
+        "line": 375,
         "signature": "draggable.addEventListener(\"touchstart\", handleTouchStart, { passive: false });"
       },
-      "webapp.js:349": {
+      "webapp.js:376": {
         "event": "touchmove",
         "handler": "handleTouchMove",
         "file": "webapp.js",
-        "line": 349,
+        "line": 376,
         "signature": "draggable.addEventListener(\"touchmove\", handleTouchMove, { passive: false });"
       },
-      "webapp.js:350": {
+      "webapp.js:377": {
         "event": "touchend",
         "handler": "handleTouchEnd",
         "file": "webapp.js",
-        "line": 350,
+        "line": 377,
         "signature": "draggable.addEventListener(\"touchend\", handleTouchEnd);"
       },
-      "webapp.js:640": {
+      "webapp.js:686": {
         "event": "DOMContentLoaded",
         "handler": "function (",
         "file": "webapp.js",
-        "line": 640,
+        "line": 686,
         "signature": "document.addEventListener('DOMContentLoaded', function () {"
       }
     },
@@ -18435,6 +18447,12 @@
         "provides": [
           "runEndToEndTest"
         ]
+      },
+      "test-ui-bug-fixes": {
+        "file": "tests\\test-ui-bug-fixes.js",
+        "exports": [],
+        "dependencies": [],
+        "provides": []
       },
       "webapp": {
         "file": "webapp.js",
@@ -36869,6 +36887,498 @@
           "line": 147
         }
       ],
+      "tests\\test-ui-bug-fixes.js": [
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 6
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 7
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 10
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 11
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 13
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 14
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 15
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "window.removeChord.toString",
+          "line": 15
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "substring",
+          "line": 15
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 17
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 18
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 21
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 22
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 24
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 28
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 29
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 31
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 32
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 33
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "window.addDragListeners.toString",
+          "line": 33
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "substring",
+          "line": 33
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 35
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 36
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 40
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 41
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "document.getElementById",
+          "line": 43
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 44
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 45
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "chordGroup.querySelectorAll",
+          "line": 47
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 48
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "chordElements.forEach",
+          "line": 50
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "chord.querySelector",
+          "line": 51
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "chord.getAttribute",
+          "line": 52
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 54
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 55
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 56
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 58
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "removeButton.getAttribute",
+          "line": 59
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 60
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 64
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 68
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 69
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "document.querySelector",
+          "line": 71
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 72
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 73
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 74
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "testRemoveButton.closest",
+          "line": 80
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 81
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "closest",
+          "line": 81
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 86
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 87
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 89
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "catch ",
+          "line": 91
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 92
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 95
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 99
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 100
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "dragHandlers.forEach",
+          "line": 110
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 111
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 112
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 114
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 119
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 120
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "document.querySelectorAll",
+          "line": 122
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 123
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 125
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 126
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 130
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "window.addDragListeners",
+          "line": 134
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 135
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "catch ",
+          "line": 136
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 137
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 140
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 144
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 145
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 146
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 147
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 148
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 149
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 150
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 151
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 152
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 153
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "document.querySelector",
+          "line": 158
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 159
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 160
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "window.removeChord",
+          "line": 161
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 163
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "document.querySelector",
+          "line": 168
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "if ",
+          "line": 169
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 170
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "window.addDragListeners",
+          "line": 171
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 173
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 178
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 179
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "window.testUIFixes.testRemoveChord",
+          "line": 179
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "console.log",
+          "line": 180
+        },
+        {
+          "caller": "tests\\test-ui-bug-fixes.js",
+          "callee": "window.testUIFixes.testDragListeners",
+          "line": 180
+        }
+      ],
       "webapp.js": [
         {
           "caller": "webapp.js",
@@ -37452,158 +37962,138 @@
         },
         {
           "caller": "webapp.js",
-          "callee": "button.closest",
+          "callee": "console.log",
           "line": 310
         },
         {
           "caller": "webapp.js",
-          "callee": "newChord.setAttribute",
-          "line": 311
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "newChord.addEventListener",
-          "line": 313
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chordGroup.removeChild",
-          "line": 314
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "onInputChordsChanged",
-          "line": 315
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "getInputChords",
-          "line": 319
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "document.getElementById",
-          "line": 322
+          "callee": "button.closest",
+          "line": 312
         },
         {
           "caller": "webapp.js",
           "callee": "if ",
-          "line": 323
+          "line": 313
         },
         {
           "caller": "webapp.js",
-          "callee": "console.warn",
-          "line": 324
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "Array.from",
-          "line": 327
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chordGroupElement.querySelectorAll",
-          "line": 327
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "map",
-          "line": 327
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "initializeDragAndDrop",
-          "line": 334
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "document.querySelectorAll",
-          "line": 336
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggables.forEach",
-          "line": 337
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "addDragListeners",
-          "line": 340
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggable.addEventListener",
-          "line": 342
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggable.addEventListener",
-          "line": 343
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggable.addEventListener",
-          "line": 344
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggable.addEventListener",
-          "line": 345
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggable.addEventListener",
-          "line": 348
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggable.addEventListener",
-          "line": 349
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggable.addEventListener",
-          "line": 350
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "handleDragStart",
-          "line": 353
+          "callee": "console.error",
+          "line": 314
         },
         {
           "caller": "webapp.js",
           "callee": "console.log",
-          "line": 355
+          "line": 318
         },
         {
           "caller": "webapp.js",
-          "callee": "this.setAttribute",
+          "callee": "newChord.setAttribute",
+          "line": 320
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "newChord.addEventListener",
+          "line": 323
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 324
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "document.getElementById",
+          "line": 325
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 326
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroup.contains",
+          "line": 326
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroup.removeChild",
+          "line": 327
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "onInputChordsChanged",
+          "line": 328
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 329
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.error",
+          "line": 331
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "getInputChords",
+          "line": 339
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "document.getElementById",
+          "line": 342
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 343
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.warn",
+          "line": 344
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "Array.from",
+          "line": 347
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroupElement.querySelectorAll",
+          "line": 347
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "map",
+          "line": 347
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "initializeDragAndDrop",
+          "line": 354
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "document.querySelectorAll",
           "line": 356
         },
         {
           "caller": "webapp.js",
-          "callee": "setTimeout",
+          "callee": "draggables.forEach",
           "line": 357
         },
         {
           "caller": "webapp.js",
-          "callee": "this.classList.add",
-          "line": 357
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "handleDragOver",
+          "callee": "addDragListeners",
           "line": 360
         },
         {
           "caller": "webapp.js",
-          "callee": "e.preventDefault",
+          "callee": "console.log",
           "line": 361
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "getDragAfterElement",
-          "line": 362
         },
         {
           "caller": "webapp.js",
@@ -37612,102 +38102,182 @@
         },
         {
           "caller": "webapp.js",
-          "callee": "if ",
-          "line": 365
+          "callee": "console.error",
+          "line": 364
         },
         {
           "caller": "webapp.js",
-          "callee": "chordGroup.appendChild",
-          "line": 366
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 367
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 368
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chordGroup.insertBefore",
+          "callee": "draggable.addEventListener",
           "line": 369
         },
         {
           "caller": "webapp.js",
-          "callee": "handleDrop",
-          "line": 374
+          "callee": "draggable.addEventListener",
+          "line": 370
         },
         {
           "caller": "webapp.js",
-          "callee": "this.classList.remove",
+          "callee": "draggable.addEventListener",
+          "line": 371
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "draggable.addEventListener",
+          "line": 372
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "draggable.addEventListener",
           "line": 375
         },
         {
           "caller": "webapp.js",
-          "callee": "handleDragEnd",
-          "line": 378
+          "callee": "draggable.addEventListener",
+          "line": 376
         },
         {
           "caller": "webapp.js",
-          "callee": "this.setAttribute",
+          "callee": "draggable.addEventListener",
+          "line": 377
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
           "line": 379
         },
         {
           "caller": "webapp.js",
-          "callee": "this.classList.remove",
-          "line": 380
+          "callee": "handleDragStart",
+          "line": 385
         },
         {
           "caller": "webapp.js",
-          "callee": "onInputChordsChanged",
-          "line": 382
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "getDragAfterElement",
+          "callee": "console.log",
           "line": 387
         },
         {
           "caller": "webapp.js",
-          "callee": "container.querySelectorAll",
-          "line": 389
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "not",
-          "line": 389
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "draggableElements.reduce",
-          "line": 391
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "child.getBoundingClientRect",
-          "line": 393
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 395
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "handleTouchStart",
-          "line": 413
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "e.preventDefault",
-          "line": 415
+          "callee": "console.log",
+          "line": 388
         },
         {
           "caller": "webapp.js",
           "callee": "this.setAttribute",
+          "line": 389
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "setTimeout",
+          "line": 390
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "this.classList.add",
+          "line": 391
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 392
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "handleDragOver",
+          "line": 396
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "e.preventDefault",
+          "line": 397
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 398
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "getDragAfterElement",
+          "line": 399
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 400
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 402
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 404
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 405
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 406
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroup.appendChild",
+          "line": 407
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 408
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 409
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 410
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroup.insertBefore",
+          "line": 411
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "handleDrop",
+          "line": 416
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 417
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "this.classList.remove",
+          "line": 418
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "onInputChordsChanged",
+          "line": 419
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 420
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "handleDragEnd",
           "line": 423
         },
         {
@@ -37717,38 +38287,43 @@
         },
         {
           "caller": "webapp.js",
-          "callee": "handleTouchMove",
-          "line": 427
+          "callee": "this.setAttribute",
+          "line": 425
         },
         {
           "caller": "webapp.js",
-          "callee": "if ",
+          "callee": "this.classList.remove",
+          "line": 426
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "onInputChordsChanged",
           "line": 428
         },
         {
           "caller": "webapp.js",
-          "callee": "e.preventDefault",
-          "line": 430
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "Math.abs",
-          "line": 432
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "Math.abs",
+          "callee": "getDragAfterElement",
           "line": 433
         },
         {
           "caller": "webapp.js",
-          "callee": "if ",
-          "line": 436
+          "callee": "container.querySelectorAll",
+          "line": 435
         },
         {
           "caller": "webapp.js",
-          "callee": "draggedChord.classList.add",
-          "line": 438
+          "callee": "not",
+          "line": 435
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "draggableElements.reduce",
+          "line": 437
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "child.getBoundingClientRect",
+          "line": 439
         },
         {
           "caller": "webapp.js",
@@ -37757,403 +38332,463 @@
         },
         {
           "caller": "webapp.js",
-          "callee": "getDragAfterElement",
-          "line": 443
+          "callee": "handleTouchStart",
+          "line": 459
         },
         {
           "caller": "webapp.js",
-          "callee": "if ",
-          "line": 445
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 447
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chordGroup.appendChild",
-          "line": 448
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 449
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 450
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chordGroup.insertBefore",
-          "line": 451
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "handleTouchEnd",
-          "line": 457
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 458
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "this.setAttribute",
-          "line": 460
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "this.classList.remove",
+          "callee": "e.preventDefault",
           "line": 461
         },
         {
           "caller": "webapp.js",
-          "callee": "if ",
-          "line": 463
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "onInputChordsChanged",
-          "line": 464
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "console.log",
+          "callee": "this.setAttribute",
           "line": 469
         },
         {
           "caller": "webapp.js",
-          "callee": "calculateResultingChords",
-          "line": 476
-        },
-        {
-          "caller": "webapp.js",
           "callee": "console.log",
-          "line": 486
+          "line": 470
         },
         {
           "caller": "webapp.js",
-          "callee": "for ",
-          "line": 488
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "autoharpIntervals.push",
-          "line": 491
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chords.indexOf",
-          "line": 491
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "match",
-          "line": 491
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "console.log",
-          "line": 493
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "for ",
-          "line": 497
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "parseChordString",
-          "line": 498
+          "callee": "handleTouchMove",
+          "line": 473
         },
         {
           "caller": "webapp.js",
           "callee": "if ",
-          "line": 499
+          "line": 474
         },
         {
           "caller": "webapp.js",
-          "callee": "chords.indexOf",
-          "line": 500
+          "callee": "e.preventDefault",
+          "line": 476
         },
         {
           "caller": "webapp.js",
-          "callee": "parsedInputChords.push",
-          "line": 501
+          "callee": "Math.abs",
+          "line": 478
         },
         {
           "caller": "webapp.js",
-          "callee": "intervals.push",
+          "callee": "Math.abs",
+          "line": 479
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 482
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "draggedChord.classList.add",
+          "line": 484
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 487
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "getDragAfterElement",
+          "line": 489
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 491
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 493
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroup.appendChild",
+          "line": 494
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 495
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 496
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroup.insertBefore",
+          "line": 497
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "handleTouchEnd",
+          "line": 503
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 504
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "this.setAttribute",
+          "line": 506
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "this.classList.remove",
           "line": 507
         },
         {
           "caller": "webapp.js",
-          "callee": "console.log",
-          "line": 508
+          "callee": "if ",
+          "line": 509
         },
         {
           "caller": "webapp.js",
-          "callee": "console.warn",
+          "callee": "onInputChordsChanged",
           "line": 510
         },
         {
           "caller": "webapp.js",
           "callee": "console.log",
-          "line": 513
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "console.log",
-          "line": 514
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "Map",
-          "line": 516
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "for ",
-          "line": 517
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "parseChordString",
-          "line": 518
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 519
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chords.indexOf",
-          "line": 520
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 522
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "autoharpChordMap.has",
-          "line": 522
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "autoharpChordMap.set",
-          "line": 523
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "autoharpChordMap.get",
-          "line": 525
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "push",
-          "line": 525
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "console.log",
-          "line": 529
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "for ",
-          "line": 535
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "for ",
-          "line": 540
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 544
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "autoharpChordMap.has",
-          "line": 544
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "autoharpChordMap.get",
-          "line": 546
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "transposedChords.push",
-          "line": 547
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 560
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "matches.push",
-          "line": 561
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "console.log",
-          "line": 566
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "transposedChords.map",
-          "line": 567
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "join",
-          "line": 567
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "console.log",
-          "line": 571
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "onInputChordsChanged",
-          "line": 579
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "getInputChords",
-          "line": 580
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "if ",
-          "line": 583
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "document.createElement",
-          "line": 585
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "chordGroupResults.appendChild",
-          "line": 587
+          "line": 515
         },
         {
           "caller": "webapp.js",
           "callee": "calculateResultingChords",
-          "line": 592
+          "line": 522
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 532
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "for ",
+          "line": 534
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "autoharpIntervals.push",
+          "line": 537
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chords.indexOf",
+          "line": 537
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "match",
+          "line": 537
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 539
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "for ",
+          "line": 543
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "parseChordString",
+          "line": 544
         },
         {
           "caller": "webapp.js",
           "callee": "if ",
-          "line": 595
+          "line": 545
         },
         {
           "caller": "webapp.js",
-          "callee": "document.createElement",
-          "line": 597
+          "callee": "chords.indexOf",
+          "line": 546
         },
         {
           "caller": "webapp.js",
-          "callee": "chordGroupResults.appendChild",
-          "line": 599
+          "callee": "parsedInputChords.push",
+          "line": 547
         },
         {
           "caller": "webapp.js",
-          "callee": "resultingChords.forEach",
-          "line": 603
+          "callee": "intervals.push",
+          "line": 553
         },
         {
           "caller": "webapp.js",
-          "callee": "document.createElement",
-          "line": 604
+          "callee": "console.log",
+          "line": 554
         },
         {
           "caller": "webapp.js",
-          "callee": "Math.abs",
-          "line": 611
+          "callee": "console.warn",
+          "line": 556
         },
         {
           "caller": "webapp.js",
-          "callee": "div.style.setProperty",
+          "callee": "console.log",
+          "line": 559
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 560
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "Map",
+          "line": 562
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "for ",
+          "line": 563
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "parseChordString",
+          "line": 564
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 565
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chords.indexOf",
+          "line": 566
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 568
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "autoharpChordMap.has",
+          "line": 568
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "autoharpChordMap.set",
+          "line": 569
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "autoharpChordMap.get",
+          "line": 571
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "push",
+          "line": 571
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
+          "line": 575
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "for ",
+          "line": 581
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "for ",
+          "line": 586
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 590
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "autoharpChordMap.has",
+          "line": 590
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "autoharpChordMap.get",
+          "line": 592
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "transposedChords.push",
+          "line": 593
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "if ",
+          "line": 606
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "matches.push",
+          "line": 607
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "console.log",
           "line": 612
         },
         {
           "caller": "webapp.js",
-          "callee": "div.setAttribute",
+          "callee": "transposedChords.map",
           "line": 613
         },
         {
           "caller": "webapp.js",
-          "callee": "transpositionResult.chords.forEach",
-          "line": 616
+          "callee": "join",
+          "line": 613
         },
         {
           "caller": "webapp.js",
-          "callee": "document.createElement",
+          "callee": "console.log",
           "line": 617
         },
         {
           "caller": "webapp.js",
-          "callee": "chordDiv.setAttribute",
-          "line": 619
+          "callee": "onInputChordsChanged",
+          "line": 625
         },
         {
           "caller": "webapp.js",
-          "callee": "chordDiv.setAttribute",
-          "line": 620
+          "callee": "getInputChords",
+          "line": 626
         },
         {
           "caller": "webapp.js",
-          "callee": "div.appendChild",
-          "line": 628
+          "callee": "if ",
+          "line": 629
         },
         {
           "caller": "webapp.js",
-          "callee": "chordGroupResults.appendChild",
+          "callee": "document.createElement",
           "line": 631
         },
         {
           "caller": "webapp.js",
-          "callee": "document.addEventListener",
-          "line": 640
+          "callee": "chordGroupResults.appendChild",
+          "line": 633
         },
         {
           "caller": "webapp.js",
-          "callee": "function ",
-          "line": 640
+          "callee": "calculateResultingChords",
+          "line": 638
         },
         {
           "caller": "webapp.js",
-          "callee": "initializeDOMReferences",
+          "callee": "if ",
           "line": 641
         },
         {
           "caller": "webapp.js",
-          "callee": "initializeAutoharpTypeListeners",
-          "line": 642
-        },
-        {
-          "caller": "webapp.js",
-          "callee": "initializeChordInputListener",
+          "callee": "document.createElement",
           "line": 643
         },
         {
           "caller": "webapp.js",
+          "callee": "chordGroupResults.appendChild",
+          "line": 645
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "resultingChords.forEach",
+          "line": 649
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "document.createElement",
+          "line": 650
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "Math.abs",
+          "line": 657
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "div.style.setProperty",
+          "line": 658
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "div.setAttribute",
+          "line": 659
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "transpositionResult.chords.forEach",
+          "line": 662
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "document.createElement",
+          "line": 663
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordDiv.setAttribute",
+          "line": 665
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordDiv.setAttribute",
+          "line": 666
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "div.appendChild",
+          "line": 674
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "chordGroupResults.appendChild",
+          "line": 677
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "document.addEventListener",
+          "line": 686
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "function ",
+          "line": 686
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "initializeDOMReferences",
+          "line": 687
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "initializeAutoharpTypeListeners",
+          "line": 688
+        },
+        {
+          "caller": "webapp.js",
+          "callee": "initializeChordInputListener",
+          "line": 689
+        },
+        {
+          "caller": "webapp.js",
           "callee": "initializeDragAndDrop",
-          "line": 644
+          "line": 690
         }
       ]
     }

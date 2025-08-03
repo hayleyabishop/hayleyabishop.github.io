@@ -307,14 +307,34 @@ function appendChord(chord) {
 }
 
 function removeChord(button) {
+  console.log('[DEBUG] removeChord called with button:', button);
+  
   const newChord = button.closest(".chord");
+  if (!newChord) {
+    console.error('[DEBUG] Could not find .chord element');
+    return;
+  }
+  
+  console.log('[DEBUG] Found chord element:', newChord);
+  
   newChord.setAttribute("aria-hidden", "true");
   newChord.style.animation = "fadeOut 0.3s forwards";
+  
   newChord.addEventListener("animationend", () => {
-    chordGroup.removeChild(newChord);
-    onInputChordsChanged();
+    console.log('[DEBUG] Animation ended, removing chord from DOM');
+    const chordGroup = document.getElementById('chordGroup');
+    if (chordGroup && chordGroup.contains(newChord)) {
+      chordGroup.removeChild(newChord);
+      onInputChordsChanged();
+      console.log('[DEBUG] Chord removed successfully');
+    } else {
+      console.error('[DEBUG] Could not remove chord - chordGroup not found or chord not in group');
+    }
   });
 }
+
+// Ensure function is globally accessible
+window.removeChord = removeChord;
 
 function getInputChords() {
   // Get all chord names from the input chordGroup -- the text within the Span.
@@ -338,6 +358,13 @@ function initializeDragAndDrop() {
 }
 
 function addDragListeners(draggable) {
+  console.log('[DEBUG] addDragListeners called for element:', draggable);
+  
+  if (!draggable) {
+    console.error('[DEBUG] addDragListeners called with null/undefined element');
+    return;
+  }
+  
   // Mouse drag events
   draggable.addEventListener("dragstart", handleDragStart);
   draggable.addEventListener("dragover", handleDragOver);
@@ -348,34 +375,53 @@ function addDragListeners(draggable) {
   draggable.addEventListener("touchstart", handleTouchStart, { passive: false });
   draggable.addEventListener("touchmove", handleTouchMove, { passive: false });
   draggable.addEventListener("touchend", handleTouchEnd);
+  
+  console.log('[DEBUG] Drag listeners added successfully to:', draggable.className);
 }
+
+// Ensure function is globally accessible via window object
+window.addDragListeners = addDragListeners;
 
 function handleDragStart(e) {
   draggedChord = this;
-  console.log("drag start handler");
+  console.log('[DEBUG] Drag start handler - element:', this);
+  console.log('[DEBUG] Drag start - draggedChord set to:', draggedChord);
   this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
-  setTimeout(() => this.classList.add("dragging"), 0); // Delay to apply dragging effect
+  setTimeout(() => {
+    this.classList.add("dragging");
+    console.log('[DEBUG] Dragging class added');
+  }, 0); // Delay to apply dragging effect
 }
 
 function handleDragOver(e) {
   e.preventDefault();
+  console.log('[DEBUG] Drag over - clientX:', e.clientX);
   const afterElement = getDragAfterElement(chordGroup, e.clientX);
+  console.log('[DEBUG] After element:', afterElement);
+  
   if (afterElement == null && chordGroup.lastElementChild == draggedChord) {
     // Do nothing. We are already at the end.
+    console.log('[DEBUG] Already at end, no movement needed');
   } else if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
+    console.log('[DEBUG] Moving to end of list');
     chordGroup.appendChild(draggedChord);
   } else if (afterElement !== null) {
     if (draggedChord !== afterElement.previousElementSibling) {
+      console.log('[DEBUG] Inserting before:', afterElement);
       chordGroup.insertBefore(draggedChord, afterElement);
     }
   }
 }
 
 function handleDrop() {
+  console.log('[DEBUG] Drop handler - removing dragging class');
   this.classList.remove("dragging");
+  onInputChordsChanged(); // Trigger update after reorder
+  console.log('[DEBUG] Drop completed, chords updated');
 }
 
 function handleDragEnd() {
+  console.log('[DEBUG] Drag end handler');
   this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
   this.classList.remove("dragging");
   draggedChord = null;
