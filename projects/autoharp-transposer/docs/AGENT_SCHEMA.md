@@ -1,6 +1,6 @@
 # Autoharp Transposer Multi-Agent Schema
 
-*Last Updated: 2025-08-03T22:06:52.185Z*
+*Last Updated: 2025-08-04T19:31:59.215Z*
 
 ## 📋 **Complete Agent Structure**
 
@@ -174,4 +174,4 @@ autoharp-transposer/
 
 ---
 
-*This schema is automatically updated by `update-agent-schema.js` when agent metadata changes.*
+*This schema is automatically updated by `tools/update-agent-schema.js` when agent metadata changes.*

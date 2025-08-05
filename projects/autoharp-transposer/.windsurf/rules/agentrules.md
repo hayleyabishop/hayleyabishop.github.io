@@ -1,5 +1,5 @@
 ---
-trigger: manual
+trigger: always_on
 ---
 
 Agent-specific information is saved in a folder structure as below: 
@@ -23,5 +23,4 @@ First, update metadata.json to reflect the current state.
 
 When I give a prompt like:
 "Chloe, debug the chord duplication issue in inputManager.js."
-Agent 1 (or my Director/coordinator agent) should log the prompt into agents/agent_1/instructions/2025-08-03_debug_chords_instruction.md. Likewise, it should log the reflections in output/2025-08-03_debug_chords_output.md and reflections/2025-08-03_debug_chords_reflection.md. 
-
+Agent 1 (or my Director/coordinator agent) should log the prompt into agents/agent_1/instructions/2025-08-03_debug_chords_instruction.md. Likewise, it should log the reflections in output/2025-08-03_debug_chords_output.md and reflections/2025-08-03_debug_chords_reflection.md.

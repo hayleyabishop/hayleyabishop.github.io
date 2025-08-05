@@ -11,9 +11,9 @@ const path = require('path');
 
 class AgentSchemaUpdater {
     constructor() {
-        this.projectRoot = __dirname;
+        this.projectRoot = path.dirname(__dirname);
         this.agentsDir = path.join(this.projectRoot, 'agents');
-        this.schemaFile = path.join(this.projectRoot, 'AGENT_SCHEMA.md');
+        this.schemaFile = path.join(this.projectRoot, 'docs', 'AGENT_SCHEMA.md');
         this.agentOrder = ['agent_director', 'agent_1', 'agent_2', 'agent_3', 'agent_4', 'agent_5'];
     }
 
@@ -250,7 +250,7 @@ ${this.generateSpecializationMatrix(agents)}
 
 ---
 
-*This schema is automatically updated by \`update-agent-schema.js\` when agent metadata changes.*`;
+*This schema is automatically updated by \`tools/update-agent-schema.js\` when agent metadata changes.*`;
 
         return content;
     }
