@@ -26,12 +26,21 @@
 - **NEVER** over-engineer solutions without confirming root cause
 - **ALWAYS** validate each change works before proceeding
 
+### **Rule #4: Beware of False Negatives**
+- **NEVER** assume something is broken just because expected output is missing
+- **ALWAYS** test actual functionality, not just logging or visual indicators
+- **NEVER** declare failure based on missing console messages alone
+- **ALWAYS** verify the core functionality works as intended
+
 ---
 
 ## 🔍 **EVIDENCE-BASED DEBUGGING PROTOCOL**
 
 ### **Phase 1: Evidence Gathering (MANDATORY)**
-1. **Ask user to reproduce the issue**
+1. a. **Try to gather evidence without user interaction**
+   - Test the app myself first, if possible.
+   - If not possible, go to 1. b.  
+1. b. **Ask user to reproduce the issue**
    - "Please try [specific action] and tell me exactly what happens"
    - "Are there any error messages in the browser console (F12)?"
    - "Which browser and version are you using?"
@@ -46,8 +55,22 @@
    - "So when you click X, Y happens instead of Z - is that correct?"
    - "Let me confirm I understand the issue correctly..."
 
+4. **Use prioritized investigation approach**
+   - Start with easiest checks first (file existence, syntax errors)
+   - Progress to medium difficulty (console errors, network issues)
+   - End with hardest checks (complex logic, timing issues)
+   - Document findings at each level before proceeding
+
 ### **Phase 2: Hypothesis Formation**
 1. **Form hypothesis based on evidence** (not code analysis)
+2. **Test core functionality before investigating symptoms**
+   - Verify the actual feature works, not just its indicators
+   - Check global object accessibility before assuming module loading failed
+   - Test functional behavior before worrying about missing logs or messages
+3. **Consider false negatives in evidence**
+   - Missing console output doesn't always mean failure
+   - Absent visual indicators may not reflect actual functionality
+   - Timing issues can hide successful operations
 2. **Start with simplest possible explanation**
 3. **Consider multiple potential causes**
 4. **Prioritize hypotheses by likelihood and impact**

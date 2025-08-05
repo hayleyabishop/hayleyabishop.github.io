@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio/Visual Module Test</title>
+</head>
+<body>
+    <h1>Audio/Visual Module Initialization Test</h1>
+    <div id="test-results"></div>
+    
+    <script>
+        // Wait for DOM to load, then test module accessibility
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== AUDIO/VISUAL MODULE TEST ===');
+            
+            // Test 1: Check if modules are globally accessible
+            setTimeout(() => {
+                console.log('Testing global accessibility...');
+                console.log('window.audioManager:', typeof window.audioManager);
+                console.log('window.visualManager:', typeof window.visualManager);
+                
+                if (window.audioManager) {
+                    console.log('✅ audioManager found:', window.audioManager);
+                } else {
+                    console.log('❌ audioManager not found');
+                }
+                
+                if (window.visualManager) {
+                    console.log('✅ visualManager found:', window.visualManager);
+                } else {
+                    console.log('❌ visualManager not found');
+                }
+                
+                // Update page with results
+                const results = document.getElementById('test-results');
+                results.innerHTML = `
+                    <p>audioManager: ${typeof window.audioManager}</p>
+                    <p>visualManager: ${typeof window.visualManager}</p>
+                `;
+            }, 1000); // Wait 1 second for modules to load
+        });
+    </script>
+    
+    <!-- Include the main webapp.js to trigger initialization -->
+    <script src="webapp.js"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@ Agent-specific information is saved in a folder structure as below:
     ├── reflections/       # Reasoning, obstacles, decisions
     └── metadata.json  
 
-First, update metadata.json to reflect the current state. 
+First, update metadata.json to reflect the current state after every prompt. 
 
 {
   "name": "Chloe",
