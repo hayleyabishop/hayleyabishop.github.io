@@ -679,6 +679,43 @@ function onInputChordsChanged() {
 }
 
 // =============================================================================
+// AUDIO AND VISUAL FEEDBACK INITIALIZATION
+// =============================================================================
+
+// Global instances for audio and visual feedback managers
+let audioManager = null;
+let visualManager = null;
+
+/**
+ * Initialize audio and visual feedback modules
+ * Phase 1 of integration sequence - enables other agents to proceed
+ */
+function initializeAudioVisualModules() {
+  try {
+    // Import and initialize ChordAudioManager
+    import('./modules/chordAudio.js').then(({ ChordAudioManager }) => {
+      audioManager = new ChordAudioManager();
+      window.audioManager = audioManager; // Make globally accessible
+      console.log('[Integration] Audio manager initialized successfully');
+    }).catch(error => {
+      console.error('[Integration] Failed to initialize audio manager:', error);
+    });
+
+    // Import and initialize VisualFeedbackManager
+    import('./modules/visualFeedback.js').then(({ VisualFeedbackManager }) => {
+      visualManager = new VisualFeedbackManager();
+      window.visualManager = visualManager; // Make globally accessible
+      console.log('[Integration] Visual feedback manager initialized successfully');
+    }).catch(error => {
+      console.error('[Integration] Failed to initialize visual feedback manager:', error);
+    });
+
+  } catch (error) {
+    console.error('[Integration] Error during audio/visual module initialization:', error);
+  }
+}
+
+// =============================================================================
 // INITIALIZE EVENT LISTENERS
 // =============================================================================
 
@@ -688,6 +725,9 @@ document.addEventListener('DOMContentLoaded', function () {
   initializeAutoharpTypeListeners();
   initializeChordInputListener();
   initializeDragAndDrop();
+  
+  // Phase 1: Initialize audio/visual modules (critical for other agents)
+  initializeAudioVisualModules();
 }); 
 
 // =============================================================================
