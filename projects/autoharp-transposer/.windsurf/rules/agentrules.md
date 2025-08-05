@@ -11,6 +11,8 @@ Agent-specific information is saved in a folder structure as below:
 
 First, update metadata.json to reflect the current state after every prompt. 
 
+Example: 
+
 {
   "name": "Chloe",
  "agent_name":"Agent 1",
