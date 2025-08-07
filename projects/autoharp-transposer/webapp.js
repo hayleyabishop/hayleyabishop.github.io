@@ -146,6 +146,15 @@ function initializeDOMReferences() {
   // Define the draggables container as js variables for manipulation.
   window.chordGroup = document.getElementById("chordGroupInputs");
   window.chordGroupResults = document.getElementById("chordGroupResults");
+  
+  // Add container drag events (where you drop)
+  if (window.chordGroup) {
+    console.log('[DEBUG] Adding container drag events to chordGroup');
+    window.chordGroup.addEventListener("dragover", handleDragOver);
+    window.chordGroup.addEventListener("drop", handleDrop);
+  } else {
+    console.error('[DEBUG] chordGroup element not found for drag events');
+  }
 }
 
 // =============================================================================
@@ -365,10 +374,8 @@ function addDragListeners(draggable) {
     return;
   }
   
-  // Mouse drag events
+  // Element-specific drag events (what you're dragging)
   draggable.addEventListener("dragstart", handleDragStart);
-  draggable.addEventListener("dragover", handleDragOver);
-  draggable.addEventListener("drop", handleDrop);
   draggable.addEventListener("dragend", handleDragEnd);
   
   // Touch events for mobile/touchscreen support
@@ -396,19 +403,20 @@ function handleDragStart(e) {
 function handleDragOver(e) {
   e.preventDefault();
   console.log('[DEBUG] Drag over - clientX:', e.clientX);
-  const afterElement = getDragAfterElement(chordGroup, e.clientX);
+  console.log('[DEBUG] window.chordGroup:', window.chordGroup);
+  const afterElement = getDragAfterElement(window.chordGroup, e.clientX);
   console.log('[DEBUG] After element:', afterElement);
   
-  if (afterElement == null && chordGroup.lastElementChild == draggedChord) {
+  if (afterElement == null && window.chordGroup.lastElementChild == draggedChord) {
     // Do nothing. We are already at the end.
     console.log('[DEBUG] Already at end, no movement needed');
-  } else if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
+  } else if (afterElement == null && window.chordGroup.lastElementChild !== draggedChord) {
     console.log('[DEBUG] Moving to end of list');
-    chordGroup.appendChild(draggedChord);
+    window.chordGroup.appendChild(draggedChord);
   } else if (afterElement !== null) {
     if (draggedChord !== afterElement.previousElementSibling) {
       console.log('[DEBUG] Inserting before:', afterElement);
-      chordGroup.insertBefore(draggedChord, afterElement);
+      window.chordGroup.insertBefore(draggedChord, afterElement);
     }
   }
 }

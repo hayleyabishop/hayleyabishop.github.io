@@ -628,9 +628,11 @@ class EventCoordinator {
 
   // Utility methods
   createChordElement(chord, index) {
+    console.log(`[DEBUG] Creating chord element for: "${chord}"`);
     const element = document.createElement('div');
     // Use 'chord' class to match legacy transcription system expectations
     element.className = 'chord';
+    element.setAttribute('draggable', 'true');
     element.innerHTML = `
       <span>${chord}</span>
       <button class="remove-chord-btn" data-chord="${chord}" aria-label="Remove ${chord}">×</button>
@@ -640,9 +642,18 @@ class EventCoordinator {
     const removeBtn = element.querySelector('.remove-chord-btn');
     if (removeBtn) {
       removeBtn.addEventListener('click', (e) => {
+        console.log(`[DEBUG] Chord removal button clicked for: "${chord}"`);
         e.stopPropagation();
-        this.stateManager.removeSelectedChord(chord);
+        this.inputManager.removeChord(chord);
       });
+    }
+    
+    // Add drag functionality for chord reordering
+    if (typeof window.addDragListeners === 'function') {
+      console.log(`[DEBUG] Adding drag listeners to chord element: "${chord}"`);
+      window.addDragListeners(element);
+    } else {
+      console.warn(`[DEBUG] addDragListeners function not available for chord: "${chord}"`);
     }
     
     return element;
