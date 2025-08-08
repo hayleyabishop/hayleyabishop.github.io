@@ -745,14 +745,17 @@ document.addEventListener('DOMContentLoaded', function () {
 // TODO: Add collapsible section in Availabe Chords.
 // TODO: Move "Available Chords" off to the side or bottom. 
 // TODO: Drag and drop support using touch screens?????? 
-// TODO: Add list of minor chords. Work through problem of interval degree.
-// TODO: Add audible chords sound playing. 
 // TODO: Add section for chord degrees / nashville numbers. 
 // TODO: Render chord DEGREES/nashville no.s as chips. Use capital or lowercase for major minor. ex. I vi ii V I
-// TODO: Support "7" chords. 
 // TODO: Add "Found # progressions" results message. 
 // TODO: Add chord synonym suggestions. 
-// TODO: Add degrees indicators by each chord group. 
 // TODO: Add save functionality that allows users to save chords.
 // TODO: Add Custom Chords text input to allow users to paste in a list of chords.
 // TODO: Add Custom Chords highlighted buttons that allows user to toggle chords on/off of availability. 
+
+
+// DONE: Add audible chords sound playing. 
+
+// DONE: Add list of minor chords. Work through problem of interval degree.
+// DONE: Support "7" chords. 
+// DONE: Add degrees indicators by each chord group. 

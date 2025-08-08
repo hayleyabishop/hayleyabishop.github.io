@@ -46,7 +46,8 @@
             </div>
             <div class="radioOption">
               <!-- Autoharp Type Selection: Custom - Allows user to define custom chord availability -->
-              <input type="radio" class="chordInputType" name="autoharpType" id="typeCustomChords" value="typeCustomChords">
+              <input type="radio" class="chordInputType" name="autoharpType" id="typeCustomChords"
+                value="typeCustomChords">
               <label for="typeCustomChords">Custom</label>
             </div>
           </div>
@@ -57,7 +58,27 @@
 
           </div>
           <div class="availableChordsSection">
-
+            <div class="staticChord">C</div>
+            <div class="staticChord">D</div>
+            <div class="staticChord">D#/Eb</div>
+            <div class="staticChord">F</div>
+            <div class="staticChord">G</div>
+            <div class="staticChord">G#/Ab</div>
+            <div class="staticChord">A</div>
+            <div class="staticChord">A#/Bb</div>
+            <div class="staticChord">Cm</div>
+            <div class="staticChord">Dm</div>
+            <div class="staticChord">Em</div>
+            <div class="staticChord">Gm</div>
+            <div class="staticChord">Am</div>
+            <div class="staticChord">C7</div>
+            <div class="staticChord">D7</div>
+            <div class="staticChord">E7</div>
+            <div class="staticChord">F7</div>
+            <div class="staticChord">G7</div>
+            <div class="staticChord">A7</div>
+            <div class="staticChord">B7</div>
+            <div class="staticChord">A#/Bb7</div>
           </div>
           <div class="label sectionHeader">Input Chords</div>
           <div class="chordSelectionInterface">
@@ -89,33 +110,34 @@
               <button type="button" class="chordButton chordType" data-type="aug" onclick="selectChordType('aug')"><span>aug</span></button>
             </div>
           </div> -->
-          
-          <!-- New Hybrid Input Section -->
-          <div class="hybrid-input-section">
-            <div class="input-methods">
-              <!-- Text Input with Suggestions -->
-              <div class="text-input-container">
-                <div class="input-with-controls">
-                  <!-- Chord Text Input: Allows user to type chord names with fuzzy matching and autocomplete suggestions -->
-                  <input type="text" id="chordTextInput" placeholder="Type chord name (e.g., Gm, F#7, Asus2)" autocomplete="off">
-                  <!-- Add Chord Button: Adds the chord from text input to the user's selection when clicked -->
-                  <button id="addChordBtn" class="add-chord-btn" type="button">Add</button>
-                  <!-- Sound Toggle Button: Toggles audio feedback on/off for chord interactions -->
-                  <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle sound">🔇</button>
+
+            <!-- New Hybrid Input Section -->
+            <div class="hybrid-input-section">
+              <div class="input-methods">
+                <!-- Text Input with Suggestions -->
+                <div class="text-input-container">
+                  <div class="input-with-controls">
+                    <!-- Chord Text Input: Allows user to type chord names with fuzzy matching and autocomplete suggestions -->
+                    <input type="text" id="chordTextInput" placeholder="Type chord name (e.g., Gm, F#7, Asus2)"
+                      autocomplete="off">
+                    <!-- Add Chord Button: Adds the chord from text input to the user's selection when clicked -->
+                    <button id="addChordBtn" class="add-chord-btn" type="button">Add</button>
+                    <!-- Sound Toggle Button: Toggles audio feedback on/off for chord interactions -->
+                    <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle sound">🔇</button>
+                  </div>
+                  <!-- Chord Suggestions Container: Displays autocomplete suggestions based on user input -->
+                  <div id="chordSuggestions" class="suggestions-container" style="display: none;"></div>
                 </div>
-                <!-- Chord Suggestions Container: Displays autocomplete suggestions based on user input -->
-                <div id="chordSuggestions" class="suggestions-container" style="display: none;"></div>
-              </div>
-              
-              <!-- Quick Action Buttons -->
-              <div class="quick-actions">
-                <!-- Clear All Button: Removes all selected chords from the user's current selection -->
-                <button id="clearAllChords" class="utility-btn" type="button">Clear All</button>
-                <!-- Play All Button: Plays all selected chords in sequence for audio feedback -->
-                <button id="playAllChords" class="utility-btn" type="button">Play All</button>
+
+                <!-- Quick Action Buttons -->
+                <div class="quick-actions">
+                  <!-- Clear All Button: Removes all selected chords from the user's current selection -->
+                  <button id="clearAllChords" class="utility-btn" type="button">Clear All</button>
+                  <!-- Play All Button: Plays all selected chords in sequence for audio feedback -->
+                  <button id="playAllChords" class="utility-btn" type="button">Play All</button>
+                </div>
               </div>
             </div>
-          </div>
         </form>
       </div>
 
@@ -140,7 +162,7 @@
 
     </div>
   </div>
-  
+
   <!-- Load modules -->
   <script type="module" src="modules/appIntegration.js"></script>
   <script src="webapp.js"></script>
