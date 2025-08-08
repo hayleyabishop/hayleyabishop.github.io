@@ -21,125 +21,65 @@
   <!-- <div  class="brace"> -->
   <div class="panel">
     Transposing chords for my autoharp.
-    <div>
+    <div class="labels">
+      <div class="label sectionHeader">Input Chords</div>
+      <!-- <div class="chordRow chordNames">
+          <div class="rowLabel">Chord:</div>
+          <button type="button" class="chordButton chordName" data-chord="C" onclick="selectChordName('C')"><span>C</span></button>
+          <button type="button" class="chordButton chordName" data-chord="C#/Db" onclick="selectChordName('C#/Db')"><span>C#/Db</span></button>
+          <button type="button" class="chordButton chordName" data-chord="D" onclick="selectChordName('D')"><span>D</span></button>
+          <button type="button" class="chordButton chordName" data-chord="D#/Eb" onclick="selectChordName('D#/Eb')"><span>D#/Eb</span></button>
+          <button type="button" class="chordButton chordName" data-chord="E" onclick="selectChordName('E')"><span>E</span></button>
+          <button type="button" class="chordButton chordName" data-chord="F" onclick="selectChordName('F')"><span>F</span></button>
+          <button type="button" class="chordButton chordName" data-chord="F#/Gb" onclick="selectChordName('F#/Gb')"><span>F#/Gb</span></button>
+          <button type="button" class="chordButton chordName" data-chord="G" onclick="selectChordName('G')"><span>G</span></button>
+          <button type="button" class="chordButton chordName" data-chord="G#/Ab" onclick="selectChordName('G#/Ab')"><span>G#/Ab</span></button>
+          <button type="button" class="chordButton chordName" data-chord="A" onclick="selectChordName('A')"><span>A</span></button>
+          <button type="button" class="chordButton chordName" data-chord="A#/Bb" onclick="selectChordName('A#/Bb')"><span>A#/Bb</span></button>
+          <button type="button" class="chordButton chordName" data-chord="B" onclick="selectChordName('B')"><span>B</span></button>
+        </div>
+        
+        
+        <div class="chordRow chordTypes">
+          <div class="rowLabel">Type:</div>
+          <button type="button" class="chordButton chordType" data-type="major" onclick="selectChordType('major')"><span>Major</span></button>
+          <button type="button" class="chordButton chordType" data-type="minor" onclick="selectChordType('minor')"><span>minor</span></button>
+          <button type="button" class="chordButton chordType" data-type="7th" onclick="selectChordType('7th')"><span>7th</span></button>
+          <button type="button" class="chordButton chordType" data-type="m7" onclick="selectChordType('m7')"><span>m7</span></button>
+          <button type="button" class="chordButton chordType" data-type="maj7" onclick="selectChordType('maj7')"><span>maj7</span></button>
+          <button type="button" class="chordButton chordType" data-type="dim" onclick="selectChordType('dim')"><span>dim</span></button>
+          <button type="button" class="chordButton chordType" data-type="aug" onclick="selectChordType('aug')"><span>aug</span></button>
+        </div>
+      </div> -->
 
-      <div class="labels">
-
-        <form action="">
-          <div class="sectionHeader">Autoharp Type</div>
-          <div class="radioList">
-
-            <div class="radioOption">
-              <!-- Autoharp Type Selection: 12-Chord - Allows user to select 12-chord autoharp for chord availability filtering -->
-              <input type="radio" class="chordInputType" name="autoharpType" id="type12Chord" value="type12Chord">
-              <label for="type12Chord">12-Chord</label>
+      <!-- New Hybrid Input Section -->
+      <div class="hybrid-input-section">
+        <div class="input-methods">
+          <!-- Text Input with Suggestions -->
+          <div class="text-input-container">
+            <div class="input-with-controls">
+              <!-- Chord Text Input: Allows user to type chord names with fuzzy matching and autocomplete suggestions -->
+              <input type="text" id="chordTextInput" placeholder="Type chord name (e.g., Gm, F#7, Asus2)"
+                autocomplete="off">
+              <!-- Add Chord Button: Adds the chord from text input to the user's selection when clicked -->
+              <button id="addChordBtn" class="add-chord-btn" type="button">Add</button>
+              <!-- Sound Toggle Button: Toggles audio feedback on/off for chord interactions -->
+              <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle sound">🔇</button>
             </div>
-            <div class="radioOption">
-              <!-- Autoharp Type Selection: 15-Chord - Allows user to select 15-chord autoharp for chord availability filtering -->
-              <input type="radio" class="chordInputType" name="autoharpType" id="type15Chord" value="type15Chord">
-              <label for="type15Chord">15-Chord</label>
-            </div>
-            <div class="radioOption">
-              <!-- Autoharp Type Selection: 21-Chord - Allows user to select 21-chord autoharp for chord availability filtering -->
-              <input type="radio" class="chordInputType" name="autoharpType" id="type21Chord" value="type21Chord">
-              <label for="type21Chord">21-Chord</label>
-            </div>
-            <div class="radioOption">
-              <!-- Autoharp Type Selection: Custom - Allows user to define custom chord availability -->
-              <input type="radio" class="chordInputType" name="autoharpType" id="typeCustomChords"
-                value="typeCustomChords">
-              <label for="typeCustomChords">Custom</label>
-            </div>
+            <!-- Chord Suggestions Container: Displays autocomplete suggestions based on user input -->
+            <div id="chordSuggestions" class="suggestions-container" style="display: none;"></div>
           </div>
 
-          <div class="collapsibleSectionHeader">
-            <div class="label">Available Chords</div>
-            <!-- <button type="collapseSection" onclick="toggleCollapseSection()"> + </button> -->
-
+          <!-- Quick Action Buttons -->
+          <div class="quick-actions">
+            <!-- Clear All Button: Removes all selected chords from the user's current selection -->
+            <button id="clearAllChords" class="utility-btn" type="button">Clear All</button>
+            <!-- Play All Button: Plays all selected chords in sequence for audio feedback -->
+            <button id="playAllChords" class="utility-btn" type="button">Play All</button>
           </div>
-          <div class="availableChordsSection">
-            <div class="staticChord">C</div>
-            <div class="staticChord">D</div>
-            <div class="staticChord">D#/Eb</div>
-            <div class="staticChord">F</div>
-            <div class="staticChord">G</div>
-            <div class="staticChord">G#/Ab</div>
-            <div class="staticChord">A</div>
-            <div class="staticChord">A#/Bb</div>
-            <div class="staticChord">Cm</div>
-            <div class="staticChord">Dm</div>
-            <div class="staticChord">Em</div>
-            <div class="staticChord">Gm</div>
-            <div class="staticChord">Am</div>
-            <div class="staticChord">C7</div>
-            <div class="staticChord">D7</div>
-            <div class="staticChord">E7</div>
-            <div class="staticChord">F7</div>
-            <div class="staticChord">G7</div>
-            <div class="staticChord">A7</div>
-            <div class="staticChord">B7</div>
-            <div class="staticChord">A#/Bb7</div>
-          </div>
-          <div class="label sectionHeader">Input Chords</div>
-          <div class="chordSelectionInterface">
-            <!-- <div class="chordRow chordNames">
-              <div class="rowLabel">Chord:</div>
-              <button type="button" class="chordButton chordName" data-chord="C" onclick="selectChordName('C')"><span>C</span></button>
-              <button type="button" class="chordButton chordName" data-chord="C#/Db" onclick="selectChordName('C#/Db')"><span>C#/Db</span></button>
-              <button type="button" class="chordButton chordName" data-chord="D" onclick="selectChordName('D')"><span>D</span></button>
-              <button type="button" class="chordButton chordName" data-chord="D#/Eb" onclick="selectChordName('D#/Eb')"><span>D#/Eb</span></button>
-              <button type="button" class="chordButton chordName" data-chord="E" onclick="selectChordName('E')"><span>E</span></button>
-              <button type="button" class="chordButton chordName" data-chord="F" onclick="selectChordName('F')"><span>F</span></button>
-              <button type="button" class="chordButton chordName" data-chord="F#/Gb" onclick="selectChordName('F#/Gb')"><span>F#/Gb</span></button>
-              <button type="button" class="chordButton chordName" data-chord="G" onclick="selectChordName('G')"><span>G</span></button>
-              <button type="button" class="chordButton chordName" data-chord="G#/Ab" onclick="selectChordName('G#/Ab')"><span>G#/Ab</span></button>
-              <button type="button" class="chordButton chordName" data-chord="A" onclick="selectChordName('A')"><span>A</span></button>
-              <button type="button" class="chordButton chordName" data-chord="A#/Bb" onclick="selectChordName('A#/Bb')"><span>A#/Bb</span></button>
-              <button type="button" class="chordButton chordName" data-chord="B" onclick="selectChordName('B')"><span>B</span></button>
-            </div>
-            
-            
-            <div class="chordRow chordTypes">
-              <div class="rowLabel">Type:</div>
-              <button type="button" class="chordButton chordType" data-type="major" onclick="selectChordType('major')"><span>Major</span></button>
-              <button type="button" class="chordButton chordType" data-type="minor" onclick="selectChordType('minor')"><span>minor</span></button>
-              <button type="button" class="chordButton chordType" data-type="7th" onclick="selectChordType('7th')"><span>7th</span></button>
-              <button type="button" class="chordButton chordType" data-type="m7" onclick="selectChordType('m7')"><span>m7</span></button>
-              <button type="button" class="chordButton chordType" data-type="maj7" onclick="selectChordType('maj7')"><span>maj7</span></button>
-              <button type="button" class="chordButton chordType" data-type="dim" onclick="selectChordType('dim')"><span>dim</span></button>
-              <button type="button" class="chordButton chordType" data-type="aug" onclick="selectChordType('aug')"><span>aug</span></button>
-            </div>
-          </div> -->
-
-            <!-- New Hybrid Input Section -->
-            <div class="hybrid-input-section">
-              <div class="input-methods">
-                <!-- Text Input with Suggestions -->
-                <div class="text-input-container">
-                  <div class="input-with-controls">
-                    <!-- Chord Text Input: Allows user to type chord names with fuzzy matching and autocomplete suggestions -->
-                    <input type="text" id="chordTextInput" placeholder="Type chord name (e.g., Gm, F#7, Asus2)"
-                      autocomplete="off">
-                    <!-- Add Chord Button: Adds the chord from text input to the user's selection when clicked -->
-                    <button id="addChordBtn" class="add-chord-btn" type="button">Add</button>
-                    <!-- Sound Toggle Button: Toggles audio feedback on/off for chord interactions -->
-                    <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle sound">🔇</button>
-                  </div>
-                  <!-- Chord Suggestions Container: Displays autocomplete suggestions based on user input -->
-                  <div id="chordSuggestions" class="suggestions-container" style="display: none;"></div>
-                </div>
-
-                <!-- Quick Action Buttons -->
-                <div class="quick-actions">
-                  <!-- Clear All Button: Removes all selected chords from the user's current selection -->
-                  <button id="clearAllChords" class="utility-btn" type="button">Clear All</button>
-                  <!-- Play All Button: Plays all selected chords in sequence for audio feedback -->
-                  <button id="playAllChords" class="utility-btn" type="button">Play All</button>
-                </div>
-              </div>
-            </div>
-        </form>
+        </div>
       </div>
+
 
       <!-- App Messages -->
       <div id="app-message" class="app-message" style="display: none;"></div>
@@ -159,20 +99,74 @@
           </div>
         </div>
       </div>
+      <div class="sectionHeader">Autoharp Type</div>
+      <div class="radioList">
+
+        <div class="radioOption">
+          <!-- Autoharp Type Selection: 12-Chord - Allows user to select 12-chord autoharp for chord availability filtering -->
+          <input type="radio" class="chordInputType" name="autoharpType" id="type12Chord" value="type12Chord">
+          <label for="type12Chord">12-Chord</label>
+        </div>
+        <div class="radioOption">
+          <!-- Autoharp Type Selection: 15-Chord - Allows user to select 15-chord autoharp for chord availability filtering -->
+          <input type="radio" class="chordInputType" name="autoharpType" id="type15Chord" value="type15Chord">
+          <label for="type15Chord">15-Chord</label>
+        </div>
+        <div class="radioOption">
+          <!-- Autoharp Type Selection: 21-Chord - Allows user to select 21-chord autoharp for chord availability filtering -->
+          <input type="radio" class="chordInputType" name="autoharpType" id="type21Chord" value="type21Chord">
+          <label for="type21Chord">21-Chord</label>
+        </div>
+        <div class="radioOption">
+          <!-- Autoharp Type Selection: Custom - Allows user to define custom chord availability -->
+          <input type="radio" class="chordInputType" name="autoharpType" id="typeCustomChords" value="typeCustomChords">
+          <label for="typeCustomChords">Custom</label>
+        </div>
+      </div>
+
+      <div class="collapsibleSectionHeader">
+        <div class="label">Available Chords</div>
+        <!-- <button type="collapseSection" onclick="toggleCollapseSection()"> + </button> -->
+
+      </div>
+      <div class="availableChordsSection">
+        <div class="staticChord">C</div>
+        <div class="staticChord">D</div>
+        <div class="staticChord">D#/Eb</div>
+        <div class="staticChord">F</div>
+        <div class="staticChord">G</div>
+        <div class="staticChord">G#/Ab</div>
+        <div class="staticChord">A</div>
+        <div class="staticChord">A#/Bb</div>
+        <div class="staticChord">Cm</div>
+        <div class="staticChord">Dm</div>
+        <div class="staticChord">Em</div>
+        <div class="staticChord">Gm</div>
+        <div class="staticChord">Am</div>
+        <div class="staticChord">C7</div>
+        <div class="staticChord">D7</div>
+        <div class="staticChord">E7</div>
+        <div class="staticChord">F7</div>
+        <div class="staticChord">G7</div>
+        <div class="staticChord">A7</div>
+        <div class="staticChord">B7</div>
+        <div class="staticChord">A#/Bb7</div>
+      </div>
+
+
 
     </div>
-  </div>
 
-  <!-- Load modules -->
-  <script type="module" src="modules/appIntegration.js"></script>
-  <script src="webapp.js"></script>
-  <!-- Debug scripts for testing -->
-  <script src="tests/test-transcription-debug.js"></script>
-  <script src="tests/test-transcription-end-to-end.js"></script>
-  <script src="tests/test-input-flow-debug.js"></script>
-  <script src="tests/test-suggestion-panel-fix.js"></script>
-  <script src="tests/test-integration.js"></script>
-  <script src="tests/test-ui-bug-fixes.js"></script>
+    <!-- Load modules -->
+    <script type="module" src="modules/appIntegration.js"></script>
+    <script src="webapp.js"></script>
+    <!-- Debug scripts for testing -->
+    <script src="tests/test-transcription-debug.js"></script>
+    <script src="tests/test-transcription-end-to-end.js"></script>
+    <script src="tests/test-input-flow-debug.js"></script>
+    <script src="tests/test-suggestion-panel-fix.js"></script>
+    <script src="tests/test-integration.js"></script>
+    <script src="tests/test-ui-bug-fixes.js"></script>
 </body>
 
 </html>
