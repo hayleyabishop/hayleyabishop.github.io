@@ -76,7 +76,8 @@ body {
 
 /* Space the text sections in the Panel out with a 5% after-margin. */
 .panel>.section {
-    margin-bottom: 5%;
+    margin-top:3%;
+    margin-bottom: 2%;
 }
 
 .panel>.section:last-child {
