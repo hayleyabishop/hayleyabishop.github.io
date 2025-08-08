@@ -75,11 +75,11 @@ body {
 }
 
 /* Space the text sections in the Panel out with a 5% after-margin. */
-.panel>div>div {
+.panel>.section {
     margin-bottom: 5%;
 }
 
-.panel>div>div:last-child {
+.panel>.section:last-child {
     margin-bottom: 0;
 }
 
@@ -641,7 +641,7 @@ select:after {
     }
     
     .input-with-controls {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.75rem;
     }
     
