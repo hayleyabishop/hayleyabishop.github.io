@@ -104,7 +104,8 @@ class AutoharpTransposerApp {
     // Initialize event coordinator
     this.modules.eventCoordinator = new EventCoordinator(
       this.modules.inputManager,
-      this.modules.stateManager
+      this.modules.stateManager,
+      this.modules.audioManager
     );
     
     console.log('All modules initialized');

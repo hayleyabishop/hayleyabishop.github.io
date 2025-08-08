@@ -95,19 +95,19 @@ class ChordAudioManager {
 
     return new Promise((resolve) => {
       const chordDuration = 60 / tempo; // Duration per chord in seconds
-      let currentTime = this.audioContext.currentTime;
+      const startTime = this.audioContext.currentTime;
       let playbackPromises = [];
 
       progression.forEach((chord, index) => {
+        const chordStartTime = startTime + (index * chordDuration); // Calculate correct start time for each chord
         const chordPlayPromise = new Promise((chordResolve) => {
           setTimeout(() => {
-            this.playChordAtTime(chord, currentTime, chordDuration);
+            this.playChordAtTime(chord, chordStartTime, chordDuration);
             chordResolve();
           }, index * chordDuration * 1000);
         });
         
         playbackPromises.push(chordPlayPromise);
-        currentTime += chordDuration;
       });
 
       // Resolve when all chords have been scheduled

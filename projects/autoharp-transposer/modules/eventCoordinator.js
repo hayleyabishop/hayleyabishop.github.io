@@ -314,8 +314,8 @@ class EventCoordinator {
       return;
     }
     
-    // Play chords in sequence
-    this.audioManager.playChordSequence(selectedChords)
+    // Play chords in sequence using playProgression method
+    this.audioManager.playProgression(selectedChords)
       .then(() => {
         console.log('Finished playing all chords');
       })
