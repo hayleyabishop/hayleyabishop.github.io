@@ -147,11 +147,15 @@ function initializeDOMReferences() {
   window.chordGroup = document.getElementById("chordGroupInputs");
   window.chordGroupResults = document.getElementById("chordGroupResults");
   
-  // Add container drag events (where you drop)
+  // Add container drag events (where you drop) - now using eventCoordinator
   if (window.chordGroup) {
     console.log('[DEBUG] Adding container drag events to chordGroup');
-    window.chordGroup.addEventListener("dragover", handleDragOver);
-    window.chordGroup.addEventListener("drop", handleDrop);
+    if (window.eventCoordinator) {
+      window.chordGroup.addEventListener("dragover", window.eventCoordinator.handleDragOver.bind(window.eventCoordinator));
+      window.chordGroup.addEventListener("drop", window.eventCoordinator.handleDrop.bind(window.eventCoordinator));
+    } else {
+      console.error('[DEBUG] eventCoordinator not available for container drag events');
+    }
   } else {
     console.error('[DEBUG] chordGroup element not found for drag events');
   }
@@ -288,72 +292,49 @@ function formatChordName(chordName, chordType) {
   }
 }
 
-// Legacy function for backward compatibility
+// Legacy function for backward compatibility - now uses inputManager
 function addChordFromButton(chordValue) {
-  if (chordValue) {
-    appendChord(chordValue);
+  console.log('[DEBUG] addChordFromButton called with:', chordValue);
+  if (chordValue && window.inputManager) {
+    window.inputManager.appendChordLegacy(chordValue);
     onInputChordsChanged();
+  } else {
+    console.error('[DEBUG] inputManager not available or chordValue empty');
   }
 }
 
+// Legacy function - now delegates to inputManager
 function appendChord(chord) {
-  const newChord = document.createElement("div");
-  newChord.setAttribute("role", "listitem");
-  newChord.classList.add("chord");
-  newChord.setAttribute("aria-grabbed", "false");
-  newChord.setAttribute("draggable", true);
-  addDragListeners(newChord);
-
-  // Create inner container for content
-  const content = document.createElement("div");
-  content.setAttribute("class", "chord-content");
-  content.innerHTML = `<span>${chord}</span><button class="xbutton" onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
-  newChord.appendChild(content);
-
-  chordGroup.appendChild(newChord);
-  chordGroup.setAttribute("role", "list");
-  onInputChordsChanged();
+  console.log('[DEBUG] appendChord called with:', chord);
+  if (window.inputManager) {
+    window.inputManager.appendChordLegacy(chord);
+  } else {
+    console.error('[DEBUG] inputManager not available');
+  }
 }
 
+// Legacy function - now delegates to inputManager
 function removeChord(button) {
   console.log('[DEBUG] removeChord called with button:', button);
-  
-  const newChord = button.closest(".chord");
-  if (!newChord) {
-    console.error('[DEBUG] Could not find .chord element');
-    return;
+  if (window.inputManager) {
+    window.inputManager.removeChordLegacy(button);
+  } else {
+    console.error('[DEBUG] inputManager not available');
   }
-  
-  console.log('[DEBUG] Found chord element:', newChord);
-  
-  newChord.setAttribute("aria-hidden", "true");
-  newChord.style.animation = "fadeOut 0.3s forwards";
-  
-  newChord.addEventListener("animationend", () => {
-    console.log('[DEBUG] Animation ended, removing chord from DOM');
-    const chordGroup = document.getElementById('chordGroup');
-    if (chordGroup && chordGroup.contains(newChord)) {
-      chordGroup.removeChild(newChord);
-      onInputChordsChanged();
-      console.log('[DEBUG] Chord removed successfully');
-    } else {
-      console.error('[DEBUG] Could not remove chord - chordGroup not found or chord not in group');
-    }
-  });
 }
 
 // Ensure function is globally accessible
 window.removeChord = removeChord;
 
+// Legacy function - now delegates to inputManager
 function getInputChords() {
-  // Get all chord names from the input chordGroup -- the text within the Span.
-  // Updated to use correct element ID: chordGroupInputs instead of chordGroup
-  const chordGroupElement = document.getElementById('chordGroupInputs') || chordGroup;
-  if (!chordGroupElement) {
-    console.warn('Neither chordGroupInputs nor chordGroup element found');
+  console.log('[DEBUG] getInputChords called');
+  if (window.inputManager) {
+    return window.inputManager.getInputChordsLegacy();
+  } else {
+    console.error('[DEBUG] inputManager not available');
     return [];
   }
-  return Array.from(chordGroupElement.querySelectorAll('.chord span')).map(span => span.textContent);
 }
 
 // =============================================================================
@@ -366,162 +347,27 @@ function initializeDragAndDrop() {
   draggables.forEach(addDragListeners);
 }
 
+// Legacy function - now delegates to eventCoordinator
 function addDragListeners(draggable) {
-  console.log('[DEBUG] addDragListeners called for element:', draggable);
-  
-  if (!draggable) {
-    console.error('[DEBUG] addDragListeners called with null/undefined element');
-    return;
+  console.log('[DEBUG] addDragListeners called - delegating to eventCoordinator');
+  if (window.eventCoordinator) {
+    window.eventCoordinator.addDragListeners(draggable);
+  } else {
+    console.error('[DEBUG] eventCoordinator not available');
   }
-  
-  // Element-specific drag events (what you're dragging)
-  draggable.addEventListener("dragstart", handleDragStart);
-  draggable.addEventListener("dragend", handleDragEnd);
-  
-  // Touch events for mobile/touchscreen support
-  draggable.addEventListener("touchstart", handleTouchStart, { passive: false });
-  draggable.addEventListener("touchmove", handleTouchMove, { passive: false });
-  draggable.addEventListener("touchend", handleTouchEnd);
-  
-  console.log('[DEBUG] Drag listeners added successfully to:', draggable.className);
 }
 
 // Ensure function is globally accessible via window object
 window.addDragListeners = addDragListeners;
 
-function handleDragStart(e) {
-  draggedChord = this;
-  console.log('[DEBUG] Drag start handler - element:', this);
-  console.log('[DEBUG] Drag start - draggedChord set to:', draggedChord);
-  this.setAttribute("aria-grabbed", "true"); // Update ARIA attribute when grabbed
-  setTimeout(() => {
-    this.classList.add("dragging");
-    console.log('[DEBUG] Dragging class added');
-  }, 0); // Delay to apply dragging effect
-}
-
-function handleDragOver(e) {
-  e.preventDefault();
-  console.log('[DEBUG] Drag over - clientX:', e.clientX);
-  console.log('[DEBUG] window.chordGroup:', window.chordGroup);
-  const afterElement = getDragAfterElement(window.chordGroup, e.clientX);
-  console.log('[DEBUG] After element:', afterElement);
-  
-  if (afterElement == null && window.chordGroup.lastElementChild == draggedChord) {
-    // Do nothing. We are already at the end.
-    console.log('[DEBUG] Already at end, no movement needed');
-  } else if (afterElement == null && window.chordGroup.lastElementChild !== draggedChord) {
-    console.log('[DEBUG] Moving to end of list');
-    window.chordGroup.appendChild(draggedChord);
-  } else if (afterElement !== null) {
-    if (draggedChord !== afterElement.previousElementSibling) {
-      console.log('[DEBUG] Inserting before:', afterElement);
-      window.chordGroup.insertBefore(draggedChord, afterElement);
-    }
-  }
-}
-
-function handleDrop() {
-  console.log('[DEBUG] Drop handler - removing dragging class');
-  this.classList.remove("dragging");
-  onInputChordsChanged(); // Trigger update after reorder
-  console.log('[DEBUG] Drop completed, chords updated');
-}
-
-function handleDragEnd() {
-  console.log('[DEBUG] Drag end handler');
-  this.setAttribute("aria-grabbed", "false"); // Reset ARIA attribute when dropped
-  this.classList.remove("dragging");
-  draggedChord = null;
-  onInputChordsChanged(); // Recalculate resulting chords after drag
-}
-
-// Insert the chord before the next element.
-// Calculate which element is next based on drop location.
-function getDragAfterElement(container, x) {
-  const draggableElements = [
-    ...container.querySelectorAll(".chord:not(.dragging)"),
-  ];
-  return draggableElements.reduce(
-    (closest, child) => {
-      const box = child.getBoundingClientRect();
-      const offset = x - box.left - box.width / 2;
-      if (offset < 0 && offset > closest.offset) {
-        return { offset: offset, element: child };
-      } else {
-        return closest;
-      }
-    },
-    { offset: Number.NEGATIVE_INFINITY }
-  ).element;
-}
-
 // =============================================================================
-// TOUCH EVENT HANDLERS FOR MOBILE SUPPORT
+// DRAG AND TOUCH HANDLERS - REFACTORED TO USE EVENT COORDINATOR
+// All drag and touch functionality moved to eventCoordinator.js for better modularity
 // =============================================================================
 
-let touchStartX = 0;
-let touchStartY = 0;
-let isDragging = false;
-
-function handleTouchStart(e) {
-  // Prevent default to avoid scrolling while dragging
-  e.preventDefault();
-  
-  draggedChord = this;
-  const touch = e.touches[0];
-  touchStartX = touch.clientX;
-  touchStartY = touch.clientY;
-  isDragging = false;
-  
-  this.setAttribute("aria-grabbed", "true");
-  console.log("touch start handler");
-}
-
-function handleTouchMove(e) {
-  if (!draggedChord) return;
-  
-  e.preventDefault();
-  const touch = e.touches[0];
-  const deltaX = Math.abs(touch.clientX - touchStartX);
-  const deltaY = Math.abs(touch.clientY - touchStartY);
-  
-  // Start dragging if moved more than 10px (threshold to distinguish from tap)
-  if (!isDragging && (deltaX > 10 || deltaY > 10)) {
-    isDragging = true;
-    draggedChord.classList.add("dragging");
-  }
-  
-  if (isDragging) {
-    // Find the element we're dragging over
-    const afterElement = getDragAfterElement(chordGroup, touch.clientX);
-    
-    if (afterElement == null && chordGroup.lastElementChild == draggedChord) {
-      // Do nothing. We are already at the end.
-    } else if (afterElement == null && chordGroup.lastElementChild !== draggedChord) {
-      chordGroup.appendChild(draggedChord);
-    } else if (afterElement !== null) {
-      if (draggedChord !== afterElement.previousElementSibling) {
-        chordGroup.insertBefore(draggedChord, afterElement);
-      }
-    }
-  }
-}
-
-function handleTouchEnd(e) {
-  if (!draggedChord) return;
-  
-  this.setAttribute("aria-grabbed", "false");
-  this.classList.remove("dragging");
-  
-  if (isDragging) {
-    onInputChordsChanged(); // Recalculate resulting chords after drag
-  }
-  
-  draggedChord = null;
-  isDragging = false;
-  console.log("touch end handler");
-}
+// Note: All drag and touch event handlers have been moved to EventCoordinator class
+// The container-level drag events (dragover, drop) are still bound here in initializeDOMReferences
+// Individual element drag events are handled by EventCoordinator.addDragListeners
 
 // =============================================================================
 // CALCULATE RESULTANT CHORDS

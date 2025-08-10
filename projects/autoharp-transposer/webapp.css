@@ -1072,15 +1072,7 @@ select:after {
 }
 
 
-.chord .xbutton {
-    /* background-image: url("data:image/svg+xml,..."); */
-    background: cover;
-    background-repeat: no-repeat;
-    border: none;
-    font-size: 16;
-    cursor: auto;
 
-}
 
 .chord-group-wrapper {
     position: relative;
@@ -1100,9 +1092,7 @@ select:after {
     opacity: 1;
 }
 
-.chord .xbutton:hover {
-    background-color: #d1d1d1;
-}
+
 
 /*  =========================
     Animations

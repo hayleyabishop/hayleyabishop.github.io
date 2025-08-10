@@ -108,7 +108,11 @@ class AutoharpTransposerApp {
       this.modules.audioManager
     );
     
-    console.log('All modules initialized');
+    // Expose modules globally for legacy compatibility
+    window.eventCoordinator = this.modules.eventCoordinator;
+    window.inputManager = this.modules.inputManager;
+    
+    console.log('All modules initialized and exposed globally');
   }
 
   connectModules() {

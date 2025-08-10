@@ -821,6 +821,198 @@ class EventCoordinator {
     // Chord buttons now use inline onclick handlers
     console.log('Legacy chord input listener initialized');
   }
+
+  // =============================================================================
+  // DRAG AND DROP FUNCTIONALITY - Moved from webapp.js
+  // =============================================================================
+
+  /**
+   * Add drag and touch event listeners to a draggable element
+   * Moved from webapp.js for better organization
+   * @param {HTMLElement} draggable - Element to make draggable
+   */
+  addDragListeners(draggable) {
+    console.log('[DEBUG] EventCoordinator.addDragListeners called for element:', draggable);
+    
+    if (!draggable) {
+      console.error('[DEBUG] addDragListeners called with null/undefined element');
+      return;
+    }
+    
+    // Element-specific drag events (what you're dragging)
+    draggable.addEventListener("dragstart", this.handleDragStart.bind(this));
+    draggable.addEventListener("dragend", this.handleDragEnd.bind(this));
+    
+    // Touch events for mobile/touchscreen support
+    draggable.addEventListener("touchstart", this.handleTouchStart.bind(this), { passive: false });
+    draggable.addEventListener("touchmove", this.handleTouchMove.bind(this), { passive: false });
+    draggable.addEventListener("touchend", this.handleTouchEnd.bind(this));
+    
+    console.log('[DEBUG] Drag listeners added successfully to:', draggable.className);
+  }
+
+  /**
+   * Handle drag start event
+   * Moved from webapp.js for better organization
+   */
+  handleDragStart(e) {
+    window.draggedChord = e.target;
+    console.log('[DEBUG] Drag start handler - element:', e.target);
+    console.log('[DEBUG] Drag start - draggedChord set to:', window.draggedChord);
+    e.target.setAttribute("aria-grabbed", "true");
+    setTimeout(() => {
+      e.target.classList.add("dragging");
+      console.log('[DEBUG] Dragging class added');
+    }, 0);
+  }
+
+  /**
+   * Handle drag over event
+   * Moved from webapp.js for better organization
+   */
+  handleDragOver(e) {
+    e.preventDefault();
+    console.log('[DEBUG] Drag over - clientX:', e.clientX);
+    console.log('[DEBUG] window.chordGroup:', window.chordGroup);
+    const afterElement = this.getDragAfterElement(window.chordGroup, e.clientX);
+    console.log('[DEBUG] After element:', afterElement);
+    
+    if (afterElement == null && window.chordGroup.lastElementChild == window.draggedChord) {
+      console.log('[DEBUG] Already at end, no movement needed');
+    } else if (afterElement == null && window.chordGroup.lastElementChild !== window.draggedChord) {
+      console.log('[DEBUG] Moving to end of list');
+      window.chordGroup.appendChild(window.draggedChord);
+    } else if (afterElement !== null) {
+      if (window.draggedChord !== afterElement.previousElementSibling) {
+        console.log('[DEBUG] Inserting before:', afterElement);
+        window.chordGroup.insertBefore(window.draggedChord, afterElement);
+      }
+    }
+  }
+
+  /**
+   * Handle drop event
+   * Moved from webapp.js for better organization
+   */
+  handleDrop(e) {
+    console.log('[DEBUG] Drop handler - removing dragging class');
+    if (window.draggedChord) {
+      window.draggedChord.classList.remove("dragging");
+    }
+    if (typeof window.onInputChordsChanged === 'function') {
+      window.onInputChordsChanged();
+    }
+    console.log('[DEBUG] Drop completed, chords updated');
+  }
+
+  /**
+   * Handle drag end event
+   * Moved from webapp.js for better organization
+   */
+  handleDragEnd(e) {
+    console.log('[DEBUG] Drag end handler');
+    e.target.setAttribute("aria-grabbed", "false");
+    e.target.classList.remove("dragging");
+    window.draggedChord = null;
+    if (typeof window.onInputChordsChanged === 'function') {
+      window.onInputChordsChanged();
+    }
+  }
+
+  /**
+   * Calculate which element should come after the dragged element
+   * Moved from webapp.js for better organization
+   */
+  getDragAfterElement(container, x) {
+    const draggableElements = [
+      ...container.querySelectorAll(".chord:not(.dragging)"),
+    ];
+    return draggableElements.reduce(
+      (closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = x - box.left - box.width / 2;
+        if (offset < 0 && offset > closest.offset) {
+          return { offset: offset, element: child };
+        } else {
+          return closest;
+        }
+      },
+      { offset: Number.NEGATIVE_INFINITY }
+    ).element;
+  }
+
+  // =============================================================================
+  // TOUCH EVENT HANDLERS FOR MOBILE SUPPORT - Moved from webapp.js
+  // =============================================================================
+
+  /**
+   * Handle touch start event
+   * Moved from webapp.js for better organization
+   */
+  handleTouchStart(e) {
+    e.preventDefault();
+    
+    window.draggedChord = e.target;
+    const touch = e.touches[0];
+    this.touchStartX = touch.clientX;
+    this.touchStartY = touch.clientY;
+    this.isDragging = false;
+    
+    e.target.setAttribute("aria-grabbed", "true");
+    console.log("touch start handler");
+  }
+
+  /**
+   * Handle touch move event
+   * Moved from webapp.js for better organization
+   */
+  handleTouchMove(e) {
+    if (!window.draggedChord) return;
+    
+    e.preventDefault();
+    const touch = e.touches[0];
+    const deltaX = Math.abs(touch.clientX - this.touchStartX);
+    const deltaY = Math.abs(touch.clientY - this.touchStartY);
+    
+    // Start dragging if moved more than 10px
+    if (!this.isDragging && (deltaX > 10 || deltaY > 10)) {
+      this.isDragging = true;
+      window.draggedChord.classList.add("dragging");
+    }
+    
+    if (this.isDragging) {
+      const afterElement = this.getDragAfterElement(window.chordGroup, touch.clientX);
+      
+      if (afterElement == null && window.chordGroup.lastElementChild == window.draggedChord) {
+        // Already at end
+      } else if (afterElement == null && window.chordGroup.lastElementChild !== window.draggedChord) {
+        window.chordGroup.appendChild(window.draggedChord);
+      } else if (afterElement !== null) {
+        if (window.draggedChord !== afterElement.previousElementSibling) {
+          window.chordGroup.insertBefore(window.draggedChord, afterElement);
+        }
+      }
+    }
+  }
+
+  /**
+   * Handle touch end event
+   * Moved from webapp.js for better organization
+   */
+  handleTouchEnd(e) {
+    if (!window.draggedChord) return;
+    
+    e.target.setAttribute("aria-grabbed", "false");
+    e.target.classList.remove("dragging");
+    
+    if (this.isDragging && typeof window.onInputChordsChanged === 'function') {
+      window.onInputChordsChanged();
+    }
+    
+    window.draggedChord = null;
+    this.isDragging = false;
+    console.log("touch end handler");
+  }
 }
 
 export { EventCoordinator };

@@ -48,7 +48,7 @@ if (chordGroup) {
   console.log(`   Found ${chordElements.length} chord elements`);
   
   chordElements.forEach((chord, index) => {
-    const removeButton = chord.querySelector('.xbutton');
+    const removeButton = chord.querySelector('.remove-chord-btn');
     const isDraggable = chord.getAttribute('draggable') === 'true';
     
     console.log(`   Chord ${index + 1}:`);
@@ -68,7 +68,7 @@ if (chordGroup) {
 console.log('\n📋 Test 4: Simulate Chord Removal');
 console.log('----------------------------------');
 
-const testRemoveButton = document.querySelector('.xbutton');
+const testRemoveButton = document.querySelector('.remove-chord-btn');
 if (testRemoveButton) {
   console.log('✅ Found test remove button');
   console.log('   Attempting to simulate click...');
@@ -155,7 +155,7 @@ console.log('If issues persist, check the debug logs for specific error messages
 // Export test functions for manual testing
 window.testUIFixes = {
   testRemoveChord: () => {
-    const button = document.querySelector('.xbutton');
+    const button = document.querySelector('.remove-chord-btn');
     if (button && typeof window.removeChord === 'function') {
       console.log('Manual test: Calling removeChord...');
       window.removeChord(button);

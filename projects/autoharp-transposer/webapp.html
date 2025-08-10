@@ -156,8 +156,19 @@
       </div>
 
     <!-- Load modules -->
-    <script type="module" src="modules/appIntegration.js"></script>
-    <script src="webapp.js"></script>
+    <script type="module">
+      // Import and initialize the app first
+      import { AutoharpTransposerApp } from './modules/appIntegration.js';
+      
+      // Initialize the app and expose modules globally
+      const app = new AutoharpTransposerApp();
+      await app.initialize();
+      
+      // Now load webapp.js after modules are globally exposed
+      const script = document.createElement('script');
+      script.src = 'webapp.js';
+      document.head.appendChild(script);
+    </script>
     <!-- Debug scripts for testing -->
     <!-- <script src="tests/test-transcription-debug.js"></script>
     <script src="tests/test-transcription-end-to-end.js"></script>

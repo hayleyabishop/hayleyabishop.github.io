@@ -323,7 +323,7 @@ class InputManager {
 
     const content = document.createElement('div');
     content.classList.add('chord-content');
-    content.innerHTML = `<span>${chord}</span><button class="xbutton" onclick="removeChord(this)" aria-label="Remove ${chord} chord">x</button>`;
+    content.innerHTML = `<span>${chord}</span><button class="remove-chord-btn" onclick="removeChord(this)" aria-label="Remove ${chord} chord">×</button>`;
 
     newChord.appendChild(content);
     chordGroup.appendChild(newChord);
