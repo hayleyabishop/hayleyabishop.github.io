@@ -160,9 +160,24 @@
       // Import and initialize the app first
       import { AutoharpTransposerApp } from './modules/appIntegration.js';
       
-      // Initialize the app and expose modules globally
+      // Initialize the app (constructor handles initialization automatically)
       const app = new AutoharpTransposerApp();
-      await app.initialize();
+      
+      // Wait for initialization to complete by checking the initialized flag
+      const waitForInit = () => {
+        return new Promise((resolve) => {
+          const checkInit = () => {
+            if (app.initialized) {
+              resolve();
+            } else {
+              setTimeout(checkInit, 100);
+            }
+          };
+          checkInit();
+        });
+      };
+      
+      await waitForInit();
       
       // Now load webapp.js after modules are globally exposed
       const script = document.createElement('script');

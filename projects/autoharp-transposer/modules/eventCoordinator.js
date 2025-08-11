@@ -224,9 +224,41 @@ class EventCoordinator {
     });
     
     this.stateManager.subscribe('autoharpTypeChanged', (data) => {
-      this.inputManager.updateAvailableChords(data.current);
-      this.updateAvailableChordButtons();
+      console.log('[DEBUG] Autoharp type changed event received:', data);
+      // Use the existing renderAvailableChords method from webapp.js
+      if (typeof window.renderAvailableChords === 'function') {
+        window.renderAvailableChords(data.availableChords);
+      } else {
+        console.warn('renderAvailableChords method not available');
+      }
     });
+  }
+
+  // UI Update Methods
+  updateAvailableChordButtons(availableChords) {
+    console.log('[DEBUG] Updating available chord buttons:', availableChords);
+    
+    const availableChordsContainer = document.querySelector('.availableChordsSection');
+    if (!availableChordsContainer) {
+      console.warn('Available chords container not found');
+      return;
+    }
+    
+    // Clear existing chord buttons
+    availableChordsContainer.innerHTML = '';
+    
+    // Add new chord buttons based on available chords
+    if (availableChords && availableChords.length > 0) {
+      availableChords.forEach(chord => {
+        const chordElement = document.createElement('div');
+        chordElement.className = 'staticChord';
+        chordElement.textContent = chord;
+        availableChordsContainer.appendChild(chordElement);
+      });
+      console.log(`[DEBUG] Updated UI with ${availableChords.length} available chords`);
+    } else {
+      console.warn('No available chords provided for UI update');
+    }
   }
 
   // Event handlers

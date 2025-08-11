@@ -71,7 +71,8 @@ class AutoharpTransposerApp {
       // Register callback for when data becomes ready
       integrationBridge.onReady(() => {
         console.log('Chord data ready for modules');
-        integrationBridge.setModuleSystemReady();
+        // Don't call setModuleSystemReady() here - it causes recursive loop
+        // The module system is already ready when this callback executes
         resolve();
       });
       
@@ -85,8 +86,8 @@ class AutoharpTransposerApp {
   }
 
   async initializeCoreModules() {
-    // Initialize state manager first
-    this.modules.stateManager = new StateManager();
+    // Initialize state manager first with IntegrationBridge reference
+    this.modules.stateManager = new StateManager(integrationBridge);
     
     // Initialize audio manager
     this.modules.audioManager = new ChordAudioManager();

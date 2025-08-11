@@ -4,7 +4,8 @@
 // =============================================================================
 
 class StateManager {
-  constructor() {
+  constructor(integrationBridge = null) {
+    this.integrationBridge = integrationBridge;
     this.state = {
       autoharpType: 'type21Chord',
       availableChords: [],
@@ -179,7 +180,8 @@ class StateManager {
     }
     
     // Get available chords for the new type
-    const availableChords = this.getAvailableChordsForType(type);
+    const availableChords = this.integrationBridge ? 
+      this.integrationBridge.getAvailableChordsForType(type) : [];
     if (!availableChords || availableChords.length === 0) {
       console.warn(`No chords available for autoharp type: ${type}`);
       return false;
