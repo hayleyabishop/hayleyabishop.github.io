@@ -1,0 +1,130 @@
+CODEBASE KNOWLEDGE GRAPH REPORT
+=====================================
+
+SUMMARY STATISTICS:
+   Files analyzed: 5
+   Classes found: 4
+   Functions found: 3
+   Methods found: 44
+   Event handlers: 0
+
+CLASSES AND METHODS:
+
+Class: CodebaseMapper (codebase-mapper.js:11)
+   constructor (line 108)
+   constructor() (line 12)
+   for() (line 33)
+   findJavaScriptFiles() (line 47)
+   for() (line 51)
+   if() (line 95)
+   if() (line 114)
+   if() (line 130)
+   if() (line 144)
+   if() (line 159)
+   if() (line 173)
+   if() (line 181)
+   buildRelationships() (line 199)
+   generateReport() (line 217)
+   if() (line 235)
+   if() (line 240)
+   if() (line 251)
+   if() (line 261)
+   if() (line 272)
+   writeReport() (line 284)
+   exportKnowledgeGraph() (line 299)
+   if() (line 334)
+
+Class: RobustDuplicateDetector (detect-duplicates.js:11)
+   constructor (line 12)
+   constructor() (line 12)
+   scanProject() (line 24)
+   findJavaScriptFiles() (line 50)
+   for() (line 56)
+   scanFile() (line 75)
+   if() (line 118)
+   analyzeResults() (line 151)
+   if() (line 156)
+   if() (line 168)
+   if() (line 178)
+   findSimilarMethodNames() (line 191)
+   for() (line 194)
+   for() (line 195)
+   areMethodNamesSimilar() (line 211)
+   for() (line 228)
+   if() (line 231)
+   for() (line 236)
+   if() (line 239)
+   generateReport() (line 247)
+   if() (line 265)
+   if() (line 278)
+   if() (line 291)
+   if() (line 299)
+   if() (line 306)
+   if() (line 308)
+   outputReport() (line 324)
+   getResults() (line 344)
+   if() (line 350)
+
+Class: ImprovedCodebaseMapper (improved-codebase-mapper.js:11)
+   constructor (line 12)
+   constructor() (line 12)
+   generateKnowledgeGraph() (line 32)
+   findJavaScriptFiles() (line 60)
+   for() (line 66)
+   analyzeFile() (line 84)
+   extractClasses() (line 104)
+   if() (line 113)
+   if() (line 126)
+   extractFunctions() (line 146)
+   if() (line 153)
+   if() (line 168)
+   buildMethodIndex() (line 183)
+   if() (line 189)
+   findDuplicates() (line 202)
+   if() (line 204)
+   updateMetadata() (line 213)
+   saveResults() (line 222)
+   generateSummary() (line 232)
+   if() (line 243)
+   if() (line 250)
+   if() (line 265)
+
+Class: AgentSchemaUpdater (update-agent-schema.js:12)
+   constructor (line 13)
+   constructor() (line 13)
+   readAgentMetadata() (line 23)
+   getAllAgentMetadata() (line 42)
+   for() (line 45)
+   if() (line 47)
+   generateAgentSection() (line 58)
+   getAgentResponsibilities() (line 79)
+   generateSpecializationMatrix() (line 132)
+   generateSchemaContent() (line 167)
+   for() (line 191)
+   if() (line 192)
+   updateSchema() (line 261)
+   watchForChanges() (line 299)
+   for() (line 302)
+   if() (line 316)
+
+STANDALONE FUNCTIONS:
+   findJavaScriptFiles() (simple-duplicate-check.js:11)
+   extractMethods() (simple-duplicate-check.js:28)
+   checkForDuplicates() (simple-duplicate-check.js:77)
+
+MODULE DEPENDENCIES:
+   codebase-mapper depends on:
+      <- fs
+      <- path
+   detect-duplicates depends on:
+      <- fs
+      <- path
+   improved-codebase-mapper depends on:
+      <- fs
+      <- path
+   simple-duplicate-check depends on:
+      <- fs
+      <- path
+   update-agent-schema depends on:
+      <- fs
+      <- path

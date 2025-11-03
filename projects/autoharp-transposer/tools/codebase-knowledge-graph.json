@@ -1,0 +1,5759 @@
+{
+  "generated": "2025-08-17T03:08:05.995Z",
+  "project": "tools",
+  "statistics": {
+    "files": 5,
+    "classes": 4,
+    "functions": 3,
+    "methods": 44,
+    "eventHandlers": 0
+  },
+  "graph": {
+    "files": {
+      "codebase-mapper.js": {
+        "path": "codebase-mapper.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tools\\codebase-mapper.js",
+        "classes": [
+          {
+            "name": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 11,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 12,
+                "signature": "constructor(projectPath) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 33,
+                "signature": "for (const file of jsFiles) {",
+                "calls": []
+              },
+              {
+                "name": "findJavaScriptFiles",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 47,
+                "signature": "findJavaScriptFiles(dir) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 51,
+                "signature": "for (const entry of entries) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 95,
+                "signature": "if (classMatch) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 114,
+                "signature": "if (methodMatch && currentClass) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 130,
+                "signature": "if (functionMatch) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 144,
+                "signature": "if (arrowFunctionMatch) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 159,
+                "signature": "if (eventHandlerMatch) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 173,
+                "signature": "if (importMatch) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 181,
+                "signature": "if (callMatches) {",
+                "calls": []
+              },
+              {
+                "name": "buildRelationships",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 199,
+                "signature": "buildRelationships() {",
+                "calls": []
+              },
+              {
+                "name": "generateReport",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 217,
+                "signature": "generateReport() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 235,
+                "signature": "if (this.knowledgeGraph.classes.size > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 240,
+                "signature": "if (classInfo.constructor) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 251,
+                "signature": "if (this.knowledgeGraph.functions.size > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 261,
+                "signature": "if (this.knowledgeGraph.eventHandlers.size > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 272,
+                "signature": "if (moduleInfo.dependencies.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "writeReport",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 284,
+                "signature": "writeReport(reportLines) {",
+                "calls": []
+              },
+              {
+                "name": "exportKnowledgeGraph",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 299,
+                "signature": "exportKnowledgeGraph() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "CodebaseMapper",
+                "file": "codebase-mapper.js",
+                "line": 334,
+                "signature": "if (require.main === module) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 108,
+              "signature": "if (currentClass && trimmedLine.includes('constructor(')) {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 33,
+            "signature": "for (const file of jsFiles) {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 47,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 51,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 95,
+            "signature": "if (classMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 114,
+            "signature": "if (methodMatch && currentClass) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 130,
+            "signature": "if (functionMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 144,
+            "signature": "if (arrowFunctionMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 159,
+            "signature": "if (eventHandlerMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 173,
+            "signature": "if (importMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 181,
+            "signature": "if (callMatches) {",
+            "calls": []
+          },
+          {
+            "name": "buildRelationships",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 199,
+            "signature": "buildRelationships() {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 217,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 235,
+            "signature": "if (this.knowledgeGraph.classes.size > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 240,
+            "signature": "if (classInfo.constructor) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 251,
+            "signature": "if (this.knowledgeGraph.functions.size > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 261,
+            "signature": "if (this.knowledgeGraph.eventHandlers.size > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 272,
+            "signature": "if (moduleInfo.dependencies.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "writeReport",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 284,
+            "signature": "writeReport(reportLines) {",
+            "calls": []
+          },
+          {
+            "name": "exportKnowledgeGraph",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 299,
+            "signature": "exportKnowledgeGraph() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 334,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [
+          "fs",
+          "path"
+        ],
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "lineCount": 341
+      },
+      "detect-duplicates.js": {
+        "path": "detect-duplicates.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tools\\detect-duplicates.js",
+        "classes": [
+          {
+            "name": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 11,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 12,
+                "signature": "constructor(projectPath) {",
+                "calls": []
+              },
+              {
+                "name": "scanProject",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 24,
+                "signature": "scanProject() {",
+                "calls": []
+              },
+              {
+                "name": "findJavaScriptFiles",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 50,
+                "signature": "findJavaScriptFiles(dir) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 56,
+                "signature": "for (const entry of entries) {",
+                "calls": []
+              },
+              {
+                "name": "scanFile",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 75,
+                "signature": "scanFile(filePath) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 118,
+                "signature": "if (match) {",
+                "calls": []
+              },
+              {
+                "name": "analyzeResults",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 151,
+                "signature": "analyzeResults() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 156,
+                "signature": "if (definitions.length > 1) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 168,
+                "signature": "if (fileDefs.length > 1) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 178,
+                "signature": "if (fileGroups.size > 1) {",
+                "calls": []
+              },
+              {
+                "name": "findSimilarMethodNames",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 191,
+                "signature": "findSimilarMethodNames() {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 194,
+                "signature": "for (let i = 0; i < methodNames.length; i++) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 195,
+                "signature": "for (let j = i + 1; j < methodNames.length; j++) {",
+                "calls": []
+              },
+              {
+                "name": "areMethodNamesSimilar",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 211,
+                "signature": "areMethodNamesSimilar(name1, name2) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 228,
+                "signature": "for (const prefix of commonPrefixes) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 231,
+                "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 236,
+                "signature": "for (const suffix of commonSuffixes) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 239,
+                "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+                "calls": []
+              },
+              {
+                "name": "generateReport",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 247,
+                "signature": "generateReport() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 265,
+                "signature": "if (this.results.criticalDuplicates.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 278,
+                "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 291,
+                "signature": "if (this.results.similarNames.length > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 299,
+                "signature": "if (this.results.similarNames.length > 10) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 306,
+                "signature": "if (this.results.criticalDuplicates.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 308,
+                "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+                "calls": []
+              },
+              {
+                "name": "outputReport",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 324,
+                "signature": "outputReport(reportLines) {",
+                "calls": []
+              },
+              {
+                "name": "getResults",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 344,
+                "signature": "getResults() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "RobustDuplicateDetector",
+                "file": "detect-duplicates.js",
+                "line": 350,
+                "signature": "if (require.main === module) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 12,
+              "signature": "constructor(projectPath) {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "scanProject",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 24,
+            "signature": "scanProject() {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 50,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 56,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "scanFile",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 75,
+            "signature": "scanFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 118,
+            "signature": "if (match) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeResults",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 151,
+            "signature": "analyzeResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 156,
+            "signature": "if (definitions.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 168,
+            "signature": "if (fileDefs.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 178,
+            "signature": "if (fileGroups.size > 1) {",
+            "calls": []
+          },
+          {
+            "name": "findSimilarMethodNames",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 191,
+            "signature": "findSimilarMethodNames() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 194,
+            "signature": "for (let i = 0; i < methodNames.length; i++) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 195,
+            "signature": "for (let j = i + 1; j < methodNames.length; j++) {",
+            "calls": []
+          },
+          {
+            "name": "areMethodNamesSimilar",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 211,
+            "signature": "areMethodNamesSimilar(name1, name2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 228,
+            "signature": "for (const prefix of commonPrefixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 231,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 236,
+            "signature": "for (const suffix of commonSuffixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 239,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 247,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 265,
+            "signature": "if (this.results.criticalDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 278,
+            "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 291,
+            "signature": "if (this.results.similarNames.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 299,
+            "signature": "if (this.results.similarNames.length > 10) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 306,
+            "signature": "if (this.results.criticalDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 308,
+            "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "outputReport",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 324,
+            "signature": "outputReport(reportLines) {",
+            "calls": []
+          },
+          {
+            "name": "getResults",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 344,
+            "signature": "getResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 350,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [
+          "fs",
+          "path"
+        ],
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "lineCount": 357
+      },
+      "improved-codebase-mapper.js": {
+        "path": "improved-codebase-mapper.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tools\\improved-codebase-mapper.js",
+        "classes": [
+          {
+            "name": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 11,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 12,
+                "signature": "constructor(projectPath) {",
+                "calls": []
+              },
+              {
+                "name": "generateKnowledgeGraph",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 32,
+                "signature": "generateKnowledgeGraph() {",
+                "calls": []
+              },
+              {
+                "name": "findJavaScriptFiles",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 60,
+                "signature": "findJavaScriptFiles(dir) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 66,
+                "signature": "for (const entry of entries) {",
+                "calls": []
+              },
+              {
+                "name": "analyzeFile",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 84,
+                "signature": "analyzeFile(filePath) {",
+                "calls": []
+              },
+              {
+                "name": "extractClasses",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 104,
+                "signature": "extractClasses(lines, fileInfo) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 113,
+                "signature": "if (classMatch) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 126,
+                "signature": "if (currentClass) {",
+                "calls": []
+              },
+              {
+                "name": "extractFunctions",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 146,
+                "signature": "extractFunctions(lines, fileInfo) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 153,
+                "signature": "if (funcMatch) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 168,
+                "signature": "if (arrowMatch) {",
+                "calls": []
+              },
+              {
+                "name": "buildMethodIndex",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 183,
+                "signature": "buildMethodIndex() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 189,
+                "signature": "if (!this.results.methodIndex[methodName]) {",
+                "calls": []
+              },
+              {
+                "name": "findDuplicates",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 202,
+                "signature": "findDuplicates() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 204,
+                "signature": "if (locations.length > 1) {",
+                "calls": []
+              },
+              {
+                "name": "updateMetadata",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 213,
+                "signature": "updateMetadata() {",
+                "calls": []
+              },
+              {
+                "name": "saveResults",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 222,
+                "signature": "saveResults() {",
+                "calls": []
+              },
+              {
+                "name": "generateSummary",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 232,
+                "signature": "generateSummary() {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 243,
+                "signature": "if (meta.totalClasses > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 250,
+                "signature": "if (meta.duplicatesFound > 0) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "ImprovedCodebaseMapper",
+                "file": "improved-codebase-mapper.js",
+                "line": 265,
+                "signature": "if (require.main === module) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 12,
+              "signature": "constructor(projectPath) {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "generateKnowledgeGraph",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 32,
+            "signature": "generateKnowledgeGraph() {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 60,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 66,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeFile",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 84,
+            "signature": "analyzeFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "extractClasses",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 104,
+            "signature": "extractClasses(lines, fileInfo) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 113,
+            "signature": "if (classMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 126,
+            "signature": "if (currentClass) {",
+            "calls": []
+          },
+          {
+            "name": "extractFunctions",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 146,
+            "signature": "extractFunctions(lines, fileInfo) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 153,
+            "signature": "if (funcMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 168,
+            "signature": "if (arrowMatch) {",
+            "calls": []
+          },
+          {
+            "name": "buildMethodIndex",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 183,
+            "signature": "buildMethodIndex() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 189,
+            "signature": "if (!this.results.methodIndex[methodName]) {",
+            "calls": []
+          },
+          {
+            "name": "findDuplicates",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 202,
+            "signature": "findDuplicates() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 204,
+            "signature": "if (locations.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "updateMetadata",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 213,
+            "signature": "updateMetadata() {",
+            "calls": []
+          },
+          {
+            "name": "saveResults",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 222,
+            "signature": "saveResults() {",
+            "calls": []
+          },
+          {
+            "name": "generateSummary",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 232,
+            "signature": "generateSummary() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 243,
+            "signature": "if (meta.totalClasses > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 250,
+            "signature": "if (meta.duplicatesFound > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 265,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [
+          "fs",
+          "path"
+        ],
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "lineCount": 272
+      },
+      "simple-duplicate-check.js": {
+        "path": "simple-duplicate-check.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tools\\simple-duplicate-check.js",
+        "classes": [],
+        "functions": [
+          {
+            "name": "findJavaScriptFiles",
+            "file": "simple-duplicate-check.js",
+            "line": 11,
+            "signature": "function findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "extractMethods",
+            "file": "simple-duplicate-check.js",
+            "line": 28,
+            "signature": "function extractMethods(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "checkForDuplicates",
+            "file": "simple-duplicate-check.js",
+            "line": 77,
+            "signature": "function checkForDuplicates() {",
+            "calls": []
+          }
+        ],
+        "methods": [],
+        "eventHandlers": [],
+        "imports": [
+          "fs",
+          "path"
+        ],
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "lineCount": 186
+      },
+      "update-agent-schema.js": {
+        "path": "update-agent-schema.js",
+        "fullPath": "C:\\Users\\hayle\\OneDrive\\Documentos\\GitHub\\Resume Website\\projects\\autoharp-transposer\\tools\\update-agent-schema.js",
+        "classes": [
+          {
+            "name": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 12,
+            "methods": [
+              {
+                "name": "constructor",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 13,
+                "signature": "constructor() {",
+                "calls": []
+              },
+              {
+                "name": "readAgentMetadata",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 23,
+                "signature": "readAgentMetadata(agentId) {",
+                "calls": []
+              },
+              {
+                "name": "getAllAgentMetadata",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 42,
+                "signature": "getAllAgentMetadata() {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 45,
+                "signature": "for (const agentId of this.agentOrder) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 47,
+                "signature": "if (metadata) {",
+                "calls": []
+              },
+              {
+                "name": "generateAgentSection",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 58,
+                "signature": "generateAgentSection(agentId, metadata) {",
+                "calls": []
+              },
+              {
+                "name": "getAgentResponsibilities",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 79,
+                "signature": "getAgentResponsibilities(agentId) {",
+                "calls": []
+              },
+              {
+                "name": "generateSpecializationMatrix",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 132,
+                "signature": "generateSpecializationMatrix(agents) {",
+                "calls": []
+              },
+              {
+                "name": "generateSchemaContent",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 167,
+                "signature": "generateSchemaContent(agents) {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 191,
+                "signature": "for (const agentId of this.agentOrder) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 192,
+                "signature": "if (agents[agentId]) {",
+                "calls": []
+              },
+              {
+                "name": "updateSchema",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 261,
+                "signature": "updateSchema() {",
+                "calls": []
+              },
+              {
+                "name": "watchForChanges",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 299,
+                "signature": "watchForChanges() {",
+                "calls": []
+              },
+              {
+                "name": "for",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 302,
+                "signature": "for (const agentId of this.agentOrder) {",
+                "calls": []
+              },
+              {
+                "name": "if",
+                "class": "AgentSchemaUpdater",
+                "file": "update-agent-schema.js",
+                "line": 316,
+                "signature": "if (require.main === module) {",
+                "calls": []
+              }
+            ],
+            "constructor": {
+              "line": 13,
+              "signature": "constructor() {"
+            }
+          }
+        ],
+        "functions": [],
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 13,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "readAgentMetadata",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 23,
+            "signature": "readAgentMetadata(agentId) {",
+            "calls": []
+          },
+          {
+            "name": "getAllAgentMetadata",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 42,
+            "signature": "getAllAgentMetadata() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 45,
+            "signature": "for (const agentId of this.agentOrder) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 47,
+            "signature": "if (metadata) {",
+            "calls": []
+          },
+          {
+            "name": "generateAgentSection",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 58,
+            "signature": "generateAgentSection(agentId, metadata) {",
+            "calls": []
+          },
+          {
+            "name": "getAgentResponsibilities",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 79,
+            "signature": "getAgentResponsibilities(agentId) {",
+            "calls": []
+          },
+          {
+            "name": "generateSpecializationMatrix",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 132,
+            "signature": "generateSpecializationMatrix(agents) {",
+            "calls": []
+          },
+          {
+            "name": "generateSchemaContent",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 167,
+            "signature": "generateSchemaContent(agents) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 191,
+            "signature": "for (const agentId of this.agentOrder) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 192,
+            "signature": "if (agents[agentId]) {",
+            "calls": []
+          },
+          {
+            "name": "updateSchema",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 261,
+            "signature": "updateSchema() {",
+            "calls": []
+          },
+          {
+            "name": "watchForChanges",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 299,
+            "signature": "watchForChanges() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 302,
+            "signature": "for (const agentId of this.agentOrder) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 316,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "eventHandlers": [],
+        "imports": [
+          "fs",
+          "path"
+        ],
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "lineCount": 332
+      }
+    },
+    "classes": {
+      "CodebaseMapper": {
+        "name": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 11,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 33,
+            "signature": "for (const file of jsFiles) {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 47,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 51,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 95,
+            "signature": "if (classMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 114,
+            "signature": "if (methodMatch && currentClass) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 130,
+            "signature": "if (functionMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 144,
+            "signature": "if (arrowFunctionMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 159,
+            "signature": "if (eventHandlerMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 173,
+            "signature": "if (importMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 181,
+            "signature": "if (callMatches) {",
+            "calls": []
+          },
+          {
+            "name": "buildRelationships",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 199,
+            "signature": "buildRelationships() {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 217,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 235,
+            "signature": "if (this.knowledgeGraph.classes.size > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 240,
+            "signature": "if (classInfo.constructor) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 251,
+            "signature": "if (this.knowledgeGraph.functions.size > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 261,
+            "signature": "if (this.knowledgeGraph.eventHandlers.size > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 272,
+            "signature": "if (moduleInfo.dependencies.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "writeReport",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 284,
+            "signature": "writeReport(reportLines) {",
+            "calls": []
+          },
+          {
+            "name": "exportKnowledgeGraph",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 299,
+            "signature": "exportKnowledgeGraph() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "CodebaseMapper",
+            "file": "codebase-mapper.js",
+            "line": 334,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 108,
+          "signature": "if (currentClass && trimmedLine.includes('constructor(')) {"
+        }
+      },
+      "RobustDuplicateDetector": {
+        "name": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 11,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "scanProject",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 24,
+            "signature": "scanProject() {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 50,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 56,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "scanFile",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 75,
+            "signature": "scanFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 118,
+            "signature": "if (match) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeResults",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 151,
+            "signature": "analyzeResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 156,
+            "signature": "if (definitions.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 168,
+            "signature": "if (fileDefs.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 178,
+            "signature": "if (fileGroups.size > 1) {",
+            "calls": []
+          },
+          {
+            "name": "findSimilarMethodNames",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 191,
+            "signature": "findSimilarMethodNames() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 194,
+            "signature": "for (let i = 0; i < methodNames.length; i++) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 195,
+            "signature": "for (let j = i + 1; j < methodNames.length; j++) {",
+            "calls": []
+          },
+          {
+            "name": "areMethodNamesSimilar",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 211,
+            "signature": "areMethodNamesSimilar(name1, name2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 228,
+            "signature": "for (const prefix of commonPrefixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 231,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 236,
+            "signature": "for (const suffix of commonSuffixes) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 239,
+            "signature": "if (base1 === base2 && base1 !== lower1 && base2 !== lower2) {",
+            "calls": []
+          },
+          {
+            "name": "generateReport",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 247,
+            "signature": "generateReport() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 265,
+            "signature": "if (this.results.criticalDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 278,
+            "signature": "if (this.results.crossFileDuplicates.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 291,
+            "signature": "if (this.results.similarNames.length > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 299,
+            "signature": "if (this.results.similarNames.length > 10) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 306,
+            "signature": "if (this.results.criticalDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 308,
+            "signature": "if (this.results.crossFileDuplicates.length === 0) {",
+            "calls": []
+          },
+          {
+            "name": "outputReport",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 324,
+            "signature": "outputReport(reportLines) {",
+            "calls": []
+          },
+          {
+            "name": "getResults",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 344,
+            "signature": "getResults() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "RobustDuplicateDetector",
+            "file": "detect-duplicates.js",
+            "line": 350,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 12,
+          "signature": "constructor(projectPath) {"
+        }
+      },
+      "ImprovedCodebaseMapper": {
+        "name": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 11,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 12,
+            "signature": "constructor(projectPath) {",
+            "calls": []
+          },
+          {
+            "name": "generateKnowledgeGraph",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 32,
+            "signature": "generateKnowledgeGraph() {",
+            "calls": []
+          },
+          {
+            "name": "findJavaScriptFiles",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 60,
+            "signature": "findJavaScriptFiles(dir) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 66,
+            "signature": "for (const entry of entries) {",
+            "calls": []
+          },
+          {
+            "name": "analyzeFile",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 84,
+            "signature": "analyzeFile(filePath) {",
+            "calls": []
+          },
+          {
+            "name": "extractClasses",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 104,
+            "signature": "extractClasses(lines, fileInfo) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 113,
+            "signature": "if (classMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 126,
+            "signature": "if (currentClass) {",
+            "calls": []
+          },
+          {
+            "name": "extractFunctions",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 146,
+            "signature": "extractFunctions(lines, fileInfo) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 153,
+            "signature": "if (funcMatch) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 168,
+            "signature": "if (arrowMatch) {",
+            "calls": []
+          },
+          {
+            "name": "buildMethodIndex",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 183,
+            "signature": "buildMethodIndex() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 189,
+            "signature": "if (!this.results.methodIndex[methodName]) {",
+            "calls": []
+          },
+          {
+            "name": "findDuplicates",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 202,
+            "signature": "findDuplicates() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 204,
+            "signature": "if (locations.length > 1) {",
+            "calls": []
+          },
+          {
+            "name": "updateMetadata",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 213,
+            "signature": "updateMetadata() {",
+            "calls": []
+          },
+          {
+            "name": "saveResults",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 222,
+            "signature": "saveResults() {",
+            "calls": []
+          },
+          {
+            "name": "generateSummary",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 232,
+            "signature": "generateSummary() {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 243,
+            "signature": "if (meta.totalClasses > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 250,
+            "signature": "if (meta.duplicatesFound > 0) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "ImprovedCodebaseMapper",
+            "file": "improved-codebase-mapper.js",
+            "line": 265,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 12,
+          "signature": "constructor(projectPath) {"
+        }
+      },
+      "AgentSchemaUpdater": {
+        "name": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 12,
+        "methods": [
+          {
+            "name": "constructor",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 13,
+            "signature": "constructor() {",
+            "calls": []
+          },
+          {
+            "name": "readAgentMetadata",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 23,
+            "signature": "readAgentMetadata(agentId) {",
+            "calls": []
+          },
+          {
+            "name": "getAllAgentMetadata",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 42,
+            "signature": "getAllAgentMetadata() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 45,
+            "signature": "for (const agentId of this.agentOrder) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 47,
+            "signature": "if (metadata) {",
+            "calls": []
+          },
+          {
+            "name": "generateAgentSection",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 58,
+            "signature": "generateAgentSection(agentId, metadata) {",
+            "calls": []
+          },
+          {
+            "name": "getAgentResponsibilities",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 79,
+            "signature": "getAgentResponsibilities(agentId) {",
+            "calls": []
+          },
+          {
+            "name": "generateSpecializationMatrix",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 132,
+            "signature": "generateSpecializationMatrix(agents) {",
+            "calls": []
+          },
+          {
+            "name": "generateSchemaContent",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 167,
+            "signature": "generateSchemaContent(agents) {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 191,
+            "signature": "for (const agentId of this.agentOrder) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 192,
+            "signature": "if (agents[agentId]) {",
+            "calls": []
+          },
+          {
+            "name": "updateSchema",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 261,
+            "signature": "updateSchema() {",
+            "calls": []
+          },
+          {
+            "name": "watchForChanges",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 299,
+            "signature": "watchForChanges() {",
+            "calls": []
+          },
+          {
+            "name": "for",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 302,
+            "signature": "for (const agentId of this.agentOrder) {",
+            "calls": []
+          },
+          {
+            "name": "if",
+            "class": "AgentSchemaUpdater",
+            "file": "update-agent-schema.js",
+            "line": 316,
+            "signature": "if (require.main === module) {",
+            "calls": []
+          }
+        ],
+        "constructor": {
+          "line": 13,
+          "signature": "constructor() {"
+        }
+      }
+    },
+    "functions": {
+      "findJavaScriptFiles": {
+        "name": "findJavaScriptFiles",
+        "file": "simple-duplicate-check.js",
+        "line": 11,
+        "signature": "function findJavaScriptFiles(dir) {",
+        "calls": []
+      },
+      "extractMethods": {
+        "name": "extractMethods",
+        "file": "simple-duplicate-check.js",
+        "line": 28,
+        "signature": "function extractMethods(filePath) {",
+        "calls": []
+      },
+      "checkForDuplicates": {
+        "name": "checkForDuplicates",
+        "file": "simple-duplicate-check.js",
+        "line": 77,
+        "signature": "function checkForDuplicates() {",
+        "calls": []
+      }
+    },
+    "methods": {
+      "CodebaseMapper.constructor": {
+        "name": "constructor",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 12,
+        "signature": "constructor(projectPath) {",
+        "calls": []
+      },
+      "CodebaseMapper.for": {
+        "name": "for",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 51,
+        "signature": "for (const entry of entries) {",
+        "calls": []
+      },
+      "CodebaseMapper.findJavaScriptFiles": {
+        "name": "findJavaScriptFiles",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 47,
+        "signature": "findJavaScriptFiles(dir) {",
+        "calls": []
+      },
+      "CodebaseMapper.if": {
+        "name": "if",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 334,
+        "signature": "if (require.main === module) {",
+        "calls": []
+      },
+      "CodebaseMapper.buildRelationships": {
+        "name": "buildRelationships",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 199,
+        "signature": "buildRelationships() {",
+        "calls": []
+      },
+      "CodebaseMapper.generateReport": {
+        "name": "generateReport",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 217,
+        "signature": "generateReport() {",
+        "calls": []
+      },
+      "CodebaseMapper.writeReport": {
+        "name": "writeReport",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 284,
+        "signature": "writeReport(reportLines) {",
+        "calls": []
+      },
+      "CodebaseMapper.exportKnowledgeGraph": {
+        "name": "exportKnowledgeGraph",
+        "class": "CodebaseMapper",
+        "file": "codebase-mapper.js",
+        "line": 299,
+        "signature": "exportKnowledgeGraph() {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.constructor": {
+        "name": "constructor",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 12,
+        "signature": "constructor(projectPath) {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.scanProject": {
+        "name": "scanProject",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 24,
+        "signature": "scanProject() {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.findJavaScriptFiles": {
+        "name": "findJavaScriptFiles",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 50,
+        "signature": "findJavaScriptFiles(dir) {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.for": {
+        "name": "for",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 236,
+        "signature": "for (const suffix of commonSuffixes) {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.scanFile": {
+        "name": "scanFile",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 75,
+        "signature": "scanFile(filePath) {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.if": {
+        "name": "if",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 350,
+        "signature": "if (require.main === module) {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.analyzeResults": {
+        "name": "analyzeResults",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 151,
+        "signature": "analyzeResults() {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.findSimilarMethodNames": {
+        "name": "findSimilarMethodNames",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 191,
+        "signature": "findSimilarMethodNames() {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.areMethodNamesSimilar": {
+        "name": "areMethodNamesSimilar",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 211,
+        "signature": "areMethodNamesSimilar(name1, name2) {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.generateReport": {
+        "name": "generateReport",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 247,
+        "signature": "generateReport() {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.outputReport": {
+        "name": "outputReport",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 324,
+        "signature": "outputReport(reportLines) {",
+        "calls": []
+      },
+      "RobustDuplicateDetector.getResults": {
+        "name": "getResults",
+        "class": "RobustDuplicateDetector",
+        "file": "detect-duplicates.js",
+        "line": 344,
+        "signature": "getResults() {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.constructor": {
+        "name": "constructor",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 12,
+        "signature": "constructor(projectPath) {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.generateKnowledgeGraph": {
+        "name": "generateKnowledgeGraph",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 32,
+        "signature": "generateKnowledgeGraph() {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.findJavaScriptFiles": {
+        "name": "findJavaScriptFiles",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 60,
+        "signature": "findJavaScriptFiles(dir) {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.for": {
+        "name": "for",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 66,
+        "signature": "for (const entry of entries) {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.analyzeFile": {
+        "name": "analyzeFile",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 84,
+        "signature": "analyzeFile(filePath) {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.extractClasses": {
+        "name": "extractClasses",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 104,
+        "signature": "extractClasses(lines, fileInfo) {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.if": {
+        "name": "if",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 265,
+        "signature": "if (require.main === module) {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.extractFunctions": {
+        "name": "extractFunctions",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 146,
+        "signature": "extractFunctions(lines, fileInfo) {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.buildMethodIndex": {
+        "name": "buildMethodIndex",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 183,
+        "signature": "buildMethodIndex() {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.findDuplicates": {
+        "name": "findDuplicates",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 202,
+        "signature": "findDuplicates() {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.updateMetadata": {
+        "name": "updateMetadata",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 213,
+        "signature": "updateMetadata() {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.saveResults": {
+        "name": "saveResults",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 222,
+        "signature": "saveResults() {",
+        "calls": []
+      },
+      "ImprovedCodebaseMapper.generateSummary": {
+        "name": "generateSummary",
+        "class": "ImprovedCodebaseMapper",
+        "file": "improved-codebase-mapper.js",
+        "line": 232,
+        "signature": "generateSummary() {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.constructor": {
+        "name": "constructor",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 13,
+        "signature": "constructor() {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.readAgentMetadata": {
+        "name": "readAgentMetadata",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 23,
+        "signature": "readAgentMetadata(agentId) {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.getAllAgentMetadata": {
+        "name": "getAllAgentMetadata",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 42,
+        "signature": "getAllAgentMetadata() {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.for": {
+        "name": "for",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 302,
+        "signature": "for (const agentId of this.agentOrder) {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.if": {
+        "name": "if",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 316,
+        "signature": "if (require.main === module) {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.generateAgentSection": {
+        "name": "generateAgentSection",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 58,
+        "signature": "generateAgentSection(agentId, metadata) {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.getAgentResponsibilities": {
+        "name": "getAgentResponsibilities",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 79,
+        "signature": "getAgentResponsibilities(agentId) {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.generateSpecializationMatrix": {
+        "name": "generateSpecializationMatrix",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 132,
+        "signature": "generateSpecializationMatrix(agents) {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.generateSchemaContent": {
+        "name": "generateSchemaContent",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 167,
+        "signature": "generateSchemaContent(agents) {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.updateSchema": {
+        "name": "updateSchema",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 261,
+        "signature": "updateSchema() {",
+        "calls": []
+      },
+      "AgentSchemaUpdater.watchForChanges": {
+        "name": "watchForChanges",
+        "class": "AgentSchemaUpdater",
+        "file": "update-agent-schema.js",
+        "line": 299,
+        "signature": "watchForChanges() {",
+        "calls": []
+      }
+    },
+    "eventHandlers": {},
+    "modules": {
+      "codebase-mapper": {
+        "file": "codebase-mapper.js",
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "provides": [
+          "CodebaseMapper"
+        ]
+      },
+      "detect-duplicates": {
+        "file": "detect-duplicates.js",
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "provides": [
+          "RobustDuplicateDetector"
+        ]
+      },
+      "improved-codebase-mapper": {
+        "file": "improved-codebase-mapper.js",
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "provides": [
+          "ImprovedCodebaseMapper"
+        ]
+      },
+      "simple-duplicate-check": {
+        "file": "simple-duplicate-check.js",
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "provides": [
+          "findJavaScriptFiles",
+          "extractMethods",
+          "checkForDuplicates"
+        ]
+      },
+      "update-agent-schema": {
+        "file": "update-agent-schema.js",
+        "exports": [],
+        "dependencies": [
+          "fs",
+          "path"
+        ],
+        "provides": [
+          "AgentSchemaUpdater"
+        ]
+      }
+    },
+    "callGraph": {
+      "codebase-mapper.js": [
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "require",
+          "line": 8
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "require",
+          "line": 9
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "constructor",
+          "line": 12
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 15
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 16
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 17
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 18
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 19
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 20
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 21
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Map",
+          "line": 22
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "generateMap",
+          "line": 26
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 27
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 29
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 30
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
+          "line": 33
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.analyzeFile",
+          "line": 34
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.buildRelationships",
+          "line": 38
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.generateReport",
+          "line": 41
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.exportKnowledgeGraph",
+          "line": 44
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "findJavaScriptFiles",
+          "line": 47
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fs.readdirSync",
+          "line": 49
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
+          "line": 51
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.join",
+          "line": 52
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 54
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "entry.isDirectory",
+          "line": 54
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "entry.name.startsWith",
+          "line": 54
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "files.push",
+          "line": 55
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 55
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 56
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "entry.isFile",
+          "line": 56
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "entry.name.endsWith",
+          "line": 56
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "files.push",
+          "line": 57
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "analyzeFile",
+          "line": 64
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fs.readFileSync",
+          "line": 65
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "content.split",
+          "line": 66
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.relative",
+          "line": 67
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "lines.forEach",
+          "line": 84
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "line.trim",
+          "line": 86
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 89
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.startsWith",
+          "line": 89
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.startsWith",
+          "line": 89
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.match",
+          "line": 94
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 95
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.classes.push",
+          "line": 103
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.classes.set",
+          "line": 104
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 108
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.includes",
+          "line": 108
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "constructor",
+          "line": 108
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.match",
+          "line": 113
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 114
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "currentClass.methods.push",
+          "line": 123
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.methods.push",
+          "line": 124
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.methods.set",
+          "line": 125
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.match",
+          "line": 129
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 130
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.functions.push",
+          "line": 138
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.functions.set",
+          "line": 139
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.match",
+          "line": 143
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 144
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.functions.push",
+          "line": 153
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.functions.set",
+          "line": 154
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.match",
+          "line": 158
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 159
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.eventHandlers.push",
+          "line": 167
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.eventHandlers.set",
+          "line": 168
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.match",
+          "line": 172
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 173
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.imports.push",
+          "line": 175
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.dependencies.push",
+          "line": 176
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "trimmedLine.match",
+          "line": 180
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 181
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "callMatches.forEach",
+          "line": 182
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "call.replace",
+          "line": 183
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 184
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.callGraph.has",
+          "line": 184
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.callGraph.set",
+          "line": 185
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.callGraph.get",
+          "line": 187
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "push",
+          "line": 187
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.files.set",
+          "line": 196
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "buildRelationships",
+          "line": 199
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 200
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
+          "line": 203
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.files.entries",
+          "line": 203
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.basename",
+          "line": 204
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.modules.set",
+          "line": 205
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.classes.map",
+          "line": 210
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fileInfo.functions.map",
+          "line": 211
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "generateReport",
+          "line": 217
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 221
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 222
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 223
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 226
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 227
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 228
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 229
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 230
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 231
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 232
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 235
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 236
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
+          "line": 237
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.classes.entries",
+          "line": 237
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 238
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 239
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 240
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 241
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "constructor ",
+          "line": 241
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "classInfo.methods.forEach",
+          "line": 243
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 244
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 247
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 251
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 252
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
+          "line": 253
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.functions.entries",
+          "line": 253
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 255
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 257
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 261
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 262
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
+          "line": 263
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.eventHandlers.entries",
+          "line": 263
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 264
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 266
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 270
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "for ",
+          "line": 271
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.knowledgeGraph.modules.entries",
+          "line": 271
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 272
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 273
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "moduleInfo.dependencies.forEach",
+          "line": 274
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.push",
+          "line": 275
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "this.writeReport",
+          "line": 281
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "writeReport",
+          "line": 284
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.join",
+          "line": 285
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fs.writeFileSync",
+          "line": 288
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.join",
+          "line": 288
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 289
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "catch ",
+          "line": 290
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.error",
+          "line": 291
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "reportLines.forEach",
+          "line": 293
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 294
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "exportKnowledgeGraph",
+          "line": 299
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Date",
+          "line": 301
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "toISOString",
+          "line": 301
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.basename",
+          "line": 302
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 311
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 312
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 313
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 314
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 315
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 316
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "Object.fromEntries",
+          "line": 317
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.join",
+          "line": 321
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "fs.writeFileSync",
+          "line": 322
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "JSON.stringify",
+          "line": 322
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 324
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "path.basename",
+          "line": 324
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 325
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 326
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 327
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 328
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "console.log",
+          "line": 329
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "if ",
+          "line": 334
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "CodebaseMapper",
+          "line": 336
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "mapper.generateMap",
+          "line": 337
+        },
+        {
+          "caller": "codebase-mapper.js",
+          "callee": "catch",
+          "line": 337
+        }
+      ],
+      "detect-duplicates.js": [
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "require",
+          "line": 8
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "require",
+          "line": 9
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "constructor",
+          "line": 12
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "Map",
+          "line": 14
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "scanProject",
+          "line": 24
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.log",
+          "line": 26
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.log",
+          "line": 27
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 29
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.log",
+          "line": 30
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "jsFiles.forEach",
+          "line": 33
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.scanFile",
+          "line": 35
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "catch ",
+          "line": 36
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.warn",
+          "line": 37
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.analyzeResults",
+          "line": 41
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.generateReport",
+          "line": 42
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "catch ",
+          "line": 44
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.error",
+          "line": 45
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "process.exit",
+          "line": 46
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "findJavaScriptFiles",
+          "line": 50
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fs.readdirSync",
+          "line": 54
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "for ",
+          "line": 56
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "path.join",
+          "line": 57
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 59
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "entry.isDirectory",
+          "line": 59
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 61
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "entry.name.startsWith",
+          "line": 61
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "files.push",
+          "line": 62
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 62
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 64
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "entry.isFile",
+          "line": 64
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "entry.name.endsWith",
+          "line": 64
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "files.push",
+          "line": 65
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "catch ",
+          "line": 68
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.warn",
+          "line": 69
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "scanFile",
+          "line": 75
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fs.readFileSync",
+          "line": 76
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "content.split",
+          "line": 77
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "path.relative",
+          "line": 78
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "lines.forEach",
+          "line": 104
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "line.trim",
+          "line": 106
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 109
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "trimmedLine.startsWith",
+          "line": 109
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "trimmedLine.startsWith",
+          "line": 110
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "trimmedLine.startsWith",
+          "line": 111
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "methodPatterns.forEach",
+          "line": 116
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "trimmedLine.match",
+          "line": 117
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 118
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 128
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "skipKeywords.includes",
+          "line": 128
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 133
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.methodDefinitions.has",
+          "line": 133
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.methodDefinitions.set",
+          "line": 134
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.methodDefinitions.get",
+          "line": 137
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "push",
+          "line": 137
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "analyzeResults",
+          "line": 151
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "for ",
+          "line": 155
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.methodDefinitions.entries",
+          "line": 155
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 156
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "Map",
+          "line": 158
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "definitions.forEach",
+          "line": 159
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 160
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fileGroups.has",
+          "line": 160
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fileGroups.set",
+          "line": 161
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fileGroups.get",
+          "line": 163
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "push",
+          "line": 163
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "for ",
+          "line": 167
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fileGroups.entries",
+          "line": 167
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 168
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.criticalDuplicates.push",
+          "line": 169
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 178
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.crossFileDuplicates.push",
+          "line": 179
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.findSimilarMethodNames",
+          "line": 188
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "findSimilarMethodNames",
+          "line": 191
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "Array.from",
+          "line": 192
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.methodDefinitions.keys",
+          "line": 192
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "for ",
+          "line": 194
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "for ",
+          "line": 195
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 199
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.areMethodNamesSimilar",
+          "line": 199
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.similarNames.push",
+          "line": 200
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.methodDefinitions.get",
+          "line": 203
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.methodDefinitions.get",
+          "line": 204
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "areMethodNamesSimilar",
+          "line": 211
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 213
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "name1.toLowerCase",
+          "line": 216
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "name2.toLowerCase",
+          "line": 217
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 220
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "lower1.includes",
+          "line": 220
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "lower2.includes",
+          "line": 220
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "for ",
+          "line": 228
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "lower1.replace",
+          "line": 229
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "RegExp",
+          "line": 229
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "lower2.replace",
+          "line": 230
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "RegExp",
+          "line": 230
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 231
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "for ",
+          "line": 236
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "lower1.replace",
+          "line": 237
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "RegExp",
+          "line": 237
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "lower2.replace",
+          "line": 238
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "RegExp",
+          "line": 238
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 239
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "generateReport",
+          "line": 247
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 251
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 252
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 253
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 256
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 257
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 258
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 259
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 260
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 261
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 262
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 265
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 266
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "duplicates ",
+          "line": 266
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.criticalDuplicates.forEach",
+          "line": 267
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 268
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 269
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "dup.definitions.forEach",
+          "line": 270
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 271
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 274
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 278
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 279
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "duplicates ",
+          "line": 279
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.crossFileDuplicates.forEach",
+          "line": 280
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 281
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 282
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "dup.definitions.forEach",
+          "line": 283
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 284
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 287
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 291
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 292
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "names ",
+          "line": 292
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.results.similarNames.slice",
+          "line": 293
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "forEach",
+          "line": 293
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 294
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 295
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 296
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 297
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 299
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 300
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 302
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 306
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 307
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 308
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 309
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 310
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 311
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 313
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "intentional ",
+          "line": 313
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 316
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.push",
+          "line": 317
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "this.outputReport",
+          "line": 321
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "outputReport",
+          "line": 324
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "path.join",
+          "line": 326
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "fs.writeFileSync",
+          "line": 329
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.join",
+          "line": 329
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.log",
+          "line": 332
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "catch ",
+          "line": 334
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.error",
+          "line": 335
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "reportLines.forEach",
+          "line": 337
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "console.log",
+          "line": 338
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "getResults",
+          "line": 344
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "if ",
+          "line": 350
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "RobustDuplicateDetector",
+          "line": 352
+        },
+        {
+          "caller": "detect-duplicates.js",
+          "callee": "detector.scanProject",
+          "line": 353
+        }
+      ],
+      "improved-codebase-mapper.js": [
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "require",
+          "line": 8
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "require",
+          "line": 9
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "constructor",
+          "line": 12
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Date",
+          "line": 16
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "toISOString",
+          "line": 16
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "generateKnowledgeGraph",
+          "line": 32
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 34
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 35
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 37
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 38
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "jsFiles.forEach",
+          "line": 40
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.analyzeFile",
+          "line": 42
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "catch ",
+          "line": 43
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.warn",
+          "line": 44
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "path.relative",
+          "line": 44
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.buildMethodIndex",
+          "line": 48
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.findDuplicates",
+          "line": 49
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.updateMetadata",
+          "line": 50
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.saveResults",
+          "line": 51
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.generateSummary",
+          "line": 52
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "catch ",
+          "line": 54
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.error",
+          "line": 55
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "process.exit",
+          "line": 56
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "findJavaScriptFiles",
+          "line": 60
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "fs.readdirSync",
+          "line": 64
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "for ",
+          "line": 66
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "path.join",
+          "line": 67
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 69
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "entry.isDirectory",
+          "line": 69
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 70
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "entry.name.startsWith",
+          "line": 70
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "files.push",
+          "line": 71
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.findJavaScriptFiles",
+          "line": 71
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 73
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "entry.isFile",
+          "line": 73
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "entry.name.endsWith",
+          "line": 73
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "files.push",
+          "line": 74
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "catch ",
+          "line": 77
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.warn",
+          "line": 78
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "analyzeFile",
+          "line": 84
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "fs.readFileSync",
+          "line": 85
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "content.split",
+          "line": 86
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "path.relative",
+          "line": 87
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.extractClasses",
+          "line": 98
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "this.extractFunctions",
+          "line": 99
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "extractClasses",
+          "line": 104
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "lines.forEach",
+          "line": 107
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "line.trim",
+          "line": 108
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "trimmed.match",
+          "line": 112
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 113
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "fileInfo.classes.push",
+          "line": 121
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 126
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "trimmed.match",
+          "line": 127
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 128
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "trimmed.startsWith",
+          "line": 128
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "currentClass.methods.push",
+          "line": 138
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "fileInfo.methods.push",
+          "line": 139
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "extractFunctions",
+          "line": 146
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "lines.forEach",
+          "line": 147
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "line.trim",
+          "line": 148
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "trimmed.match",
+          "line": 152
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 153
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "fileInfo.functions.push",
+          "line": 162
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "trimmed.match",
+          "line": 167
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 168
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "fileInfo.functions.push",
+          "line": 177
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "buildMethodIndex",
+          "line": 183
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.entries",
+          "line": 186
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "forEach",
+          "line": 186
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 189
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "push",
+          "line": 193
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "findDuplicates",
+          "line": 202
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.entries",
+          "line": 203
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "forEach",
+          "line": 203
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 204
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "updateMetadata",
+          "line": 213
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.keys",
+          "line": 215
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.keys",
+          "line": 216
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.keys",
+          "line": 217
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.keys",
+          "line": 218
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.keys",
+          "line": 219
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "saveResults",
+          "line": 222
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "path.join",
+          "line": 224
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "fs.writeFileSync",
+          "line": 225
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "JSON.stringify",
+          "line": 225
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 226
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "path.relative",
+          "line": 226
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "catch ",
+          "line": 227
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.error",
+          "line": 228
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "generateSummary",
+          "line": 232
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 235
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 236
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 237
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 238
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 239
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 240
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 241
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 243
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 244
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.values",
+          "line": 245
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "forEach",
+          "line": 245
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 246
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 250
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 251
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "Object.entries",
+          "line": 252
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "forEach",
+          "line": 252
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 253
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "info.locations.forEach",
+          "line": 254
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 255
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "console.log",
+          "line": 260
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "if ",
+          "line": 265
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "ImprovedCodebaseMapper",
+          "line": 267
+        },
+        {
+          "caller": "improved-codebase-mapper.js",
+          "callee": "mapper.generateKnowledgeGraph",
+          "line": 268
+        }
+      ],
+      "simple-duplicate-check.js": [
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "require",
+          "line": 8
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "require",
+          "line": 9
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "findJavaScriptFiles",
+          "line": 11
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "fs.readdirSync",
+          "line": 13
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "for ",
+          "line": 15
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "path.join",
+          "line": 16
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 18
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "entry.isDirectory",
+          "line": 18
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "entry.name.startsWith",
+          "line": 18
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "files.push",
+          "line": 19
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "findJavaScriptFiles",
+          "line": 19
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 20
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "entry.isFile",
+          "line": 20
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "entry.name.endsWith",
+          "line": 20
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "files.push",
+          "line": 21
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "extractMethods",
+          "line": 28
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "fs.readFileSync",
+          "line": 29
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "content.split",
+          "line": 30
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "path.relative",
+          "line": 31
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "process.cwd",
+          "line": 31
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "lines.forEach",
+          "line": 44
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "line.trim",
+          "line": 46
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 49
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "trimmedLine.startsWith",
+          "line": 49
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "trimmedLine.startsWith",
+          "line": 49
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "patterns.forEach",
+          "line": 53
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "trimmedLine.match",
+          "line": 54
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 55
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 59
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "includes",
+          "line": 59
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "methods.push",
+          "line": 63
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "checkForDuplicates",
+          "line": 77
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 78
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 79
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "process.cwd",
+          "line": 81
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "findJavaScriptFiles",
+          "line": 82
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 84
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "jsFiles.forEach",
+          "line": 88
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "extractMethods",
+          "line": 89
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "allMethods.push",
+          "line": 90
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "allMethods.forEach",
+          "line": 95
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 96
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "push",
+          "line": 99
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "Object.entries",
+          "line": 106
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "forEach",
+          "line": 106
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 107
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "methods.forEach",
+          "line": 110
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 111
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "push",
+          "line": 114
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "Object.entries",
+          "line": 117
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "forEach",
+          "line": 117
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 118
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "sameFileDuplicates.push",
+          "line": 119
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 128
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "duplicates.push",
+          "line": 129
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 138
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 139
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 140
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "Object.keys",
+          "line": 140
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 141
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 142
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 145
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 146
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "duplicates ",
+          "line": 146
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "sameFileDuplicates.forEach",
+          "line": 147
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 148
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "dup.methods.forEach",
+          "line": 149
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 150
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 153
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "duplicates.filter",
+          "line": 157
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "Set",
+          "line": 158
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "dup.methods.map",
+          "line": 158
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 162
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 163
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "duplicates ",
+          "line": 163
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "crossFileDuplicates.forEach",
+          "line": 164
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 165
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "dup.methods.forEach",
+          "line": 166
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 167
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 170
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 174
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 175
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "if ",
+          "line": 176
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 177
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 178
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "intentional ",
+          "line": 178
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "console.log",
+          "line": 180
+        },
+        {
+          "caller": "simple-duplicate-check.js",
+          "callee": "checkForDuplicates",
+          "line": 185
+        }
+      ],
+      "update-agent-schema.js": [
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "require",
+          "line": 9
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "require",
+          "line": 10
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "constructor",
+          "line": 13
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "path.dirname",
+          "line": 14
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "path.join",
+          "line": 15
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "path.join",
+          "line": 16
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "readAgentMetadata",
+          "line": 23
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "path.join",
+          "line": 25
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "if ",
+          "line": 26
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "fs.existsSync",
+          "line": 26
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.warn",
+          "line": 27
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "fs.readFileSync",
+          "line": 31
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "JSON.parse",
+          "line": 32
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "catch ",
+          "line": 33
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.error",
+          "line": 34
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "getAllAgentMetadata",
+          "line": 42
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "for ",
+          "line": 45
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "this.readAgentMetadata",
+          "line": 46
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "if ",
+          "line": 47
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "generateAgentSection",
+          "line": 58
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "metadata.status.charAt",
+          "line": 69
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "toUpperCase",
+          "line": 69
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "metadata.status.slice",
+          "line": 69
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "this.getAgentResponsibilities",
+          "line": 73
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "getAgentResponsibilities",
+          "line": 79
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "integration ",
+          "line": 91
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "agentResponsibilities.map",
+          "line": 126
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "join",
+          "line": 126
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "generateSpecializationMatrix",
+          "line": 132
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "for ",
+          "line": 154
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "Object.entries",
+          "line": 154
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "generateSchemaContent",
+          "line": 167
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "Date",
+          "line": 168
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "toISOString",
+          "line": 168
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "for ",
+          "line": 179
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "Object.entries",
+          "line": 179
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "this.generateAgentSection",
+          "line": 180
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "for ",
+          "line": 191
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "if ",
+          "line": 192
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "for ",
+          "line": 239
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "Object.values",
+          "line": 239
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "this.generateSpecializationMatrix",
+          "line": 249
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "updateSchema",
+          "line": 261
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.log",
+          "line": 263
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "this.getAllAgentMetadata",
+          "line": 266
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "if ",
+          "line": 268
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "Object.keys",
+          "line": 268
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.error",
+          "line": 269
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "this.generateSchemaContent",
+          "line": 274
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "fs.writeFileSync",
+          "line": 277
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.log",
+          "line": 279
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.log",
+          "line": 280
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "Object.keys",
+          "line": 280
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "for ",
+          "line": 283
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "Object.entries",
+          "line": 283
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.log",
+          "line": 286
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "catch ",
+          "line": 290
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.error",
+          "line": 291
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "changes ",
+          "line": 297
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "watchForChanges",
+          "line": 299
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.log",
+          "line": 300
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "for ",
+          "line": 302
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "path.join",
+          "line": 303
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "if ",
+          "line": 305
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "fs.existsSync",
+          "line": 305
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "fs.watchFile",
+          "line": 306
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.log",
+          "line": 307
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "this.updateSchema",
+          "line": 308
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "if ",
+          "line": 316
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "AgentSchemaUpdater",
+          "line": 317
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "process.argv.slice",
+          "line": 320
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "if ",
+          "line": 322
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "args.includes",
+          "line": 322
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "updater.updateSchema",
+          "line": 323
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "updater.watchForChanges",
+          "line": 324
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "console.log",
+          "line": 325
+        },
+        {
+          "caller": "update-agent-schema.js",
+          "callee": "updater.updateSchema",
+          "line": 327
+        }
+      ]
+    }
+  }
+}

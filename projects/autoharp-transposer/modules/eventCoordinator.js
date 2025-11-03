@@ -426,14 +426,8 @@ class EventCoordinator {
     // Clear suggestions immediately
     this.clearSuggestions();
     
-    // If there are suggestions visible, use the selected one
-    const selectedSuggestion = document.querySelector('.suggestion-item.selected');
-    if (selectedSuggestion) {
-      const chord = selectedSuggestion.dataset.chord;
-      this.inputManager.addChord(chord, 'suggestion');
-      this.clearTextInput();
-      return;
-    }
+    // Note: Suggestion clicks are handled by handleSuggestionClick() method
+    // Removed duplicate addChord call that was causing suggestions to be added twice
     
     // If no suggestions are selected but input has value, try to add it directly
     if (inputValue && inputValue.trim()) {

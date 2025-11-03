@@ -35,10 +35,10 @@
  *
  * ------------------------------------------------------------------- 
  */
- @import url("fonts.css");
- @import url("font-awesome/css/font-awesome.min.css");
- @import url("micons/micons.css");
- 
+@import url("fonts.css");
+@import url("font-awesome/css/font-awesome.min.css");
+@import url("micons/micons.css");
+
 
 
 /** 
@@ -52,7 +52,7 @@
 	/* By Palette */
 	--accent: #83f6e7;
 	/*  #FF0077*/
-	--accent-dark:  #51e8f6;
+	--accent-dark: #51e8f6;
 	/* #cc005f */
 	--accent-xtra-dark: #03818c;
 	/* #990047 */
@@ -120,6 +120,10 @@
 	--secondary: #313131;
 	--secondary-highlight: var(--accent-dark);
 	--background-secondary: var(--accent-xtra-dark);
+
+
+	/* Transitions */
+	--transform-folio-item: cubic-bezier(0, 1.39, 0.74, 0.98);
 
 }
 
@@ -1451,7 +1455,7 @@ header .top-bar {
 	min-width: 220px;
 	min-height: 66px;
 	position: relative;
-	text-align:left;
+	text-align: left;
 	left: 0px;
 	top: 0;
 	height: 100%;
@@ -1661,7 +1665,7 @@ header .logo a {
 		width: 100%;
 		box-sizing: border-box;
 	}
-	
+
 }
 
 @media only screen and (max-width:768px) {
@@ -1698,7 +1702,7 @@ header .logo a {
 #intro {
 	background: #151515 url("../intro-bg.jpg") no-repeat center center;
 	/* Dall-E prompt: DALL·E 2024-07-12 19.29.14 - A background image for a machine learning engineer's website, depicting a neural network forming the shape of a city skyline. The image should feature */
-	-webkit-background-size: cover; 
+	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
@@ -2290,6 +2294,10 @@ header .logo a {
 	padding: 0;
 	position: relative;
 	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+
+
+
 }
 
 #portfolio .folio-item img {
@@ -2324,21 +2332,66 @@ header .logo a {
 #portfolio .folio-item-cell {
 	display: table-cell;
 	vertical-align: middle;
-	text-align: center;
+	text-align: left;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	-webkit-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 	position: relative;
-	left: -100%;
+
+	/* left: -100%; */
+}
+
+/* parent keeps centered text */
+#portfolio .folio-item-cell {
+	text-align: center;
+}
+
+/* make title an inline-block so transform affects it only */
+#portfolio .folio-title {
+	display: inline-block;
+	text-align: left;
+	transition: transform 0.35s cubic-bezier(.2, .8, .2, 1), color 0.25s ease;
+	transform: translateX(0), scale(1);
+
+}
+
+/* hover/focus state: move right a bit */
+#portfolio .bgrid.folio-item:hover .folio-title,
+#portfolio .bgrid.folio-item:focus-within .folio-title {
+	transform: translateX(8%);
+	/* adjust % or px to taste */
+	color: var(--accent-xtra-dark);
 }
 
 #portfolio .folio-title {
-	color: #FFFFFF;
+	color: var(--header-primary);
 	font-size: 3.3rem;
 	padding: 0 3rem;
+	transition: all 1s var(--transform-folio-item);
+	-webkit-transition: all 1s var(--transform-folio-item);
+	-moz-transition: all 1s var(--transform-folio-item);
+	-ms-transition: all 1s var(--transform-folio-item);
+	-o-transition: all 1s var(--transform-folio-item);
 	margin-bottom: 0;
+
+}
+
+#portfolio .folio-title>.moving-arrow {
+	width: 200px;
+	height: 200px;
+	color: #00000000;
+	background: var(--header-primary);
+
+	transition: all 0.2s var(--transform-folio-item);
+	clip-path: polygon(68% 30%, 68% 50%, 68% 70%, 0% 70%, 0% 50%, 0% 30%);
+
+}
+
+#portfolio .folio-item:hover .folio-title>.moving-arrow {
+	background: var(--accent-xtra-dark);
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
 #portfolio .folio-types {
@@ -2351,12 +2404,14 @@ header .logo a {
 	color: rgba(255, 255, 255, 0.6);
 }
 
-#portfolio .folio-item:hover .overlay {
+#portfolio .folio-item:hover>.overlay {
 	background: rgba(0, 0, 0, 0.8);
 }
 
-#portfolio .folio-item:hover .folio-item-cell {
-	left: 0;
+#portfolio .folio-item:hover .folio-title {
+	color: var(--accent-xtra-dark);
+	left: 10%;
+
 }
 
 #portfolio .folio-item:hover img {

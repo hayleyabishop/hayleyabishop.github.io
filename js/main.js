@@ -116,9 +116,10 @@
 
 
 	/*----------------------------------------------------*/
-	/*	Modal Popup
-	------------------------------------------------------*/
-   $('.item-wrap a').magnificPopup({
+   /*  Modal Popup
+   ------------------------------------------------------*/
+   // Initialize Magnific Popup only for inline modal triggers (anchors with href starting with '#')
+   $('.item-wrap a[href^="#"]').magnificPopup({
 
       type:'inline',
       fixedContentPos: false,
