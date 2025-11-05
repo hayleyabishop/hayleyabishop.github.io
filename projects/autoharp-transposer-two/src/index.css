@@ -1,0 +1,15 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --inset-top: env(safe-area-inset-top);
+  --inset-bottom: env(safe-area-inset-bottom);
+}
+
+.app {
+  min-height: 100dvh;
+  padding-top: var(--inset-top);
+  padding-bottom: var(--inset-bottom);
+}
