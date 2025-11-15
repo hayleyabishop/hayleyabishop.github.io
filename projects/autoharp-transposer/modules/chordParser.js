@@ -488,26 +488,7 @@ class ChordParser {
     return normalize(str1) === normalize(str2);
   }
 
-  // Enhanced chord name normalization
-  normalizeChordName(chordName) {
-    if (!chordName) return '';
-
-    return chordName
-      // Normalize enharmonic equivalents
-      .replace(/C#|Db/g, 'C#/Db')
-      .replace(/D#|Eb/g, 'D#/Eb')
-      .replace(/F#|Gb/g, 'F#/Gb')
-      .replace(/G#|Ab/g, 'G#/Ab')
-      .replace(/A#|Bb/g, 'A#/Bb')
-      // Normalize chord types
-      .replace(/major/gi, '')
-      .replace(/minor/gi, 'm')
-      .replace(/diminished/gi, 'dim')
-      .replace(/augmented/gi, 'aug')
-      .replace(/dominant/gi, '')
-      .trim();
-  }
-
+  
   // Chord history management
   addToHistory(chord) {
     if (!chord || !this.validateChord(chord)) return;
