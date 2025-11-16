@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chord-utils": "file:../packages/chord-utils",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

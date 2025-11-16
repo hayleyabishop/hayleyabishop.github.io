@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
+import { normalizeChordInput } from "chord-utils";
 
 /**
  * ChordChipInput
@@ -30,18 +31,12 @@ export default function ChordChipInput() {
 
   const normalizeChord = (raw: string) => {
     if (!raw) return "";
+    // Keep dictation/filler cleanup, then delegate to shared utils
     let t = raw.toLowerCase().trim();
     t = t.replace(/\b(u+h+|um+m+|erm+|ah+|uhh+)\b/gi, " ").trim();
-    t = t
-      .replace(/\bsharp\b/gi, "#")
-      .replace(/\bflat\b/gi, "b")
-      .replace(/\bmajor\b/gi, "")
-      .replace(/\bminor\b/gi, "m")
-      .replace(/\bseven(th)?\b/gi, "7")
-      .replace(/\s{2,}/g, " ")
-      .trim();
-    if (!t) return "";
-    return t[0].toUpperCase() + t.slice(1);
+    t = t.replace(/\s{2,}/g, " ").trim();
+    const normalized = normalizeChordInput(t);
+    return normalized || "";
   };
 
   const isUndoCommand = (s: string) => {
