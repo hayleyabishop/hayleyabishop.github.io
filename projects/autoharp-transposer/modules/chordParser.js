@@ -156,6 +156,9 @@ class ChordParser {
     
     // Remove extra spaces and normalize spacing
     normalized = normalized.replace(/\s+/g, ' ');
+
+    // Join accidental separated by space with root (e.g., 'c #' => 'c#', 'd b' => 'db')
+    normalized = normalized.replace(/([a-g])\s*([#b])/g, '$1$2');
     
     // Extract root note (handle sharps/flats and case insensitivity)
     const rootMatch = normalized.match(/^([a-g][#b]?)/);
@@ -163,6 +166,8 @@ class ChordParser {
     
     let root = rootMatch[1].toUpperCase(); // Normalize to uppercase
     let remainder = normalized.slice(rootMatch[0].length).trim();
+    // Collapse spaces in remainder so 'm 7' -> 'm7', 'maj 7' -> 'maj7', etc.
+    remainder = remainder.replace(/\s+/g, '');
     
     
     // Handle enharmonic equivalents and normalize sharps/flats
@@ -534,11 +539,7 @@ class ChordParser {
     // Handle common input variations
     const variations = [
       cleanInput,
-      cleanInput.replace(/sharp/gi, '#'),
-      cleanInput.replace(/flat/gi, 'b'),
-      cleanInput.replace(/major/gi, ''),
-      cleanInput.replace(/minor/gi, 'm'),
-      this.normalizeChordName(cleanInput)
+      this.normalizeChordInput(cleanInput)
     ];
 
     for (const variation of variations) {
