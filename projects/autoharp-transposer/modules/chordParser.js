@@ -532,24 +532,7 @@ class ChordParser {
     }
   }
 
-  // Advanced chord parsing with better error handling
-  parseAdvancedChord(input) {
-    const cleanInput = input.trim();
-    
-    // Handle common input variations
-    const variations = [
-      cleanInput,
-      this.normalizeChordInput(cleanInput)
-    ];
-
-    for (const variation of variations) {
-      const match = this.parseChord(variation);
-      if (match) return match;
-    }
-
-    return null;
-  }
-
+  
   // Get chord suggestions with context
   getContextualSuggestions(input, recentChords = []) {
     const baseSuggestions = this.getSuggestions(input);
