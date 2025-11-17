@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { normalizeChordInput } from "chord-utils";
+import { useChordSuggestions } from "./useChordSuggestions";
 
 /**
  * ChordChipInput
@@ -28,6 +29,13 @@ export default function ChordChipInput() {
       liveRef.current.textContent = msg;
     }
   };
+
+  const currentToken = (() => {
+    const parts = inputValue.split(/(?:\s|,)+/).filter(Boolean);
+    return parts.length ? parts[parts.length - 1] : "";
+  })();
+
+  const suggestions = useChordSuggestions(currentToken, 5);
 
   const normalizeChord = (raw: string) => {
     if (!raw) return "";
@@ -191,6 +199,24 @@ export default function ChordChipInput() {
           autoComplete="off"
         />
       </div>
+      {suggestions.length > 0 && (
+        <div className="mt-1 flex flex-wrap gap-2 text-xs text-gray-600" aria-live="polite">
+          <span>Suggestions:</span>
+          {suggestions.map((sug) => (
+            <button
+              key={sug}
+              type="button"
+              className="rounded-full border border-gray-300 px-2 py-0.5 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              onClick={() => {
+                addChip(sug);
+                setInputValue("");
+              }}
+            >
+              {sug}
+            </button>
+          ))}
+        </div>
+      )}
       <div id="chordHelp" className="sr-only">
         Type or dictate a chord and press Space, Comma, or Enter to add it.
         Say “undo”, “delete”, or “no” to remove the last chord. Use left and
