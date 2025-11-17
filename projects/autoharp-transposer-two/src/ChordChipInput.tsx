@@ -125,6 +125,12 @@ export default function ChordChipInput() {
       tryCommitTokens(true);
       return;
     }
+    if (e.key === "Backspace" && inputValue.trim().length === 0 && chips.length) {
+      // When the input is empty, Backspace behaves like "undo last chord"
+      e.preventDefault();
+      removeLastChip();
+      return;
+    }
     if (e.key === "ArrowLeft" && inputRef.current?.selectionStart === 0 && chips.length) {
       e.preventDefault();
       chipRefs.current[chips.length - 1]?.focus();
