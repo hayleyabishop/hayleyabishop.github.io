@@ -12,8 +12,8 @@ function normalizeChordInput(input) {
   // Join accidental separated by space with root (e.g., 'c #' => 'c#', 'd b' => 'db')
   normalized = normalized.replace(/([a-g])\s*([#b])/g, '$1$2');
 
-  // Extract root note (handle sharps/flats and case insensitivity)
-  const rootMatch = normalized.match(/^([a-g][#b]?)/);
+  // Match chord name. Make sure it's a valid sharp/flat or natural chord.
+  const rootMatch = normalized.match(/^([abdeg][b]?)|^([acdfg][#]?)/);
   if (!rootMatch) return '';
 
   let root = rootMatch[1].toUpperCase();
@@ -24,11 +24,11 @@ function normalizeChordInput(input) {
 
   // Enharmonic equivalents to sharps
   const enharmonicMap = {
-    db: 'C#', 'c#': 'C#',
-    eb: 'D#', 'd#': 'D#',
-    gb: 'F#', 'f#': 'F#',
-    ab: 'G#', 'g#': 'G#',
-    bb: 'A#', 'a#': 'A#'
+    'db': 'D♭', 'c#': 'C#',
+    'eb': 'E♭', 'd#': 'D#',
+    'gb': 'G♭', 'f#': 'F#',
+    'ab': 'A♭', 'g#': 'G#',
+    'bb': 'B♭', 'a#': 'A#'
   };
   if (enharmonicMap[root.toLowerCase()]) {
     root = enharmonicMap[root.toLowerCase()];
